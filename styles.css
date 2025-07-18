@@ -1194,7 +1194,7 @@ body::before {
     transform: translateX(-3px);
 }
 
-/* Responsive Design for What If Page */
+/* Responsive Design for Imagine Page */
 @media (max-width: 768px) {
     .what-if-row {
         flex-direction: column;
