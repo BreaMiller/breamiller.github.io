@@ -1077,12 +1077,12 @@ body::before {
 }
 
 /* Imagine Page Styles */
-.what-if-subtitle {
+.imagine-subtitle {
     margin-top: 40px;
     text-align: center;
 }
 
-.what-if-subtitle h2 {
+.imagine-subtitle h2 {
     font-size: 1.5rem;
     font-weight: 400;
     color: #888;
@@ -1090,27 +1090,27 @@ body::before {
     margin: 0;
 }
 
-.what-if-section {
+.imagine-section {
     margin-bottom: 120px;
 }
 
-.what-if-row {
+.imagine-row {
     display: flex;
     gap: 60px;
     justify-content: center;
 }
 
-.what-if-item {
+.imagine-item {
     flex: 1;
     max-width: 600px;
 }
 
-.what-if-text {
+.imagine-text {
     margin-bottom: 30px;
     text-align: center;
 }
 
-.what-if-text h3 {
+.imagine-text h3 {
     font-size: 1.3rem;
     font-weight: 500;
     color: #ffffff;
@@ -1118,7 +1118,7 @@ body::before {
     margin: 0;
 }
 
-.what-if-card {
+.imagine-card {
     border-radius: 20px;
     overflow: hidden;
     background: #222;
@@ -1127,30 +1127,30 @@ body::before {
     cursor: pointer;
 }
 
-.what-if-card:hover {
+.imagine-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     border-color: rgba(154, 255, 0, 0.3);
 }
 
-.what-if-card.large {
+.imagine-card.large {
     height: 600px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.what-if-card.medium {
+.imagine-card.medium {
     height: 400px;
 }
 
-.what-if-card img {
+.imagine-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-.what-if-card:hover img {
+.imagine-card:hover img {
     transform: scale(1.05);
 }
 
@@ -1196,28 +1196,28 @@ body::before {
 
 /* Responsive Design for Imagine Page */
 @media (max-width: 768px) {
-    .what-if-row {
+    .imagine-row {
         flex-direction: column;
         gap: 40px;
     }
     
-    .what-if-item {
+    .imagine-item {
         max-width: none;
     }
     
-    .what-if-card.large {
+    .imagine-card.large {
         height: 400px;
     }
     
-    .what-if-card.medium {
+    .imagine-card.medium {
         height: 300px;
     }
     
-    .what-if-text h3 {
+    .imagine-text h3 {
         font-size: 1.1rem;
     }
     
-    .what-if-section {
+    .imagine-section {
         margin-bottom: 80px;
     }
 }
