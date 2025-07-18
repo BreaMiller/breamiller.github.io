@@ -282,6 +282,31 @@ body::before {
     height: 700px;
 }
 
+/* Responsive Design for Horizontal Cards */
+@media (max-width: 768px) {
+    .bento-horizontal {
+        height: 400px;
+    }
+    
+    .bento-horizontal .project-header .project-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bento-horizontal {
+        height: 300px;
+    }
+    
+    .bento-horizontal .project-header .project-title {
+        font-size: 1.2rem;
+    }
+    
+    .bento-horizontal .project-header .project-label {
+        font-size: 10px;
+    }
+}
+
 /* Project Cards */
 .project-header {
     text-align: center;
