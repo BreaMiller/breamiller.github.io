@@ -338,7 +338,7 @@ new Vue({
             isTimerPlaying: false,
             tracks: [
                 {
-                    name: "AI Tutorial",
+                    name: "Meditation Music",
                     artist: "Brea Miller",
                     cover: "https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=400",
                     source: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
