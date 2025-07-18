@@ -763,6 +763,7 @@ body::before {
     color: #888;
     padding: 20px 0;
     border-top: 1px solid #333;
+    margin-top: 20px;
 }
 
 .footer-content {
