@@ -127,7 +127,7 @@ function loadLatestProjects() {
 function navigateToProject(projectSlug) {
     // Handle special cases for dedicated pages
     if (projectSlug === 'iamgine' || projectSlug === 'imagine...') {
-        window.location.href = 'what-if.html';
+        window.location.href = 'imagine.html';
     } else {
         // Create a simple project page URL
         window.location.href = `project.html?project=${projectSlug}`;
