@@ -68,7 +68,7 @@ const projectsData = [
     {
         name: "Imagine...",
         description: "Creative AI experiments",
-        slug: "what-if",
+        slug: "imagine",
         color: "teal",
         image: "https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
