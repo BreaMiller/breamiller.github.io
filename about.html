@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Brea Miller</title>
+    <link rel="stylesheet" href="about-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <!-- Back Button -->
+    <button class="back-button" onclick="window.location.href='index.html'">
+        ←
+    </button>
+
+    <!-- Main Container -->
+    <div class="about-main-container">
+        <!-- Left Section -->
+        <div class="about-left-section">
+            <!-- Profile Image with Gradient -->
+            <div class="about-profile-container">
+                <div class="about-profile-image">
+                    <img src="https://i.imgur.com/pDRAZKX.png" alt="Brea Miller">
+                    <div class="profile-gradient-overlay"></div>
+                </div>
+                <h1 class="about-greeting">Hello!</h1>
+                <h2 class="about-name">I'm Brea</h2>
+            </div>
+
+            <!-- About Text and Tags -->
+            <div class="about-text-section">
+                <p class="about-description">
+                    <strong>AI Prompt Engineer</strong> with 4+ years of experience in leading innovative solutions for brands, agencies, and creative projects.
+                </p>
+                
+                <div class="about-skills-tags">
+                    <span class="about-skill-tag">AI/ML</span>
+                    <span class="about-skill-tag">Midjourney</span>
+                    <span class="about-skill-tag">DALL-E</span>
+                    <span class="about-skill-tag">Stable Diffusion</span>
+                    <span class="about-skill-tag">Creative Direction</span>
+                </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="about-location-card">
+                <div class="location-info">
+                    <h3 class="location-title">Willing to Relocate</h3>
+                    <p class="location-time">Remote Worldwide • Available 24/7</p>
+                </div>
+                <div class="location-map">
+                    <div class="map-placeholder"></div>
+                    <div class="location-dot"></div>
+                </div>
+            </div>
+
+            <!-- Contact Buttons -->
+            <div class="about-action-buttons">
+                <button class="btn-primary">Contact me</button>
+                <button class="btn-secondary">Resume</button>
+            </div>
+        </div>
+
+        <!-- Center Section - Music Player -->
+        <div class="about-center-section">
+            <!-- Vue.js Music Player -->
+            <div class="wrapper" id="app">
+                <div class="player">
+                    <div class="player__top">
+                        <div class="player-cover">
+                            <transition-group :name="transitionName">
+                                <div class="player-cover__item" v-if="$index === currentTrackIndex" :style="{ backgroundImage: `url(${track.cover})` }"  v-for="(track, $index) in tracks" :key="$index"></div>
+                            </transition-group>
+                        </div>
+                        <div class="player-controls">
+                            <div class="player-controls__item -favorite" :class="{ active : currentTrack.favorited }" @click="favorite">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-heart-o"></use>
+                                </svg>
+                            </div>
+                            <a :href="currentTrack.url" target="_blank" class="player-controls__item">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-link"></use>
+                                </svg>
+                            </a>
+                            <div class="player-controls__item" @click="prevTrack">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-prev"></use>
+                                </svg>
+                            </div>
+                            <div class="player-controls__item" @click="nextTrack">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-next"></use>
+                                </svg>
+                            </div>
+                            <div class="player-controls__item -xl js-play" @click="play">
+                                <svg class="icon">
+                                    <use xlink:href="#icon-pause" v-if="isTimerPlaying"></use>
+                                    <use xlink:href="#icon-play" v-else></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress" ref="progress">
+                        <div class="progress__top">
+                            <div class="album-info" v-if="currentTrack">
+                                <div class="album-info__name">{{ currentTrack.artist }}</div>
+                                <div class="album-info__track">{{ currentTrack.name }}</div>
+                            </div>
+                            <div class="progress__duration">{{ duration }}</div>
+                        </div>
+                        <div class="progress__bar" @click="clickProgress">
+                            <div class="progress__current" :style="{ width : barWidth }"></div>
+                        </div>
+                        <div class="progress__time">{{ currentTime }}</div>
+                    </div>
+                    <div v-cloak></div>
+                </div>
+            </div>
+
+            <!-- SVG Icons -->
+            <svg xmlns="http://www.w3.org/2000/svg" hidden xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <symbol id="icon-heart-o" viewBox="0 0 32 32">
+                        <title>icon-heart-o</title>
+                        <path d="M22.88 1.952c-2.72 0-5.184 1.28-6.88 3.456-1.696-2.176-4.16-3.456-6.88-3.456-4.48 0-9.024 3.648-9.024 10.592 0 7.232 7.776 12.704 15.072 17.248 0.256 0.16 0.544 0.256 0.832 0.256s0.576-0.096 0.832-0.256c7.296-4.544 15.072-10.016 15.072-17.248 0-6.944-4.544-10.592-9.024-10.592zM16 26.56c-4.864-3.072-12.736-8.288-12.736-14.016 0-5.088 3.040-7.424 5.824-7.424 2.368 0 4.384 1.504 5.408 4.032 0.256 0.608 0.832 0.992 1.472 0.992s1.248-0.384 1.472-0.992c1.024-2.528 3.040-4.032 5.408-4.032 2.816 0 5.824 2.304 5.824 7.424 0.064 5.728-7.808 10.976-12.672 14.016z"></path>
+                    </symbol>
+                    <symbol id="icon-heart" viewBox="0 0 32 32">
+                        <title>icon-heart</title>
+                        <path d="M22.88 1.952c-2.72 0-5.184 1.28-6.88 3.456-1.696-2.176-4.16-3.456-6.88-3.456-4.48 0-9.024 3.648-9.024 10.592 0 7.232 7.776 12.704 15.072 17.248 0.256 0.16 0.544 0.256 0.832 0.256s0.576-0.096 0.832-0.256c7.296-4.544 15.072-10.016 15.072-17.248 0-6.944-4.544-10.592-9.024-10.592z"></path>
+                    </symbol>
+                    <symbol id="icon-pause" viewBox="0 0 32 32">
+                        <title>icon-pause</title>
+                        <path d="M16 0.32c-8.64 0-15.68 7.040-15.68 15.68s7.040 15.68 15.68 15.68 15.68-7.040 15.68-15.68-7.040-15.68-15.68-15.68zM16 29.216c-7.296 0-13.216-5.92-13.216-13.216s5.92-13.216 13.216-13.216 13.216 5.92 13.216 13.216-5.92 13.216-13.216 13.216z"></path>
+                        <path d="M12.16 22.336v0c-0.896 0-1.6-0.704-1.6-1.6v-9.472c0-0.896 0.704-1.6 1.6-1.6v0c0.896 0 1.6 0.704 1.6 1.6v9.504c0 0.864-0.704 1.568-1.6 1.568z"></path>
+                        <path d="M19.84 22.336v0c-0.896 0-1.6-0.704-1.6-1.6v-9.472c0-0.896 0.704-1.6 1.6-1.6v0c0.896 0 1.6 0.704 1.6 1.6v9.504c0 0.864-0.704 1.568-1.6 1.568z"></path>
+                    </symbol>
+                    <symbol id="icon-play" viewBox="0 0 32 32">
+                        <title>icon-play</title>
+                        <path d="M21.216 15.168l-7.616-5.088c-0.672-0.416-1.504 0.032-1.504 0.832v10.176c0 0.8 0.896 1.248 1.504 0.832l7.616-5.088c0.576-0.416 0.576-1.248 0-1.664z"></path>
+                        <path d="M16 0.32c-8.64 0-15.68 7.040-15.68 15.68s7.040 15.68 15.68 15.68 15.68-7.040 15.68-15.68-7.040-15.68-15.68-15.68zM16 29.216c-7.296 0-13.216-5.92-13.216-13.216s5.92-13.216 13.216-13.216 13.216 5.92 13.216 13.216-5.92 13.216-13.216 13.216z"></path>
+                    </symbol>
+                    <symbol id="icon-link" viewBox="0 0 32 32">
+                        <title>link</title>
+                        <path d="M23.584 17.92c0 0.864 0 1.728 0 2.56 0 1.312 0 2.656 0 3.968 0 0.352 0.032 0.736-0.032 1.12 0.032-0.16 0.032-0.288 0.064-0.448-0.032 0.224-0.096 0.448-0.16 0.64 0.064-0.128 0.128-0.256 0.16-0.416-0.096 0.192-0.192 0.384-0.32 0.576 0.096-0.128 0.16-0.224 0.256-0.352-0.128 0.16-0.288 0.32-0.48 0.48 0.128-0.096 0.224-0.16 0.352-0.256-0.192 0.128-0.352 0.256-0.576 0.32 0.128-0.064 0.256-0.128 0.416-0.16-0.224 0.096-0.416 0.16-0.64 0.16 0.16-0.032 0.288-0.032 0.448-0.064-0.256 0.032-0.512 0.032-0.768 0.032-0.448 0-0.896 0-1.312 0-1.472 0-2.976 0-4.448 0-1.824 0-3.616 0-5.44 0-1.568 0-3.104 0-4.672 0-0.736 0-1.44 0-2.176 0-0.128 0-0.224 0-0.352-0.032 0.16 0.032 0.288 0.032 0.448 0.064-0.224-0.032-0.448-0.096-0.64-0.16 0.128 0.064 0.256 0.128 0.416 0.16-0.192-0.096-0.384-0.192-0.576-0.32 0.128 0.096 0.224 0.16 0.352 0.256-0.16-0.128-0.32-0.288-0.48-0.48 0.096 0.128 0.16 0.224 0.256 0.352-0.128-0.192-0.256-0.352-0.32-0.576 0.064 0.128 0.128 0.256 0.16 0.416-0.096-0.224-0.16-0.416-0.16-0.64 0.032 0.16 0.032 0.288 0.064 0.448-0.032-0.256-0.032-0.512-0.032-0.768 0-0.448 0-0.896 0-1.312 0-1.472 0-2.976 0-4.448 0-1.824 0-3.616 0-5.44 0-1.568 0-3.104 0-4.672 0-0.736 0-1.44 0-2.176 0-0.128 0-0.224 0.032-0.352-0.032 0.16-0.032 0.288-0.064 0.448 0.032-0.224 0.096-0.448 0.16-0.64-0.064 0.128-0.128 0.256-0.16 0.416 0.096-0.192 0.192-0.384 0.32-0.576-0.096 0.128-0.16 0.224-0.256 0.352 0.128-0.16 0.288-0.32 0.48-0.48-0.128 0.096-0.224 0.16-0.352 0.256 0.192-0.128 0.352-0.256 0.576-0.32-0.128 0.064-0.256 0.128-0.416 0.16 0.224-0.096 0.416-0.16 0.64-0.16-0.16 0.032-0.288 0.032-0.448 0.064 0.48-0.064 0.96-0.032 1.44-0.032 0.992 0 1.952 0 2.944 0 1.216 0 2.432 0 3.616 0 1.056 0 2.112 0 3.168 0 0.512 0 1.024 0 1.536 0 0 0 0 0 0.032 0 0.448 0 0.896-0.192 1.184-0.48s0.512-0.768 0.48-1.184c-0.032-0.448-0.16-0.896-0.48-1.184s-0.736-0.48-1.184-0.48c-0.64 0-1.28 0-1.92 0-1.408 0-2.816 0-4.224 0-1.44 0-2.848 0-4.256 0-0.672 0-1.344 0-2.016 0-0.736 0-1.472 0.192-2.112 0.576s-1.216 0.96-1.568 1.6c-0.384 0.64-0.544 1.376-0.544 2.144 0 0.672 0 1.376 0 2.048 0 1.28 0 2.56 0 3.84 0 1.504 0 3.040 0 4.544 0 1.408 0 2.848 0 4.256 0 0.992 0 1.952 0 2.944 0 0.224 0 0.448 0 0.64 0 0.864 0.224 1.76 0.768 2.464 0.16 0.192 0.288 0.384 0.48 0.576s0.384 0.352 0.608 0.512c0.32 0.224 0.64 0.384 1.024 0.512 0.448 0.16 0.928 0.224 1.408 0.224 0.16 0 0.32 0 0.48 0 0.896 0 1.792 0 2.72 0 1.376 0 2.784 0 4.16 0 1.536 0 3.040 0 4.576 0 1.312 0 2.656 0 3.968 0 0.768 0 1.536 0 2.336 0 0.416 0 0.832-0.032 1.248-0.128 1.504-0.32 2.784-1.6 3.104-3.104 0.128-0.544 0.128-1.056 0.128-1.568 0-0.608 0-1.184 0-1.792 0-1.408 0-2.816 0-4.224 0-0.256 0-0.512 0-0.768 0-0.448-0.192-0.896-0.48-1.184s-0.768-0.512-1.184-0.48c-0.448 0.032-0.896 0.16-1.184 0.48-0.384 0.384-0.576 0.768-0.576 1.248v0z"></path>
+                    </symbol>
+                    <symbol id="icon-next" viewBox="0 0 32 32">
+                        <title>next</title>
+                        <path d="M2.304 18.304h14.688l-4.608 4.576c-0.864 0.864-0.864 2.336 0 3.232 0.864 0.864 2.336 0.864 3.232 0l8.448-8.48c0.864-0.864 0.864-2.336 0-3.232l-8.448-8.448c-0.448-0.448-1.056-0.672-1.632-0.672s-1.184 0.224-1.632 0.672c-0.864 0.864-0.864 2.336 0 3.232l4.64 4.576h-14.688c-1.248 0-2.304 0.992-2.304 2.272s1.024 2.272 2.304 2.272z"></path>
+                        <path d="M29.696 26.752c1.248 0 2.304-1.024 2.304-2.304v-16.928c0-1.248-1.024-2.304-2.304-2.304s-2.304 1.024-2.304 2.304v16.928c0.064 1.28 1.056 2.304 2.304 2.304z"></path>
+                    </symbol>
+                    <symbol id="icon-prev" viewBox="0 0 32 32">
+                        <title>prev</title>
+                        <path d="M29.696 13.696h-14.688l4.576-4.576c0.864-0.864 0.864-2.336 0-3.232-0.864-0.864-2.336-0.864-3.232 0l-8.448 8.48c-0.864 0.864-0.864 2.336 0 3.232l8.448 8.448c0.448 0.448 1.056 0.672 1.632 0.672s1.184-0.224 1.632-0.672c0.864-0.864 0.864-2.336 0-3.232l-4.608-4.576h14.688c1.248 0 2.304-1.024 2.304-2.304s-1.024-2.24-2.304-2.24z"></path>
+                        <path d="M2.304 5.248c-1.248 0-2.304 1.024-2.304 2.304v16.928c0 1.248 1.024 2.304 2.304 2.304s2.304-1.024 2.304-2.304v-16.928c-0.064-1.28-1.056-2.304-2.304-2.304z"></path>
+                    </symbol>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- Right Section -->
+        <div class="about-right-section">
+            <!-- Social Links Grid -->
+            <div class="about-social-grid">
+                <!-- First Row -->
+                <div class="social-row">
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/5113842599/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/1402/5113842599_2951bcf168_c.jpg" alt="Take your child to work day">
+                    </a>
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/5114444986/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/1200/5114444986_7a008975f1_k.jpg" alt="Take your child to work day">
+                    </a>
+                    <a href="https://tiktok.com" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/7127/7487103836_621fb68cc0_k.jpg" alt="Eye Art">
+                    </a>
+                </div>
+                
+                <!-- Second Row -->
+                <div class="social-row">
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/4869514841/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/4142/4869514841_b75c0b306d_h.jpg" alt="Jolly jump from a C130J aircraft">
+                    </a>
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/4870162496/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/4117/4870162496_ffb2b22356_h.jpg" alt="Airmen jump from a C130J aircraft">
+                    </a>
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/4870220206/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/4141/4870220206_cac8503c8f_c.jpg" alt="Paratroop jump force">
+                    </a>
+                </div>
+                
+                <!-- Third Row -->
+                <div class="social-row">
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/4800552773/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/4142/4800552773_7c232b4e1f_h.jpg" alt="Airmen secures a threat">
+                    </a>
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/4801187606/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/4099/4801187606_e14235d3d5_k.jpg" alt="Eye Art">
+                    </a>
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/4800554063/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/4082/4800554063_862c46f5f4_c.jpg" alt="Airmen secure the perimeter">
+                    </a>
+                </div>
+                
+                <!-- Fourth Row -->
+                <div class="social-row">
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/4870060634/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/4118/4870060634_1b5e50a944_c.jpg" alt="Eye Art">
+                    </a>
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/4801125178/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/4119/4801125178_241eabfc87_h.jpg" alt="Eye Art">
+                    </a>
+                    <a href="https://www.flickr.com/photos/as-seen-by-brea/5299996940/" class="social-icon" target="_blank">
+                        <img src="https://staging-jubilee.flickr.com/5289/5299996940_93e17e1a46_k.jpg" alt="C130J prepares for take off">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Latest Projects -->
+            <div class="about-latest-projects">
+                <h3 class="projects-title">Latest projects</h3>
+                <div class="about-project-list">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page View Counter -->
+    <div class="page-counter" id="pageCounter">
+        Views: <span id="viewCount">0</span>
+    </div>
+
+    <script src="about-script.js"></script>
+</body>
+</html>
