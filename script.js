@@ -223,8 +223,8 @@ document.querySelector('.hero-button')?.addEventListener('click', function() {
 // Navigation function for project cards
 function navigateToProject(projectName) {
     // Handle special cases for dedicated pages
-    if (projectName === 'what-if' || projectName === 'what if...') {
-        window.location.href = 'what-if.html';
+    if (projectName === 'imagine' || projectName === 'imagine...') {
+        window.location.href = 'imagine.html';
     } else {
         // Create a simple project page URL
         window.location.href = `project.html?project=${projectName}`;
