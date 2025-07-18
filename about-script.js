@@ -339,7 +339,7 @@ new Vue({
             tracks: [
                 {
                     name: "Meditation Music",
-                    artist: "Brea Miller",
+                    composer: "Brea Miller",
                     cover: "https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=400",
                     source: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
                     url: "https://www.youtube.com/watch?v=example",
