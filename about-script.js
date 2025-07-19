@@ -338,20 +338,20 @@ new Vue({
             isTimerPlaying: false,
             tracks: [
                 {
-                    name: "First Light Stroll",
-                    artist: "Brea Miller",
-                    cover: "https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=400",
-                    source: "https://drive.google.com/file/d/18Ew-blZRKC2G71gWAKKRGA1y_FvJtucu/preview",
-                    url: "https://www.youtube.com/watch?v=example1"
-                    favorited: true
+                    name: "Digital Art",
+                    artist: "Future Vision",
+                    cover: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400",
+                    source: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
+                    url: "https://www.youtube.com/watch?v=example3",
+                    favorited: false
                 },
                 {
-                    name: "Creative Process",
-                    artist: "Brea Miller",
-                    cover: "https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=400",
+                    name: "Digital Art",
+                    artist: "Future Vision",
+                    cover: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400",
                     source: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
-                    url: "https://www.youtube.com/watch?v=example2",
-                    favorited: true
+                    url: "https://www.youtube.com/watch?v=example3",
+                    favorited: false
                 },
                 {
                     name: "Digital Art",
