@@ -342,7 +342,7 @@ new Vue({
                     artist: "Brea Miller",
                     cover: "https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=400",
                     source: "https://drive.google.com/file/d/18Ew-blZRKC2G71gWAKKRGA1y_FvJtucu/preview",
-                    url: "https://youtube.googleapis.com/iframe_api"
+                    url: "https://youtube.googleapis.com/"
                     favorited: true
                 },
                 {
