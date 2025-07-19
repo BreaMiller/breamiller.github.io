@@ -338,10 +338,10 @@ new Vue({
             isTimerPlaying: false,
             tracks: [
                 {
-                    name: "First Ligh Stroll",
+                    name: "First Light Stroll",
                     artist: "Brea Miller",
                     cover: "https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=400",
-                    source: "https://jmp.sh/s/faFm6jpRVNik58GDYHTw",
+                    source: "https://jmp.sh/GF8dVF1n",
                     url: "https://www.youtube.com/watch?v=example",
                     favorited: true
                 },
