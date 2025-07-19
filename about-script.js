@@ -349,8 +349,8 @@ new Vue({
                     name: "Creative Process",
                     artist: "Brea Miller",
                     cover: "https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=400",
-                    source: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
-                    url: "https://www.youtube.com/watch?v=example2",
+                    source: "https://drive.google.com/file/d/18Ew-blZRKC2G71gWAKKRGA1y_FvJtucu/preview",
+                    url: "https://www.youtube.com",
                     favorited: true
                 },
                 {
