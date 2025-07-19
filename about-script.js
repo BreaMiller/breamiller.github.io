@@ -341,7 +341,7 @@ new Vue({
                     name: "First Light Stroll",
                     artist: "Brea Miller",
                     cover: "https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=400",
-                    source: "https://jumpshare.com/v/faFm6jpRVNik58GDYHTw?b=OPltCMRG59oYl1m9smMn",
+                    source: "https://audio.com/brea-miller/audio/first-light-stroll",
                     url: "https://www.youtube.com/watch?v=example",
                     favorited: true
                 },
