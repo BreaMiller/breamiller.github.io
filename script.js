@@ -220,6 +220,11 @@ document.querySelector('.hero-button')?.addEventListener('click', function() {
     window.location.href = 'about.html';
 });
 
+// Back Home button interaction
+document.querySelector('.back-home-button')?.addEventListener('click', function() {
+    window.location.href = 'index.html';
+});
+
 // Navigation function for project cards
 function navigateToProject(projectName) {
     // Handle special cases for dedicated pages
