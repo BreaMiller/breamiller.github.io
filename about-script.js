@@ -45,16 +45,16 @@ const projectsData = [
         image: "https://i.imgur.com/ErEqAbd.png"
     },
     {
-        name: "Digital Portraits", 
-        description: "Style transfer experiments",
-        slug: "digital-portraits",
+        name: "Love Birds", 
+        description: "AI Decor",
+        slug: "lov-birds",
         color: "blue",
         image: "https://i.imgur.com/uWiCWju.jpeg"
     },
     {
-        name: "Cyberpunk Future",
-        description: "Futuristic AI concepts", 
-        slug: "cyberpunk-x-future",
+        name: "Iridescence",
+        description: "AI Couture", 
+        slug: "iridescence",
         color: "purple",
         image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
