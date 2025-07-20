@@ -56,7 +56,7 @@ const projectsData = [
         description: "AI Couture", 
         slug: "iridescence",
         color: "purple",
-        image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "https://i.imgur.com/GxTG4gk.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
         name: "Motion Graphics",
