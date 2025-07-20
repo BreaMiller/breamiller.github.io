@@ -38,9 +38,9 @@ document.querySelectorAll('.profile-card, .hello-section, .location-card, .visua
 // Dynamic project data - pulled from home page cards
 const projectsData = [
     {
-        name: "Neural Dreams",
+        name: "Pneuma Collection",
         description: "AI-generated artwork series",
-        slug: "neural-dreams",
+        slug: "pneuma",
         color: "green",
         image: "https://i.imgur.com/ErEqAbd.png"
     },
