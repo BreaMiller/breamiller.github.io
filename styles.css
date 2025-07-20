@@ -176,6 +176,30 @@ body::before {
     margin: 0 auto;
 }
 
+.back-home-button {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 18px 18px;
+    border-radius: 20px;
+    width: 140px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+    position: relative;
+    overflow: hidden;
+    animation: outlineGlow 3s ease-in-out infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 @keyframes outlineGlow {
     0%, 100% {
         box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
