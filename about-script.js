@@ -338,9 +338,9 @@ new Vue({
             isTimerPlaying: false,
             tracks: [
                 {
-                    name: "Digital Art",
-                    artist: "Future Vision",
-                    cover: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400",
+                    name: "As It Was",
+                    artist: "Harry Styles",
+                    cover: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/18bc2436-740b-44c4-9dd8-fd7be51a07ad?auto=compress&cs=tinysrgb&w=400",
                     source: "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Harry-Styles-As-It-Was.mp3",
                     url: "https://www.youtube.com/watch?v=example3",
                     favorited: false
