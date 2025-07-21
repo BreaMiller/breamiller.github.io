@@ -348,7 +348,7 @@ new Vue({
                 {
                     name: "Digital Art",
                     artist: "Future Vision",
-                    cover: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400",
+                    cover: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/4c5c1727-8b32-48c1-91de-b0496ccf10f6?auto=compress&cs=tinysrgb&w=400",
                     source: "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Dua-Lipa-Physical.mp3",
                     url: "https://www.youtube.com/watch?v=example3",
                     favorited: false
