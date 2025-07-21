@@ -330,7 +330,7 @@ body::before {
 /* Responsive Design for Horizontal Cards */
 @media (max-width: 768px) {
     .bento-horizontal {
-        height: 400px;
+        height: 200px;
     }
     
     .bento-horizontal .project-header .project-title {
