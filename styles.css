@@ -338,9 +338,9 @@ body::before {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 240px) {
     .bento-horizontal {
-        height: 300px;
+        height: 150px;
     }
     
     .bento-horizontal .project-header .project-title {
