@@ -349,7 +349,7 @@ new Vue({
                     name: "Digital Art",
                     artist: "Future Vision",
                     cover: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400",
-                    source: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
+                    source: "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Dua-Lipa-Physical.mp3",
                     url: "https://www.youtube.com/watch?v=example3",
                     favorited: false
                 },
