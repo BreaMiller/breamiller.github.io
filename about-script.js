@@ -354,8 +354,8 @@ new Vue({
                     favorited: false
                 },
                 {
-                    name: "Digital Art",
-                    artist: "Future Vision",
+                    name: "Seni Dert Etmeler",
+                    artist: "Madrigal",
                     cover: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400",
                     source: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
                     url: "https://www.youtube.com/watch?v=example3",
