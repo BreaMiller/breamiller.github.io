@@ -346,8 +346,8 @@ new Vue({
                     favorited: false
                 },
                 {
-                    name: "Digital Art",
-                    artist: "Future Vision",
+                    name: "Physical",
+                    artist: "Dua Lipa",
                     cover: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/4c5c1727-8b32-48c1-91de-b0496ccf10f6?auto=compress&cs=tinysrgb&w=400",
                     source: "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Dua-Lipa-Physical.mp3",
                     url: "https://www.youtube.com/watch?v=example3",
