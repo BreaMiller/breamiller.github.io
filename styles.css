@@ -328,13 +328,13 @@ body::before {
 }
 
 /* Responsive Design for Horizontal Cards */
-@media (max-width: 365px) {
+@media (max-width: 165px) {
     .bento-horizontal {
-        height: 200px;
+        height: 100px;
     }
     
     .bento-horizontal .project-header .project-title {
-        font-size: 1.0rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -344,7 +344,7 @@ body::before {
     }
     
     .bento-horizontal .project-header .project-title {
-        font-size: 2.0rem;
+        font-size: 1.0rem;
     }
     
     .bento-horizontal .project-header .project-label {
