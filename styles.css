@@ -328,7 +328,7 @@ body::before {
 }
 
 /* Responsive Design for Horizontal Cards */
-@media (max-width: 165px) {
+@media (max-width: 50%) {
     .bento-horizontal {
         height: 100px;
     }
