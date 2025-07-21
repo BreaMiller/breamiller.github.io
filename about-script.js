@@ -356,9 +356,9 @@ new Vue({
                 {
                     name: "Seni Dert Etmeler",
                     artist: "Madrigal",
-                    cover: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=400",
-                    source: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
-                    url: "https://www.youtube.com/watch?v=example3",
+                    cover: "https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/abaa23bd-8c93-4219-a3ef-0d0cb6f12566?auto=compress&cs=tinysrgb&w=400",
+                    source: "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Madrigal-Seni-Dert-Etmeler.mp3",
+                    url: "https://www.youtube.com/watch?v=LgsaD-vNJ9M",
                     favorited: false
                 }
             ],
