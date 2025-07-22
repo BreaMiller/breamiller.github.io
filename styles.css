@@ -1178,7 +1178,7 @@ body::before {
     color: #ffffff;
     line-height: 1.4;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .imagine-card {
