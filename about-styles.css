@@ -52,7 +52,7 @@ body::before {
     font-size: 18px;
 }
 
-.back-button:hover {
+.top-back-button:hover {
     background: rgba(128, 128, 128, 1);
     transform: scale(1.1);
 }
