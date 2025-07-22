@@ -456,6 +456,7 @@ body::before {
 
 .project-info {
     margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .project-description {
