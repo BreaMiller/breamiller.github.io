@@ -894,7 +894,7 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .back-button {
+    .top-back-button {
         top: 20px;
         left: 20px;
         width: 45px;
