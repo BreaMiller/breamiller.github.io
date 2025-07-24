@@ -70,7 +70,7 @@ const projectsData = [
         description: "Kids Reading App",
         slug: "imagine",
         color: "teal",
-        image: "https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=600"
+        image: "https://i.imgur.com/fGq1EDQ.png?auto=compress&cs=tinysrgb&w=600"
     },
     {
         name: "GeneProof",
