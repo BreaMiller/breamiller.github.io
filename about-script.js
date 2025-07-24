@@ -77,7 +77,7 @@ const projectsData = [
         description: "Health Tracking App",
         slug: "geneproof",
         color: "gray",
-        image: "https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://i.imgur.com/GyRDHxC.gif?auto=compress&cs=tinysrgb&w=800"
     }
 ];
 
