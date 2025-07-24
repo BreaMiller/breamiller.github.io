@@ -63,7 +63,7 @@ const projectsData = [
         description: "Where to Watch",
         slug: "buku", 
         color: "pink",
-        image: "https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=800"
+        image: "https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=800"
     },
     {
         name: "Knack",
