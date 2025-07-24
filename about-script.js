@@ -129,6 +129,9 @@ function navigateToProject(projectSlug) {
     if (projectSlug === 'iamgine' || projectSlug === 'imagine...') {
         window.location.href = 'imagine.html';
     } else {
+         // About page URL
+        window.location.href = `about.html;
+    } else {
         // Create a simple project page URL
         window.location.href = `project.html?project=${projectSlug}`;
     }
