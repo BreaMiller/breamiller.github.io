@@ -62,14 +62,14 @@ const projectsData = [
         name: "Buku TV",
         description: "Where to Watch",
         slug: "buku", 
-        color: "pink",
+        color: "teal",
         image: "https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=800"
     },
     {
         name: "Knack",
         description: "Kids Reading App",
         slug: "imagine",
-        color: "teal",
+        color: "pink",
         image: "https://i.imgur.com/fGq1EDQ.png?auto=compress&cs=tinysrgb&w=600"
     },
     {
