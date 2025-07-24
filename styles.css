@@ -1249,13 +1249,7 @@ body::before {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
 }
-@media (max-width: 768px) {
-    .top-back-button {
-        top: 20px;
-        left: 20px;
-        width: 45px;
-        height: 45px;
-    }
+
 .top-back-arrow {
     font-size: 18px;
     transition: transform 0.3s ease;
