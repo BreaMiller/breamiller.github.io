@@ -893,13 +893,9 @@ body::before {
     }
 }
 
-@media (max-width: 768px) {
-    .top-back-button {
-        top: 20px;
-        left: 20px;
-        width: 45px;
-        height: 45px;
-    }
+.top-back-button:hover {
+    background: rgba(128, 128, 128, 1);
+    transform: scale(1.1);
     
     .about-main-container {
         padding: 80px 24px 80px;
