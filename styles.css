@@ -1253,10 +1253,6 @@ body::before {
 .top-back-button:hover {
     background: rgba(128, 128, 128, 1);
     transform: scale(1.1);
-    
-    .about-main-container {
-        padding: 80px 24px 80px;
-        gap: 32px;
 }
 
 .top-back-arrow {
