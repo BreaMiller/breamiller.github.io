@@ -59,23 +59,23 @@ const projectsData = [
         image: "https://i.imgur.com/GxTG4gk.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
-        name: "Motion Graphics",
-        description: "AI video generation",
-        slug: "motion-graphics", 
+        name: "Buku TV",
+        description: "Where to Watch",
+        slug: "buku", 
         color: "pink",
         image: "https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
-        name: "Imagine...",
-        description: "Creative AI experiments",
+        name: "Knack",
+        description: "Kids Reading App",
         slug: "imagine",
         color: "teal",
         image: "https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=600"
     },
     {
-        name: "Abstract Visions",
-        description: "Digital art exploration",
-        slug: "abstract-visions",
+        name: "GeneProof",
+        description: "Health Tracking App",
+        slug: "geneproof",
         color: "gray",
         image: "https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
