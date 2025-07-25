@@ -443,5 +443,41 @@ function animateCounterTo(element, finalValue) {
 
 document.addEventListener('DOMContentLoaded', initializePageCounter);
 </script>
+
+  <script>
+function initializePageCounter() {
+    const countElement = document.getElementById('viewCount');
+    
+    // Using CountAPI - completely free and anonymous
+    const counterURL = 'https://api.countapi.xyz/hit/breamiller-portfolio/page-views';
+    
+    fetch(counterURL)
+        .then(response => response.json())
+        .then(data => {
+            animateCounterTo(countElement, data.value);
+        })
+        .catch(error => {
+            console.error('Counter API error:', error);
+            countElement.textContent = '1,247'; // Fallback number
+        });
+}
+
+function animateCounterTo(element, finalValue) {
+    let currentValue = 0;
+    const increment = Math.ceil(finalValue / 30);
+    
+    const timer = setInterval(() => {
+        currentValue += increment;
+        if (currentValue >= finalValue) {
+            currentValue = finalValue;
+            clearInterval(timer);
+        }
+        element.textContent = currentValue.toLocaleString();
+    }, 50);
+}
+
+document.addEventListener('DOMContentLoaded', initializePageCounter);
+</script>
+  
 </body>
 </html>
