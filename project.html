@@ -3,86 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagine... - Brea Miller</title>
+    <title>Project Details - Brea Miller</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="top-back-button" onclick="window.location.href='index'">
+   <button class="top-back-button" onclick="window.location.href='index.html'">
        <span class="back-arrow">←</span>
     </button>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <h1 class="hero-title">Imagine...</h1>
+            <h1 class="hero-title" id="project-title">Project Details</h1>
             <p class="hero-subtitle">
-                <span class="accent-text">✐ᝰ could be,</span> passion projects that <span class="accent-text">reform</span> our living experience.
+                <span class="accent-text">✐ᝰ could be</span> passion projects for a <span class="accent-text">reformed</span> living exerience.
             </p>
-            <div class="imagine-subtitle">
-                <span class="stat-label">* ALL IMAGES WERE CREATED USING AI . . .</span>
-            </div>
         </div>
     </section>
 
     <!-- Project Content Section -->
     <section class="work section-spacing">
         <div class="container">
-            <!-- First Card -->
-            <div class="imagine-section">
-                <div class="imagine-text">
-                    <h3>Spotify had exclusive vinyl record clubs?</h3>
-                </div>
-                <div class="imagine-card large">
-                    <img src="https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Spotify Vinyl Record Club">
-                </div>
-            </div>
-
-            <!-- Second Row - Two Cards -->
-            <div class="imagine-section">
-                <div class="imagine-row">
-                    <div class="imagine-item">
-                        <div class="imagine-text">
-                            <h3>We generated electricity in the places we spend the most of our time.</h3>
-                        </div>
-                        <div class="imagine-card medium">
-                            <img src="https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tesla Horse-drawn Carriages">
-                        </div>
+            <div class="project-details">
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project Image 1">
                     </div>
-                    
-                    <div class="imagine-item">
-                        <div class="imagine-text">
-                            <h3>X had a service for sending 'tweets' as physical mail between users?</h3>
-                        </div>
-                        <div class="imagine-card medium">
-                            <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=600" alt="X Physical Mail Service">
-                        </div>
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project Image 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project Image 3">
                     </div>
                 </div>
-            </div>
-
-            <!-- Third Row - Two Cards -->
-            <div class="imagine-section">
-                <div class="imagine-row">
-                    <div class="imagine-item">
-                        <div class="imagine-text">
-                            <h3>Google made physical libraries where people search through articles and books manually?</h3>
-                        </div>
-                        <div class="imagine-card medium">
-                            <img src="https://images.pexels.com/photos/8566464/pexels-photo-8566464.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Google Physical Libraries">
-                        </div>
-                    </div>
-                    
-                    <div class="imagine-item">
-                        <div class="imagine-text">
-                            <h3>Snapchat made disposable cameras that print photos instantly, with filters applied directly to the print?</h3>
-                        </div>
-                        <div class="imagine-card medium">
-                            <img src="https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Snapchat Disposable Cameras">
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="project-info">
                     <h2 class="section-title">Project Overview</h2>
                     <p class="project-description">
@@ -91,11 +47,10 @@
                     </p>
                 </div>
             </div>
-
-            <!-- Back Button -->
-        <button class="back-home-button" onclick="window.location.href='index'">BACK TO HOME</button>
+            <button class="back-home-button" onclick="window.location.href='index.html'">BACK TO HOME</button>
         </div>
     </section>
+
 
     <!-- Footer -->
     <footer class="footer section-spacing">
@@ -106,9 +61,9 @@
                     <span class="footer-text">Brea Miller © 2026</span>
                 </div>
                 <div class="footer-links">
-                    <a href="index#work" class="footer-link">Work</a>
-                    <a href="about" class="footer-link">About</a>
-                    <a href="index#contact" class="footer-link">Contact</a>
+                    <a href="index.html#work" class="footer-link">Work</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="index.html#contact" class="footer-link">Contact</a>
                 </div>
             </div>
         </div>
@@ -119,64 +74,15 @@
         Views: <span id="viewCount">0</span>
     </div>
 
-  <script>
-function initializePageCounter() {
-    const countElement = document.getElementById('viewCount');
-    const storageKey = 'breamiller-portfolio-views';
-    const sessionKey = 'current-session-counted';
-    
-    try {
-        // Get current count
-        let totalViews = parseInt(localStorage.getItem(storageKey)) || 1250; // Start with reasonable number
+    <script>
+        // Get project name from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectName = urlParams.get('project');
         
-        // Check if we've counted this session already
-        const sessionCounted = sessionStorage.getItem(sessionKey);
-        
-        if (!sessionCounted) {
-            // New session - increment counter
-            totalViews += 1;
-            localStorage.setItem(storageKey, totalViews.toString());
-            sessionStorage.setItem(sessionKey, 'true');
-            
-            // Create backup in case localStorage gets cleared
-            try {
-                const expireDate = new Date();
-                expireDate.setFullYear(expireDate.getFullYear() + 1);
-                document.cookie = `portfolio_views=${totalViews}; expires=${expireDate.toUTCString()}; path=/`;
-            } catch (e) {
-                // Cookies disabled, but that's okay
-            }
+        if (projectName) {
+            document.getElementById('project-title').textContent = projectName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
         }
-        
-        // Animate the counter for visual appeal
-        animateCounter(countElement, totalViews);
-        
-    } catch (error) {
-        console.error('Counter error:', error);
-        // Fallback to a static number
-        countElement.textContent = '1,285';
-    }
-}
-
-function animateCounter(element, finalValue) {
-    let currentValue = Math.max(1, finalValue - 30);
-    const increment = Math.max(1, Math.ceil((finalValue - currentValue) / 25));
-    
-    const timer = setInterval(() => {
-        currentValue += increment;
-        if (currentValue >= finalValue) {
-            currentValue = finalValue;
-            clearInterval(timer);
-        }
-        
-        // Add commas for large numbers
-        element.textContent = currentValue.toLocaleString();
-    }, 40);
-}
-
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', initializePageCounter);
-</script>
-  
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
