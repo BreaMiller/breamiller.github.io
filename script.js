@@ -225,9 +225,6 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
     window.location.href = 'index.html';
 });
 
-
-}
-
 // Add click handlers to existing cards
 document.addEventListener('DOMContentLoaded', function() {
     // Add click handlers to cards that don't already have onclick
