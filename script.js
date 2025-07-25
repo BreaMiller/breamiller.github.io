@@ -225,12 +225,14 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
     window.location.href = 'index.html';
 });
 
-function navigateToProjectBySlug(element) {
-    const projectSlug = element.getAttribute('data-project');
-    if (projectSlug === 'imagine') {
+// Navigation function for project cards
+function navigateToProject(projectName) {
+    // Handle special cases for dedicated pages
+    if (projectName === 'imagine' || projectName === 'imagine...') {
         window.location.href = 'imagine.html';
     } else {
-        window.location.href = `project.html?project=${projectSlug}`;
+        // Create a simple project page URL
+        window.location.href = `project.html?project=${projectName}`;
     }
 }
 
