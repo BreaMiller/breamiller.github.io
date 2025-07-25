@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const viewCountElement = document.getElementById('viewCount');
     if (viewCountElement) {
         // Get current page name
-        const pageName = window.location.pathname.split('/').pop() || 'about.html';
+        const pageName = window.location.pathname.split('/').pop() || 'about';
         const storageKey = `pageViews_${pageName}`;
         
         // Get current view count from localStorage
