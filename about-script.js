@@ -214,7 +214,7 @@ window.addEventListener('scroll', function() {
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         // Close any modals or return to main page
-        window.location.href = 'index.html';
+        window.location.href = 'index';
     }
 });
 
