@@ -432,8 +432,8 @@ body::before {
 .pop-off-container .project-card img.pop-out-image {
     position: absolute;
     z-index: 4;
-    width: 90%;
-    height: 130%;
+    width: 100%;
+    height: 140%;
     top: -10%;
     left: 0;
     object-fit: cover;
