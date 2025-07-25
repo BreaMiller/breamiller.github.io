@@ -27,8 +27,8 @@
                     <span class="stat-label">Images Generated</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">1.5+</span>
-                    <span class="stat-label">Hours of AI Videos</span>
+                    <span class="stat-number">1+</span>
+                    <span class="stat-label">Hour of AI Videos</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">30+</span>
@@ -41,16 +41,16 @@
                 <div class="logo-row">
                     <div class="logo-item">ADOBE</div>
                     <div class="logo-item">CURSOR</div>
-                    <div class="logo-item">WORDPRESS</div>
+                    <div class="logo-item">KLINE</div>
                     <div class="logo-item">LUMA</div>
                     <div class="logo-item">MIDJOURNEY</div>
                 </div>
                 <div class="logo-row">
                     <div class="logo-item">HUBSPOT</div>
-                    <div class="logo-item">FIGMA</div>
+                    <div class="logo-item">RETOOL</div>
                     <div class="logo-item">CUSTOM APIs</div>
                     <div class="logo-item">FLICKR</div>
-                    <div class="logo-item">CLAUDE</div>
+                    <div class="logo-item">ANTHROPIC</div>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
                 
                 <div class="bento-item bento-uniform-small">
                     <div class="project-header">
-                        <div class="project-label">AI DECOR</div>
+                        <div class="project-label">AI HOME</div>
                         <h3 class="project-title">Love Birds</h3>
                     </div>
                     <div class="project-card">
@@ -149,8 +149,8 @@
                     <div class="project-header">
                         <div class="project-label">PASSION PROJECT</div>
                         <h3 class="project-title">Imagine...</h3>
-                </div>
-                <div class="project-card" onclick="navigateToProject('imagine')">
+                    </div>
+                    <div class="project-card">
                         <img src="https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Imagine">
                     </div>
                 </div>
@@ -325,7 +325,7 @@
         <div class="container">
             <div class="media-card">
                 <div class="media-header">
-                    <div class="media-label">AI PODCAST (COMING SOON)</div>
+                    <div class="media-label">AI PODCAST</div>
                     <div class="media-brand">🎙️</div>
                 </div>
                 <h2 class="media-title">Innovative Empath</h2>
@@ -369,7 +369,7 @@
                         <div class="contact-icon">📧</div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>brea.m.miller@gmail.com</p>
+                            <p>hello@breamiller.com</p>
                         </div>
                     </div>
                     <div class="contact-method">
@@ -395,7 +395,7 @@
                 </div>
                 <div class="footer-links">
                     <a href="#work" class="footer-link">Work</a>
-                    <a href="about" class="footer-link">About</a>
+                    <a href="about.html" class="footer-link">About</a>
                     <a href="#contact" class="footer-link">Contact</a>
                 </div>
             </div>
@@ -406,102 +406,7 @@
     <div class="page-counter" id="pageCounter">
         Views: <span id="viewCount">0</span>
     </div>
-  
+
     <script src="script.js"></script>
-
-<script>
-function initializePageCounter() {
-    const countElement = document.getElementById('viewCount');
-    
-    // Using CountAPI - completely free and anonymous
-    const counterURL = 'https://api.countapi.xyz/hit/breamiller-portfolio/page-views';
-    
-    fetch(counterURL)
-        .then(response => response.json())
-        .then(data => {
-            animateCounterTo(countElement, data.value);
-        })
-        .catch(error => {
-            console.error('Counter API error:', error);
-            countElement.textContent = '1,247'; // Fallback number
-        });
-}
-
-function animateCounterTo(element, finalValue) {
-    let currentValue = 0;
-    const increment = Math.ceil(finalValue / 30);
-    
-    const timer = setInterval(() => {
-        currentValue += increment;
-        if (currentValue >= finalValue) {
-            currentValue = finalValue;
-            clearInterval(timer);
-        }
-        element.textContent = currentValue.toLocaleString();
-    }, 50);
-}
-
-document.addEventListener('DOMContentLoaded', initializePageCounter);
-</script>
-
-  <script>
-function initializePageCounter() {
-    const countElement = document.getElementById('viewCount');
-    const storageKey = 'breamiller-portfolio-views';
-    const sessionKey = 'current-session-counted';
-    
-    try {
-        // Get current count
-        let totalViews = parseInt(localStorage.getItem(storageKey)) || 1250; // Start with reasonable number
-        
-        // Check if we've counted this session already
-        const sessionCounted = sessionStorage.getItem(sessionKey);
-        
-        if (!sessionCounted) {
-            // New session - increment counter
-            totalViews += 1;
-            localStorage.setItem(storageKey, totalViews.toString());
-            sessionStorage.setItem(sessionKey, 'true');
-            
-            // Create backup in case localStorage gets cleared
-            try {
-                const expireDate = new Date();
-                expireDate.setFullYear(expireDate.getFullYear() + 1);
-                document.cookie = `portfolio_views=${totalViews}; expires=${expireDate.toUTCString()}; path=/`;
-            } catch (e) {
-                // Cookies disabled, but that's okay
-            }
-        }
-        
-        // Animate the counter for visual appeal
-        animateCounter(countElement, totalViews);
-        
-    } catch (error) {
-        console.error('Counter error:', error);
-        // Fallback to a static number
-        countElement.textContent = '1,285';
-    }
-}
-
-function animateCounter(element, finalValue) {
-    let currentValue = Math.max(1, finalValue - 30);
-    const increment = Math.max(1, Math.ceil((finalValue - currentValue) / 25));
-    
-    const timer = setInterval(() => {
-        currentValue += increment;
-        if (currentValue >= finalValue) {
-            currentValue = finalValue;
-            clearInterval(timer);
-        }
-        
-        // Add commas for large numbers
-        element.textContent = currentValue.toLocaleString();
-    }, 40);
-}
-
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', initializePageCounter);
-</script>
-  
 </body>
 </html>
