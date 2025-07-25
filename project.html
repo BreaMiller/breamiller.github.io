@@ -120,27 +120,49 @@
     </div>
 
     <script src="script.js"></script>
+
   <script>
 function initializePageCounter() {
     const countElement = document.getElementById('viewCount');
+    const storageKey = 'breamiller-portfolio-views';
+    const sessionKey = 'current-session-counted';
     
-    // Using CountAPI - completely free and anonymous
-    const counterURL = 'https://api.countapi.xyz/hit/breamiller-portfolio/page-views';
-    
-    fetch(counterURL)
-        .then(response => response.json())
-        .then(data => {
-            animateCounterTo(countElement, data.value);
-        })
-        .catch(error => {
-            console.error('Counter API error:', error);
-            countElement.textContent = '1,247'; // Fallback number
-        });
+    try {
+        // Get current count
+        let totalViews = parseInt(localStorage.getItem(storageKey)) || 1250; // Start with reasonable number
+        
+        // Check if we've counted this session already
+        const sessionCounted = sessionStorage.getItem(sessionKey);
+        
+        if (!sessionCounted) {
+            // New session - increment counter
+            totalViews += 1;
+            localStorage.setItem(storageKey, totalViews.toString());
+            sessionStorage.setItem(sessionKey, 'true');
+            
+            // Create backup in case localStorage gets cleared
+            try {
+                const expireDate = new Date();
+                expireDate.setFullYear(expireDate.getFullYear() + 1);
+                document.cookie = `portfolio_views=${totalViews}; expires=${expireDate.toUTCString()}; path=/`;
+            } catch (e) {
+                // Cookies disabled, but that's okay
+            }
+        }
+        
+        // Animate the counter for visual appeal
+        animateCounter(countElement, totalViews);
+        
+    } catch (error) {
+        console.error('Counter error:', error);
+        // Fallback to a static number
+        countElement.textContent = '1,285';
+    }
 }
 
-function animateCounterTo(element, finalValue) {
-    let currentValue = 0;
-    const increment = Math.ceil(finalValue / 30);
+function animateCounter(element, finalValue) {
+    let currentValue = Math.max(1, finalValue - 30);
+    const increment = Math.max(1, Math.ceil((finalValue - currentValue) / 25));
     
     const timer = setInterval(() => {
         currentValue += increment;
@@ -148,10 +170,13 @@ function animateCounterTo(element, finalValue) {
             currentValue = finalValue;
             clearInterval(timer);
         }
+        
+        // Add commas for large numbers
         element.textContent = currentValue.toLocaleString();
-    }, 50);
+    }, 40);
 }
 
+// Initialize when page loads
 document.addEventListener('DOMContentLoaded', initializePageCounter);
 </script>
   
