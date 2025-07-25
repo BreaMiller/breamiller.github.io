@@ -222,7 +222,7 @@ document.querySelector('.hero-button')?.addEventListener('click', function() {
 
 // Back Home button interaction
 document.querySelector('.back-home-button')?.addEventListener('click', function() {
-    window.location.href = 'index.html';
+    window.location.href = 'index';
 });
 
 // Navigation function for projects
