@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Hero button interaction
 document.querySelector('.hero-button')?.addEventListener('click', function() {
-    window.location.href = 'about.html';
+    window.location.href = 'about';
 });
 
 // Back Home button interaction
