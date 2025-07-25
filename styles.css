@@ -433,7 +433,7 @@ body::before {
     position: absolute;
     z-index: 4;
     width: 90%;
-    height: 110%;
+    height: 120%;
     top: -10%;
     left: 0;
     object-fit: cover;
