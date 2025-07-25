@@ -221,7 +221,7 @@ document.addEventListener('keydown', function(e) {
 // Contact button functionality
 document.querySelector('.btn-primary')?.addEventListener('click', function() {
     // Scroll to contact section or open contact modal
-    window.location.href = 'index.html#contact';
+    window.location.href = 'index#contact';
 });
 
 // Resume button functionality
