@@ -123,17 +123,6 @@ function loadLatestProjects() {
     }
 }
 
-// Navigation function for projects
-function navigateToProject(projectSlug) {
-    // Handle special cases for dedicated pages
-    if (projectSlug === 'iamgine' || projectSlug === 'imagine...') {
-        window.location.href = 'imagine.html';
-    } else {
-        // Create a simple project page URL
-        window.location.href = `project.html?project=${projectSlug}`;
-    }
-}
-
 // Enhanced hover effects for project items
 document.querySelectorAll('.project-item').forEach(item => {
     item.addEventListener('mouseenter', function() {
