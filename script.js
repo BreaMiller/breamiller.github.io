@@ -225,6 +225,17 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
     window.location.href = 'index.html';
 });
 
+// Navigation function for projects
+function navigateToProject(projectSlug) {
+    // Handle special cases for dedicated pages
+    if (projectSlug === 'iamgine' || projectSlug === 'imagine...') {
+        window.location.href = 'imagine.html';
+    } else {
+        // Create a simple project page URL
+        window.location.href = `project.html?project=${projectSlug}`;
+    }
+}
+
 // Add click handlers to existing cards
 document.addEventListener('DOMContentLoaded', function() {
     // Add click handlers to cards that don't already have onclick
