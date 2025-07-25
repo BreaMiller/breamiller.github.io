@@ -225,15 +225,7 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
     window.location.href = 'index.html';
 });
 
-// Navigation function for project cards
-function navigateToProject(projectName) {
-    // Handle special cases for dedicated pages
-    if (projectName === 'imagine' || projectName === 'imagine...') {
-        window.location.href = 'imagine.html';
-    } else {
-        // Create a simple project page URL
-        window.location.href = `project.html?project=${projectName}`;
-    }
+
 }
 
 // Add click handlers to existing cards
