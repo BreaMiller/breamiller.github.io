@@ -328,6 +328,4 @@ function throttle(func, limit) {
 // Apply throttling to scroll events
 window.addEventListener('scroll', throttle(function() {
     // Scroll-based animations here
-}, 100))
-
-})
+}, 100));
