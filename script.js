@@ -330,8 +330,4 @@ window.addEventListener('scroll', throttle(function() {
     // Scroll-based animations here
 }, 100));
 
-<div class="page-counter" id="pageCounter">
-    Views: <span id="viewCount">0</span>
-</div>
-
 });
