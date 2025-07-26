@@ -404,69 +404,10 @@
 
     <!-- Page View Counter -->
     <div class="page-counter" id="pageCounter">
-        Views: <span id="viewCount">0</span>
+        Views: <span id="viewCount">1250</span>
     </div>
 
     <script src="script.js"></script>
-
-  <script>
-function initializePageCounter() {
-    const countElement = document.getElementById('viewCount');
-    const storageKey = 'breamiller-portfolio-views';
-    const sessionKey = 'current-session-counted';
-    
-    try {
-        // Get current count
-        let totalViews = parseInt(localStorage.getItem(storageKey)) || 1250; // Start with reasonable number
-        
-        // Check if we've counted this session already
-        const sessionCounted = sessionStorage.getItem(sessionKey);
-        
-        if (!sessionCounted) {
-            // New session - increment counter
-            totalViews += 1;
-            localStorage.setItem(storageKey, totalViews.toString());
-            sessionStorage.setItem(sessionKey, 'true');
-            
-            // Create backup in case localStorage gets cleared
-            try {
-                const expireDate = new Date();
-                expireDate.setFullYear(expireDate.getFullYear() + 1);
-                document.cookie = `portfolio_views=${totalViews}; expires=${expireDate.toUTCString()}; path=/`;
-            } catch (e) {
-                // Cookies disabled, but that's okay
-            }
-        }
-        
-        // Animate the counter for visual appeal
-        animateCounter(countElement, totalViews);
-        
-    } catch (error) {
-        console.error('Counter error:', error);
-        // Fallback to a static number
-        countElement.textContent = '1,285';
-    }
-}
-
-function animateCounter(element, finalValue) {
-    let currentValue = Math.max(1, finalValue - 30);
-    const increment = Math.max(1, Math.ceil((finalValue - currentValue) / 25));
-    
-    const timer = setInterval(() => {
-        currentValue += increment;
-        if (currentValue >= finalValue) {
-            currentValue = finalValue;
-            clearInterval(timer);
-        }
-        
-        // Add commas for large numbers
-        element.textContent = currentValue.toLocaleString();
-    }, 40);
-}
-
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', initializePageCounter);
-</script>
   
 </body>
 </html>
