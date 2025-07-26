@@ -329,4 +329,5 @@ function throttle(func, limit) {
 window.addEventListener('scroll', throttle(function() {
     // Scroll-based animations here
 }, 100));
-});
+
+})
