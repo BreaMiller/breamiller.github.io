@@ -352,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Animate counter
         let currentCount = 0;
-        const increment = Math.ceil(viewCount / 19);
+        const increment = Math.ceil(viewCount / 30);
         const timer = setInterval(() => {
             currentCount += increment;
             if (currentCount >= viewCount) {
