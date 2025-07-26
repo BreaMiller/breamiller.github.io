@@ -330,36 +330,4 @@ window.addEventListener('scroll', throttle(function() {
     // Scroll-based animations here
 }, 100));
 
-// Page View Counter
-document.addEventListener('DOMContentLoaded', function() {
-    const viewCountElement = document.getElementById('viewCount');
-    if (viewCountElement) {
-        // Get current page name
-        const pageName = window.location.pathname.split('/').pop() || 'index';
-        const storageKey = `pageViews_${pageName}`;
-        
-        // Get current view count from localStorage
-        let viewCount = parseInt(localStorage.getItem(storageKey) || '0');
-        
-        // Increment view count
-        viewCount++;
-        
-        // Save updated count
-        localStorage.setItem(storageKey, viewCount.toString());
-        
-        // Display count with animation
-        viewCountElement.textContent = '0';
-        
-        // Animate counter
-        let currentCount = 0;
-        const increment = Math.ceil(viewCount / 30);
-        const timer = setInterval(() => {
-            currentCount += increment;
-            if (currentCount >= viewCount) {
-                currentCount = viewCount;
-                clearInterval(timer);
-            }
-            viewCountElement.textContent = currentCount.toLocaleString();
-        }, 50);
-    }
 });
