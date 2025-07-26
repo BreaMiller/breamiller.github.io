@@ -26,19 +26,60 @@
     <!-- Project Content Section -->
     <section class="work section-spacing">
         <div class="container">
-            <div class="project-details">
-                <div class="project-gallery">
-                    <div class="gallery-item">
-                        <img src="https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project Image 1">
+            <!-- First Card -->
+            <div class="imagine-section">
+                <div class="imagine-text">
+                    <h3>Spotify had exclusive vinyl record clubs?</h3>
+                </div>
+                <div class="imagine-card large">
+                    <img src="https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Spotify Vinyl Record Club">
+                </div>
+            </div>
+
+            <!-- Second Row - Two Cards -->
+            <div class="imagine-section">
+                <div class="imagine-row">
+                    <div class="imagine-item">
+                        <div class="imagine-text">
+                            <h3>We generated electricity in the places we spend the most of our time.</h3>
+                        </div>
+                        <div class="imagine-card medium">
+                            <img src="https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tesla Horse-drawn Carriages">
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project Image 2">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Project Image 3">
+                    
+                    <div class="imagine-item">
+                        <div class="imagine-text">
+                            <h3>X had a service for sending 'tweets' as physical mail between users?</h3>
+                        </div>
+                        <div class="imagine-card medium">
+                            <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=600" alt="X Physical Mail Service">
+                        </div>
                     </div>
                 </div>
-                
+            </div>
+
+            <!-- Third Row - Two Cards -->
+            <div class="imagine-section">
+                <div class="imagine-row">
+                    <div class="imagine-item">
+                        <div class="imagine-text">
+                            <h3>Google made physical libraries where people search through articles and books manually?</h3>
+                        </div>
+                        <div class="imagine-card medium">
+                            <img src="https://images.pexels.com/photos/8566464/pexels-photo-8566464.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Google Physical Libraries">
+                        </div>
+                    </div>
+                    
+                    <div class="imagine-item">
+                        <div class="imagine-text">
+                            <h3>Snapchat made disposable cameras that print photos instantly, with filters applied directly to the print?</h3>
+                        </div>
+                        <div class="imagine-card medium">
+                            <img src="https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Snapchat Disposable Cameras">
+                        </div>
+                    </div>
+                </div>
                 <div class="project-info">
                     <h2 class="section-title">Project Overview</h2>
                     <p class="project-description">
@@ -47,10 +88,11 @@
                     </p>
                 </div>
             </div>
-            <button class="back-home-button" onclick="window.location.href='index.html'">BACK TO HOME</button>
+
+            <!-- Back Button -->
+        <button class="back-home-button" onclick="window.location.href='index.html'">BACK TO HOME</button>
         </div>
     </section>
-
 
     <!-- Footer -->
     <footer class="footer section-spacing">
@@ -68,11 +110,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Page View Counter -->
-    <div class="page-counter" id="pageCounter">
-        Views: <span id="viewCount">0</span>
-    </div>
 
     <script>
         // Get project name from URL parameters
