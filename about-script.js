@@ -39,7 +39,7 @@ document.querySelectorAll('.profile-card, .hello-section, .location-card, .visua
 const projectsData = [
     {
         name: "Pneuma Collection",
-        description: "AI Ready to Wear",
+        description: "AI Ready-to-Wear",
         slug: "pneuma",
         color: "green",
         image: "https://i.imgur.com/ErEqAbd.png"
