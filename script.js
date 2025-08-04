@@ -225,24 +225,15 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
     window.location.href = 'index';
 });
 
-// Updated navigation function for projects
+// Navigation function for projects
 function navigateToProject(projectSlug) {
     // Handle special cases for dedicated pages
-    if (projectSlug === 'imagine' || projectSlug === 'imagine...') {
+    if (projectSlug === 'iamgine' || projectSlug === 'imagine...') {
         window.location.href = 'imagine.html';
-        return;
+    } else {
+        // Create a simple project page URL
+        window.location.href = `project.html?project=${projectSlug}`;
     }
-    
-    // Convert title to slug format
-    const slug = projectSlug.toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '') // Remove special characters
-        .replace(/\s+/g, '-') // Replace spaces with hyphens
-        .replace(/-+/g, '-') // Replace multiple hyphens with single
-        .trim();
-    
-    // Navigate to dynamic project page
-    window.location.href = `project.html?project=${slug}`;
-}
 }
 
 // Add click handlers to existing cards
