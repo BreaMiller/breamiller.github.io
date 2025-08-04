@@ -9,7 +9,7 @@ const projectsData = {
       {
         type: 'single',
         title: 'The Vision Behind Pneuma',
-        text: 'The Pneuma Collection represents a revolutionary approach to ready-to-wear fashion, where every piece is crafted through the lens of artificial intelligence.',
+        text: 'The Pneuma Collection represents a revolutionary approach to ready-to-wear fashion, every piece is tailored to the individual.',
         image: 'https://i.imgur.com/ErEqAbd.png?auto=compress&cs=tinysrgb&w=600'
       },
       {
