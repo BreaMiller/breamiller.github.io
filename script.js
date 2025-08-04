@@ -227,29 +227,8 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
 
 // Updated navigation function for projects
 function navigateToProject(projectSlug) {
-    // Handle special cases for dedicated pages
-    if (projectSlug === 'imagine' || projectSlug === 'imagine...') {
-        window.location.href = 'imagine.html';
-        return;
-    }
-
-    // Convert title to URL-friendly slug format
-    let slug = projectSlug.toLowerCase(); // Make everything lowercase
-
-    // Remove special characters (keep only letters, numbers, spaces, and hyphens)
-    slug = slug.replace(/[!@#$%^&*()_+=\[\]{};':"\\|,.<>\/?~`]/g, '');
-
-    // Replace all spaces (single or multiple) with hyphens
-    slug = slug.replace(/\s+/g, '-');
-
-    // Replace multiple hyphens with single hyphen
-    slug = slug.replace(/-+/g, '-');
-
-    // Remove hyphens from start and end
-    slug = slug.replace(/^-+|-+$/g, '');
-
     // Navigate to dynamic project page
-    window.location.href = `project.html?project=${slug}`;
+    window.location.href = `project.html?project=${projectSlug}`;
 }
 
 // Add click handlers to existing cards

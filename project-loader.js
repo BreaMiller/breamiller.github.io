@@ -39,6 +39,7 @@ class ProjectLoader {
     renderProject(data) {
         // Update page title
         document.getElementById('page-title').textContent = `${data.title} - Brea Miller`;
+        document.title = `${data.title} - Brea Miller`;
         
         // Update hero section
         document.getElementById('project-label').textContent = data.label;
@@ -70,14 +71,14 @@ class ProjectLoader {
 
     createSingleSection(section) {
         const sectionDiv = document.createElement('div');
-        sectionDiv.className = 'project-section';
+        sectionDiv.className = 'imagine-section';
         
         sectionDiv.innerHTML = `
-            <div class="project-text">
+            <div class="imagine-text">
                 <h3>${section.title}</h3>
                 <p>${section.text}</p>
             </div>
-            <div class="project-card large">
+            <div class="imagine-card large">
                 <img src="${section.image}" alt="${section.title}" loading="lazy">
             </div>
         `;
@@ -87,21 +88,21 @@ class ProjectLoader {
 
     createDoubleSection(section) {
         const sectionDiv = document.createElement('div');
-        sectionDiv.className = 'project-section';
+        sectionDiv.className = 'imagine-section';
         
         const rowDiv = document.createElement('div');
-        rowDiv.className = 'project-row';
+        rowDiv.className = 'imagine-row';
         
         section.items.forEach(item => {
             const itemDiv = document.createElement('div');
-            itemDiv.className = 'project-item';
+            itemDiv.className = 'imagine-item';
             
             itemDiv.innerHTML = `
-                <div class="project-text">
+                <div class="imagine-text">
                     <h3>${item.title}</h3>
                     <p>${item.text}</p>
                 </div>
-                <div class="project-card medium">
+                <div class="imagine-card medium">
                     <img src="${item.image}" alt="${item.title}" loading="lazy">
                 </div>
             `;
@@ -116,11 +117,20 @@ class ProjectLoader {
     hideLoading() {
         this.loadingState.style.display = 'none';
         this.projectContent.style.display = 'block';
+        
+        // Trigger animations
+        setTimeout(() => {
+            const elements = document.querySelectorAll('.imagine-section, .project-hero-image');
+            elements.forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }, 100);
     }
 
     showError() {
         this.loadingState.style.display = 'none';
-        this.errorState.style.display = 'block';
+        this.errorState.style.display = 'flex';
     }
 }
 
