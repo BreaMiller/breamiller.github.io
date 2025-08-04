@@ -226,8 +226,6 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
 });
 
 // Updated navigation function for projects
-function navigateToProject(projectSlug)
-
     // Convert title to URL-friendly slug format
     let slug = projectSlug.toLowerCase(); // Make everything lowercase
 
