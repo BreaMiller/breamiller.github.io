@@ -237,7 +237,7 @@ function navigateToProject(projectSlug) {
     if (projectSlug === 'love-birds' || projectSlug === 'love-birds') {
         window.location.href = 'love-birds.html';
         return;
-    }
+    } 
 
     // Convert title to URL-friendly slug format
     let slug = projectSlug.toLowerCase(); // Make everything lowercase
