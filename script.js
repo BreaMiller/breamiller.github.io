@@ -244,7 +244,6 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
 // Navigate to dynamic project page
     window.location.href = `project.html?project=${slug}`;
 }
-}
 
 // Add click handlers to existing cards
 document.addEventListener('DOMContentLoaded', function() {
