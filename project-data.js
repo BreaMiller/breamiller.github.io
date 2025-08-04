@@ -10,7 +10,7 @@ const projectsData = {
         type: 'single',
         title: 'The Vision Behind Pneuma',
         text: 'What if fashion could breathe life into our digital dreams? The Pneuma Collection represents a revolutionary approach to ready-to-wear fashion, where every piece is crafted through the lens of artificial intelligence.',
-        image: 'https://i.imgur.com/ErEqAbd.png'
+        image: 'https://i.imgur.com/ErEqAbd.png?auto=compress&cs=tinysrgb&w=600'
       },
       {
         type: 'double',
