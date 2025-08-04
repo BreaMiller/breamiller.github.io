@@ -4,7 +4,7 @@ const projectsData = {
     title: 'Pneuma Collection',
     label: 'AI READY-TO-WEAR',
     heroImage: '',
-    description: 'Innovative AI-driven fashion collection showcasing the future of ready-to-wear clothing.',
+    description: 'The future of ready-to-wear fashion: print on demand.',
     sections: [
       {
         type: 'single',
