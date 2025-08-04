@@ -3,7 +3,7 @@ const projectsData = {
   'pneuma-collection': {
     title: 'Pneuma Collection',
     label: 'AI READY-TO-WEAR',
-    heroImage: 'https://i.imgur.com/ErEqAbd.png',
+    heroImage: '',
     description: 'Innovative AI-driven fashion collection showcasing the future of ready-to-wear clothing.',
     sections: [
       {
