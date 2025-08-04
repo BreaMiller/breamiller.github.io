@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details - Brea Miller</title>
+    <title>Imagine... - Brea Miller</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-   <button class="top-back-button" onclick="window.location.href='index.html'">
+    <button class="top-back-button" onclick="window.location.href='index.html'">
        <span class="back-arrow">←</span>
     </button>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <h1 class="hero-title" id="project-title">Project Details</h1>
+            <h1 class="hero-title">Imagine...</h1>
             <p class="hero-subtitle">
-                <span class="accent-text">✐ᝰ could be</span> passion projects for a <span class="accent-text">reformed</span> living exerience.
+                <span class="accent-text">✐ᝰ could be,</span> passion projects that <span class="accent-text">reform</span> the way we interact with the digital world.
             </p>
+            <div class="imagine-subtitle">
+                <span class="stat-label">* ALL IMAGES WERE CREATED USING AI . . .</span>
+            </div>
         </div>
     </section>
 
@@ -27,32 +30,32 @@
     <section class="work section-spacing">
         <div class="container">
             <!-- First Card -->
-            <div class="project-section">
-                <div class="project-text">
+            <div class="imagine-section">
+                <div class="imagine-text">
                     <h3>Spotify had exclusive vinyl record clubs?</h3>
                 </div>
-                <div class="project-card large">
+                <div class="imagine-card large">
                     <img src="https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Spotify Vinyl Record Club">
                 </div>
             </div>
 
             <!-- Second Row - Two Cards -->
-            <div class="project-section">
-                <div class="project-row">
-                    <div class="project-item">
-                        <div class="project-text">
+            <div class="imagine-section">
+                <div class="imagine-row">
+                    <div class="imagine-item">
+                        <div class="imagine-text">
                             <h3>We generated electricity in the places we spend the most of our time.</h3>
                         </div>
-                        <div class="projec-card medium">
+                        <div class="imagine-card medium">
                             <img src="https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tesla Horse-drawn Carriages">
                         </div>
                     </div>
                     
-                    <div class="project-item">
-                        <div class="project-text">
+                    <div class="imagine-item">
+                        <div class="imagine-text">
                             <h3>X had a service for sending 'tweets' as physical mail between users?</h3>
                         </div>
-                        <div class="project-card medium">
+                        <div class="imagine-card medium">
                             <img src="https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=600" alt="X Physical Mail Service">
                         </div>
                     </div>
@@ -60,28 +63,28 @@
             </div>
 
             <!-- Third Row - Two Cards -->
-            <div class="project-section">
-                <div class="project-row">
-                    <div class="project-item">
-                        <div class="project-text">
+            <div class="imagine-section">
+                <div class="imagine-row">
+                    <div class="imagine-item">
+                        <div class="imagine-text">
                             <h3>Google made physical libraries where people search through articles and books manually?</h3>
                         </div>
-                        <div class="project-card medium">
+                        <div class="imagine-card medium">
                             <img src="https://images.pexels.com/photos/8566464/pexels-photo-8566464.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Google Physical Libraries">
                         </div>
                     </div>
                     
-                    <div class="project-item">
-                        <div class="project-text">
+                    <div class="imagine-item">
+                        <div class="imagine-text">
                             <h3>Snapchat made disposable cameras that print photos instantly, with filters applied directly to the print?</h3>
                         </div>
-                        <div class="project-card medium">
+                        <div class="imagine-card medium">
                             <img src="https://images.pexels.com/photos/8566441/pexels-photo-8566441.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Snapchat Disposable Cameras">
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
-                    <h2 class="project-title">Project Overview</h2>
+                    <h2 class="section-title">Project Overview</h2>
                     <p class="project-description">
                         This project showcases innovative AI-driven creative solutions that push the boundaries of visual storytelling. 
                         Through careful attention to detail and cutting-edge technology, we've created something truly unique.
@@ -111,15 +114,11 @@
         </div>
     </footer>
 
-    <script>
-        // Get project name from URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const projectName = urlParams.get('project');
-        
-        if (projectName) {
-            document.getElementById('project-title').textContent = projectName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-        }
-    </script>
+    <!-- Page View Counter -->
+    <div class="page-counter" id="pageCounter">
+        Views: <span id="viewCount">0</span>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
