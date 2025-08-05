@@ -436,10 +436,10 @@ body::before {
 .pop-off-container .project-card img.pop-out-image {
     position: absolute;
     z-index: 4;
-    width: 75%;
+    width: 150%;
     height: 135%;
     top: -10%;
-    left: 70px;
+    left: -70px;
     object-fit: cover;
     transform: none;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
