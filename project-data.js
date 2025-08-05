@@ -258,7 +258,7 @@ const projectsData = {
   'ad-reels': {
     title: 'Ad Reels',
     label: '',
-    heroImage: 'https://i.imgur.com/cFfsXOv.gif',
+    heroImage: '',
     description: 'AI-generated advertising content that captures attention and drives engagement.',
     sections: [
       {
@@ -274,7 +274,7 @@ const projectsData = {
   'coming-soon': {
     title: 'Coming Soon',
     label: '',
-    heroImage: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=800',
+    heroImage: '',
     description: 'Abstract AI art collection exploring the boundaries of digital creativity.',
     sections: [
       {
@@ -290,7 +290,7 @@ const projectsData = {
   'imagine': {
     title: 'Imagine...',
     label: '',
-    heroImage: 'https://i.imgur.com/hskv718.jpeg',
+    heroImage: '',
     description: 'Creative exploration of alternative realities and "what if" scenarios.',
     sections: [
       {
