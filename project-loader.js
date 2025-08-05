@@ -87,6 +87,7 @@ class ProjectLoader {
                 container.appendChild(this.createDoubleSection(section));
             }
         });
+ }
 
     createSingleSection(section) {
         const sectionDiv = document.createElement('div');
