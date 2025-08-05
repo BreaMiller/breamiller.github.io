@@ -2,7 +2,7 @@
 const projectsData = {
   'pneuma-collection': {
     title: 'Pneuma Collection',
-    label: 'AI READY-TO-WEAR',
+    label: '',
     heroImage: '',
     description: 'The future of ready-to-wear fashion: print on demand.',
     sections: [
@@ -33,15 +33,15 @@ const projectsData = {
   
   'love-birds': {
     title: 'Love Birds',
-    label: 'AI DECOR',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/uWiCWju.jpeg',
     description: 'Romantic AI-generated art pieces perfect for modern home decoration.',
     sections: [
       {
         type: 'single',
         title: 'Capturing Love Through AI',
         text: 'What if we could visualize the essence of love through artificial intelligence? Love Birds explores the intersection of emotion and technology.',
-        image: 'https://i.imgur.com/uWiCWju.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
     ],
     overview: 'A series of AI-generated decorative pieces that capture the beauty and intimacy of love through algorithmic artistry.'
@@ -49,15 +49,15 @@ const projectsData = {
 
   'iridescence': {
     title: 'Iridescence',
-    label: 'AI COUTURE',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/GxTG4gk.jpeg',
     description: 'High-fashion couture pieces featuring iridescent AI-generated designs.',
     sections: [
       {
         type: 'single',
         title: 'The Science of Beauty',
         text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
-        image: 'https://i.imgur.com/GxTG4gk.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/GxTG4gk.jpeg'
       }
     ],
     overview: 'Luxury couture collection combining traditional craftsmanship with AI-generated patterns that mimic the natural phenomenon of iridescence.'
@@ -65,15 +65,15 @@ const projectsData = {
 
   'buku-tv': {
     title: 'Buku TV™️',
-    label: 'WHERE TO WATCH',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/W9YVpm6.gif',
     description: 'Revolutionary streaming platform for discovering where to watch your favorite content.',
     sections: [
       {
         type: 'single',
         title: 'Simplifying Entertainment Discovery',
         text: 'What if finding where to watch your favorite shows was effortless? Buku TV aggregates content from all major streaming platforms.',
-        image: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/W9YVpm6.gif'
       }
     ],
     overview: 'A comprehensive streaming aggregator that helps users find content across multiple platforms with intelligent recommendations.'
@@ -81,15 +81,15 @@ const projectsData = {
 
   'knack': {
     title: 'Knack™️',
-    label: 'KIDS READING APP',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/fGq1EDQ.png',
     description: 'Interactive reading app designed to make learning fun for children.',
     sections: [
       {
         type: 'single',
         title: 'Making Reading Magical',
         text: 'What if every child could discover the joy of reading through interactive storytelling? Knack transforms reading into an adventure.',
-        image: 'https://i.imgur.com/fGq1EDQ.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/fGq1EDQ.png'
       }
     ],
     overview: 'Educational app that combines gamification with reading to engage young learners and foster a lifelong love of books.'
@@ -97,15 +97,15 @@ const projectsData = {
 
   'geneproof': {
     title: 'GeneProof',
-    label: 'HEALTH TRACKING APP',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/GyRDHxC.gif',
     description: 'Advanced genetic health tracking application for personalized wellness.',
     sections: [
       {
         type: 'single',
         title: 'Personalized Health Insights',
         text: 'What if your genetics could guide your daily health decisions? GeneProof provides personalized recommendations based on your DNA.',
-        image: 'https://i.imgur.com/GyRDHxC.gif?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/GyRDHxC.gif'
       }
     ],
     overview: 'Cutting-edge app that uses genetic data to provide personalized health recommendations and track wellness metrics.'
@@ -113,15 +113,15 @@ const projectsData = {
 
   'baraka': {
     title: 'Baraka',
-    label: 'MATERNITY SOCIAL NETWORK',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/2hBPNJ7.png',
     description: 'Social platform connecting expectant mothers and families.',
     sections: [
       {
         type: 'single',
         title: 'Building Community for Mothers',
         text: 'What if every expectant mother had a supportive community at her fingertips? Baraka connects mothers through shared experiences.',
-        image: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/2hBPNJ7.png'
       }
     ],
     overview: 'Social network designed to support and connect mothers throughout their pregnancy journey with expert advice and peer support.'
@@ -129,15 +129,15 @@ const projectsData = {
 
   'civic-social': {
     title: 'Civic Social',
-    label: 'NETWORK FOR DEMOCRACY',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/zOAd5qr.png',
     description: 'Platform for civic engagement and democratic participation.',
     sections: [
       {
         type: 'single',
         title: 'Strengthening Democracy',
         text: 'What if every citizen could easily participate in shaping their community? Civic Social makes democratic engagement accessible.',
-        image: 'https://i.imgur.com/zOAd5qr.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/zOAd5qr.png'
       }
     ],
     overview: 'Digital platform that facilitates civic engagement and democratic processes through community organizing and voting tools.'
@@ -145,15 +145,15 @@ const projectsData = {
 
   'biohaxx-tv-series': {
     title: 'BioHaxx',
-    label: 'AI TV SERIES',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/k8p4JMP.gif',
     description: 'Futuristic TV series exploring biotechnology and human enhancement.',
     sections: [
       {
         type: 'single',
         title: 'The Future of Human Enhancement',
         text: 'What if we could hack our own biology to become superhuman? BioHaxx explores the ethical implications of biotechnology.',
-        image: 'https://i.imgur.com/k8p4JMP.gif?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/k8p4JMP.gif'
       }
     ],
     overview: 'Thought-provoking series that examines the ethical implications of biotechnology and human enhancement in a near-future setting.'
@@ -161,15 +161,15 @@ const projectsData = {
 
   'wellness-guide': {
     title: 'Wellness Guide',
-    label: 'LIFESTYLE BOOK',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/EGUHIC7.png',
     description: 'Comprehensive guide to holistic wellness and healthy living.',
     sections: [
       {
         type: 'single',
         title: 'Your Journey to Wellness',
         text: 'What if wellness wasn\'t just a destination, but a beautiful journey? This guide provides practical steps for holistic health.',
-        image: 'https://i.imgur.com/EGUHIC7.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/EGUHIC7.png'
       }
     ],
     overview: 'A comprehensive guide covering all aspects of physical, mental, and spiritual wellness with actionable advice and insights.'
@@ -177,15 +177,15 @@ const projectsData = {
 
   'gifts-from-the-sacred-warrior': {
     title: 'Gifts from the Sacred Warrior',
-    label: 'GRAPHIC NOVEL',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/LSCxFn5.png',
     description: 'Epic graphic novel exploring themes of courage, sacrifice, and spiritual growth.',
     sections: [
       {
         type: 'single',
         title: 'A Hero\'s Journey',
         text: 'What if the greatest battles were fought within ourselves? This graphic novel explores the inner warrior in all of us.',
-        image: 'https://i.imgur.com/LSCxFn5.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/LSCxFn5.png'
       }
     ],
     overview: 'An epic graphic novel that combines stunning visuals with profound storytelling about personal transformation and spiritual awakening.'
@@ -193,15 +193,15 @@ const projectsData = {
 
   'bask-handbag': {
     title: 'Bask Handbag',
-    label: 'AI FASHION',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/WagmOW8.jpeg',
     description: 'Luxury handbag collection featuring AI-generated designs and patterns.',
     sections: [
       {
         type: 'single',
         title: 'Luxury Meets Innovation',
         text: 'What if luxury accessories could be both timeless and futuristic? The Bask collection redefines premium handbags.',
-        image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/WagmOW8.jpeg'
       }
     ],
     overview: 'Premium handbag collection that combines traditional craftsmanship with AI-generated patterns for unique luxury accessories.'
@@ -209,15 +209,15 @@ const projectsData = {
 
   'unspoken': {
     title: 'Unspoken',
-    label: 'AI DIGITAL ART',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/2iZU8IW.png',
     description: 'Abstract digital art series exploring themes of communication and silence.',
     sections: [
       {
         type: 'single',
         title: 'The Language of Silence',
         text: 'What if the most powerful messages were never spoken? Unspoken explores communication beyond words.',
-        image: 'https://i.imgur.com/2iZU8IW.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/2iZU8IW.png'
       }
     ],
     overview: 'A digital art series that uses AI to explore the spaces between words, creating visual representations of unspoken emotions.'
@@ -225,15 +225,15 @@ const projectsData = {
 
   'ethereal-stroll': {
     title: 'Ethereal Stroll',
-    label: 'MEDITATION MUSIC',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/uwCTYkA.jpeg',
     description: 'Ambient music collection designed for meditation and relaxation.',
     sections: [
       {
         type: 'single',
         title: 'Music for the Soul',
         text: 'What if music could transport you to another realm? Ethereal Stroll creates soundscapes for inner peace.',
-        image: 'https://i.imgur.com/uwCTYkA.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/uwCTYkA.jpeg'
       }
     ],
     overview: 'A collection of ambient compositions designed to facilitate meditation, relaxation, and spiritual contemplation.'
@@ -241,15 +241,15 @@ const projectsData = {
 
   'rhea': {
     title: 'Rhea',
-    label: 'ENERGY DASHBOARD',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/6EA3YOJ.gif',
     description: 'Smart energy management dashboard for sustainable living.',
     sections: [
       {
         type: 'single',
         title: 'Sustainable Energy Management',
         text: 'What if managing your energy consumption was as easy as checking your phone? Rhea makes sustainability simple.',
-        image: 'https://i.imgur.com/6EA3YOJ.gif?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/6EA3YOJ.gif'
       }
     ],
     overview: 'Intelligent dashboard that helps users monitor and optimize their energy consumption for a more sustainable lifestyle.'
@@ -257,15 +257,15 @@ const projectsData = {
 
   'ad-reels': {
     title: 'Ad Reels',
-    label: 'AI ADS',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/cFfsXOv.gif',
     description: 'AI-generated advertising content that captures attention and drives engagement.',
     sections: [
       {
         type: 'single',
         title: 'The Future of Advertising',
         text: 'What if ads could be as entertaining as the content we love? Ad Reels uses AI to create compelling advertising content.',
-        video: 'https://i.imgur.com/lRQUd6S.mp4?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/cFfsXOv.gif'
       }
     ],
     overview: 'Revolutionary approach to advertising using AI to create engaging, personalized content that resonates with audiences.'
@@ -273,7 +273,7 @@ const projectsData = {
 
   'coming-soon': {
     title: 'Coming Soon',
-    label: 'ABSTRACT AI ART',
+    label: '',
     heroImage: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Abstract AI art collection exploring the boundaries of digital creativity.',
     sections: [
@@ -289,15 +289,15 @@ const projectsData = {
 
   'imagine': {
     title: 'Imagine...',
-    label: 'PASSION PROJECT',
-    heroImage: '',
+    label: '',
+    heroImage: 'https://i.imgur.com/hskv718.jpeg',
     description: 'Creative exploration of alternative realities and "what if" scenarios.',
     sections: [
       {
         type: 'single',
         title: 'What If the World Was Different?',
         text: 'What if technology companies operated in the physical world? Imagine explores alternative realities through creative storytelling.',
-        image: 'https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/hskv718.jpeg'
       }
     ],
     overview: 'A creative project that reimagines how digital companies might operate in the physical world, exploring alternative business models.'
