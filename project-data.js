@@ -117,7 +117,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Making Reading Magical',
+        title: 'Make Reading Fun',
         text: 'What if every child could discover the joy of reading through interactive storytelling? Knack transforms reading into an adventure.',
         image: 'https://i.imgur.com/fGq1EDQ.png'
       }
