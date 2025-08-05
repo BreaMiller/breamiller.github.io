@@ -231,7 +231,7 @@ const projectsData = {
         type: 'single',
         title: 'Luxury Meets Innovation',
         text: 'What if premium accessories could redefine what it means to be both timeless and futuristic.',
-        image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/KfKTvU5.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Premium handbag collection that combines traditional craftsmanship with AI-generated patterns for unique luxury accessories.'
