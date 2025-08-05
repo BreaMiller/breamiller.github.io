@@ -88,8 +88,8 @@ class ProjectLoader {
             }
         });
  }
-  {
-    createSingleSection(section) {
+
+  {createSingleSection(section) {
         const sectionDiv = document.createElement('div');
         sectionDiv.className = 'imagine-section';
         
@@ -106,7 +106,7 @@ let mediaContent = '';
             <img src="${section.image}" alt="${section.title}" loading="lazy" class="project-media-element">
         `;
     }
-}
+
     sectionDiv.innerHTML = `
         <div class="imagine-text">
             <h3>${section.title}</h3>
