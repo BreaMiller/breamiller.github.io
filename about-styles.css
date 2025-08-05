@@ -568,9 +568,6 @@ body::before {
 .scale-out-enter-active {
     transition: all .55s ease-in-out;
 }
-.scale-out-leave-active {
-    transition: all .35s ease-in-out;
-}
 .scale-out-enter {
     transform: scale(.55);
     pointer-events: none;
