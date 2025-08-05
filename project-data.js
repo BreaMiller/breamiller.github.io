@@ -246,7 +246,7 @@ const projectsData = {
       {
         type: 'single',
         title: 'The Language of Silence',
-        text: 'What if the most powerful messages were never spoken? Unspoken says the quiet part aloud.',
+        text: 'What if the most powerful messages were never spoken? Unspoken says the quiet part out loud.',
         image: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
