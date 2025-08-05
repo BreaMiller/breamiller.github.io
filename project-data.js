@@ -210,14 +210,14 @@ const projectsData = {
   'unspoken': {
     title: 'Unspoken',
     label: '',
-    heroImage: 'https://i.imgur.com/2iZU8IW.png',
+    heroImage: '',
     description: 'Abstract digital art series exploring themes of communication and silence.',
     sections: [
       {
         type: 'single',
         title: 'The Language of Silence',
         text: 'What if the most powerful messages were never spoken? Unspoken explores communication beyond words.',
-        image: 'https://i.imgur.com/2iZU8IW.png'
+        image: 'https://i.imgur.com/Cb76dIw.jpeg'
       }
     ],
     overview: 'A digital art series that uses AI to explore the spaces between words, creating visual representations of unspoken emotions.'
