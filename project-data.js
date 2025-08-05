@@ -114,7 +114,7 @@ const projectsData = {
   'baraka': {
     title: 'Baraka',
     label: '',
-    heroImage: 'https://i.imgur.com/2hBPNJ7.png',
+    heroImage: '',
     description: 'Social platform connecting expectant mothers and families.',
     sections: [
       {
@@ -130,7 +130,7 @@ const projectsData = {
   'civic-social': {
     title: 'Civic Social',
     label: '',
-    heroImage: 'https://i.imgur.com/zOAd5qr.png',
+    heroImage: '',
     description: 'Platform for civic engagement and democratic participation.',
     sections: [
       {
@@ -146,7 +146,7 @@ const projectsData = {
   'biohaxx-tv-series': {
     title: 'BioHaxx',
     label: '',
-    heroImage: 'https://i.imgur.com/k8p4JMP.gif',
+    heroImage: '',
     description: 'Futuristic TV series exploring biotechnology and human enhancement.',
     sections: [
       {
@@ -162,7 +162,7 @@ const projectsData = {
   'wellness-guide': {
     title: 'Wellness Guide',
     label: '',
-    heroImage: 'https://i.imgur.com/EGUHIC7.png',
+    heroImage: '',
     description: 'Comprehensive guide to holistic wellness and healthy living.',
     sections: [
       {
@@ -178,7 +178,7 @@ const projectsData = {
   'gifts-from-the-sacred-warrior': {
     title: 'Gifts from the Sacred Warrior',
     label: '',
-    heroImage: 'https://i.imgur.com/LSCxFn5.png',
+    heroImage: '',
     description: 'Epic graphic novel exploring themes of courage, sacrifice, and spiritual growth.',
     sections: [
       {
@@ -194,7 +194,7 @@ const projectsData = {
   'bask-handbag': {
     title: 'Bask Handbag',
     label: '',
-    heroImage: 'https://i.imgur.com/WagmOW8.jpeg',
+    heroImage: '',
     description: 'Luxury handbag collection featuring AI-generated designs and patterns.',
     sections: [
       {
