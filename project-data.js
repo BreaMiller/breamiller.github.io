@@ -10,7 +10,7 @@ const projectsData = {
         type: 'single',
         title: 'The Vision',
         text: 'The Pneuma Collection represents a revolutionary approach to ready-to-wear fashion, every piece is tailored to the individual.',
-        image: 'https://i.imgur.com/nQNqPDj.png?auto=compress&cs=tinysrgb&w=200'
+        image: 'blob:https://imgur.com/c06407f5-d360-47b1-9fd1-e78d5dd1a6b1?auto=compress&cs=tinysrgb&w=200'
       },
       {
         type: 'double',
