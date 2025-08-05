@@ -315,7 +315,7 @@ body::before {
 
 .btn-secondary:hover {
     background: transparent;
-    border-color: rgba(236, 72, 153, 0.3);
+    border-color: rgba(236, 72, 153, 0.5);
     color: #ec4899;
     transform: translateY(-2px);
 }
