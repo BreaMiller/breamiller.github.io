@@ -36,24 +36,44 @@ class ProjectLoader {
         }, 500);
     }
 
-    renderProject(data) {
+        renderProject(data) {
         // Update page title
-        document.getElementById('page-title').textContent = `${data.title} - Brea Miller`;
-        document.title = `${data.title} - Brea Miller`;
+        const pageTitleElement = document.getElementById('page-title');
+    if (pageTitleElement) {
+        pageTitleElement.textContent = `${data.title} - Brea Miller`;
+    }
+    document.title = `${data.title} - Brea Miller`;
         
         // Update hero section
-        document.getElementById('project-label').textContent = data.label;
-        document.getElementById('project-title').textContent = data.title;
-        document.getElementById('project-description').innerHTML = 
-            `<span class="accent-text">✐ᝰ</span> ${data.description}`;
-        document.getElementById('hero-image').src = data.heroImage;
-        document.getElementById('hero-image').alt = data.title;
+ const projectLabelElement = document.getElementById('project-label');
+    if (projectLabelElement) {
+        projectLabelElement.textContent = data.label;
+    }
+
+    const projectTitleElement = document.getElementById('project-title');
+    if (projectTitleElement) {
+        projectTitleElement.textContent = data.title;
+    }
+
+    const projectDescriptionElement = document.getElementById('project-description');
+    if (projectDescriptionElement) {
+        projectDescriptionElement.innerHTML = `<span class="accent-text">✐ᝰ</span> ${data.description}`;
+    }
+
+    const heroImageElement = document.getElementById('hero-image');
+    if (heroImageElement) {
+        heroImageElement.src = data.heroImage;
+        heroImageElement.alt = data.title;
+    }
         
         // Update overview
-        document.getElementById('project-overview').textContent = data.overview;
-        
+        const projectOverviewElement = document.getElementById('project-overview');
+    if (projectOverviewElement) {
+        projectOverviewElement.textContent = data.overview;
+    }
+          
         // Render dynamic sections
-        this.renderSections(data.sections);
+  this.renderSections(data.sections);
     }
 
     renderSections(sections) {
