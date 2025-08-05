@@ -10,7 +10,7 @@ const projectsData = {
         type: 'single',
         title: 'The Vision',
         text: 'The Pneuma Collection represents a revolutionary approach to ready-to-wear fashion, every piece is tailored to the individual.',
-        image: 'https://i.imgur.com/nQNqPDj.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/nQNqPDj.png?auto=compress&cs=tinysrgb&w=200'
       },
       {
         type: 'double',
@@ -18,7 +18,7 @@ const projectsData = {
           {
             title: 'AI-Generated Textures',
             text: 'Every fabric pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
-            image: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=600'
+            image: 'https://i.imgur.com/nQNqPDj.png?auto=compress&cs=tinysrgb&w=600'
           },
           {
             title: 'Sustainable Materials',
