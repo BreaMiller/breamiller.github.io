@@ -295,7 +295,7 @@ const projectsData = {
         type: 'single',
         title: 'The Future of Advertising',
         text: 'Creating and optimizing campaigns is now faster than ever.',
-        video: 'https://i.imgur.com/lRQUd6S.mp4?auto=compress&cs=tinysrgb&w=600'
+        video: 'https://i.imgur.com/lRQUd6S.mp4?auto=compress&cs=tinysrgb&w=800'
       }
     ],
     overview: 'Revolutionary approach to advertising using AI to create engaging, personalized content that resonates with audiences.'
