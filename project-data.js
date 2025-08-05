@@ -242,7 +242,7 @@ const projectsData = {
   'rhea': {
     title: 'Rhea',
     label: '',
-    heroImage: 'https://i.imgur.com/6EA3YOJ.gif',
+    heroImage: '',
     description: 'Smart energy management dashboard for sustainable living.',
     sections: [
       {
