@@ -93,15 +93,29 @@ class ProjectLoader {
         const sectionDiv = document.createElement('div');
         sectionDiv.className = 'imagine-section';
         
-        sectionDiv.innerHTML = `
-            <div class="imagine-text">
-                <h3>${section.title}</h3>
-                <p>${section.text}</p>
-            </div>
-            <div class="imagine-card large">
-                <img src="${section.image}" alt="${section.title}" loading="lazy">
-            </div>
+let mediaContent = '';
+    if (section.video) {
+        mediaContent = `
+            <video controls autoplay loop muted playsinline class="project-media-element">
+                <source src="${section.video}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         `;
+    } else if (section.image) {
+        mediaContent = `
+            <img src="${section.image}" alt="${section.title}" loading="lazy" class="project-media-element">
+        `;
+    }
+
+    sectionDiv.innerHTML = `
+        <div class="imagine-text">
+            <h3>${section.title}</h3>
+            <p>${section.text}</p>
+        </div>
+        <div class="imagine-card large">
+            ${mediaContent}
+        </div>
+    `;
         
         return sectionDiv;
     }
