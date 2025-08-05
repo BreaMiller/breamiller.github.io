@@ -55,18 +55,18 @@ const projectsData = {
             title: 'Sustainable Materials',
             text: 'Combining technology with eco-friendly production methods to create decor that cares for our planet.',
             image: 'https://i.imgur.com/uWiCWju.jpeg?auto=compress&cs=tinysrgb&w=600'
-          }
+          },
+            {
+        type: 'single',
+        title: '',
+        text: '',
+        image: 'https://i.imgur.com/e7kW4Jt.jpeg?auto=compress&cs=tinysrgb&w=800'
+      }
         ]
       }
     ],
     overview: 'AI-generated decorative pieces that capture the artistry of intimacy.'
   },
-  {
-        type: 'single',
-        title: '',
-        text: '',
-        image: 'https://i.imgur.com/e7kW4Jt.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
 
   'iridescence': {
     title: 'Iridescence',
