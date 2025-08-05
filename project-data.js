@@ -41,7 +41,7 @@ const projectsData = {
         type: 'single',
         title: 'Tenderness',
         text: 'The essence of love: Birds share an endearing embrace.',
-        image: 'https://i.imgur.com/uWiCWju.jpeg'
+        image: 'https://i.imgur.com/w5B40Jm.jpeg'
       }
     ],
     overview: 'AI-generated decorative pieces that capture the artistry of intimacy.'
