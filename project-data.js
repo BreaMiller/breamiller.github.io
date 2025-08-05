@@ -48,12 +48,12 @@ const projectsData = {
         items: [
           {
             title: 'AI-Generated Textures',
-            text: 'Every fabric pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
+            text: 'Every pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
             image: 'https://i.imgur.com/7a7WUio.jpeg?auto=compress&cs=tinysrgb&w=600'
           },
           {
             title: 'Sustainable Materials',
-            text: 'Combining technology with eco-friendly production methods to create fashion that cares for our planet.',
+            text: 'Combining technology with eco-friendly production methods to create decor that cares for our planet.',
             image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
           }
         ]
