@@ -1210,7 +1210,7 @@ body::before {
     height: 400px;
 }
 
-.imagine-card img {
+.imagine-card .project-media-element {
     width: 100%;
     height: 100%;
     object-fit: cover;
