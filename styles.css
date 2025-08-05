@@ -299,7 +299,7 @@ body::before {
 }
 
 .bento-item {
-    display: flex;
+    display: relative;
     flex-direction: column;
     gap: 20px;
     border-radius: 20px;
