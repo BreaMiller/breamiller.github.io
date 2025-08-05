@@ -294,7 +294,7 @@ const projectsData = {
       {
         type: 'single',
         title: 'The Future of Advertising',
-        text: 'AI-generated ad Reels makes creating and optimizing campaigns faster than ever.',
+        text: 'AI-generated ad reels makes creating and optimizing campaigns faster than ever.',
         image: 'https://i.imgur.com/cFfsXOv.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
