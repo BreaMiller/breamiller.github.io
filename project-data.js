@@ -222,7 +222,7 @@ const projectsData = {
   },
 
   'bask-handbag': {
-    title: 'Bask Handbag',
+    title: 'Solaria Handbag',
     label: '',
     heroImage: '',
     description: 'Luxury handbag collection featuring AI-generated designs and patterns.',
@@ -230,7 +230,7 @@ const projectsData = {
       {
         type: 'single',
         title: 'Luxury Meets Innovation',
-        text: 'What if luxury accessories could be both timeless and futuristic? The Bask collection redefines premium handbags.',
+        text: 'What if premium accessories could redefine what it means to be both timeless and futuristic.',
         image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
