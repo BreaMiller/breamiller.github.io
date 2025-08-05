@@ -185,7 +185,7 @@ function updateTime() {
         hour12: false,
         hour: '2-digit',
         minute: '2-digit',
-        timeZone: 'America/Los_Angeles'
+        timeZone: 'America/Chicago'
     });
     
     const timeElement = document.querySelector('.location-time');
