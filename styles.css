@@ -449,6 +449,7 @@ body::before {
 
 /* Project Details Page */
 .project-details {
+    color: #000000;
     max-width: 1000px;
     margin: 0 auto;
     text-align: left;
