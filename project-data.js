@@ -250,7 +250,7 @@ const projectsData = {
         image: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'A digital art series that uses AI to explore the spaces between words, creating visual representations of unspoken emotions.'
+    overview: 'A digital art series that uses AI to explore the spaces between words, creating visual representations of unspoken truth.'
   },
 
   'ethereal-stroll': {
