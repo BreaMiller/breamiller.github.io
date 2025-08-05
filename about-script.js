@@ -190,7 +190,7 @@ function updateTime() {
     
     const timeElement = document.querySelector('.location-time');
     if (timeElement) {
-        timeElement.textContent = `${timeString} CST-8 • Local time`;
+        timeElement.textContent = `${timeString} CST • Local time`;
     }
 }
 
