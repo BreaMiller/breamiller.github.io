@@ -118,11 +118,11 @@ const projectsData = {
       {
         type: 'single',
         title: 'Make Reading Fun',
-        text: 'What if every child could had their own AI-reading assistant that could keep track of the grammer and phonics skills they need to practice. Knack transforms reading into an adventure.',
+        text: 'What if every child could had their own AI-reading assistant that could keep track of the grammer and phonics skills they need to practice.',
         image: 'https://i.imgur.com/fGq1EDQ.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Educational app that combines gamification with reading to engage young learners and foster a lifelong love of books.'
+    overview: 'knack is the scoll-worthy educational app that combines gamification with reading to engage young learners and foster a lifelong love of books.'
   },
 
   'geneproof': {
