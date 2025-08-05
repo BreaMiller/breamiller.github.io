@@ -221,7 +221,7 @@ const projectsData = {
     overview: 'An epic graphic novel that combines stunning visuals with profound storytelling about personal transformation and spiritual awakening.'
   },
 
-  'bask-handbag': {
+  'solaria-handbag': {
     title: 'Solaria Handbag',
     label: '',
     heroImage: '',
