@@ -57,12 +57,6 @@ const projectsData = {
             image: 'https://i.imgur.com/uWiCWju.jpeg?auto=compress&cs=tinysrgb&w=600'
           },
         ]
-        {
-        type: 'single',
-        title: '',
-        text: '',
-        image: 'https://i.imgur.com/e7kW4Jt.jpeg?auto=compress&cs=tinysrgb&w=800'
-      },
       }
     ],
     overview: 'AI-generated decorative pieces that capture the artistry of intimacy.'
