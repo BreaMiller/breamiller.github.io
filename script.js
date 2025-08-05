@@ -228,7 +228,7 @@ document.querySelector('.back-home-button')?.addEventListener('click', function(
 // Updated navigation function for projects
 function navigateToProject(projectSlug) {
     // Navigate to dynamic project page
-    window.location.href = `project.html?project=${projectSlug}`;
+    window.location.href = `project?project=${projectSlug}`;
 }
 
 // Add click handlers to existing cards
