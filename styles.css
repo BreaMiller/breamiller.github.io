@@ -461,7 +461,7 @@ body::before {
 
 .project-description {
     font-size: 1.2rem;
-    color: #ccc;
+    color: #000000;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
