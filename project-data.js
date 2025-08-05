@@ -35,12 +35,12 @@ const projectsData = {
     title: 'Love Birds',
     label: '',
     heroImage: '',
-    description: 'Romantic AI-generated art pieces perfect for modern home decoration.',
+    description: 'Romantic AI-generated art pieces perfect for modern home decor.',
     sections: [
       {
         type: 'single',
-        title: 'Capturing Love Through AI',
-        text: 'What if we could visualize the essence of love through artificial intelligence? Love Birds explores the intersection of emotion and technology.',
+        title: 'Tenderness',
+        text: 'The essence of love: Birds share an endearing hug.',
         image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
     ],
