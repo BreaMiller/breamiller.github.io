@@ -89,7 +89,7 @@ class ProjectLoader {
         });
  }
 
-  {createSingleSection(section) {
+    createSingleSection(section) {
         const sectionDiv = document.createElement('div');
         sectionDiv.className = 'imagine-section';
         
