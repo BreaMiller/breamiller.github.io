@@ -44,7 +44,7 @@ const projectsData = {
         image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
     ],
-    overview: 'A series of AI-generated decorative pieces that capture the beauty and intimacy of love through algorithmic artistry.'
+    overview: 'AI-generated decorative pieces that capture the artistry of intimacy.'
   },
 
   'iridescence': {
