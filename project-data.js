@@ -207,8 +207,8 @@ const projectsData = {
     overview: 'Premium handbag collection that combines traditional craftsmanship with AI-generated patterns for unique luxury accessories.'
   },
 
-  'unspoken': {
-    title: 'Unspoken',
+  'opia': {
+    title: 'Opia',
     label: '',
     heroImage: '',
     description: 'Abstract digital art series exploring themes of communication and silence.',
