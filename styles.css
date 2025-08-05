@@ -1192,7 +1192,7 @@ body::before {
 
 .imagine-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
     border-color: rgba(236, 72, 153, 0.3);
 }
 
