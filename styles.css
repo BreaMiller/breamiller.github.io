@@ -361,15 +361,6 @@ body::before {
     font-family: 'JetBrains Mono', monospace;
 }
 
-.project-header .project-title {
-    color: #ffffff;
-    font-size: 2rem;
-    font-weight: 800;
-    margin: 0;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-}
-
 .project-card {
     position: relative;
     flex: 1;
