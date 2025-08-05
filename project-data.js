@@ -42,6 +42,21 @@ const projectsData = {
         title: 'Tenderness',
         text: 'The essence of love: Birds share an endearing embrace.',
         image: 'https://i.imgur.com/w5B40Jm.jpeg'
+      },
+      {
+        type: 'double',
+        items: [
+          {
+            title: 'AI-Generated Textures',
+            text: 'Every fabric pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
+            image: 'https://i.imgur.com/7a7WUio.jpeg?auto=compress&cs=tinysrgb&w=600'
+          },
+          {
+            title: 'Sustainable Materials',
+            text: 'Combining technology with eco-friendly production methods to create fashion that cares for our planet.',
+            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
+          }
+        ]
       }
     ],
     overview: 'AI-generated decorative pieces that capture the artistry of intimacy.'
