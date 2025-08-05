@@ -3,6 +3,7 @@ const projectsData = {
   'pneuma-collection': {
     title: 'Pneuma Collection',
     label: '',
+    heroImage: '',
     description: 'The future of ready-to-wear fashion: print on demand.',
     sections: [
       {
