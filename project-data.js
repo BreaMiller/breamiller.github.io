@@ -294,7 +294,7 @@ const projectsData = {
       {
         type: 'single',
         title: 'The Future of Advertising',
-        text: 'What if ads could be as entertaining as the content we love? Ad Reels uses AI to create compelling advertising content.',
+        text: 'AI-generated ad Reels makes creating and optimizing campaigns faster than ever.',
         image: 'https://i.imgur.com/cFfsXOv.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
