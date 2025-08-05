@@ -34,7 +34,7 @@ const projectsData = {
   'love-birds': {
     title: 'Love Birds',
     label: '',
-    heroImage: 'https://i.imgur.com/uWiCWju.jpeg',
+    heroImage: '',
     description: 'Romantic AI-generated art pieces perfect for modern home decoration.',
     sections: [
       {
