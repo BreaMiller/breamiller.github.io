@@ -225,7 +225,7 @@ const projectsData = {
     title: 'Solaria Handbag',
     label: '',
     heroImage: '',
-    description: 'Luxury handbag collection featuring AI-generated designs and patterns.',
+    description: 'Luxury accessory collection featuring AI-generated designs and patterns.',
     sections: [
       {
         type: 'single',
