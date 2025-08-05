@@ -66,11 +66,11 @@ const projectsData = {
     title: 'Iridescence',
     label: '',
     heroImage: '',
-    description: 'High-fashion couture pieces featuring iridescent AI-generated designs.',
+    description: 'High-fashion couture pieces featuring iridescent designs.',
     sections: [
       {
         type: 'single',
-        title: 'The Science of Beauty',
+        title: 'The Law of Attraction',
         text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
         image: 'https://i.imgur.com/GxTG4gk.jpeg'
       }
