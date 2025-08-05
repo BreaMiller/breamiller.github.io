@@ -322,7 +322,7 @@ body::before {
 
 .bento-uniform-medium {
     flex: 1;
-    height: auto;
+    height: 600;
     max-width: 600px;
 }
 
