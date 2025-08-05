@@ -415,7 +415,7 @@ body::before {
 .project-card:hover {
     transform: translateY(-12px);
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(236, 72, 153, 0.3);
-    border-color: rgba(236, 72, 153, 0.3);
+    border-color: rgba(236, 72, 153, 0.4);
 }
 
 /* Pop-off card container - allows content to extend beyond boundaries */
