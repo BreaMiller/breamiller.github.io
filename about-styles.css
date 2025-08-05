@@ -566,7 +566,7 @@ body::before {
 
 /* Transition animations */
 .scale-out-enter-active {
-    transition: all .35s ease-in-out;
+    transition: all .55s ease-in-out;
 }
 .scale-out-leave-active {
     transition: all .35s ease-in-out;
