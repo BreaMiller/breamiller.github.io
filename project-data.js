@@ -73,6 +73,21 @@ const projectsData = {
         title: 'The Law of Attraction',
         text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
         image: 'https://i.imgur.com/GxTG4gk.jpeg'
+      },
+            {
+        type: 'double',
+        items: [
+          {
+            title: 'AI-Generated Textures',
+            text: 'Every pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
+            image: 'https://i.imgur.com/Tam7XB4.jpeg?auto=compress&cs=tinysrgb&w=600'
+          },
+          {
+            title: 'Sustainable Materials',
+            text: 'Combining technology with eco-friendly production methods to create decor that cares for our planet.',
+            image: 'https://i.imgur.com/uWiCWju.jpeg?auto=compress&cs=tinysrgb&w=600'
+          },
+        ]
       }
     ],
     overview: 'Luxury couture collection combining traditional craftsmanship with AI-generated patterns that mimic the natural phenomenon of iridescence.'
