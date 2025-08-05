@@ -1350,7 +1350,7 @@ body::before {
 }
 
 .project-hero-image {
-    margin-top: 2rem;
+    margin-top: 1rem;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
