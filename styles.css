@@ -438,8 +438,8 @@ body::before {
     z-index: 4;
     width: auto; 
     height: 500px;
-    top: -10%;
-    left: -10%;
+    top: -5%;
+    left: -30%;
     object-fit: cover;
     transform: none;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
