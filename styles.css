@@ -363,7 +363,7 @@ body::before {
 
 .project-header .project-title {
     color: #ffffff;
-    font-size: 6rem;
+    font-size: 2rem;
     font-weight: 800;
     margin: 0;
     line-height: 1.2;
@@ -451,7 +451,7 @@ body::before {
 .project-details {
     max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .project-info {
