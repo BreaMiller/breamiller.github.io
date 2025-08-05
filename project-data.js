@@ -40,7 +40,7 @@ const projectsData = {
       {
         type: 'single',
         title: 'Tenderness',
-        text: 'The essence of love: Birds share an endearing hug.',
+        text: 'The essence of love: Birds share an endearing embrace.',
         image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
     ],
