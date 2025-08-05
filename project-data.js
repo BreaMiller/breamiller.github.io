@@ -54,7 +54,7 @@ const projectsData = {
           {
             title: 'Sustainable Materials',
             text: 'Combining technology with eco-friendly production methods to create decor that cares for our planet.',
-            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
+            image: 'https://i.imgur.com/uWiCWju.jpeg?auto=compress&cs=tinysrgb&w=600'
           }
         ]
       }
