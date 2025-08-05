@@ -50,7 +50,7 @@ const projectsData = {
   'iridescence': {
     title: 'Iridescence',
     label: '',
-    heroImage: 'https://i.imgur.com/GxTG4gk.jpeg',
+    heroImage: '',
     description: 'High-fashion couture pieces featuring iridescent AI-generated designs.',
     sections: [
       {
@@ -66,7 +66,7 @@ const projectsData = {
   'buku-tv': {
     title: 'Buku TV™️',
     label: '',
-    heroImage: 'https://i.imgur.com/W9YVpm6.gif',
+    heroImage: '',
     description: 'Revolutionary streaming platform for discovering where to watch your favorite content.',
     sections: [
       {
@@ -82,7 +82,7 @@ const projectsData = {
   'knack': {
     title: 'Knack™️',
     label: '',
-    heroImage: 'https://i.imgur.com/fGq1EDQ.png',
+    heroImage: '',
     description: 'Interactive reading app designed to make learning fun for children.',
     sections: [
       {
@@ -98,7 +98,7 @@ const projectsData = {
   'geneproof': {
     title: 'GeneProof',
     label: '',
-    heroImage: 'https://i.imgur.com/GyRDHxC.gif',
+    heroImage: '',
     description: 'Advanced genetic health tracking application for personalized wellness.',
     sections: [
       {
