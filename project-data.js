@@ -70,7 +70,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Law of Attraction',
+        title: '',
         text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
         image: 'https://i.imgur.com/DshTqp8.jpeg?auto=compress&cs=tinysrgb&w=600'
       },
