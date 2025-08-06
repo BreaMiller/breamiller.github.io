@@ -185,18 +185,24 @@ let mediaContent = '';
         return sectionDiv;
     }
 
-   hideLoading() {
-    this.loadingState.style.display = 'none';
-    this.projectContent.style.display = 'block';
+ hideLoading() {
+    this.loadingState.style.display = 'none'; // Hide the loading spinner
+    this.projectContent.style.display = 'block'; // Make the content container visible (but still transparent due to CSS)
     
-    // Trigger animations
+    // A small delay is needed to allow the browser to apply 'display: block'
+    // before the opacity transition starts. This forces a reflow.
     setTimeout(() => {
+        this.projectContent.style.opacity = '1'; // Trigger the fade-in for the main content
+        
+        // The individual elements inside (imagine-section, project-hero-image)
+        // will also animate based on their own CSS transitions and the
+        // opacity/transform changes applied here.
         const elements = document.querySelectorAll('.imagine-section, .project-hero-image');
         elements.forEach(el => {
             el.style.opacity = '1';
             el.style.transform = 'translateY(0)';
         });
-    }, 100);
+    }, 50); // A minimal delay (e.g., 50ms) is usually sufficient
 }
 
     showError() {
