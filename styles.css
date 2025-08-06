@@ -316,14 +316,14 @@ body::before {
 /* Bento Item Sizes */
 .bento-uniform-small {
     flex: 1;
-    height: 500px;
-    max-width: 400px;
+    height: auto;
+    max-width: auto;
 }
 
 .bento-uniform-medium {
     flex: 1;
-    height: 600px;
-    max-width: 600px;
+    height: auto;
+    max-width: auto;
 }
 
 .bento-uniform-large {
