@@ -185,19 +185,19 @@ let mediaContent = '';
         return sectionDiv;
     }
 
-    hideLoading() {
-        this.loadingState.style.display = 'none';
-        this.projectContent.style.display = 'block';
-        
-        // Trigger animations
-        setTimeout(() => {
-            const elements = document.querySelectorAll('.imagine-section, .project-hero-image');
-            elements.forEach(el => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            });
-        }, 100);
-    }
+   hideLoading() {
+    this.loadingState.style.display = 'none';
+    this.projectContent.style.display = 'block';
+    
+    // Trigger animations
+    setTimeout(() => {
+        const elements = document.querySelectorAll('.imagine-section, .project-hero-image');
+        elements.forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+    }, 100);
+}
 
     showError() {
         this.loadingState.style.display = 'none';
