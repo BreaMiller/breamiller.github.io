@@ -78,7 +78,7 @@ const projectsData = {
         type: 'double',
         items: [
           {
-            title: 'AI-Generated Textures',
+            title: '',
             text: 'Every pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
             image: 'https://i.imgur.com/vsrO8IJ.jpeg?auto=compress&cs=tinysrgb&w=600'
           },
