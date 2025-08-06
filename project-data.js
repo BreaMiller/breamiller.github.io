@@ -21,7 +21,7 @@ const projectsData = {
             image: 'https://i.imgur.com/7a7WUio.jpeg?auto=compress&cs=tinysrgb&w=600'
           },
           {
-            title: 'Sustainable Materials',
+            title: '',
             text: 'Combining technology with eco-friendly production methods to create fashion that cares for our planet.',
             image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
           }
