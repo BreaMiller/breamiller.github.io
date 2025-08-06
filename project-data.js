@@ -277,7 +277,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Sustainable Energy Management',
+        title: '',
         text: 'What if managing your energy consumption was as easy as checking your phone? Rhea makes sustainability simple.',
         image: 'https://i.imgur.com/6EA3YOJ.gif?auto=compress&cs=tinysrgb&w=600'
       }
