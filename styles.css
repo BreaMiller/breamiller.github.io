@@ -1187,6 +1187,8 @@ body::before {
 
 .imagine-card {
     border-radius: 20px;
+    width: auto; 
+    height: 500px;
     overflow: hidden;
     background: #222;
     border: 1px solid #333;
