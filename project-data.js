@@ -63,7 +63,7 @@ const projectsData = {
   },
 
   'iridescence': {
-    title: 'Iridescence',
+    title: '',
     label: '',
     heroImage: '',
     description: 'High-fashion couture pieces featuring iridescent designs.',
