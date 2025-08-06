@@ -440,7 +440,7 @@ body::before {
     height: 500px;
     top: -5%;
     left: -30%;
-    object-fit: contain;
+    object-fit: cover;
     transform: none;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
