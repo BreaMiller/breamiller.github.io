@@ -317,13 +317,13 @@ body::before {
 .bento-uniform-small {
     flex: 1;
     height: auto;
-    max-width: auto;
+    max-width: 400px;
 }
 
 .bento-uniform-medium {
     flex: 1;
     height: auto;
-    max-width: auto;
+    max-width: 600px;
 }
 
 .bento-uniform-large {
