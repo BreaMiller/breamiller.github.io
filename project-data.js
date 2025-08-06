@@ -213,7 +213,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'A Hero\'s Journey',
+        title: '',
         text: 'What if the greatest battles were fought within ourselves? This graphic novel explores the inner warrior in all of us.',
         image: 'https://i.imgur.com/LSCxFn5.png?auto=compress&cs=tinysrgb&w=600'
       }
