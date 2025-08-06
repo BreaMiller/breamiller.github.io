@@ -133,7 +133,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Personalized Health Insights',
+        title: '',
         text: 'What if your genetics could guide your daily health decisions? GeneProof provides personalized recommendations based on your DNA.',
         image: 'https://i.imgur.com/GyRDHxC.gif?auto=compress&cs=tinysrgb&w=600'
       }
@@ -149,7 +149,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Building Community for Mothers',
+        title: '',
         text: 'What if every expectant mother had a supportive community at her fingertips? Baraka connects mothers through shared experiences.',
         image: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=600'
       }
@@ -165,7 +165,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Strengthening Democracy',
+        title: '',
         text: 'What if every citizen could easily participate in shaping their community? Civic Social makes democratic engagement accessible.',
         image: 'https://i.imgur.com/zOAd5qr.png?auto=compress&cs=tinysrgb&w=600'
       }
@@ -181,7 +181,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Future of Human Enhancement',
+        title: '',
         text: 'What if we could hack our own biology to become superhuman? BioHaxx explores the ethical implications of biotechnology.',
         image: 'https://i.imgur.com/k8p4JMP.gif?auto=compress&cs=tinysrgb&w=600'
       }
@@ -197,7 +197,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Your Journey to Wellness',
+        title: '',
         text: 'What if wellness wasn\'t just a destination, but a beautiful journey? This guide provides practical steps for holistic health.',
         image: 'https://i.imgur.com/EGUHIC7.png?auto=compress&cs=tinysrgb&w=600'
       }
