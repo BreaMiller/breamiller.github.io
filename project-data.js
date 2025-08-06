@@ -309,7 +309,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Abstract Expressions',
+        title: '',
         text: 'What if AI could express emotions through abstract art? This upcoming collection explores the intersection of technology and emotion.',
         image: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=800'
       }
