@@ -117,7 +117,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Make Reading Fun',
+        title: '',
         text: 'What if every child could had their own AI-reading assistant that could keep track of the grammer and phonics skills they need to practice.',
         image: 'https://i.imgur.com/fGq1EDQ.png?auto=compress&cs=tinysrgb&w=600'
       }
