@@ -168,43 +168,6 @@ let mediaContent = '';
     }
 }
 
-// Inside ProjectLoader class, e.g., after renderSections(data.sections);
-// Or create a new method like this.setupLightboxListeners(); and call it.
-setupLightboxListeners() {
-    const lightboxOverlay = document.getElementById('lightbox-overlay');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxClose = document.getElementById('lightbox-close');
-
-    // Event listener for opening the lightbox
-    document.addEventListener('click', (event) => {
-        // Check if the clicked element is an image within an imagine-card
-        if (event.target.classList.contains('project-media-element') && event.target.closest('.imagine-card')) {
-            const imageUrl = event.target.src;
-            if (imageUrl) {
-                lightboxImage.src = imageUrl;
-                lightboxOverlay.classList.add('active');
-            }
-        }
-    });
-
-    // Event listener for closing the lightbox via close button
-    lightboxClose.addEventListener('click', () => {
-        lightboxOverlay.classList.remove('active');
-    });
-
-    // Event listener for closing the lightbox by clicking outside the image
-    lightboxOverlay.addEventListener('click', (event) => {
-        if (event.target === lightboxOverlay) {
-            lightboxOverlay.classList.remove('active');
-        }
-    });
-}
-
-// Call this method after the project content is rendered
-// For example, in the renderProject method, after renderSections:
-// this.renderSections(data.sections);
-// this.setupLightboxListeners();
-
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new ProjectLoader();
