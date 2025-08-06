@@ -229,7 +229,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Luxury Meets Innovation',
+        title: '',
         text: 'What if premium accessories could redefine what it means to be both timeless and futuristic.',
         image: 'https://i.imgur.com/zLtU5VE.png?auto=compress&cs=tinysrgb&w=600'
       }
