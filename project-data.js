@@ -293,7 +293,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Future of Advertising',
+        title: '',
         text: 'Creating and optimizing campaigns is now faster than ever.',
         video: 'https://i.imgur.com/lRQUd6S.mp4?auto=compress&cs=tinysrgb&w=800'
       }
