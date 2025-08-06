@@ -8,7 +8,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Vision',
+        title: '',
         text: 'The Pneuma Collection represents a revolutionary approach to ready-to-wear fashion, every piece is tailored to the individual.',
         image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=200'
       },
