@@ -16,7 +16,7 @@ const projectsData = {
         type: 'double',
         items: [
           {
-            title: 'AI-Generated Textures',
+            title: '',
             text: 'Every fabric pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
             image: 'https://i.imgur.com/7a7WUio.jpeg?auto=compress&cs=tinysrgb&w=600'
           },
@@ -39,8 +39,8 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Tenderness',
-        text: 'The essence of love: Birds share an endearing embrace.',
+        title: '',
+        text: 'The essence of love: birds share an tender embrace.',
         image: 'https://i.imgur.com/w5B40Jm.jpeg?auto=compress&cs=tinysrgb&w=800'
       },
       {
