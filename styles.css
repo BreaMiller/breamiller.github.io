@@ -1192,7 +1192,7 @@ body::before {
     border: 1px solid #333;
     transition: all 0.4s ease;
     cursor: pointer;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .imagine-card:hover {
