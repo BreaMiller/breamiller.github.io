@@ -295,7 +295,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'What If the World Was Different?',
+        title: '',
         text: 'What if technology companies operated in the physical world? Imagine explores alternative realities through creative storytelling.',
         image: 'https://i.imgur.com/hskv718.jpeg'
       }
