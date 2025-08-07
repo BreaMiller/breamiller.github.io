@@ -8,7 +8,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Vision Behind Pneuma',
+        title: '',
         text: 'The Pneuma Collection represents a revolutionary approach to ready-to-wear fashion, every piece is tailored to the individual.',
         image: 'https://i.imgur.com/ErEqAbd.png?auto=compress&cs=tinysrgb&w=600'
       },
@@ -16,12 +16,12 @@ const projectsData = {
         type: 'double',
         items: [
           {
-            title: 'AI-Generated Textures',
+            title: '',
             text: 'Every fabric pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
             image: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=600'
           },
           {
-            title: 'Sustainable Materials',
+            title: '',
             text: 'Combining technology with eco-friendly production methods to create fashion that cares for our planet.',
             image: 'https://images.pexels.com/photos/8566485/pexels-photo-8566485.jpeg?auto=compress&cs=tinysrgb&w=600'
           }
@@ -39,7 +39,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Capturing Love Through AI',
+        title: '',
         text: 'What if we could visualize the essence of love through artificial intelligence? Love Birds explores the intersection of emotion and technology.',
         image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
@@ -55,7 +55,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Science of Beauty',
+        title: '',
         text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
         image: 'https://i.imgur.com/GxTG4gk.jpeg'
       }
@@ -71,7 +71,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Simplifying Entertainment Discovery',
+        title: '',
         text: 'What if finding where to watch your favorite shows was effortless? Buku TV aggregates content from all major streaming platforms.',
         image: 'https://i.imgur.com/W9YVpm6.gif'
       }
@@ -87,7 +87,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Making Reading Magical',
+        title: '',
         text: 'What if every child could discover the joy of reading through interactive storytelling? Knack transforms reading into an adventure.',
         image: 'https://i.imgur.com/fGq1EDQ.png'
       }
@@ -103,7 +103,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Personalized Health Insights',
+        title: '',
         text: 'What if your genetics could guide your daily health decisions? GeneProof provides personalized recommendations based on your DNA.',
         image: 'https://i.imgur.com/GyRDHxC.gif'
       }
@@ -119,7 +119,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Building Community for Mothers',
+        title: '',
         text: 'What if every expectant mother had a supportive community at her fingertips? Baraka connects mothers through shared experiences.',
         image: 'https://i.imgur.com/2hBPNJ7.png'
       }
@@ -135,7 +135,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Strengthening Democracy',
+        title: '',
         text: 'What if every citizen could easily participate in shaping their community? Civic Social makes democratic engagement accessible.',
         image: 'https://i.imgur.com/zOAd5qr.png'
       }
@@ -151,7 +151,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Future of Human Enhancement',
+        title: '',
         text: 'What if we could hack our own biology to become superhuman? BioHaxx explores the ethical implications of biotechnology.',
         image: 'https://i.imgur.com/k8p4JMP.gif'
       }
@@ -167,7 +167,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Your Journey to Wellness',
+        title: '',
         text: 'What if wellness wasn\'t just a destination, but a beautiful journey? This guide provides practical steps for holistic health.',
         image: 'https://i.imgur.com/EGUHIC7.png'
       }
@@ -183,7 +183,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'A Hero\'s Journey',
+        title: '',
         text: 'What if the greatest battles were fought within ourselves? This graphic novel explores the inner warrior in all of us.',
         image: 'https://i.imgur.com/LSCxFn5.png'
       }
@@ -199,7 +199,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Luxury Meets Innovation',
+        title: '',
         text: 'What if luxury accessories could be both timeless and futuristic? The Bask collection redefines premium handbags.',
         image: 'https://i.imgur.com/WagmOW8.jpeg'
       }
@@ -215,7 +215,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Language of Silence',
+        title: '',
         text: 'What if the most powerful messages were never spoken? Unspoken explores communication beyond words.',
         image: 'https://i.imgur.com/IDkwGzA.png'
       }
@@ -231,7 +231,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Music for the Soul',
+        title: '',
         text: 'What if music could transport you to another realm? Ethereal Stroll creates soundscapes for inner peace.',
         image: 'https://i.imgur.com/uwCTYkA.jpeg'
       }
@@ -247,7 +247,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'Sustainable Energy Management',
+        title: '',
         text: 'What if managing your energy consumption was as easy as checking your phone? Rhea makes sustainability simple.',
         image: 'https://i.imgur.com/6EA3YOJ.gif'
       }
@@ -263,7 +263,7 @@ const projectsData = {
     sections: [
       {
         type: 'single',
-        title: 'The Future of Advertising',
+        title: '',
         text: 'What if ads could be as entertaining as the content we love? Ad Reels uses AI to create compelling advertising content.',
         image: 'https://i.imgur.com/cFfsXOv.gif'
       }
