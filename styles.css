@@ -127,7 +127,7 @@ body::before {
 }
 
 .stat-item {
-    text-align: center;
+    text-align: left;
 }
 
 .stat-number {
@@ -1192,7 +1192,6 @@ body::before {
     border: 1px solid #333;
     transition: all 0.4s ease;
     cursor: pointer;
-    object-fit: cover;
 }
 
 .imagine-card:hover {
@@ -1236,7 +1235,7 @@ body::before {
     background: rgba(128, 128, 128, 0.8);
     border: none;
     border-radius: 50%;
-    display: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -1425,30 +1424,19 @@ body::before {
 /* Lightbox Close Button */
 #lightbox-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: rgba(17, 17, 17, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    font-size: 24px;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 50%;
-    transition: all 0.3s ease;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.2s ease;
 }
 
 #lightbox-close:hover {
-    background: linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%);
-    color: #ffffff;
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
-    border-color: rgba(236, 72, 153, 0.3);
-}
+    background: rgba(255, 255, 255, 0.2);
+}  
 }
