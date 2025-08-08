@@ -83,12 +83,12 @@ const projectsData = {
     title: 'Knack™️',
     label: '',
     heroImage: '',
-    description: 'Interactive reading app designed to make learning fun for children.',
+    description: 'Interactive reading app designed to make learning more engaging for children.',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'What if every child could discover the joy of reading through interactive storytelling? Knack transforms reading into an adventure.',
+        text: 'Every reading session is more productive.',
         image: 'https://i.imgur.com/fGq1EDQ.png'
       }
     ],
