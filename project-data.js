@@ -17,7 +17,7 @@ const projectsData = {
         items: [
           {
             title: '',
-            text: 'Every fabric pattern was created using advanced AI algorithms, resulting in unique textures never seen before.',
+            text: 'Every fabric pattern features unique textures never seen before.',
             image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
           },
           {
