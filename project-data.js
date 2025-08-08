@@ -152,7 +152,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'BioHaxx explores the implications of the inner worldof microscopic intelligence.',
+        text: 'BioHaxx explores the implications of the inner world of microscopic intelligence.',
         image: 'https://i.imgur.com/k8p4JMP.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
