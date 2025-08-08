@@ -52,7 +52,7 @@ const projectsData = [
         image: "https://i.imgur.com/uWiCWju.jpeg"
     },
     {
-        name: "Iridescence",
+        name: "The Art of Attraction",
         description: "AI Couture", 
         slug: "iridescence",
         color: "purple",
