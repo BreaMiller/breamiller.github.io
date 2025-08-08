@@ -104,7 +104,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if your genetics could guide your daily health decisions? GeneProof provides personalized recommendations based on your DNA.',
+        text: 'GeneProof provides personalized recommendations based on your DNA and enviornmental factors.',
         image: 'https://i.imgur.com/GyRDHxC.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
