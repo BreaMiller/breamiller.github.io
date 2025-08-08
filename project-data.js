@@ -44,6 +44,7 @@ const projectsData = {
         image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
     ],
+    
     overview: 'A series of AI-generated decorative pieces that capture the beauty and intimacy of love through algorithmic artistry.'
   },
 
@@ -58,19 +59,6 @@ const projectsData = {
         title: '',
         text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
         image: 'https://i.imgur.com/eXDo86B.jpeg'
-      }
-    ],
-    'love-birds': {
-    title: 'Love Birds',
-    label: '',
-    heroImage: '',
-    description: 'Romantic AI-generated art pieces perfect for modern home decoration.',
-    sections: [
-      {
-        type: 'single',
-        title: '',
-        text: 'What if we could visualize the essence of love through artificial intelligence? Love Birds explores the intersection of emotion and technology.',
-        image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
     ],
     overview: 'Luxury couture collection combining traditional craftsmanship with AI-generated patterns that mimic the natural phenomenon of iridescence.'
