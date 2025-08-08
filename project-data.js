@@ -10,7 +10,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'The Pneuma Collection represents a revolutionary approach to ready-to-wear fashion, every piece is tailored to the individual.',
-        image: 'https://i.imgur.com/ErEqAbd.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
       },
       {
         type: 'double',
