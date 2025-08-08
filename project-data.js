@@ -47,8 +47,8 @@ const projectsData = {
     overview: 'A series of AI-generated decorative pieces that capture the beauty and intimacy of love through algorithmic artistry.'
   },
 
-  'iridescence': {
-    title: 'Iridescence',
+  'attraction': {
+    title: 'The Art of Attraction',
     label: '',
     heroImage: '',
     description: 'High-fashion couture pieces featuring iridescent AI-generated designs.',
