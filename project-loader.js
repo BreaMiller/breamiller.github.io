@@ -44,7 +44,7 @@ class ProjectLoader {
         // Update hero section
         document.getElementById('project-label').textContent = data.label;
         document.getElementById('project-title').textContent = data.title;
-        document.getElementById('project-description').innerHTML =<span class="accent-text">reform</span> ${'data.description'};
+        document.getElementById('project-description').innerHTML = `<span class="accent-text">reform</span> ${data.description}`;
         document.getElementById('hero-image').src = data.heroImage;
         document.getElementById('hero-image').alt = data.title;
         
