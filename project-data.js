@@ -35,7 +35,7 @@ const projectsData = {
     title: 'Love Birds',
     label: '',
     heroImage: '',
-    description: 'Romantic AI-generated art pieces perfect for modern home decoration.',
+    description: 'Romantic, AI-generated art pieces perfect for modern home decor.',
     sections: [
       {
         type: 'single',
