@@ -57,7 +57,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Garments that mimic one of mother nature\'s most majestic creatures.',
-        image: 'https://i.imgur.com/eXDo86B.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/KBqlIKI.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Luxury couture collection combining traditional craftsmanship with AI-generated patterns that mimic the natural phenomenon of iridescence.'
