@@ -147,12 +147,12 @@ const projectsData = {
     title: 'BioHaxx',
     label: '',
     heroImage: '',
-    description: 'Futuristic TV series exploring biotechnology and human enhancement.',
+    description: 'Sci-fi TV series exploring the pathonogenic experience.',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'What if we could hack our own biology to become superhuman? BioHaxx explores the ethical implications of biotechnology.',
+        text: 'BioHaxx explores the implications of the inner worldof microscopic intelligence.',
         image: 'https://i.imgur.com/k8p4JMP.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
