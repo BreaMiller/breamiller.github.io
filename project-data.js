@@ -124,7 +124,7 @@ const projectsData = {
         image: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Social network designed to support and connect mothers throughout their pregnancy journey with expert advice and peer support.'
+    overview: 'Social network designed to support and connect mothers throughout their pregnancy journey with live-in doulas and peer support.'
   },
 
   'civic-social': {
