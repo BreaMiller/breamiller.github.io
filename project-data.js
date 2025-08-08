@@ -40,7 +40,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if we could visualize the essence of love through artificial intelligence? Love Birds explores the intersection of emotion and technology.',
+        text: 'The essence of love.',
         image: 'https://i.imgur.com/w5B40Jm.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
