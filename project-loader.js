@@ -38,18 +38,29 @@ class ProjectLoader {
 
     renderProject(data) {
         // Update page title
-        document.getElementById('page-title').textContent = `${data.title} - Brea Miller`;
+        const pageTitle = document.getElementById('page-title');
+        if (pageTitle) pageTitle.textContent = `${data.title} - Brea Miller`;
         document.title = `${data.title} - Brea Miller`;
         
         // Update hero section
-        document.getElementById('project-label').textContent = data.label;
-        document.getElementById('project-title').textContent = data.title;
-        document.getElementById('project-description').innerHTML = `<span class="accent-text">reform</span> ${data.description}`;
-        document.getElementById('hero-image').src = data.heroImage;
-        document.getElementById('hero-image').alt = data.title;
+        const projectLabel = document.getElementById('project-label');
+        if (projectLabel) projectLabel.textContent = data.label;
+        
+        const projectTitle = document.getElementById('project-title');
+        if (projectTitle) projectTitle.textContent = data.title;
+        
+        const projectDescription = document.getElementById('project-description');
+        if (projectDescription) projectDescription.innerHTML = `<span class="accent-text">reform</span> ${data.description}`;
+        
+        const heroImage = document.getElementById('hero-image');
+        if (heroImage) {
+            heroImage.src = data.heroImage;
+            heroImage.alt = data.title;
+        }
         
         // Update overview
-        document.getElementById('project-overview').textContent = data.overview;
+        const projectOverview = document.getElementById('project-overview');
+        if (projectOverview) projectOverview.textContent = data.overview;
         
         // Render dynamic sections
         this.renderSections(data.sections);
