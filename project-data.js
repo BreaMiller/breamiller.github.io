@@ -156,7 +156,7 @@ const projectsData = {
         image: 'https://i.imgur.com/k8p4JMP.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Thought-provoking series that examines the ethical implications of biotechnology and human enhancement in a near-future setting.'
+    overview: 'Thought-provoking series that deep-dives into the inner world of microscopic intelligence.'
   },
 
   'wellness-guide': {
