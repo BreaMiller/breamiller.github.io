@@ -67,7 +67,7 @@ const projectsData = {
     title: 'Buku TV™️',
     label: '',
     heroImage: '',
-    description: 'Revolutionary streaming platform for discovering where to watch your favorite content.',
+    description: 'Revolutionary streaming platform for discovering where to watch your favorite movies and tv series.',
     sections: [
       {
         type: 'single',
