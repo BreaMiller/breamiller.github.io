@@ -41,7 +41,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if we could visualize the essence of love through artificial intelligence? Love Birds explores the intersection of emotion and technology.',
-        image: 'https://i.imgur.com/uWiCWju.jpeg'
+        image: 'https://i.imgur.com/uWiCWju.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A series of AI-generated decorative pieces that capture the beauty and intimacy of love through algorithmic artistry.'
@@ -57,7 +57,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
-        image: 'https://i.imgur.com/eXDo86B.jpeg'
+        image: 'https://i.imgur.com/eXDo86B.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Luxury couture collection combining traditional craftsmanship with AI-generated patterns that mimic the natural phenomenon of iridescence.'
@@ -73,7 +73,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if finding where to watch your favorite shows was effortless? Buku TV aggregates content from all major streaming platforms.',
-        image: 'https://i.imgur.com/W9YVpm6.gif'
+        image: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A comprehensive streaming aggregator that helps users find content across multiple platforms with intelligent recommendations.'
@@ -89,7 +89,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Every reading session is more productive.',
-        image: 'https://i.imgur.com/fGq1EDQ.png'
+        image: 'https://i.imgur.com/fGq1EDQ.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Educational app that combines gamification with reading to engage young learners and foster a lifelong love of books.'
@@ -105,7 +105,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if your genetics could guide your daily health decisions? GeneProof provides personalized recommendations based on your DNA.',
-        image: 'https://i.imgur.com/GyRDHxC.gif'
+        image: 'https://i.imgur.com/GyRDHxC.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Cutting-edge app that uses genetic data to provide personalized health recommendations and track wellness metrics.'
@@ -121,7 +121,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if every expectant mother had a supportive community at her fingertips? Baraka connects mothers through shared experiences.',
-        image: 'https://i.imgur.com/2hBPNJ7.png'
+        image: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Social network designed to support and connect mothers throughout their pregnancy journey with expert advice and peer support.'
@@ -137,7 +137,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if every citizen could easily participate in shaping their community? Civic Social makes democratic engagement accessible.',
-        image: 'https://i.imgur.com/zOAd5qr.png'
+        image: 'https://i.imgur.com/zOAd5qr.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Digital platform that facilitates civic engagement and democratic processes through community organizing and voting tools.'
@@ -153,7 +153,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if we could hack our own biology to become superhuman? BioHaxx explores the ethical implications of biotechnology.',
-        image: 'https://i.imgur.com/k8p4JMP.gif'
+        image: 'https://i.imgur.com/k8p4JMP.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Thought-provoking series that examines the ethical implications of biotechnology and human enhancement in a near-future setting.'
@@ -169,7 +169,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if wellness wasn\'t just a destination, but a beautiful journey? This guide provides practical steps for holistic health.',
-        image: 'https://i.imgur.com/EGUHIC7.png'
+        image: 'https://i.imgur.com/EGUHIC7.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A comprehensive guide covering all aspects of physical, mental, and spiritual wellness with actionable advice and insights.'
@@ -185,7 +185,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if the greatest battles were fought within ourselves? This graphic novel explores the inner warrior in all of us.',
-        image: 'https://i.imgur.com/LSCxFn5.png'
+        image: 'https://i.imgur.com/LSCxFn5.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'An epic graphic novel that combines stunning visuals with profound storytelling about personal transformation and spiritual awakening.'
@@ -201,7 +201,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if luxury accessories could be both timeless and futuristic? The Bask collection redefines premium handbags.',
-        image: 'https://i.imgur.com/WagmOW8.jpeg'
+        image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Premium handbag collection that combines traditional craftsmanship with AI-generated patterns for unique luxury accessories.'
@@ -217,7 +217,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if the most powerful messages were never spoken? Unspoken explores communication beyond words.',
-        image: 'https://i.imgur.com/IDkwGzA.png'
+        image: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A digital art series that uses AI to explore the spaces between words, creating visual representations of unspoken emotions.'
@@ -226,14 +226,14 @@ const projectsData = {
   'ethereal-stroll': {
     title: 'Ethereal Stroll',
     label: '',
-    heroImage: 'https://i.imgur.com/uwCTYkA.jpeg',
+    heroImage: 'https://i.imgur.com/uwCTYkA.jpeg?auto=compress&cs=tinysrgb&w=600',
     description: 'Ambient music collection designed for meditation and relaxation.',
     sections: [
       {
         type: 'single',
         title: '',
         text: 'What if music could transport you to another realm? Ethereal Stroll creates soundscapes for inner peace.',
-        image: 'https://i.imgur.com/uwCTYkA.jpeg'
+        image: 'https://i.imgur.com/uwCTYkA.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A collection of ambient compositions designed to facilitate meditation, relaxation, and spiritual contemplation.'
@@ -249,7 +249,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if managing your energy consumption was as easy as checking your phone? Rhea makes sustainability simple.',
-        image: 'https://i.imgur.com/6EA3YOJ.gif'
+        image: 'https://i.imgur.com/6EA3YOJ.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Intelligent dashboard that helps users monitor and optimize their energy consumption for a more sustainable lifestyle.'
@@ -265,7 +265,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if ads could be as entertaining as the content we love? Ad Reels uses AI to create compelling advertising content.',
-        image: 'https://i.imgur.com/cFfsXOv.gif'
+        image: 'https://i.imgur.com/cFfsXOv.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Revolutionary approach to advertising using AI to create engaging, personalized content that resonates with audiences.'
@@ -297,7 +297,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if technology companies operated in the physical world? Imagine explores alternative realities through creative storytelling.',
-        image: 'https://i.imgur.com/hskv718.jpeg'
+        image: 'https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A creative project that reimagines how digital companies might operate in the physical world, exploring alternative business models.'
