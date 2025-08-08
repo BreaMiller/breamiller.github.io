@@ -44,22 +44,6 @@ const projectsData = {
         image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
     ],
-          {
-        type: 'double',
-        items: [
-          {
-            title: '',
-            text: 'Every fabric pattern features unique textures never seen before.',
-            image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
-          },
-          {
-            title: '',
-            text: 'Eco-friendly production methods: fashion for our planet.',
-            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
-          }
-        ]
-      }
-    ],
     overview: 'A series of AI-generated decorative pieces that capture the beauty and intimacy of love through algorithmic artistry.'
   },
 
