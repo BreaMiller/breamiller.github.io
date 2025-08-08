@@ -204,7 +204,7 @@ const projectsData = {
         image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Premium handbag collection that combines traditional craftsmanship with AI-generated patterns for unique luxury accessories.'
+    overview: 'A premium handbag that combines traditional craftsmanship with AI-generated patterns for unique luxury accessories.'
   },
 
   'opia': {
