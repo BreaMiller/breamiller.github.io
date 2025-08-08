@@ -265,7 +265,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Optimizing compelling ads is more efficient than ever with AI-generated content.',
-        video: 'https://i.imgur.com/cFfsXOv.gif?auto=compress&cs=tinysrgb&w=600'
+        video: 'https://i.imgur.com/lRQUd6S.mp4?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Revolutionary approach to advertising using AI to create engaging, personalized content that resonates with audiences.'
