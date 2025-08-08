@@ -72,7 +72,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if finding where to watch your favorite shows was effortless? Buku TV aggregates content from all major streaming platforms.',
+        text: 'Buku TV aggregates content from all major streaming platforms.',
         image: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
