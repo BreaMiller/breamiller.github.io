@@ -50,7 +50,7 @@ class ProjectLoader {
         if (projectTitle) projectTitle.textContent = data.title;
         
         const projectDescription = document.getElementById('project-description');
-        if (projectDescription) projectDescription.innerHTML = `<span class="accent-text">reform</span> ${data.description}`;
+        if (projectDescription) projectDescription.innerHTML = `<span class="accent-text">✐ᝰ</span> ${data.description}`;
         
         const heroImage = document.getElementById('hero-image');
         if (heroImage) {
