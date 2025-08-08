@@ -259,12 +259,12 @@ const projectsData = {
     title: 'Ad Reels',
     label: '',
     heroImage: '',
-    description: 'AI-generated advertising content that captures attention and drives engagement.',
+    description: 'Ad that captures attention and drive engagement.',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'What if ads could be as entertaining as the content we love? Ad Reels uses AI to create compelling advertising content.',
+        text: 'Optimizing compelling ads is more efficient than ever with AI-generated content.',
         image: 'https://i.imgur.com/cFfsXOv.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
