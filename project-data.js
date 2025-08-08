@@ -41,7 +41,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'The essence of love.',
-        image: 'https://i.imgur.com/w5B40Jm.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/w5B40Jm.jpeg=600'
       }
     ],
     overview: 'Decorative pieces that capture the artistry of a warm embrace. Exuding tender love and care that can be felt and appreciated.'
