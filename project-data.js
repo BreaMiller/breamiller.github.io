@@ -76,7 +76,7 @@ const projectsData = {
         image: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'A comprehensive streaming aggregator that helps users find content across multiple platforms with intelligent recommendations.'
+    overview: 'A comprehensive streaming distribution aggregator that helps users find content across multiple platforms with intelligent recommendations.'
   },
 
   'knack': {
