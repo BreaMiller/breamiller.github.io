@@ -57,7 +57,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
-        image: 'https://i.imgur.com/GxTG4gk.jpeg'
+        image: 'https://i.imgur.com/eXDo86B.jpeg'
       }
     ],
     overview: 'Luxury couture collection combining traditional craftsmanship with AI-generated patterns that mimic the natural phenomenon of iridescence.'
