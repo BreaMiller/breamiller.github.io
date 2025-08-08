@@ -56,7 +56,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'Exploring how light and color interact in AI-generated fashion, creating garments that shift and change like living art.',
+        text: 'Garments that mimic one of mother nature\'s most majestic creatures.',
         image: 'https://i.imgur.com/eXDo86B.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
