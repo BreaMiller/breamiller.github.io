@@ -191,8 +191,8 @@ const projectsData = {
     overview: 'An epic graphic novel that combines stunning visuals with profound storytelling about personal transformation and spiritual awakening.'
   },
 
-  'bask-handbag': {
-    title: 'Bask Handbag',
+  'solaria-handbag': {
+    title: 'Solaria Handbag',
     label: '',
     heroImage: '',
     description: 'Luxury handbag collection featuring AI-generated designs and patterns.',
@@ -200,7 +200,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if luxury accessories could be both timeless and futuristic? The Bask collection redefines premium handbags.',
+        text: 'What if luxury accessories could be both timeless and futuristic? The Solaria handbag redefines premium handbags.',
         image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
