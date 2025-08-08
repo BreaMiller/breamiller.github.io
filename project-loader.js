@@ -90,6 +90,7 @@ class ProjectLoader {
             </div>
             <div class="imagine-card large">
                 <img src="${section.image}" alt="${section.title}" loading="lazy">
+                <video src="${section.video}" alt="${section.title}" loading="lazy">
             </div>
         `;
         
