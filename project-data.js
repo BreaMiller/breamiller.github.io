@@ -44,7 +44,7 @@ const projectsData = {
         image: 'https://i.imgur.com/uWiCWju.jpeg'
       }
     ],
-          {
+    {
         type: 'double',
         items: [
           {
@@ -76,9 +76,9 @@ const projectsData = {
         image: 'https://i.imgur.com/eXDo86B.jpeg'
       }
     ],
-    {
-      type: 'double',
-      items: [
+{
+        type: 'double',
+        items: [
           {
             title: '',
             text: 'Every fabric pattern features unique textures never seen before.',
