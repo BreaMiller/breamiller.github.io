@@ -35,7 +35,7 @@ const projectsData = {
     title: 'Love Birds',
     label: '',
     heroImage: '',
-    description: 'Romantic art pieces perfect for modern home decor.',
+    description: 'Art pieces perfect for modern home decor.',
     sections: [
       {
         type: 'single',
@@ -44,7 +44,7 @@ const projectsData = {
         image: 'https://i.imgur.com/w5B40Jm.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Decorative pieces that capture the artistry of a tender embrace.'
+    overview: 'Decorative pieces that capture the artistry of a warm embrace. Exuding tender love and care that can be felt and appreciated.'
   },
 
   'attraction': {
