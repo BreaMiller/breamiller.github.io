@@ -120,7 +120,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if every expectant mother had a supportive community at her fingertips? Baraka connects mothers through shared experiences.',
+        text: 'What if every expectant mother had a supportive community at her fingertips?',
         image: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
