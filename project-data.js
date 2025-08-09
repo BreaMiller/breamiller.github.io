@@ -98,7 +98,7 @@ const projectsData = {
   'geneproof': {
     title: 'GeneProof',
     label: '',
-    heroImage: 'https://i.imgur.com/GyRDHxC.gif?auto=compress&cs=tinysrgb&w=600',
+    heroImage: '',
     description: 'Advanced genetic health tracking application for personalized wellness.',
     sections: [
       {
