@@ -1220,11 +1220,7 @@ body::before {
 
 .imagine-card:hover img {
     transform: scale(1.05);
-}
 
-.top-back-button-container {
-    text-align: center;
-    margin-top: 80px;
 }
 
 .top-back-button {
@@ -1265,6 +1261,9 @@ body::before {
     transition: transform 0.3s ease;
 }
 
+.top-back-button:hover .back-arrow {
+    transform: translateX(-3px);
+}
 
 /* Responsive Design for Imagine Page */
 @media (max-width: 768px) {
