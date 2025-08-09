@@ -89,7 +89,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Every reading session is more productive.',
-        image: 'https://i.imgur.com/fGq1EDQ.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/U9Gvnsg.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Knack gamifies reading to engage young learners and foster a lifelong love of books.'
