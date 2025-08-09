@@ -259,16 +259,16 @@ const projectsData = {
     title: 'Ad Reels',
     label: '',
     heroImage: '',
-    description: 'Ads that captures attention and drive engagement.',
+    description: 'Ads for small businesses with tight budgets.',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'Optimizing compelling ads is more efficient than ever with AI-generated content.',
+        text: 'Optimizing compelling ads is more affordable than ever with AI-generated content.',
         image: 'https://i.imgur.com/RYtMF4t.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Revolutionary approach to advertising using AI to create engaging, personalized content that resonates with audiences.'
+    overview: 'Cost-effective approach to creating engaging, personalized content that resonates with audiences.'
   },
 
   'coming-soon': {
