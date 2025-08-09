@@ -55,9 +55,6 @@ body::before {
 .top-back-button:hover {
     background: rgba(128, 128, 128, 1);
     transform: scale(1.1);
-    z-index: 1000;
-    color: #ffffff;
-    font-size: 18px;
 }
 
 /* About Main Container */
