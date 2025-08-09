@@ -1266,7 +1266,7 @@ body::before {
 }
 
 .top-back-button:hover .back-arrow {
-    transform: translateX(-3px);
+    transform: translateX(-4px);
 }
 
 /* Responsive Design for Imagine Page */
