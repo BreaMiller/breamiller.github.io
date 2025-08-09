@@ -569,10 +569,10 @@ body::before {
 
 /* Transition animations */
 .scale-out-enter-active {
-    transition: all .55s ease-in-out;
+    transition: all .77s ease-in-out;
 }
 .scale-out-enter {
-    transform: scale(.55);
+    transform: scale(.77);
     pointer-events: none;
     opacity: 0;
 }
