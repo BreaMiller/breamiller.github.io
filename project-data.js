@@ -188,7 +188,7 @@ const projectsData = {
         image: 'https://i.imgur.com/LSCxFn5.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'An epic graphic novel that combines stunning visuals with profound storytelling about personal transformation and spiritual awakening.'
+    overview: 'Stunning visuals with gut-wrentching plot twists about personal transformation and spiritual awakening.'
   },
 
   'solaria-handbag': {
