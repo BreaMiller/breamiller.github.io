@@ -831,7 +831,7 @@ body::before {
     padding: 20px 0;
     border-top: 1px solid #333;
     margin-top: 20px;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
 }
 
 .footer-content {
