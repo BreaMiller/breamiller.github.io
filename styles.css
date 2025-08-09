@@ -475,7 +475,7 @@ body::before {
 }
 
 /* Vertical-pop-off image hover effect */
-.v-pop-off-container .project-card:hover img.pop-out-image {
+.v-pop-off-container .project-card:hover img.v-pop-out-image {
     transform: scale(1.05);
 }
 
