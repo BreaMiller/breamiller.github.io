@@ -49,7 +49,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
     opacity: 0.1;
     pointer-events: none;
 }
@@ -406,14 +406,16 @@ body::before {
     opacity: 1;
 }
 
-.project-card img {
+.project-card img,
+.project-card video { /* Added video */
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-card:hover img {
+.project-card:hover img,
+.project-card:hover video { /* Added video */
     transform: scale(1.05);
 }
 
@@ -434,7 +436,8 @@ body::before {
 }
 
 /* Pop-off image styling - creates the 3D pop-off effect */
-.pop-off-container .project-card img.pop-out-image {
+.pop-off-container .project-card img.pop-out-image,
+.pop-off-container .project-card video.pop-out-image { /* Added video */
     position: absolute;
     z-index: 4;
     width: 100%;
@@ -447,7 +450,8 @@ body::before {
 }
 
 /* Vertical-pop-off image hover effect */
-.v-pop-off-container .project-card img.v-pop-out-image {
+.v-pop-off-container .project-card img.v-pop-out-image,
+.v-pop-off-container .project-card video.v-pop-out-image { /* Added video */
     transform: scale(1.05);
 }
 
@@ -462,7 +466,8 @@ body::before {
 }
 
 /* Vertical-pop-off image styling - creates the 3D pop-off effect */
-.v-pop-off-container .project-card img.v-pop-out-image {
+.v-pop-off-container .project-card img.v-pop-out-image,
+.v-pop-off-container .project-card video.v-pop-out-image { /* Added video */
     position: absolute;
     z-index: 4;
     width: 100%;
@@ -475,7 +480,8 @@ body::before {
 }
 
 /* Vertical-pop-off image hover effect */
-.v-pop-off-container .project-card:hover img.v-pop-out-image {
+.v-pop-off-container .project-card:hover img.v-pop-out-image,
+.v-pop-off-container .project-card:hover video.v-pop-out-image { /* Added video */
     transform: scale(1.05);
 }
 
@@ -511,14 +517,16 @@ body::before {
     background: #222;
 }
 
-.gallery-item img {
+.gallery-item img,
+.gallery-item video { /* Added video */
     width: 100%;
     height: 400px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
+.gallery-item:hover img,
+.gallery-item:hover video { /* Added video */
     transform: scale(1.05);
 }
 
@@ -1103,11 +1111,13 @@ body::before {
 }
 
 /* Image Zoom Effect */
-.project-card img {
+.project-card img,
+.project-card video { /* Added video */
     transition: transform 0.3s ease;
 }
 
-.project-card:hover img {
+.project-card:hover img,
+.project-card:hover video { /* Added video */
     transform: scale(1.05);
 }
 
@@ -1246,14 +1256,16 @@ body::before {
     height: 400px;
 }
 
-.imagine-card img {
+.imagine-card img,
+.imagine-card video { /* Added video */
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
 
-.imagine-card:hover img {
+.imagine-card:hover img,
+.imagine-card:hover video { /* Added video */
     transform: scale(1.05);
 
 }
@@ -1380,7 +1392,7 @@ body::before {
     backdrop-filter: blur(10px);
 }
 
-.project-hero-image {
+.project-hero-media { /* Changed from .project-hero-image */
     margin-top: 1rem;
     border-radius: 12px;
     overflow: hidden;
@@ -1390,14 +1402,16 @@ body::before {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.project-hero-image img {
+.project-hero-media img,
+.project-hero-media video { /* Added video */
     width: 100%;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
 }
 
-.project-hero-image:hover img {
+.project-hero-media:hover img,
+.project-hero-media:hover video { /* Added video */
     transform: scale(1.02);
 }
 }
