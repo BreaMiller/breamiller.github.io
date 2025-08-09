@@ -1255,6 +1255,10 @@ body::before {
     box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
 }
 
+.top-back-button:hover {
+    background: rgba(128, 128, 128, 1);
+}
+
 .top-back-arrow {
     font-size: 18px;
     transition: transform 0.3s ease;
