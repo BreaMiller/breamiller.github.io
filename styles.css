@@ -1255,10 +1255,6 @@ body::before {
     box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
 }
 
-.top-back-button:hover {
-    background: rgba(128, 128, 128, 1);
-}
-
 /* Responsive Design for Imagine Page */
 @media (max-width: 768px) {
     .imagine-row {
