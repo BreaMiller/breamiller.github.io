@@ -582,7 +582,7 @@ body::before {
 }
 
 .scale-in-enter {
-    transform: scale(1.2);
+    transform: scale(.77);
     pointer-events: none;
     opacity: 0;
 }
