@@ -568,6 +568,14 @@ body::before {
 }
 
 /* Transition animations */
+.scale-out-enter-active {
+    transition: all .55s ease-in-out;
+}
+.scale-out-enter {
+    transform: scale(.55);
+    pointer-events: none;
+    opacity: 0;
+}
 .scale-out-leave-to {
     transform: scale(1.2);
     pointer-events: none;
@@ -580,7 +588,11 @@ body::before {
 .scale-in-leave-active {
     transition: all .35s ease-in-out;
 }
-
+.scale-in-enter {
+    transform: scale(1.2);
+    pointer-events: none;
+    opacity: 0;
+}
 .scale-in-leave-to {
     transform: scale(.55);
     pointer-events: none;
