@@ -575,9 +575,7 @@ body::before {
 .scale-in-enter-active {
     transition: all .35s ease-in-out;
 }
-.scale-in-leave-active {
-    transition: all .35s ease-in-out;
-}
+
 
 
 /* Right Section */
