@@ -67,7 +67,7 @@ const projectsData = {
     title: 'Buku TV™️',
     label: '',
     heroImage: '',
-    description: 'Search where to watch your favorite movies and tv series.',
+    description: 'Search your favorite movies and tv series.',
     sections: [
       {
         type: 'single',
