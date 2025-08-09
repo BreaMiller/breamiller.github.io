@@ -571,6 +571,11 @@ body::before {
 .scale-out-enter-active {
     transition: all .55s ease-in-out;
 }
+.scale-out-enter {
+    transform: scale(.55);
+    pointer-events: none;
+    opacity: 0;
+}
 
 /* Right Section */
 .about-right-section {
