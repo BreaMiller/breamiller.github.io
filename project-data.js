@@ -131,7 +131,7 @@ const projectsData = {
     title: 'Civic Social',
     label: '',
     heroImage: '',
-    description: 'Voting platform for decentralizing the tax budget.',
+    description: 'Voting platform for decentralizing state taxes.',
     sections: [
       {
         type: 'single',
