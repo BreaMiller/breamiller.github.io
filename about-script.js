@@ -218,10 +218,10 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Contact button functionality
+// Skills button functionality
 document.querySelector('.btn-primary')?.addEventListener('click', function() {
     // Open skills list in new tab or download
-    window.location.href = 'https://www.notion.so/Brea-Miller-24a81d719ffb80ceacd7f69ea926b8b4?source=copy_link';
+    window.location.href = 'https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb80ceacd7f69ea926b8b4';
 });
 
 // Military Service button functionality
