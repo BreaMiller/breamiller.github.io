@@ -568,12 +568,17 @@ body::before {
 }
 
 /* Transition animations */
-
-.scale-out-enter {
-    transform: scale(.77);
-    pointer-events: none;
-    opacity: 100%;
+.scale-out-enter-active {
+    transition: all .55s ease-in-out;
 }
+
+.scale-in-enter-active {
+    transition: all .35s ease-in-out;
+}
+.scale-in-leave-active {
+    transition: all .35s ease-in-out;
+}
+
 
 /* Right Section */
 .about-right-section {
