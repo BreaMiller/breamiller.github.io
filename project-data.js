@@ -216,7 +216,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if the most powerful messages were never spoken? Unspoken explores communication beyond words.',
+        text: 'What if the most powerful messages were never spoken? Opia communicates beyond words.',
         image: 'https://i.imgur.com/nYlLijK.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
