@@ -136,7 +136,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if every citizen could actively participate in shaping their own community? Civic Social makes democratic engagement accessible.',
+        text: 'What if every citizen could actively participate in shaping their own community?',
         image: 'https://i.imgur.com/zOAd5qr.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
