@@ -1257,6 +1257,7 @@ body::before {
 
 .top-back-arrow {
     font-size: 18px;
+    transition: transform 0.3s ease;
 }
 
 .top-back-button:hover .back-arrow {
