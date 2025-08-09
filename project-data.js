@@ -300,7 +300,7 @@ const projectsData = {
         image: 'https://i.imgur.com/jSYhdrw.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Reimagine how we can generate electricity to power our homes, businesses, and recreational activities.'
+    overview: 'Reimagine how we generate electricity to power our homes, businesses, and recreational activities.'
   }
 };
 
