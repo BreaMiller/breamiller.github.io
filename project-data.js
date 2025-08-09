@@ -275,12 +275,12 @@ const projectsData = {
     title: 'Coming Soon',
     label: '',
     heroImage: '',
-    description: 'Abstract AI art collection exploring the boundaries of digital creativity.',
+    description: 'Abstract AI art collection exploring the boundaries of human emotions.',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'What if AI could express emotions through abstract art? This upcoming collection explores the intersection of technology and emotion.',
+        text: 'What do you get when AI attempts to express emotions through abstract art? This upcoming collection!',
         image: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=800'
       }
     ],
@@ -291,16 +291,16 @@ const projectsData = {
     title: 'Imagine...',
     label: '',
     heroImage: '',
-    description: 'Creative exploration of alternative realities and "what if" scenarios.',
+    description: 'Near-future technological advancements.',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'What if technology companies operated in the physical world? Imagine explores alternative realities through creative storytelling.',
+        text: 'What If we generated our own electricity?',
         image: 'https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'A creative project that reimagines how digital companies might operate in the physical world, exploring alternative business models.'
+    overview: 'A creative project that reimagines how people can generate electricity to power their homes, businesses, and recreational activities.'
   }
 };
 
