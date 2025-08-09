@@ -249,7 +249,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Energy monitoring is as easy as checking your phone.',
-        image: 'https://i.imgur.com/6EA3YOJ.gif?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/nWeTubZ.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Intelligent dashboard that helps users monitor and optimize their kinetic energy generation and consumption for a more sustainable lifestyle.'
