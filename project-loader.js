@@ -46,6 +46,7 @@ class ProjectLoader {
             video.muted = true;
             video.autoplay = true;
             video.playsInline = true;
+            video.controls = true; // Add this line to show controls
             if (poster) {
                 video.poster = poster;
             }
