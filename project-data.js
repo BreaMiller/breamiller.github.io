@@ -217,7 +217,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if the most powerful messages were never spoken? Unspoken explores communication beyond words.',
-        image: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/lHB0OfN.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A digital art series that uses AI to explore the spaces between words, creating visual representations of unspoken emotions.'
