@@ -1255,6 +1255,15 @@ body::before {
     transform: scale(1.1);
 }
 
+.top-back-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.top-back-button:hover .back-arrow {
+    transform: translateX(-3px);
+}
+
 /* Responsive Design for Imagine Page */
 @media (max-width: 768px) {
     .imagine-row {
