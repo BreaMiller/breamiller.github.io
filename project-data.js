@@ -140,7 +140,7 @@ const projectsData = {
         image: 'https://i.imgur.com/zOAd5qr.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Digital platform that facilitates civic engagement and democratic processes through community organizing and voting tools.'
+    overview: 'Digital platform that facilitates civic engagement and democratic processes through community organizing and voting.'
   },
 
   'biohaxx-tv-series': {
