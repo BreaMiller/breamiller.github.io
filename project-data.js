@@ -297,7 +297,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What If we generated our own electricity?',
-        image: 'https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/jSYhdrw.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A creative project that reimagines how people can generate electricity to power their homes, businesses, and recreational activities.'
