@@ -362,7 +362,11 @@ body::before {
 }
 
 .project-header .project-title {
-    color: #ffffff;
+    display: block;
+    background: linear-gradient(135deg, #ffffff 0%, #ec4899 50%, #6366f1 75%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 2rem;
     font-weight: 800;
     margin: 0;
