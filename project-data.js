@@ -51,7 +51,7 @@ const projectsData = {
     title: 'The Art of Attraction',
     label: '',
     heroImage: '',
-    description: 'High-fashion couture featuring iridescent AI-generated designs.',
+    description: 'High-fashion couture featuring iridescent, AI-generated designs.',
     sections: [
       {
         type: 'single',
