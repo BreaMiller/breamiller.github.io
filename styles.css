@@ -447,7 +447,7 @@ body::before {
 }
 
 /* Vertical-pop-off image hover effect */
-.v-pop-off-container  img.v-pop-out-image {
+.v-pop-off-container .project-card img.v-pop-out-image {
     transform: scale(1.05);
 }
 
@@ -457,7 +457,7 @@ body::before {
 }
 
 /* Vertical-pop-off card - override overflow hidden for this specific card */
-.v-pop-off-container {
+.v-pop-off-container .project-card {
     overflow: visible;
 }
 
