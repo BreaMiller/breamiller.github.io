@@ -1367,7 +1367,7 @@ body::before {
     width: 50%;
     height: auto;
     align: center;
-    display: block;
+    display: ;
     transition: transform 0.3s ease;
 }
 
