@@ -570,12 +570,7 @@ body::before {
 /* Transition animations */
 
 .scale-in-enter {
-    transform: scale(1.2);
-    pointer-events: none;
-    opacity: 0;
-}
-.scale-in-leave-to {
-    transform: scale(.55);
+    transform: scale(.88);
     pointer-events: none;
     opacity: 0;
 }
