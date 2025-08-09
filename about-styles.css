@@ -568,21 +568,9 @@ body::before {
 }
 
 /* Transition animations */
-.scale-out-leave-to {
-    transform: scale(1.2);
-    pointer-events: none;
-    opacity: 0;
-}
+
 .scale-in-enter-active {
     transition: all .35s ease-in-out;
-}
-.scale-in-leave-active {
-    transition: all .35s ease-in-out;
-}
-.scale-in-leave-to {
-    transform: scale(.55);
-    pointer-events: none;
-    opacity: 0;
 }
 
 /* Right Section */
