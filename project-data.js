@@ -296,7 +296,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What If we generated our own electricity?',
+        text: 'What If we harnessed our kinetic electricity?',
         image: 'https://i.imgur.com/jSYhdrw.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
