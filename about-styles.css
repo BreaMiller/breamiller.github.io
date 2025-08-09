@@ -572,8 +572,6 @@ body::before {
     transition: all .35s ease-in-out;
 }
 
-
-
 /* Right Section */
 .about-right-section {
     display: flex;
