@@ -462,7 +462,7 @@ body::before {
 }
 
 /* Vertical-pop-off image styling - creates the 3D pop-off effect */
-.pop-off-container .project-card img.v-pop-out-image {
+.v-pop-off-container .project-card img.v-pop-out-image {
     position: absolute;
     z-index: 4;
     width: 100%;
