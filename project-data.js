@@ -121,7 +121,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if every expectant mother had a supportive community at her fingertips?',
-        image: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/uUXqZ3d.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Use case for matchmaking application: Mother-to-be can use an app to connect with doulas and other expecting mothers, discover local facilities, and browse self care resources. Once an expecting mother enters her preferences, she will be matched with doulas and local facilities that offer prenatal and postnatal care. In this case, the app must be able to match expecting mothers to doulas and birthing facilities based on preferences, conceal personal information, authenticate personal and professional credentials, offer a messaging service, curate a list of local activity centers, and communicate with prenatal and postnatal care facilities electronically.'
