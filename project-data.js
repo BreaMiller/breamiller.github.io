@@ -83,7 +83,7 @@ const projectsData = {
     title: 'Knack™️',
     label: '',
     heroImage: '',
-    description: 'An Interactive reading app designed to make learning more engaging for children.',
+    description: 'An interactive reading app for kids.',
     sections: [
       {
         type: 'single',
