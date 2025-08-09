@@ -67,7 +67,7 @@ const projectsData = {
     title: 'Buku TV™️',
     label: '',
     heroImage: '',
-    description: 'Search your favorite movies and tv series.',
+    description: 'Search where to watch your favorite movies and tv series.',
     sections: [
       {
         type: 'single',
@@ -265,7 +265,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Optimizing compelling ads is more affordable than ever with AI-generated content.',
-        image: 'https://i.imgur.com/RYtMF4t.gif?auto=compress&cs=tinysrgb&w=600'
+        video: 'https://i.imgur.com/RYtMF4t.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Cost-effective approach to creating engaging, personalized content that resonates with audiences.'
