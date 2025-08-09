@@ -232,7 +232,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if music could transport you to another realm? Ethereal Stroll creates soundscapes for inner peace.',
+        text: 'Soundscape for mindful meditation.',
         image: 'https://i.imgur.com/uwCTYkA.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
