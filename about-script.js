@@ -227,7 +227,7 @@ document.querySelector('.btn-primary')?.addEventListener('click', function() {
 // Military Service button functionality
 document.querySelector('.btn-secondary')?.addEventListener('click', function() {
     // Open military service in new tab or download
-    window.location.href = 'https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb803fa29cd1d221d7750e';
+    window.location.href = 'https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb803fa29cd1d221d7750e?pvs=74';
 });
 
 // Watch button functionality
