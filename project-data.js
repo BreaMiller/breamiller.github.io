@@ -179,7 +179,7 @@ const projectsData = {
     title: 'Gifts from the Sacred Warrior',
     label: '',
     heroImage: '',
-    description: 'A sci-fi original exploring themes of courage, sacrifice, and spiritual growth.',
+    description: 'A sci-fi original exploring themes of courage and sacrifice.',
     sections: [
       {
         type: 'single',
