@@ -569,7 +569,7 @@ body::before {
 
 /* Transition animations */
 .scale-out-enter-active {
-    transition: all .77s ease-in-out;
+    transition: all .77s ease-in;
 }
 .scale-out-enter {
     transform: scale(.77);
