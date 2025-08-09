@@ -1259,11 +1259,6 @@ body::before {
     background: rgba(128, 128, 128, 1);
 }
 
-.top-back-arrow {
-    font-size: 18px;
-    transition: transform 0.3s ease;
-}
-
 /* Responsive Design for Imagine Page */
 @media (max-width: 768px) {
     .imagine-row {
