@@ -73,7 +73,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'Buku TV aggregates content from all major streaming platforms.',
-        image: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/IBQRMJZ.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A comprehensive streaming distribution aggregator that helps users find content across multiple platforms with intelligent recommendations.'
