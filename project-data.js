@@ -108,7 +108,7 @@ const projectsData = {
         image: 'https://i.imgur.com/GyRDHxC.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Cutting-edge app that uses genetic data to provide personalized health recommendations and track wellness metrics.'
+    overview: 'Use case for wellness application: Individuals can use an app to claim ownership of their DNA, receive recommendations and rewards based on their medical history, and match with distant DNA relatives. When the user uploads their medical records, they receive recommendations to manage future or existing medical conditions. Once a task is complete or a recipe is used, the user will be asked to rate each recommendation to keep track of its overall effectiveness. The deep learning technology will improve recommendations for each individual depending on their DNA, medical history, and environmental factors. Users are compensated for achieving medical milestones and for participating in biomedical research. In this case, the app must be able to authenticate ownership, conceal the identity of each individual, interpret medical records, match medical interpretations to pharmacogenetics and natural wellness recommendations, process payments, match DNA relatives, and communicate with biomedical researchers electronically.'
   },
 
   'baraka': {
