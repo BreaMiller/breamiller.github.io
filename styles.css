@@ -446,11 +446,38 @@ body::before {
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Pop-off image hover effect */
-.pop-off-container .project-card:hover img.pop-out-image {
+/* Vertical-pop-off image hover effect */
+.v-pop-off-container  img.v-pop-out-image {
     transform: scale(1.05);
 }
 
+/* Vertical-pop-off card container - allows content to extend beyond boundaries */
+.v-pop-off-container {
+    overflow: visible;
+}
+
+/* Vertical-pop-off card - override overflow hidden for this specific card */
+.v-pop-off-container {
+    overflow: visible;
+}
+
+/* Vertical-pop-off image styling - creates the 3D pop-off effect */
+.pop-off-container .project-card img.v-pop-out-image {
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 135%;
+    top: -10%;
+    left: 0;
+    object-fit: cover;
+    transform: none;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Vertical-pop-off image hover effect */
+.v-pop-off-container .project-card:hover img.pop-out-image {
+    transform: scale(1.05);
+}
 
 /* Project Details Page */
 .project-details {
