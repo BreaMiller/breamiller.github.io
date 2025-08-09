@@ -361,19 +361,13 @@ body::before {
     font-family: 'JetBrains Mono', monospace;
 }
 
-.project-header {
+.project-header .project-title {
     color: #ffffff;
     font-size: 2rem;
     font-weight: 800;
     margin: 0;
     line-height: 1.2;
     letter-spacing: -0.01em;
-}
-.project-title{
-      background: linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .project-card {
