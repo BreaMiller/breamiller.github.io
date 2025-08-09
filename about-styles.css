@@ -368,7 +368,7 @@ body::before {
 .player-cover {
     width: 200px;
     height: 200px;
-    margin-left: 0px;
+    margin-left: -50px;
     flex-shrink: 0;
     position: relative;
     z-index: 2;
