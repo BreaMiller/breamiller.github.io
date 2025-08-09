@@ -217,7 +217,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'What if the most powerful messages were never spoken? Opia communicates beyond words.',
-        video: 'https://i.imgur.com/McOV8P4.mp4?auto=compress&cs=tinysrgb&w=600'
+        video: 'https://i.imgur.com/RNisHGQ.mp4?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A digital art piece that that explores the spaces between words; creating a visual representation of unspoken communication.'
