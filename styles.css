@@ -1244,7 +1244,6 @@ body::before {
 
 .top-back-button:hover {
     background: linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
 }
