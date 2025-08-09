@@ -248,11 +248,11 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if managing your energy consumption was as easy as checking your phone? Rhea makes sustainability simple.',
+        text: 'Energy monitoring is as easy as checking your phone.',
         image: 'https://i.imgur.com/6EA3YOJ.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Intelligent dashboard that helps users monitor and optimize their energy consumption for a more sustainable lifestyle.'
+    overview: 'Intelligent dashboard that helps users monitor and optimize their kinetic energy generation and consumption for a more sustainable lifestyle.'
   },
 
   'ad-reels': {
