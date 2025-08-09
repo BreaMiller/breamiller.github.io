@@ -168,7 +168,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if wellness wasn\'t just a destination, but a beautiful journey? This guide provides practical steps for holistic health.',
+        text: 'This guide is a symptoms index for maintaining optimal health.',
         image: 'https://i.imgur.com/EGUHIC7.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
