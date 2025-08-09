@@ -179,12 +179,12 @@ const projectsData = {
     title: 'Gifts from the Sacred Warrior',
     label: '',
     heroImage: '',
-    description: 'Epic graphic novel exploring themes of courage, sacrifice, and spiritual growth.',
+    description: 'A sci-fi original exploring themes of courage, sacrifice, and spiritual growth.',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'What if the greatest battles were fought within ourselves? This graphic novel explores the inner warrior in all of us.',
+        text: 'The greatest battles are often fought within ourselves. This graphic novel explores the warrior within all of us.',
         image: 'https://i.imgur.com/LSCxFn5.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
