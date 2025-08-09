@@ -60,7 +60,7 @@ const projectsData = {
         image: 'https://i.imgur.com/KBqlIKI.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Luxury couture collection combining traditional craftsmanship with AI-generated patterns that mimic the natural phenomenon of iridescence.'
+    overview: 'Luxury couture collection combining traditional craftsmanship with AI-generated patterns that mimic one of nature\'s most beautiful phenomenons.'
   },
 
   'buku-tv': {
