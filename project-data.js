@@ -115,7 +115,7 @@ const projectsData = {
     title: 'Baraka',
     label: '',
     heroImage: '',
-    description: 'Social platform fostering a villiage for expectant mothers.',
+    description: 'Network for Expectant mothers to connect with peers and doulas.',
     sections: [
       {
         type: 'single',
