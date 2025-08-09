@@ -163,7 +163,7 @@ const projectsData = {
     title: 'Wellness Guide',
     label: '',
     heroImage: '',
-    description: 'Comprehensive guide to holistic wellness and healthy living.',
+    description: 'To Healing Common Ailments with Cell Salts.',
     sections: [
       {
         type: 'single',
