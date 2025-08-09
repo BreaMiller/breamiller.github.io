@@ -59,7 +59,6 @@ body::before {
     box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
 }
 
-
 /* About Main Container */
 .about-main-container {
     display: grid;
@@ -581,6 +580,7 @@ body::before {
     pointer-events: none;
     opacity: 0;
 }
+
 .scale-in-enter-active {
     transition: all .35s ease-in-out;
 }
@@ -596,7 +596,7 @@ body::before {
     transform: scale(.55);
     pointer-events: none;
     opacity: 0;
-
+}
 
 /* Right Section */
 .about-right-section {
