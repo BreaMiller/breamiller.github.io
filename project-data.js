@@ -92,7 +92,7 @@ const projectsData = {
         image: 'https://i.imgur.com/fGq1EDQ.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Educational app that combines gamification with reading to engage young learners and foster a lifelong love of books.'
+    overview: 'Knack gamifies reading to engage young learners and foster a lifelong love of books.'
   },
 
   'geneproof': {
