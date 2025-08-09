@@ -1222,11 +1222,6 @@ body::before {
     transform: scale(1.05);
 }
 
-.top-back-button-container {
-    text-align: center;
-    margin-top: 80px;
-}
-
 .top-back-button {
     position: fixed;
     top: 40px;
