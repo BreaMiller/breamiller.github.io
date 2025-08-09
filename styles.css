@@ -1366,7 +1366,7 @@ body::before {
 .project-hero-image img {
     width: 50%;
     height: auto;
-    align-items: center;
+    align-content: center;
     display: block;
     transition: transform 0.3s ease;
 }
