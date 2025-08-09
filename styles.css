@@ -1244,7 +1244,20 @@ body::before {
     z-index: 1000;
     color: #ffffff;
     font-size: 18px;
+}
 
+.top-back-button:hover {
+    background: rgba(128, 128, 128, 1);
+    transform: scale(1.1);
+}
+
+.top-back-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.top-back-button:hover .back-arrow {
+    transform: translateX(-3px);
 }
 
 /* Responsive Design for Imagine Page */
