@@ -1364,10 +1364,10 @@ body::before {
 }
 
 .project-hero-image img {
-    width: 50%;
-    height: auto;
+    width: auto;
+    height: 50%;
     align: center;
-    display: ;
+    display: block;
     transition: transform 0.3s ease;
 }
 
