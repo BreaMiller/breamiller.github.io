@@ -296,7 +296,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What If we harnessed our kinetic energy?',
+        text: 'What If we converted our kinetic energy into electricity?',
         image: 'https://i.imgur.com/jSYhdrw.gif?auto=compress&cs=tinysrgb&w=600'
       }
     ],
