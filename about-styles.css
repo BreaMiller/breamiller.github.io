@@ -572,7 +572,7 @@ body::before {
 .scale-out-enter {
     transform: scale(.77);
     pointer-events: none;
-    opacity: 0;
+    opacity: 100%;
 }
 
 /* Right Section */
