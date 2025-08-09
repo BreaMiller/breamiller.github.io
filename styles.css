@@ -849,7 +849,10 @@ body::before {
 .footer-logo {
     font-size: 20px;
     font-weight: 700;
-    color: #ffffff;
+    background: linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .footer-text {
