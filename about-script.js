@@ -220,14 +220,14 @@ document.addEventListener('keydown', function(e) {
 
 // Contact button functionality
 document.querySelector('.btn-primary')?.addEventListener('click', function() {
-    // Scroll to contact section or open contact modal
-    window.location.href = 'index#contact';
+    // Open skills list in new tab or download
+    window.location.href = 'https://www.notion.so/Brea-Miller-24a81d719ffb80ceacd7f69ea926b8b4?source=copy_link';
 });
 
 // Resume button functionality
 document.querySelector('.btn-secondary')?.addEventListener('click', function() {
-    // Open resume in new tab or download
-    window.open('#', '_blank');
+    // Open military service in new tab or download
+    window.location.href = 'https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb803fa29cd1d221d7750e';
 });
 
 // Watch button functionality
