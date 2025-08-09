@@ -1359,6 +1359,7 @@ body::before {
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     opacity: 0;
+    align-items: center;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
