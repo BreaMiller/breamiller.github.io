@@ -211,7 +211,7 @@ const projectsData = {
     title: 'Opia',
     label: '',
     heroImage: '',
-    description: 'Abstract digital art series exploring themes of communication and silence.',
+    description: 'Silence is golden.',
     sections: [
       {
         type: 'single',
