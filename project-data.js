@@ -200,7 +200,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'What if luxury accessories could be both timeless and futuristic?',
+        text: 'What if luxury could be both timeless and futuristic?',
         image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
