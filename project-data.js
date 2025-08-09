@@ -22,7 +22,7 @@ const projectsData = {
           },
           {
             title: '',
-            text: 'Eco-friendly production methods: fashion for our planet.',
+            text: 'Eco-friendly production methods + quality materials = planet-preserving fashion.',
             image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
           }
         ]
