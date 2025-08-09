@@ -169,7 +169,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'This guide is a symptoms index for maintaining optimal health.',
-        image: 'https://i.imgur.com/yJZVJzV.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/DfndDEI.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'A comprehensive guide covering all aspects of physical, mental, and spiritual wellness with actionable advice and insights.'
