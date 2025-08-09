@@ -106,7 +106,7 @@ const projectsData = {
         title: '',
         text: 'GeneProof provides personalized recommendations based on your DNA and enviornmental factors.',
         image: 'https://i.imgur.com/GyRDHxC.gif?auto=compress&cs=tinysrgb&w=600'
-      }
+{
         type: 'double',
         items: [
           {
@@ -122,7 +122,7 @@ const projectsData = {
         ]
       }
     ],
-    overview: 'Cutting-edge app that uses genetic data to provide personalized health recommendations and track wellness metrics.'
+    overview: 'At the intersection of AI technology and fashion design, unique wearable mandalas push the boundaries of traditional clothing design.'
   },
 
   'baraka': {
