@@ -1222,6 +1222,11 @@ body::before {
     transform: scale(1.05);
 }
 
+.top-back-button-container {
+    text-align: center;
+    margin-top: 80px;
+}
+
 .top-back-button {
     position: fixed;
     top: 40px;
@@ -1248,6 +1253,20 @@ body::before {
     background-clip: text;
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
+}
+
+.top-back-button:hover {
+    background: rgba(128, 128, 128, 1);
+    transform: scale(1.1);
+}
+
+.top-back-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.top-back-button:hover .back-arrow {
+    transform: translateX(-3px);
 }
 
 /* Responsive Design for Imagine Page */
