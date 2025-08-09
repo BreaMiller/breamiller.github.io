@@ -435,7 +435,7 @@ body::before {
 
 /* Pop-off image styling - creates the 3D pop-off effect */
 .pop-off-container .project-card img.pop-out-image {
-    position: absolute;
+    position: relative;
     z-index: 4;
     width: 100%;
     height: 135%;
