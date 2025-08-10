@@ -283,19 +283,19 @@ body::before {
   animation: marquee-reverse 20s linear infinite;
 }
 
-/* Styling for the new label */
+/* Styling for the label */
 .software-label {
     font-size: 16px;
     font-weight: 600;
     color: #777;
     text-align: center;
     letter-spacing: 1px;
-    margin-bottom: 30px; /* Adjust spacing as needed */
+    margin-bottom: 30px;
     text-transform: uppercase;
 }
 
-/* Client Logos */
-.client-logos {
+/* Tools Used Logos */
+.tools-used-logos {
     display: flex;
     flex-direction: column;
     gap: 30px;
