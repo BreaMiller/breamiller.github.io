@@ -258,7 +258,7 @@ body::before {
 
 /* Marquee Animations for Brand Scroller */
 @keyframes marquee {
-  0% {
+  100% {
     transform: translateX(0);
   }
   50% {
@@ -267,7 +267,7 @@ body::before {
 }
 
 @keyframes marquee-reverse {
-  0% {
+  100% {
     transform: translateX(-50%);
   }
   50% {
