@@ -1,6 +1,6 @@
 "use client";
 
-import { BsAmazon, BsGoogle, BsSpotify, BsYoutube, BsFlickr } from "react-icons/bs"; // Added BsFlickr
+import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs"; // Added BsFlickr
 
 export const BrandScroller = () => {
   return (
@@ -30,7 +30,7 @@ export const BrandScroller = () => {
                 <p className="text-lg font-semibold opacity-80">Google</p>
               </div>
               <div className="flex items-center w-28 gap-3">
-                <BsFlickr size={24} />
+                < size={24} />
                 <p className="text-lg font-semibold opacity-80">Flickr</p>
               </div>
             </div>
