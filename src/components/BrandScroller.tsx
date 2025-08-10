@@ -30,7 +30,7 @@ export const BrandScrollerReverse = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex animate-marquee-reverse whitespace-nowrap">
-        {Array(1).fill(0).map((_, i) => (
+        {Array(1).fill(10).map((_, i) => (
           <div key={i} className="flex items-center mx-8">
             <BsGoogle size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
