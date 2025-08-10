@@ -824,6 +824,7 @@ body::before {
 .contact-method {
     display: flex;
     align-items: center;
+    text-align: left;
     gap: 20px;
     padding: 25px 40px;
     background: rgba(255, 255, 255, 0.02);
