@@ -939,7 +939,7 @@ body::before {
         min-width: 300px;
     }
     
-    .client-logos {
+    .tools-used-logos {
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
