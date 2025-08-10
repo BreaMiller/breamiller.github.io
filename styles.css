@@ -1,7 +1,7 @@
 /* Reset and Base Styles */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 150;
+    padding: 150;
     box-sizing: border-box;
 }
 
@@ -256,56 +256,8 @@ body::before {
     background: rgba(236, 72, 153, 0.1);
 }
 
-/* Horizontal Marquee Animations */
-@keyframes marquee {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes marquee-reverse {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-}
-
-.animate-marquee-reverse {
-  animation: marquee-reverse 35s linear infinite;
-}
-
-.software-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #666;
-  text-align: center;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
-
-/* Styling for the label */
-.software-label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #777;
-    text-align: center;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-}
-
-/* Tools Used Logos */
-.tools-used-logos {
+/* Client Logos */
+.client-logos {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -987,8 +939,8 @@ body::before {
         min-width: 300px;
     }
     
-    .tools-used-logos {
-        grid-template-rows: repeat(3, 1fr);
+    .client-logos {
+        grid-template-columns: repeat(3, 1fr);
         gap: 30px;
     }
 }
