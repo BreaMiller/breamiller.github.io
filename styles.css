@@ -304,7 +304,7 @@ body::before {
 
 .logo-row {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     gap: 60px;
     flex-wrap: wrap;
