@@ -303,11 +303,11 @@ body::before {
 }
 
 .logo-row {
-    display: flex;
+    display: relative;
     justify-content: center;
     align-items: center;
     gap: 60px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .logo-column {
