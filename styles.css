@@ -307,14 +307,14 @@ body::before {
     justify-content: center;
     align-items: center;
     gap: 60px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .logo-column {
     display: flex;
-    flex-direction: row; /* single row inside each column */
+    flex-direction: row;
     gap: 60px;
-    flex-wrap: nowrap; /* prevent wrapping */
+    flex-wrap: nowrap; 
     justify-content: center;
     align-items: center;
 }
