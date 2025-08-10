@@ -299,7 +299,7 @@ body::before {
     flex-direction: column;
     gap: 30px;
     margin-top: 80px;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 .logo-row {
