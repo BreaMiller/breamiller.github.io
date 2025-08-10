@@ -310,6 +310,15 @@ body::before {
     flex-wrap: wrap;
 }
 
+.logo-column {
+    display: flex;
+    flex-direction: row; /* single row inside each column */
+    gap: 60px;
+    flex-wrap: nowrap; /* prevent wrapping */
+    justify-content: center;
+    align-items: center;
+}
+
 .logo-item {
     font-size: 16px;
     font-weight: 600;
