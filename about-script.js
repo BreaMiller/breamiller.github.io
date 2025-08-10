@@ -191,12 +191,12 @@ function updateTime() {
         hour12: false,
         hour: '2-digit',
         minute: '2-digit',
-        timeZone: 'America/Eastern'
+        timeZone: 'America/Chicago'
     });
     
     const timeElement = document.querySelector('.location-time');
     if (timeElement) {
-        timeElement.textContent = `${timeString} EST • Local time`;
+        timeElement.textContent = `${timeString} CST • Local time`;
     }
 }
 
