@@ -63,10 +63,6 @@ export const BrandScrollerReverse = () => {
                 <BsGoogle size={24} />
                 <p className="text-lg font-semibold opacity-80">Google</p>
               </div>
-              <div className="flex items-center w-28 gap-3">
-                <BsFlickr size={24} />
-                <p className="text-lg font-semibold opacity-80">Flickr</p>
-              </div>
             </div>
           ))}
       </div>
