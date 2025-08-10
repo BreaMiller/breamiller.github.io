@@ -256,6 +256,44 @@ body::before {
     background: rgba(236, 72, 153, 0.1);
 }
 
+/* Marquee Animations for Brand Scroller */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse var(--duration) linear infinite;
+}
+
+/* Styling for the new label */
+.software-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 30px; /* Adjust spacing as needed */
+    text-transform: uppercase;
+}
+
 /* Client Logos */
 .client-logos {
     display: flex;
