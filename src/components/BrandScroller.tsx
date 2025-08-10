@@ -4,75 +4,69 @@ import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 
 export const BrandScroller = () => {
   return (
-    <>
-      <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
-        {Array(4)
+    <div className="w-full overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+      <div className="flex animate-marquee gap-8">
+        {Array(6)
           .fill(0)
           .map((_, i) => (
-            <div
-              className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
-              key={i}
-            >
-              <div className="flex items-center w-28 gap-3">
-                <BsSpotify size={24} />
-                <p className="text-lg font-semibold opacity-80">Spotify</p>
+            <div key={i} className="flex shrink-0 gap-8">
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <BsSpotify size={24} className="text-white" />
+                <p className="text-lg font-semibold text-white opacity-80">Spotify</p>
               </div>
-              <div className="flex items-center w-28 gap-3">
-                <BsYoutube size={24} />
-                <p className="text-lg font-semibold opacity-80">YouTube</p>
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <BsYoutube size={24} className="text-white" />
+                <p className="text-lg font-semibold text-white opacity-80">YouTube</p>
               </div>
-              <div className="flex items-center w-28 gap-3">
-                <BsAmazon size={24} />
-                <p className="text-lg font-semibold opacity-80">Amazon</p>
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <BsAmazon size={24} className="text-white" />
+                <p className="text-lg font-semibold text-white opacity-80">Amazon</p>
               </div>
-              <div className="flex items-center w-28 gap-3">
-                <BsGoogle size={24} />
-                <p className="text-lg font-semibold opacity-80">Google</p>
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <BsGoogle size={24} className="text-white" />
+                <p className="text-lg font-semibold text-white opacity-80">Google</p>
               </div>
             </div>
           ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export const BrandScrollerReverse = () => { 
+export const BrandScrollerReverse = () => {
   return (
-    <>
-      <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
-        {Array(4)
+    <div className="w-full overflow-hidden py-2 [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+      <div className="flex animate-marquee-reverse gap-8">
+        {Array(6)
           .fill(0)
           .map((_, i) => (
-            <div
-              className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee-reverse flex-row"
-              key={i}
-            >
-              <div className="flex items-center w-28 gap-3">
-                <BsSpotify size={24} />
-                <p className="text-lg font-semibold opacity-80">Spotify</p>
+            <div key={i} className="flex shrink-0 gap-8">
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <BsSpotify size={24} className="text-white" />
+                <p className="text-lg font-semibold text-white opacity-80">Spotify</p>
               </div>
-              <div className="flex items-center w-28 gap-3">
-                <BsYoutube size={24} />
-                <p className="text-lg font-semibold opacity-80">YouTube</p>
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <BsYoutube size={24} className="text-white" />
+                <p className="text-lg font-semibold text-white opacity-80">YouTube</p>
               </div>
-              <div className="flex items-center w-28 gap-3">
-                <BsAmazon size={24} />
-                <p className="text-lg font-semibold opacity-80">Amazon</p>
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <BsAmazon size={24} className="text-white" />
+                <p className="text-lg font-semibold text-white opacity-80">Amazon</p>
               </div>
-              <div className="flex items-center w-28 gap-3">
-                <BsGoogle size={24} />
-                <p className="text-lg font-semibold opacity-80">Google</p>
+              <div className="flex items-center gap-3 whitespace-nowrap">
+                <BsGoogle size={24} className="text-white" />
+                <p className="text-lg font-semibold text-white opacity-80">Google</p>
               </div>
             </div>
           ))}
       </div>
-    </>
+    </div>
   );
 };
 
 const BrandScrollerContent = () => {
   return (
-    <div className="flex flex-col gap-6 items-center justify-center">
+    <div className="w-full flex flex-col gap-6">
       <BrandScroller />
       <BrandScrollerReverse />
     </div>
