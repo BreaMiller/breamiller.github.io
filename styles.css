@@ -293,15 +293,6 @@ body::before {
   text-transform: uppercase;
 }
 
-/* Tools Used Logos */
-.tools-used-logos {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 80px;
-    opacity: 0.3;
-}
-
 .logo-row {
     display: flex;
     justify-content: center;
