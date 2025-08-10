@@ -1,6 +1,6 @@
 "use client";
 
-import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs"; // Added BsFlickr
+import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 
 export const BrandScroller = () => {
   return (
