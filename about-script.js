@@ -227,13 +227,13 @@ document.addEventListener('keydown', function(e) {
 // Skills button functionality
 document.querySelector('.btn-primary')?.addEventListener('click', function() {
     // Open skills list in new tab or download
-    window.location.href = 'https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb80ceacd7f69ea926b8b4';
+    window.location.href = 'https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb80ceacd7f69ea926b8b4', '_blank';
 });
 
 // Military Service button functionality
 document.querySelector('.btn-secondary')?.addEventListener('click', function() {
     // Open military service in new tab or download
-    window.location.href = 'https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb803fa29cd1d221d7750e?pvs=74';
+    window.open('https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb803fa29cd1d221d7750e?pvs=74', '_blank');
 });
 
 // Watch button functionality
