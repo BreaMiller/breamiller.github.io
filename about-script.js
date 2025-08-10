@@ -191,7 +191,7 @@ function updateTime() {
         hour12: false,
         hour: '2-digit',
         minute: '2-digit',
-        timeZone: 'America/New York'
+        timeZone: 'America/New-York'
     });
     
     const timeElement = document.querySelector('.location-time');
