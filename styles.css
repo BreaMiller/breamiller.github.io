@@ -256,6 +256,43 @@ body::before {
     background: rgba(236, 72, 153, 0.1);
 }
 
+/* Horizontal Marquee Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 35s linear infinite;
+}
+
+.software-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
 /* Tools Used Logos */
 .tools-used-logos {
     display: flex;
