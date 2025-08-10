@@ -261,7 +261,7 @@ body::before {
   0% {
     transform: translateX(0);
   }
-  100% {
+  50% {
     transform: translateX(-50%);
   }
 }
@@ -270,7 +270,7 @@ body::before {
   0% {
     transform: translateX(-50%);
   }
-  100% {
+  50% {
     transform: translateX(0);
   }
 }
