@@ -33,16 +33,16 @@ export const BrandScrollerReverse = () => {
         {Array(8).fill(0).map((_, i) => (
           <div key={i} className="flex items-center mx-8">
             <BsGoogle size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6">Google</span>
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsAmazon size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6">Amazon</span>
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsYoutube size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6">YouTube</span>
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsSpotify size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6">Spotify</span>
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
           </div>
         ))}
       </div>
