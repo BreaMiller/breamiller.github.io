@@ -9,7 +9,7 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'Ready-to-wearfashion tailored to the individual.',
+        text: 'Ready-to-wear fashion tailored to the individual.',
         image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
       },
       {
