@@ -15,7 +15,7 @@ export const BrandScroller = () => {
             <BsYoutube size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <FaFlickr size={20} className="px-9" />
+            <BsAmazon size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsGoogle size={20} className="px-9" />
@@ -36,7 +36,7 @@ export const BrandScrollerReverse = () => {
             <BsGoogle size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <FaFlickr size={20} className="mx-2" />
+            <BsAmazon size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsYoutube size={20} className="mx-2" />
