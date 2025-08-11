@@ -303,7 +303,7 @@ body::before {
 }
 
 .logo-row {
-    display: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
