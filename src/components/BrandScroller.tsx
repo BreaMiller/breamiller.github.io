@@ -3,6 +3,7 @@
 import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 import { FaFlickr } from "react-icons/fa";
 import { SiAdobe } from "react-icons/si";
+import { FiFigma } from "react-icons/fi";
 
 export const BrandScroller = () => {
   return (
@@ -22,7 +23,7 @@ export const BrandScroller = () => {
             <BsGoogle size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
-            <SiAdobe size={20} className="mx-2" />
+            <FiFigma size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
             <SiAdobe size={20} className="mx-2" />
@@ -75,7 +76,7 @@ export const BrandScrollerReverse = () => {
             <SiAdobe size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <SiAdobe size={20} className="mx-2" />
+            <FiFigma size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsGoogle size={20} className="mx-2" />
