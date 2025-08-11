@@ -15,7 +15,7 @@ export const BrandScroller = () => {
             <SiAdobe size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
          
-            <BsYoutube size={20} className="px-9" />
+            <SiClaude size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <FaFlickr size={20} className="px-9" />
@@ -30,7 +30,7 @@ export const BrandScroller = () => {
             <VscGithubInverted size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <SiClaude size={20} className="mx-2" />
+            <BsYoutube size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
             <SiMake size={20} className="mx-2" />
@@ -71,7 +71,7 @@ export const BrandScrollerReverse = () => {
             <SiMake size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <SiClaude size={20} className="mx-2" />
+            <BsYoutube size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>        
             
             <VscGithubInverted size={20} className="mx-2" />
@@ -86,7 +86,7 @@ export const BrandScrollerReverse = () => {
             <FaFlickr size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <BsYoutube size={20} className="mx-2" />
+            <SiClaude size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <SiAdobe size={20} className="mx-2" />
