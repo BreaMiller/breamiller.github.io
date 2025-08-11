@@ -4,6 +4,7 @@ import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 import { FaFlickr, FaWordpress } from "react-icons/fa";
 import { SiAdobe, SiGooglegemini, SiClaude, SiMake, SiN8N, SiRapid, SiElevenlabs } from "react-icons/si";
 import { FiFigma } from "react-icons/fi";
+import { VscGithubInverted } from "react-icons/vsc";
 
 export const BrandScroller = () => {
   return (
@@ -26,7 +27,7 @@ export const BrandScroller = () => {
             <FiFigma size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
-            <FaWordpress size={20} className="mx-2" />
+            <VscGithubInverted size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <SiClaude size={20} className="mx-2" />
@@ -73,7 +74,7 @@ export const BrandScrollerReverse = () => {
             <SiClaude size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>        
             
-            <FaWordpress size={20} className="mx-2" />
+            <VscGithubInverted size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <FiFigma size={20} className="mx-2" />
