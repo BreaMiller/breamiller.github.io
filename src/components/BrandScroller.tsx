@@ -1,7 +1,6 @@
 "use client";
 
 import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
-import { FaFlickr } from "react-icons/fa";
 
 export const BrandScroller = () => {
   return (
