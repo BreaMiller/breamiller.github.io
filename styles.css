@@ -288,7 +288,7 @@ body::before {
   font-weight: 600;
   color: #666;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 200px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
