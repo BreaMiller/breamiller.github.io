@@ -64,7 +64,7 @@ const BrandScrollerReverse = () => {
   return (
     <div className="w-full overflow-hidden brand-scroller-container py-6 relative">
       <div className="flex whitespace-nowrap animate-marquee-reverse">
-        {Array(15).fill(0).map((_, i) => (
+        {Array(1).fill(0).map((_, i) => (
           <React.Fragment key={i}>
             <div className="flex items-center mx-12 flex-shrink-0">
               <BsGoogle size={20} style={{ color: '#888' }} />
