@@ -98,7 +98,7 @@ export const brand-scroller-reverse = () => {
   );
 };
 
-const BrandScrollerContent = () => {
+const brand-scroller-content = () => {
   return (
     <div className="py-4">
       <brand-scroller />
