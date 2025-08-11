@@ -10,6 +10,9 @@ export const BrandScroller = () => {
           <div key={i} className="flex items-center mx-8">
             <BsSpotify size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
+         
+            <BsYoutube size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsAmazon size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
