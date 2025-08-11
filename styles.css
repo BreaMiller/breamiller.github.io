@@ -295,7 +295,7 @@ body::before {
 
 /* Tools Used Logos */
 .tools-used-logos {
-    display: flex;
+    display: relative;
     flex-direction: column;
     gap: 30px;
     margin-top: 80px;
