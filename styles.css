@@ -321,8 +321,8 @@ body::before {
 
 .logo-item {
     font-size: 16px;
-    font-weight: 600;
-    gap: 600px;
+    font-weight: 600px;
+    padding: ;
     color: #777;
     text-align: center;
     letter-spacing: 100px;
