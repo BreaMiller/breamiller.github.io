@@ -101,10 +101,10 @@ export const BrandScrollerReverse = () => {
 const BrandScrollerContent = () => {
   return (
     <div className="py-4">
-      <BrandScroller />
-      <BrandScrollerReverse />
+      <brand-scroller />
+      <bBrand-scroller-reverse />
     </div>
   );
 };
 
-export default BrandScrollerContent;
+export default brand-scroller-content;
