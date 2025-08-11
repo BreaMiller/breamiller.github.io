@@ -236,7 +236,7 @@ const projectsData = {
         image: 'https://i.imgur.com/uwCTYkA.jpeg?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Ambient compositions designed to facilitate meditation, relaxation, and spiritual contemplation.'
+    overview: 'Ambient composition designed to facilitate meditation, relaxation, and spiritual contemplation.'
   },
 
   'rhea': {
