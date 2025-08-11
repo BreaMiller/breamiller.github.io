@@ -4,7 +4,7 @@ import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 
 export const BrandScroller = () => {
   return (
-    <div className="w-full overflow-visible">
+    <div className="w-full overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
         {Array(1).fill(10).map((_, i) => (
           <div key={i} className="flex items-center mx-8">
