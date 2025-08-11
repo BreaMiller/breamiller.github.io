@@ -227,7 +227,7 @@ const projectsData = {
     title: 'Ethereal Stroll',
     label: '',
     heroImage: '?auto=compress&cs=tinysrgb&w=600',
-    description: 'Ambient, relaxation music.',
+    description: 'Ambient Music',
     sections: [
       {
         type: 'single',
