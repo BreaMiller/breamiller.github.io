@@ -2,7 +2,7 @@
 
 import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 import { FaFlickr, FaWordpress } from "react-icons/fa";
-import { SiAdobe, SiGooglegemini, SiClaude, SiMake, SiN8N } from "react-icons/si";
+import { SiAdobe, SiGooglegemini, SiClaude, SiMake, SiN8N, SiRapid } from "react-icons/si";
 import { FiFigma } from "react-icons/fi";
 
 export const BrandScroller = () => {
@@ -35,7 +35,7 @@ export const BrandScroller = () => {
             <SiMake size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
-             <SiAdobe size={20} className="mx-2" />
+             <SiRapid size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
             <SiAdobe size={20} className="mx-2" />
@@ -64,7 +64,7 @@ export const BrandScrollerReverse = () => {
             <SiAdobe size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>           
             
-            <SiAdobe size={20} className="mx-2" />
+            <SiRapid size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>          
             
             <SiMake size={20} className="mx-2" />
