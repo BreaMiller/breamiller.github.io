@@ -6,9 +6,8 @@ export const BrandScroller = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
-        {Array(1).fill(0).map((_, i) => (
-          <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap)] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]"
-            key={i} className="flex items-center mx-8">
+        {Array(1).fill(10).map((_, i) => (
+          <div key={i} className="flex items-center mx-8">
             <BsSpotify size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
           
