@@ -1,7 +1,7 @@
 "use client";
 
 import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
-import { FaFlickr } from "react-icons/fa";
+import { FaFlickr, FaWordpress } from "react-icons/fa";
 import { SiAdobe, SiGooglegemini } from "react-icons/si";
 import { FiFigma } from "react-icons/fi";
 
@@ -26,7 +26,7 @@ export const BrandScroller = () => {
             <FiFigma size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
-            <SiAdobe size={20} className="mx-2" />
+            <FaWordpress size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <SiAdobe size={20} className="mx-2" />
@@ -73,7 +73,7 @@ export const BrandScrollerReverse = () => {
             <SiAdobe size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>        
             
-            <SiAdobe size={20} className="mx-2" />
+            <FaWordpress size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <FiFigma size={20} className="mx-2" />
