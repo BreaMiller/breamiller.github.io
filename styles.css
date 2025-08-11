@@ -324,7 +324,7 @@ body::before {
     font-weight: 600;
     color: #777;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 100px;
     transition: color 0.3s ease;
 }
 
