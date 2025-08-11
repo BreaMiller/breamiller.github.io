@@ -1,100 +1,66 @@
-"use client";
+<div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap))] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+        {Array(4)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
+              key={i}
+            >
+              <div className="flex items-center w-28 gap-3">
+                <BsSpotify size={24} />
+                <p className="text-lg font-semibold opacity-80">Spotify</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsYoutube size={24} />
+                <p className="text-lg font-semibold opacity-80">YouTube</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsAmazon size={24} />
+                <p className="text-lg font-semibold opacity-80">Amazon</p>
+              </div>
 
-import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
-import { FaFlickr } from "react-icons/fa";
-import { SiAdobe, SiGooglegemini, SiClaude, SiMake, SiN8N, SiRapid, SiElevenlabs } from "react-icons/si";
-import { FiFigma } from "react-icons/fi";
-import { VscGithubInverted } from "react-icons/vsc";
-
-export const BrandScroller = () => {
-  return (
-    <div className="w-full overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {Array(1).fill(10).map((_, i) => (
-          <div key={i} className="flex items-center mx-8">
-            <SiAdobe size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-         
-            <SiClaude size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <FaFlickr size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <SiGooglegemini size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <VscGithubInverted size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <FiFigma size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <BsYoutube size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <SiMake size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-             <SiRapid size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <SiElevenlabs size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <SiN8N size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>            
-
-          </div>
-        ))}
+              <div className="flex items-center w-28 gap-3">
+                <BsGoogle size={24} />
+                <p className="text-lg font-semibold opacity-80">Google</p>
+              </div>
+            </div>
+          ))}
       </div>
-    </div>
   );
 };
 
 export const BrandScrollerReverse = () => {
   return (
-    <div className="w-full overflow-hidden">
-      <div className="flex animate-marquee-reverse whitespace-nowrap">
-        {Array(1).fill(10).map((_, i) => (
-          <div key={i} className="flex items-center mx-8">
+    <>
+       <div className="group flex overflow-hidden py-2 [--gap:2rem] [gap:var(--gap))] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
+        {Array(4)
+          .fill(0)
+          .map((_, i) => (
+            <div
+              className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee-reverse flex-row"
+              key={i}
+            >
+              <div className="flex items-center w-28 gap-3">
+                <BsSpotify size={24} />
+                <p className="text-lg font-semibold opacity-80">Spotify</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsYoutube size={24} />
+                <p className="text-lg font-semibold opacity-80">YouTube</p>
+              </div>
+              <div className="flex items-center w-28 gap-3">
+                <BsAmazon size={24} />
+                <p className="text-lg font-semibold opacity-80">Amazon</p>
+              </div>
 
-            <SiN8N size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>            
-            
-            <SiElevenlabs size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>           
-            
-            <SiRapid size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>          
-            
-            <SiMake size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <BsYoutube size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>        
-            
-            <FiFigma size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <VscGithubInverted size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <SiGooglegemini size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <FaFlickr size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <SiClaude size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <SiAdobe size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-          </div>
-        ))}
+              <div className="flex items-center w-28 gap-3">
+                <BsGoogle size={24} />
+                <p className="text-lg font-semibold opacity-80">Google</p>
+              </div>
+            </div>
+          ))}
       </div>
-    </div>
+    </>
   );
 };
 
