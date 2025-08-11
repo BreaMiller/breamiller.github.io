@@ -17,7 +17,7 @@ export const BrandScroller = () => {
             <BsAmazon size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <BsGoogle size={20} className="px-9" />
+            <BsGoogle size={200} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
           </div>
         ))}
