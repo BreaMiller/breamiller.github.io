@@ -4,5 +4,5 @@ import BrandScrollerContent from './components/BrandScroller';
 const rootElement = document.getElementById('brand-scroller-root');
 
 if (rootElement) {
-  createRoot(rootElement).render(<BrandScrollerContent />);
+  createRoot(rootElement).render(<brand-scroller-content />);
 }
