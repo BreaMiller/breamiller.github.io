@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client';
-import brand-scroller-content from './components/brand-scroller'; // Corrected import path
+import BrandScrollerContent from './components/BrandScroller'; // Corrected import path
 
-const rootElement = document.getElementById('brand-scroller-root');
+const rootElement = document.getElementById('Brand-Scroller-root');
 
 if (rootElement) {
-  createRoot(rootElement).render(<brand-scroller-content />);
+  createRoot(rootElement).render(<BrandScrollerContent />);
 }
