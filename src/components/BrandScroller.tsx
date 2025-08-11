@@ -24,10 +24,10 @@ export const BrandScroller = () => {
             <SiGooglegemini size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
-            <FiFigma size={20} className="mx-2" />
+            <VscGithubInverted size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
-            <VscGithubInverted size={20} className="mx-2" />
+            <FiFigma size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsYoutube size={20} className="mx-2" />
@@ -74,10 +74,10 @@ export const BrandScrollerReverse = () => {
             <BsYoutube size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>        
             
-            <VscGithubInverted size={20} className="mx-2" />
+            <FiFigma size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <FiFigma size={20} className="mx-2" />
+            <VscGithubInverted size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <SiGooglegemini size={20} className="mx-2" />
