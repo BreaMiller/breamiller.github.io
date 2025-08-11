@@ -6,8 +6,11 @@ export const BrandScroller = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
-        {Array(1).fill(10).map((_, i) => (
-          <div key={i} className="flex items-center mx-8">
+        
+        {[...Array(2)].map((_, i) => (
+  <div key={i} className="flex items-center">
+    {logos.map((logo) => logo)}
+
             <BsSpotify size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
