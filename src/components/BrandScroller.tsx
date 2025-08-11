@@ -41,7 +41,7 @@ export const BrandScroller = () => {
             <SiAdobe size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
 
-            <SiAdobe size={20} className="mx-2" />
+            <SiN8N size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>            
 
           </div>
@@ -58,7 +58,7 @@ export const BrandScrollerReverse = () => {
         {Array(1).fill(10).map((_, i) => (
           <div key={i} className="flex items-center mx-8">
 
-            <SiAdobe size={20} className="mx-2" />
+            <SiN8N size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>            
             
             <SiAdobe size={20} className="mx-2" />
