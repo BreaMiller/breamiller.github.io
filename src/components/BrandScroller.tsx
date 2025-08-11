@@ -2,7 +2,7 @@
 
 import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 import { FaFlickr, FaWordpress } from "react-icons/fa";
-import { SiAdobe, SiGooglegemini, SiClaude, SiMake } from "react-icons/si";
+import { SiAdobe, SiGooglegemini, SiClaude, SiMake, SiN8N } from "react-icons/si";
 import { FiFigma } from "react-icons/fi";
 
 export const BrandScroller = () => {
