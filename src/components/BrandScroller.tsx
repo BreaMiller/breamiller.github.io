@@ -8,17 +8,17 @@ export const BrandScroller = () => {
       <div className="flex animate-marquee whitespace-nowrap">
         {Array(1).fill(10).map((_, i) => (
           <div key={i} className="flex items-center mx-8">
-            <BsSpotify size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 px-6"></span>
+            <BsSpotify size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <BsYoutube size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 px-6"></span>
+            <BsYoutube size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <BsAmazon size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 px-6"></span>
+            <BsAmazon size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <BsGoogle size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 px-6"></span>
+            <BsGoogle size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
           </div>
         ))}
       </div>
