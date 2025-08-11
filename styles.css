@@ -299,6 +299,7 @@ body::before {
     flex-direction: column;
     gap: 30px;
     margin-top: 80px;
+    margin-left: auto;
     opacity: 0.5;
 }
 
