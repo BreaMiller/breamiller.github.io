@@ -2,6 +2,7 @@
 
 import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 import { FaFlickr } from "react-icons/fa";
+import { SiAdobe } from "react-icons/si";
 
 export const BrandScroller = () => {
   return (
@@ -9,7 +10,7 @@ export const BrandScroller = () => {
       <div className="flex animate-marquee whitespace-nowrap">
         {Array(1).fill(10).map((_, i) => (
           <div key={i} className="flex items-center mx-8">
-            <BsSpotify size={20} className="px-9" />
+            <SiAdobe size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
          
             <BsYoutube size={20} className="px-9" />
@@ -20,6 +21,28 @@ export const BrandScroller = () => {
             
             <BsGoogle size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
+
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+            
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+
+             <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>            
+
           </div>
         ))}
       </div>
@@ -33,6 +56,28 @@ export const BrandScrollerReverse = () => {
       <div className="flex animate-marquee-reverse whitespace-nowrap">
         {Array(1).fill(10).map((_, i) => (
           <div key={i} className="flex items-center mx-8">
+
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>            
+            
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>           
+            
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>          
+            
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+            
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>        
+            
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+            
+            <SiAdobe size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+            
             <BsGoogle size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
@@ -42,7 +87,7 @@ export const BrandScrollerReverse = () => {
             <BsYoutube size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <BsSpotify size={20} className="mx-2" />
+            <SiAdobe size={20} className="mx-2" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
           </div>
         ))}
