@@ -6,41 +6,23 @@ export const BrandScroller = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
-        {Array(1).fill(0).map((_, i) => (
-          <div key={i} className="flex items-center shrink-0">
-            <div className="flex items-center gap-3 mx-12">
-              <BsSpotify size={24} className="text-white" />
-              <span className="text-lg font-semibold opacity-80 text-white">Spotify</span>
-            </div>
-
-               <div className="w-full overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {Array(1).fill(0).map((_, i) => (
-          <div key={i} className="flex items-center shrink-0"
-            <div className="flex items-center gap-3 mx-12">
-              <BsYoutube size={24} className="text-white" />
-              <span className="text-lg font-semibold opacity-80 text-white">YouTube</span>
-            </div>
-
-               <div className="w-full overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {Array(1).fill(0).map((_, i) => (
-          <div key={i} className="flex items-center shrink-0"
-            <div className="flex items-center gap-3 mx-12">
-              <BsAmazon size={24} className="text-white" />
-              <span className="text-lg font-semibold opacity-80 text-white">Amazon</span>
-            </div>
-
-           <div className="w-full overflow-hidden">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {Array(1).fill(0).map((_, i) => (
-          <div key={i} className="flex items-center shrink-0"
-            <div className="flex items-center gap-3 mx-12">
-              <BsGoogle size={24} className="text-white" />
-              <span className="text-lg font-semibold opacity-80 text-white">Google</span>
-            </div>
+        {Array(1).fill(10).map((_, i) => (
+          <div key={i} className="flex items-center mx-8">
+            <BsSpotify size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+          
+            <BsYoutube size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+            
+            <BsAmazon size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+            
+            <BsGoogle size={20} className="px-9" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
+          </div>
         ))}
       </div>
+    </div>
   );
 };
 
@@ -48,27 +30,19 @@ export const BrandScrollerReverse = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex animate-marquee-reverse whitespace-nowrap">
-        {Array(1).fill(0).map((_, i) => (
-          <div key={i} className="flex items-center shrink-0">
-            <div className="flex items-center gap-3 mx-12">
-              <BsGoogle size={24} className="text-white" />
-              <span className="text-lg font-semibold opacity-80 text-white">Google</span>
-            </div>
+        {Array(1).fill(10).map((_, i) => (
+          <div key={i} className="flex items-center mx-8">
+            <BsGoogle size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <div className="flex items-center gap-3 mx-12">
-              <BsAmazon size={24} className="text-white" />
-              <span className="text-lg font-semibold opacity-80 text-white">Amazon</span>
-            </div>
+            <BsAmazon size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <div className="flex items-center gap-3 mx-12">
-              <BsYoutube size={24} className="text-white" />
-              <span className="text-lg font-semibold opacity-80 text-white">YouTube</span>
-            </div>
+            <BsYoutube size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <div className="flex items-center gap-3 mx-12">
-              <BsSpotify size={24} className="text-white" />
-              <span className="text-lg font-semibold opacity-80 text-white">Spotify</span>
-            </div>
+            <BsSpotify size={20} className="mx-2" />
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
           </div>
         ))}
       </div>
