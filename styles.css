@@ -312,7 +312,7 @@ body::before {
 
 .logo-column {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 60px;
     flex-wrap: nowrap; 
     justify-content: center;
