@@ -28,7 +28,7 @@ const projectsData = {
         ]
       }
     ],
-    overview: 'At the intersection of AI technology and fashion design, unique wearable mandalas push the boundaries of traditional patterns.'
+    overview: 'At the intersection of AI technology and fashion design, unique mandalas push the boundaries of traditional patterns.'
   },
   
   'love-birds': {
