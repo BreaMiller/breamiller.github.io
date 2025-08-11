@@ -7,8 +7,8 @@ export const BrandScroller = () => {
     <div className="w-full overflow-hidden">
       <div className="flex animate-marquee whitespace-nowrap">
         {Array(1).fill(10).map((_, i) => (
-          <div key={i} className="flex items-center mx-12">
-            <BsSpotify size={20} className="px-20" />
+          <div key={i} className="flex items-center mx-8">
+            <BsSpotify size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
           
             <BsYoutube size={20} className="px-9" />
