@@ -12,7 +12,7 @@ export const BrandScroller = () => {
             <span className="text-sm font-medium opacity-70 mx-6"></span>
          
             <BsYoutube size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
+            <span className="text-sm font-medium opacity-70 mx-60"></span>
             
             <BsAmazon size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
