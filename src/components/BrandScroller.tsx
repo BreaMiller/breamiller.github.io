@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 
 // Mock icons matching your design aesthetic
