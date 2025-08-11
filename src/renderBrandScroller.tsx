@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import brand-scroller-content from './components/BrandScroller'; // Corrected import path
+import brand-scroller-content from './components/brand-scroller'; // Corrected import path
 
 const rootElement = document.getElementById('brand-scroller-root');
 
