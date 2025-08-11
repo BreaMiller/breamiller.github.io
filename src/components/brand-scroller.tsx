@@ -52,7 +52,7 @@ export const BrandScroller = () => {
   );
 };
 
-export const brand-scroller-reverse = () => {
+export const BrandScrollerReverse = () => {
   return (
     <div className="w-full overflow-hidden">
       <div className="flex animate-marquee-reverse whitespace-nowrap">
