@@ -308,7 +308,15 @@ body::before {
     align-items: center;
     gap: 60px;
     flex-wrap: nowrap;
-  
+}
+
+.logo-column {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    flex-wrap: nowrap; 
+    justify-content: center;
+    align-items: center;
 }
 
 .logo-item {
