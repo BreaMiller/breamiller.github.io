@@ -1,6 +1,6 @@
 "use client";
 
-import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
+import { BsAdobe, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
 
 export const BrandScroller = () => {
   return (
@@ -12,9 +12,9 @@ export const BrandScroller = () => {
             <span className="text-sm font-medium opacity-70 mx-6"></span>
          
             <BsYoutube size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-60"></span>
+            <span className="text-sm font-medium opacity-70 mx-6"></span>
             
-            <BsAmazon size={20} className="px-9" />
+            <BsAdobe size={20} className="px-9" />
             <span className="text-sm font-medium opacity-70 mx-6"></span>
             
             <BsGoogle size={20} className="px-9" />
