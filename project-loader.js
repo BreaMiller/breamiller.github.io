@@ -66,10 +66,6 @@ class ProjectLoader {
         if (pageTitle) pageTitle.textContent = `${data.title} - Brea Miller`;
         document.title = `${data.title} - Brea Miller`;
         
-        // Update hero section
-        //const projectLabel = document.getElementById('');
-        //if (projectLabel) projectLabel.textContent = data.label;
-        
         const projectTitle = document.getElementById('project-title');
         if (projectTitle) projectTitle.textContent = data.title;
         
