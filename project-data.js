@@ -175,15 +175,15 @@ const projectsData = {
   },
 
   'gifts-from-the-sacred-warrior': {
-    title: 'Gifts from the Sacred Warrior',
+    title: 'Xantara',
     label: '',
     heroImage: '',
-    description: 'A sci-fi original exploring themes of courage and sacrifice.',
+    description: 'Sci-fi Original',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'The greatest battles are often fought within ourselves. This graphic novel explores the warrior within all of us.',
+        text: 'The greatest battles are often fought within ourselves.',
         image: 'https://i.imgur.com/LSCxFn5.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
