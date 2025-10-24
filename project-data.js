@@ -174,7 +174,7 @@ const projectsData = {
     overview: 'A comprehensive guide covering all aspects of physical, mental, and spiritual wellness with actionable advice and insights.'
   },
 
-  'gifts-from-the-sacred-warrior': {
+  'xantara': {
     title: 'Xantara',
     label: '',
     heroImage: '',
