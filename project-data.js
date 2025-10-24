@@ -184,7 +184,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'The greatest battles are often fought within ourselves.',
-        image: 'https://i.imgur.com/LSCxFn5.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/WbYxDvA.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
     overview: 'Stunning visuals with gut-wrentching plot twists about personal transformation and spiritual awakening.'
