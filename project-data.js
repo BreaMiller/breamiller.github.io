@@ -85,7 +85,7 @@ const projectsData = {
         ]
       }
     ],
-    overview: 'Inspired by Dr. Suneed, I created a directory of healthcare practiotioners whose views on healthcare are more traditional.'
+    overview: 'Inspired by Dr. Suneed, I created a directory for patients seeking practitioners whose views on healthcare are more traditional.'
   },
   'pneuma-collection': {
     title: 'Pneuma Collection',
