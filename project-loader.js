@@ -94,6 +94,9 @@ class ProjectLoader {
         
         // Render dynamic sections
         this.renderSections(data.sections);
+        
+        // Render visit button if URL exists
+        this.renderVisitButton(data);
     }
 
     renderSections(sections) {
@@ -173,7 +176,7 @@ class ProjectLoader {
     }
     
     renderVisitButton(data) {
-        const container = document.getElementById('visit-project-button-container');
+        const container = document.getElementById('project-buttons-container');
         if (!container) return;
         
         if (data.visitUrl && data.visitLabel) {
