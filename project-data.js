@@ -74,13 +74,13 @@ const projectsData = {
         items: [
           {
             title: '',
-            text: 'Every fabric pattern features unique textures never seen before.',
-            image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
+            text: 'We are on a mission to restore trust in the healthcare system.',
+            image: 'https://i.imgur.com/7LzGTS4.png?auto=compress&cs=tinysrgb&w=600'
           },
           {
             title: '',
             text: 'Premium designs made with quality materials and eco-friendly production.',
-            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
+            image: 'https://i.imgur.com/PAnSmlS.png?auto=compress&cs=tinysrgb&w=600'
           }
         ]
       }
