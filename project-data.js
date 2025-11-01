@@ -238,16 +238,16 @@ const projectsData = {
     overview: 'Ambient composition designed to facilitate meditation, relaxation, and spiritual contemplation.'
   },
 
-  'rhea': {
-    title: 'Rhea',
+  'flix': {
+    title: 'Lite Flix',
     label: '',
     heroImage: '',
-    description: 'Smart energy management dashboard for sustainable living.',
+    description: 'Smart digital camera.',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'Energy monitoring is as easy as checking your phone.',
+        text: 'High-powered camera made of aerospace-grade transparent materials.',
         image: 'https://i.imgur.com/U51sKZH.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
