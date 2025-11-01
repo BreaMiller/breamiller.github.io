@@ -290,7 +290,7 @@ const projectsData = {
     title: 'Imagine...',
     label: '',
     heroImage: '',
-    description: 'Near-future technological advancements.',
+    description: 'Near-future technologies.',
     sections: [
       {
         type: 'single',
