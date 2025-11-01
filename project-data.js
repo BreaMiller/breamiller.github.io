@@ -1,5 +1,92 @@
 // projects-data.js - Centralized project data
 const projectsData = {
+  'amped': {
+    title: 'Amped Gaming Platform',
+    heroImage: '',
+    description: 'The future of gaming is in your imagination.',
+    sections: [
+      {
+        type: 'single',
+        title: '',
+        text: 'Integrated with the world\'s most trusted game creation software.',
+        image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
+      },
+      {
+        type: 'double',
+        items: [
+          {
+            title: '',
+            text: 'Every game is generated with AI.',
+            image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
+          },
+          {
+            title: '',
+            text: 'Get rewards as your games grow in popularity.',
+            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
+          }
+        ]
+      }
+    ],
+    overview: 'A gaming community where you call the shots.'
+  },
+    'geneproof2.0': {
+    title: 'GeneProof 2.0',
+    heroImage: '',
+    description: 'Focus on your health.',
+    sections: [
+      {
+        type: 'single',
+        title: '',
+        text: 'Track your health.',
+        image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
+      },
+      {
+        type: 'double',
+        items: [
+          {
+            title: '',
+            text: 'Every fabric pattern features unique textures never seen before.',
+            image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
+          },
+          {
+            title: '',
+            text: 'Premium designs made with quality materials and eco-friendly production.',
+            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
+          }
+        ]
+      }
+    ],
+    overview: 'At the intersection of AI technology and fashion design, unique mandalas push the boundaries of traditional patterns.'
+  },
+    'altamed': {
+    title: 'AltaMed',
+    heroImage: '',
+    description: 'Find the most trusted traditional and integrative practitioners.',
+    sections: [
+      {
+        type: 'single',
+        title: '',
+        text: 'Ready-to-wear fashion tailored to the individual.',
+        image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
+      },
+      {
+        type: 'double',
+        items: [
+          {
+            title: '',
+            text: 'Every fabric pattern features unique textures never seen before.',
+            image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
+          },
+          {
+            title: '',
+            text: 'Premium designs made with quality materials and eco-friendly production.',
+            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
+          }
+        ]
+      }
+    ],
+    overview: 'At the intersection of AI technology and fashion design, unique mandalas push the boundaries of traditional patterns.'
+  },
   'pneuma-collection': {
     title: 'Pneuma Collection',
     heroImage: '',
@@ -78,6 +165,22 @@ const projectsData = {
     overview: 'A comprehensive streaming distribution aggregator that helps users find content across multiple platforms with intelligent recommendations.'
   },
 
+  'voya': {
+    title: 'Voya™️',
+    label: '',
+    heroImage: '',
+    description: 'An astrocartography travel app',
+    sections: [
+      {
+        type: 'single',
+        title: '',
+        text: 'Every trip aligns with the stars',
+        image: 'https://i.imgur.com/0pYWUlj.gif?auto=compress&cs=tinysrgb&w=600'
+      }
+    ],
+    overview: 'Knack gamifies reading to engage young learners and foster a lifelong love of books.'
+  },
+  
   'knack': {
     title: 'Knack™️',
     label: '',
@@ -141,7 +244,36 @@ const projectsData = {
     ],
     overview: 'Digital platform that facilitates civic engagement and democratic processes through community organizing and voting.'
   },
-
+    'flix': {
+    title: 'LiteFlix',
+    heroImage: '',
+    description: 'Inspired by 5D Optic Storage.',
+    sections: [
+      {
+        type: 'single',
+        title: '',
+        text: 'Ready-to-wear fashion tailored to the individual.',
+        image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
+      },
+      {
+        type: 'double',
+        items: [
+          {
+            title: '',
+            text: 'Every fabric pattern features unique textures never seen before.',
+            image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
+          },
+          {
+            title: '',
+            text: 'Premium designs made with quality materials and eco-friendly production.',
+            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
+          }
+        ]
+      }
+    ],
+    overview: 'At the intersection of AI technology and fashion design, unique mandalas push the boundaries of traditional patterns.'
+  },
+  
   'biohaxx-tv-series': {
     title: 'BioHaxx',
     label: '',
