@@ -69,7 +69,7 @@ const projectsData = {
         type: 'single',
         title: '',
         text: 'New practioners added weekly.',
-        image: 'https://i.imgur.com/COdt4NR.png?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/rjFoRKX.png?auto=compress&cs=tinysrgb&w=600'
       },
       {
         type: 'double',
