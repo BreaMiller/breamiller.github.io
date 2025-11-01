@@ -85,7 +85,7 @@ const projectsData = {
         ]
       }
     ],
-    overview: 'At the intersection of AI technology and fashion design, unique mandalas push the boundaries of traditional patterns.'
+    overview: 'Inspired by Dr. Suneed, I created a directory of healthcare practiotioners whose views on healthcare are more traditional.'
   },
   'pneuma-collection': {
     title: 'Pneuma Collection',
