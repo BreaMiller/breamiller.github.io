@@ -283,7 +283,7 @@ const projectsData = {
         image: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=800'
       }
     ],
-    overview: 'An upcoming collection of abstract AI-generated artworks that push the boundaries of digital creativity and emotional expression.'
+    overview: 'Pushing the boundaries of AI-generated expression.'
   },
 
   'imagine': {
