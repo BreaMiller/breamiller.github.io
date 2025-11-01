@@ -79,7 +79,7 @@ const projectsData = {
           },
           {
             title: '',
-            text: 'We are on a mission to restore trust in our healthcare system..',
+            text: 'We are on a mission to restore trust in our healthcare system.',
             image: 'https://i.imgur.com/PAnSmlS.png?auto=compress&cs=tinysrgb&w=600'
           }
         ]
