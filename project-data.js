@@ -74,12 +74,12 @@ const projectsData = {
         items: [
           {
             title: '',
-            text: 'We are on a mission to restore trust in the healthcare system.',
+            text: 'Downloadable resources to help you prepare for your next visit.',
             image: 'https://i.imgur.com/7LzGTS4.png?auto=compress&cs=tinysrgb&w=600'
           },
           {
             title: '',
-            text: 'Premium designs made with quality materials and eco-friendly production.',
+            text: 'We are on a mission to restore trust in the healthcare system..',
             image: 'https://i.imgur.com/PAnSmlS.png?auto=compress&cs=tinysrgb&w=600'
           }
         ]
