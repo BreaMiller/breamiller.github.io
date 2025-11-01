@@ -256,6 +256,61 @@ body::before {
     background: rgba(236, 72, 153, 0.1);
 }
 
+/* Visit Project Button - Opposite design to hero button */
+.visit-project-button {
+    background: linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%);
+    border: none;
+    color: #ffffff;
+    padding: 18px 18px;
+    border-radius: 20px;
+    width: 140px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.3);
+    text-decoration: none;
+}
+
+.visit-project-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.visit-project-button:hover::before {
+    left: 100%;
+}
+
+.visit-project-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.5);
+    background: linear-gradient(135deg, #f472b6 0%, #7c3aed 50%, #0891b2 100%);
+}
+
+/* Button container for project pages */
+.project-buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
 /* Horizontal Marquee Animations */
 @keyframes marquee {
   0% {

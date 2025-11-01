@@ -62,6 +62,8 @@ const projectsData = {
     title: 'AltaMed',
     heroImage: '',
     description: 'Find the most trusted traditional and integrative practitioners.',
+    visitUrl: 'https://breamiller.github.io/altamed/',
+    visitLabel: 'Visit AltaMed',
     sections: [
       {
         type: 'single',
