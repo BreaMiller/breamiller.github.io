@@ -66,8 +66,8 @@ const projectsData = {
       {
         type: 'single',
         title: '',
-        text: 'Ready-to-wear fashion tailored to the individual.',
-        image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
+        text: 'New practioners added weekly.',
+        image: 'https://i.imgur.com/COdt4NR.png?auto=compress&cs=tinysrgb&w=600'
       },
       {
         type: 'double',
