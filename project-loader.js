@@ -171,6 +171,21 @@ class ProjectLoader {
         sectionDiv.appendChild(rowDiv);
         return sectionDiv;
     }
+    
+    renderVisitButton(data) {
+        const container = document.getElementById('visit-project-button-container');
+        if (!container) return;
+        
+        if (data.visitUrl && data.visitLabel) {
+            const visitButton = document.createElement('a');
+            visitButton.href = data.visitUrl;
+            visitButton.target = '_blank';
+            visitButton.rel = 'noopener noreferrer';
+            visitButton.className = 'visit-project-button';
+            visitButton.textContent = data.visitLabel;
+            container.appendChild(visitButton);
+        }
+    }
 
     hideLoading() {
         if (this.loadingState) this.loadingState.style.display = 'none';
