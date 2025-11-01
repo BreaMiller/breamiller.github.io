@@ -251,7 +251,7 @@ const projectsData = {
         image: 'https://i.imgur.com/U51sKZH.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Intelligent dashboard that helps users monitor and optimize their kinetic energy generation and consumption for a more sustainable lifestyle.'
+    overview: 'Capture every fleeting moment, not as it appears, but as it feels–vivid, multi-dimensional, alive.'
   },
 
   'ad-reels': {
