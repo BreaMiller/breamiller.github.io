@@ -1,15 +1,15 @@
 // projects-data.js - Centralized project data
 const projectsData = {
-  'amped': {
-    title: 'Amped Gaming Platform',
+  'ggs': {
+    title: 'Good Games Dev Platform',
     heroImage: '',
-    description: 'The future of gaming is in your imagination.',
+    description: 'The future of gaming is your imagination.',
     sections: [
       {
         type: 'single',
         title: '',
         text: 'Integrated with the world\'s most trusted game creation software.',
-        image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/4pXoc8n.png?auto=compress&cs=tinysrgb&w=600'
       },
       {
         type: 'double',
