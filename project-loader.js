@@ -22,18 +22,14 @@ class ProjectLoader {
     }
 
     loadProject(slug) {
-        // Simulate loading delay for better UX
-        setTimeout(() => {
-            const projectData = window.projectsData[slug];
-            
-            if (!projectData) {
-                this.showError();
-                return;
-            }
+        const projectData = window.projectsData[slug];
+        
+        if (!projectData) {
+            this.showError();
+            return;
+        }
 
-            this.renderProject(projectData);
-            this.hideLoading();
-        }, 500);
+        this.renderProject(projectData);
     }
 
     // Helper function to create media element (img or video)
@@ -61,10 +57,10 @@ class ProjectLoader {
     }
 
     renderProject(data) {
-        // Update page title
+        // Update page title FIRST
+        document.title = `${data.title} - Brea Miller`;
         const pageTitle = document.getElementById('page-title');
         if (pageTitle) pageTitle.textContent = `${data.title} - Brea Miller`;
-        document.title = `${data.title} - Brea Miller`;
         
         // Update hero section
         //const projectLabel = document.getElementById('');
@@ -107,9 +103,13 @@ class ProjectLoader {
 
         sections.forEach((section, index) => {
             if (section.type === 'single') {
-                container.appendChild(this.createSingleSection(section));
+                const el = this.createSingleSection(section);
+                el.style.animationDelay = `${index * 0.1}s`;
+                container.appendChild(el);
             } else if (section.type === 'double') {
-                container.appendChild(this.createDoubleSection(section));
+                const el = this.createDoubleSection(section);
+                el.style.animationDelay = `${index * 0.1}s`;
+                container.appendChild(el);
             }
         });
     }
@@ -188,20 +188,6 @@ class ProjectLoader {
             visitButton.textContent = data.visitLabel;
             container.appendChild(visitButton);
         }
-    }
-
-    hideLoading() {
-        if (this.loadingState) this.loadingState.style.display = 'none';
-        if (this.projectContent) this.projectContent.style.display = 'block';
-        
-        // Trigger animations
-        setTimeout(() => {
-            const elements = document.querySelectorAll('.imagine-section, .project-hero-media');
-            elements.forEach(el => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            });
-        }, 100);
     }
 
     showError() {

@@ -1,33 +1,35 @@
 // projects-data.js - Centralized project data
 const projectsData = {
   'ggs': {
-    title: 'Good Games Dev Platform',
+    title: 'Good Games Dev',
     heroImage: '',
-    description: 'The future of gaming is your imagination.',
+    description: 'An incentivized game development platform.',
+    visitUrl: 'https://breamiller.github.io/gg',
+    visitLabel: 'Visit GG',
     sections: [
       {
         type: 'single',
         title: '',
-        text: 'Integrated with the world\'s most trusted game creation software.',
-        image: 'https://i.imgur.com/4pXoc8n.png?auto=compress&cs=tinysrgb&w=600'
+        text: 'Integrated with the world\'s most trusted game development tools.',
+        image: 'https://i.imgur.com/0l9hG2d.png?auto=compress&cs=tinysrgb&w=600'
       },
       {
         type: 'double',
         items: [
           {
             title: '',
-            text: 'Every game is generated with AI.',
-            image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
+            text: 'Jumpstart your next game dev project with AI.',
+            image: 'https://i.imgur.com/6UCV7va.png?auto=compress&cs=tinysrgb&w=600'
           },
           {
             title: '',
-            text: 'Get rewards as your games grow in popularity.',
-            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
+            text: 'Collect rewards as your games grow in popularity.',
+            image: 'https://i.imgur.com/kKRjXhk.png?auto=compress&cs=tinysrgb&w=600'
           }
         ]
       }
     ],
-    overview: 'A gaming community where you call the shots.'
+    overview: 'The future of gaming start with your imagination.'
   },
     'geneproof2.0': {
     title: 'GeneProof 2.0',
@@ -250,6 +252,8 @@ const projectsData = {
     title: 'LiteFlix',
     heroImage: '',
     description: 'Inspired by 5D Optic Storage.',
+    visitUrl: 'https://breamiller.github.io/liteflix',
+    visitLabel: 'Visit LiteFlix',
     sections: [
       {
         type: 'single',
@@ -373,10 +377,10 @@ const projectsData = {
   },
 
   'flix': {
-    title: 'Lite Flix',
+    title: 'LiteFlix',
     label: '',
     heroImage: '',
-    description: 'Smart digital camera.',
+    description: 'The next generation of digital cameras.',
     sections: [
       {
         type: 'single',
