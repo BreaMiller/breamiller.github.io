@@ -187,7 +187,7 @@ export const AboutPage: React.FC = () => {
                 }}
               >
                 <img
-                  src="https://i.imgur.com/0LIib9a.png"
+                  src="https://i.imgur.com/0E3HLMf.png"
                   alt="Brea Miller"
                   style={{
                     width: "100%",

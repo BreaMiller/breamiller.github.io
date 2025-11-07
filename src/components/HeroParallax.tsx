@@ -58,7 +58,7 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[275vh] pt-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
       style={{
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
@@ -145,7 +145,7 @@ export const Header = () => {
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
           fontWeight: "600",
-        }}>✐ᝰ innovative empath–</span> crafting digital experiences that bridge the gap between innovation and human connection. Every project is an opportunity to create products that don't just work beautifully, but feel intentional and alive.
+        }}>✐ᝰ innovative empath–</span>crafting digital experiences that bridge the gap between innovation and human connection. Every project is an opportunity to create products that don't just work beautifully, but feel intentional and alive.
       </p>
             <button 
         onClick={() => navigate('/about')}

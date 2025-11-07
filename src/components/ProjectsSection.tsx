@@ -7,7 +7,7 @@ export const ProjectsSection = () => {
     { id: 'altamed', label: 'HEALTHCARE DIRECTORY', title: 'AltaMed', img: 'https://i.imgur.com/PLb6nM4.png?auto=compress&cs=tinysrgb&w=400', size: 'small' },
     { id: 'civic-social', label: 'NETWORK FOR DEMOCRACY', title: 'Civic Social', img: 'https://i.imgur.com/zOAd5qr.png?auto=compress&cs=tinysrgb&w=400', size: 'small' },
     { id: 'baraka', label: 'MATERNITY SOCIAL NETWORK', title: 'Baraka', img: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=400', size: 'small' },
-    { id: 'geneproof', label: 'DNA TRACKING APP', title: 'GeneProof', img: 'https://i.imgur.com/o91Hbp9.gif?auto=compress&cs=tinysrgb&w=400', size: 'small', popOff: true },
+    { id: 'geneproof', label: 'HEALTH TRACKING APP', title: 'GeneProof', img: 'https://i.imgur.com/o91Hbp9.gif?auto=compress&cs=tinysrgb&w=400', size: 'small', popOff: true },
     { id: 'buku-tv', label: 'WHERE TO WATCH', title: 'Buku TV™️', img: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=800', size: 'medium' },
     { id: 'voya', label: 'TRAVEL COMPANION', title: 'Voya', img: 'https://i.imgur.com/0pYWUlj.gif?auto=compress&cs=tinysrgb&w=1200', size: 'medium' },
     { id: 'ad-reels', label: 'AI ADS', title: 'Ad Reels', img: 'https://i.imgur.com/O0Pmvuj.gif?auto=compress&cs=tinysrgb&w=800', size: 'large', isVideo: true },

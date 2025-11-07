@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HeroParallax } from './components/HeroParallax';
 import { ProjectsSection } from './components/ProjectsSection';
+import { AIToolsSection } from './components/AIToolsSection';
 import { ContactForm } from './components/ContactForm';
 import { heroProducts } from './heroProductsData';
 
@@ -29,6 +30,7 @@ function App() {
       />
       <div style={{ position: "relative", zIndex: 1 }}>
         <HeroParallax products={heroProducts} />
+        <AIToolsSection />
         <ProjectsSection />
       </div>
 
