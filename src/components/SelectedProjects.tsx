@@ -208,16 +208,13 @@ export const SelectedProjects = () => {
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
-      initial={{ opacity: 0, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.8 }}
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="container max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           className="mb-12"
         >
@@ -231,9 +228,9 @@ export const SelectedProjects = () => {
 
         {/* Filter Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0.05 }}
           viewport={{ once: false, amount: 0.5 }}
           className="flex flex-wrap gap-3 mb-12"
         >
@@ -268,7 +265,13 @@ export const SelectedProjects = () => {
         </motion.div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
           <AnimatePresence mode="popLayout">
             {displayed.map((project, index) => (
               <motion.div
@@ -304,15 +307,15 @@ export const SelectedProjects = () => {
               </motion.div>
             ))}
           </AnimatePresence>
-        </div>
+        </motion.div>
 
         {/* Load More Button */}
         {hasMore && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            viewport={{ once: false, amount: 0.5 }}
             className="text-center"
           >
             <button

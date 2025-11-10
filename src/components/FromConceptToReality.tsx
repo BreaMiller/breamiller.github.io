@@ -58,16 +58,13 @@ export const FromConceptToReality = () => {
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
-      initial={{ opacity: 0, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.8 }}
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="container max-w-4xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           className="text-center mb-16"
         >
@@ -84,14 +81,20 @@ export const FromConceptToReality = () => {
           {/* Timeline line */}
           <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-pink-500/50 to-pink-500/0" />
 
-          <div className="space-y-12">
+          <motion.div
+            className="space-y-12"
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+            viewport={{ once: false, amount: 0.5 }}
+          >
             {steps.map((step, index) => (
               <motion.div
                 key={step.number}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.05 + (index * 0.05) }}
+                viewport={{ once: false, amount: 0.5 }}
                 className="grid md:grid-cols-2 gap-8 items-center"
               >
                 {/* Content - alternating sides */}
@@ -126,7 +129,7 @@ export const FromConceptToReality = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>

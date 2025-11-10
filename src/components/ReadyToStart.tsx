@@ -12,23 +12,20 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
-      initial={{ opacity: 0, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.8 }}
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="container max-w-3xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 text-center hover:border-white/20 transition-all duration-300"
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
             viewport={{ once: false, amount: 0.5 }}
             className="text-3xl md:text-5xl font-bold text-white mb-6"
           >
@@ -38,7 +35,7 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: false, amount: 0.5 }}
             className="text-lg text-white/70 mb-8 max-w-2xl mx-auto"
           >
@@ -46,9 +43,9 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.5, delay: 0.15 }}
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >

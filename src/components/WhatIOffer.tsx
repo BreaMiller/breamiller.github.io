@@ -79,16 +79,13 @@ export const WhatIOffer = () => {
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
-      initial={{ opacity: 0, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.8 }}
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="container max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           className="mb-12"
         >
@@ -100,14 +97,20 @@ export const WhatIOffer = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.05 + (index * 0.05) }}
+              viewport={{ once: false, amount: 0.5 }}
               className={`bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300`}
               style={{
                 backgroundImage: `linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(25, 25, 35, 0.8))`,
@@ -118,7 +121,7 @@ export const WhatIOffer = () => {
               <p className="text-white/70 text-sm leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );

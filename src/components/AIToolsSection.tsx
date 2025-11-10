@@ -26,15 +26,15 @@ export const AIToolsSection = () => {
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
-      initial={{ opacity: 0, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.8 }}
       viewport={{ once: false, amount: 0.3 }}
     >
-      <div className="container max-w-7xl mx-auto px-3 sm:px-4 mb-12 sm:mb-16">
-      </div>
-
-      <div style={{ position: "relative", display: "flex", alignItems: "center", gap: "20px" }}>
+      <motion.div
+        style={{ position: "relative", display: "flex", alignItems: "center", gap: "20px" }}
+        initial={{ opacity: 0, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 0.6, delay: 0 }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
         {/* My Favorite AI Tools text - outside blur */}
         <div
           style={{
@@ -102,8 +102,9 @@ export const AIToolsSection = () => {
               left: 0,
               width: "180px",
               height: "100%",
-              background: "linear-gradient(to right, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.8) 25%, rgba(10, 10, 10, 0.4) 55%, rgba(10, 10, 10, 0.1) 85%, transparent 100%)",
+              background: "linear-gradient(to right, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.95) 20%, rgba(10, 10, 10, 0.7) 50%, transparent 100%)",
               backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
               pointerEvents: "none",
               zIndex: 10,
               animation: "fadeBlur 0.3s ease-in-out",
@@ -116,17 +117,24 @@ export const AIToolsSection = () => {
               right: 0,
               width: "120px",
               height: "100%",
-              background: "linear-gradient(to left, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.8) 25%, rgba(10, 10, 10, 0.4) 55%, rgba(10, 10, 10, 0.1) 85%, transparent 100%)",
+              background: "linear-gradient(to left, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.95) 20%, rgba(10, 10, 10, 0.7) 50%, transparent 100%)",
               backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
               pointerEvents: "none",
               zIndex: 10,
               animation: "fadeBlur 0.3s ease-in-out",
             }}
           />
         </div>
-      </div>
+      </motion.div>
 
-            <div className="container max-w-7xl mx-auto px-3 sm:px-4 mt-16 sm:mt-20 flex justify-center">
+      <motion.div
+        className="container max-w-7xl mx-auto px-3 sm:px-4 mt-16 sm:mt-20 flex justify-center"
+        initial={{ opacity: 0, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, filter: "blur(0px)" }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: false, amount: 0.5 }}
+      >
         <button
           disabled
           onMouseEnter={() => setIsHovering(true)}
@@ -179,7 +187,7 @@ export const AIToolsSection = () => {
           )}
           Directory Coming Soon
         </button>
-      </div>
+      </motion.div>
     </motion.section>
   );
 };
