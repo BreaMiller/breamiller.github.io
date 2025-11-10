@@ -36,8 +36,8 @@ function App() {
         <HeroParallax products={heroProducts} />
         <AIToolsSection />
         <FeaturedProjects />
-        <SelectedProjects />
         <WhatIOffer />
+        <SelectedProjects />
         <FromConceptToReality />
         <ReadyToStart onContactClick={() => setIsContactOpen(true)} />
       </div>

@@ -169,24 +169,95 @@ export const FeaturedProjects = () => {
 
           {/* Navigation Arrows */}
           <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between px-4 z-10 pointer-events-none">
-            <button
+            <motion.button
               onClick={prevSlide}
-              className="pointer-events-auto p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-300 hidden md:flex items-center justify-center"
+              className="pointer-events-auto p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hidden md:flex items-center justify-center relative overflow-hidden group"
               aria-label="Previous slide"
+              whileHover={{ scale: 1.12 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* Shine sweep effect */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)", x: "-150%" }}
+                whileHover={{ x: "150%" }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                style={{ width: "200%", pointerEvents: "none" }}
+              />
+
+              {/* Glow effect on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
+                whileHover={{ 
+                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.6), inset 0 0 10px rgba(236, 72, 153, 0.15)",
+                  background: "rgba(236, 72, 153, 0.1)"
+                }}
+                transition={{ duration: 0.3 }}
+                style={{ pointerEvents: "none" }}
+              />
+
+              {/* Border highlight on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ borderColor: "rgba(255, 255, 255, 0.2)", borderWidth: "1px" }}
+                whileHover={{ borderColor: "rgba(236, 72, 153, 0.6)" }}
+                transition={{ duration: 0.3 }}
+                style={{ 
+                  pointerEvents: "none",
+                  border: "1px solid"
+                }}
+              />
+
+              <svg className="w-6 h-6 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
-            </button>
-            <button
+            </motion.button>
+
+            <motion.button
               onClick={nextSlide}
-              className="pointer-events-auto p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-300 hidden md:flex items-center justify-center"
+              className="pointer-events-auto p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hidden md:flex items-center justify-center relative overflow-hidden group"
               aria-label="Next slide"
+              whileHover={{ scale: 1.12 }}
+              whileTap={{ scale: 0.9 }}
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {/* Shine sweep effect */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)", x: "-150%" }}
+                whileHover={{ x: "150%" }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                style={{ width: "200%", pointerEvents: "none" }}
+              />
+
+              {/* Glow effect on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
+                whileHover={{ 
+                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.6), inset 0 0 10px rgba(236, 72, 153, 0.15)",
+                  background: "rgba(236, 72, 153, 0.1)"
+                }}
+                transition={{ duration: 0.3 }}
+                style={{ pointerEvents: "none" }}
+              />
+
+              {/* Border highlight on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ borderColor: "rgba(255, 255, 255, 0.2)", borderWidth: "1px" }}
+                whileHover={{ borderColor: "rgba(236, 72, 153, 0.6)" }}
+                transition={{ duration: 0.3 }}
+                style={{ 
+                  pointerEvents: "none",
+                  border: "1px solid"
+                }}
+              />
+
+              <svg className="w-6 h-6 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </motion.button>
           </div>
         </div>
 

@@ -78,7 +78,7 @@ export const SelectedProjects = () => {
     (project) => activeFilter === 'all' || project.category === activeFilter
   );
 
-  const displayed = showAll ? filtered : filtered.slice(0, 6);
+  const displayed = showAll ? filtered : filtered.slice(0, 3);
 
   return (
     <motion.section
@@ -185,8 +185,8 @@ export const SelectedProjects = () => {
           </AnimatePresence>
         </div>
 
-        {/* View Full Portfolio Button */}
-        {!showAll && filtered.length > 6 && (
+        {/* Load More Button */}
+        {!showAll && filtered.length > 3 && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -194,13 +194,51 @@ export const SelectedProjects = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <button
+            <motion.button
               onClick={() => setShowAll(true)}
-              className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-white/80 font-medium hover:bg-white/10 hover:border-white/20 transition-all duration-300 inline-flex items-center gap-2"
+              className="px-8 py-3 bg-gradient-to-r from-pink-500/20 to-pink-600/20 border border-pink-400/40 text-white font-semibold rounded-full inline-flex items-center gap-2 relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              View Full Portfolio
-              <span>→</span>
-            </button>
+              {/* Shine sweep effect */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)", x: "-150%" }}
+                whileHover={{ x: "150%" }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                style={{ width: "200%", pointerEvents: "none" }}
+              />
+
+              {/* Glow effect on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
+                whileHover={{ 
+                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.5), inset 0 0 15px rgba(236, 72, 153, 0.15)",
+                }}
+                transition={{ duration: 0.3 }}
+                style={{ pointerEvents: "none" }}
+              />
+
+              {/* Border highlight on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ borderColor: "rgba(236, 72, 153, 0.4)", borderWidth: "1px" }}
+                whileHover={{ borderColor: "rgba(236, 72, 153, 0.8)" }}
+                transition={{ duration: 0.3 }}
+                style={{ 
+                  pointerEvents: "none",
+                  border: "1px solid"
+                }}
+              />
+
+              <span className="relative z-10 flex items-center gap-2">
+                Load More Projects
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </span>
+            </motion.button>
           </motion.div>
         )}
       </div>
