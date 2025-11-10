@@ -18,6 +18,13 @@ const featuredProjects: FeaturedProject[] = [
     category: '3D Render',
   },
   {
+    id: 'geneproof2.0',
+    title: 'GeneProof 2.0',
+    description: 'Next-generation health tracking with AI-powered insights',
+    image: 'https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=1200',
+    category: 'Health Tech',
+  },
+  {
     id: 'buku-tv',
     title: 'Buku TV',
     description: 'Entertainment streaming service with premium experience',
@@ -102,7 +109,7 @@ export const FeaturedProjects = () => {
                 animate={{ opacity: 0.4, x: 0 }}
                 exit={{ opacity: 0, x: 100 }}
                 transition={{ duration: 0.5 }}
-                className="hidden lg:block flex-shrink-0 w-64 h-96 cursor-pointer"
+                className="hidden lg:block flex-shrink-0 w-80 h-[500px] cursor-pointer"
                 onClick={prevSlide}
               >
                 <div className="relative overflow-hidden rounded-2xl h-full group">
@@ -123,7 +130,7 @@ export const FeaturedProjects = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5 }}
-                className="group relative overflow-hidden rounded-2xl h-96 md:h-[500px] w-full max-w-2xl flex-shrink-0 cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl h-96 md:h-[625px] w-full max-w-2xl flex-shrink-0 cursor-pointer"
               >
                 <img
                   src={featuredProjects[currentIndex].image}
@@ -145,7 +152,7 @@ export const FeaturedProjects = () => {
                 animate={{ opacity: 0.4, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
-                className="hidden lg:block flex-shrink-0 w-64 h-96 cursor-pointer"
+                className="hidden lg:block flex-shrink-0 w-80 h-[500px] cursor-pointer"
                 onClick={nextSlide}
               >
                 <div className="relative overflow-hidden rounded-2xl h-full group">

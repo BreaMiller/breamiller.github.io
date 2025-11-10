@@ -48,17 +48,54 @@ export const ReadyToStart = () => {
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
-            <a
+            <motion.a
               href="mailto:brea@example.com"
-              className="px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300 inline-flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold rounded-full inline-flex items-center justify-center gap-2 relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              Send Email
-              <span>→</span>
-            </a>
-            <button className="px-6 py-3 bg-white/5 border border-white/20 text-white/80 font-medium rounded-full hover:bg-white/10 hover:border-white/30 transition-all duration-300 inline-flex items-center justify-center gap-2">
-              Schedule Call
-              <span>📅</span>
-            </button>
+              {/* Glare effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                initial={{ x: '-100%' }}
+                whileHover={{ x: '100%' }}
+                transition={{ duration: 0.5 }}
+                style={{ width: '200%' }}
+              />
+              {/* Shadow on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ boxShadow: '0 0 0px rgba(236, 72, 153, 0)' }}
+                whileHover={{ boxShadow: '0 0 30px rgba(236, 72, 153, 0.6)' }}
+                transition={{ duration: 0.3 }}
+                style={{ pointerEvents: 'none' }}
+              />
+              <span className="relative z-10">Send Email</span>
+              <span className="relative z-10">→</span>
+            </motion.a>
+
+            <motion.button
+              className="px-6 py-3 bg-white/5 border border-white/20 text-white/80 font-medium rounded-full inline-flex items-center justify-center gap-2 relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {/* Background fill on hover */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-pink-600/20"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              {/* Border highlight on hover */}
+              <motion.div
+                className="absolute inset-0 rounded-full border border-pink-400/50"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+              />
+              <span className="relative z-10">Schedule Call</span>
+              <span className="relative z-10">📅</span>
+            </motion.button>
           </motion.div>
 
           <motion.div

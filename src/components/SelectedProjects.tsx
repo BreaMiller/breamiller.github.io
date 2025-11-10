@@ -117,17 +117,32 @@ export const SelectedProjects = () => {
           className="flex flex-wrap gap-3 mb-12"
         >
           {categories.map((cat) => (
-            <button
+            <motion.button
               key={cat.id}
               onClick={() => setActiveFilter(cat.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 relative overflow-hidden group ${
                 activeFilter === cat.id
-                  ? 'bg-white/10 border border-white/30 text-white'
-                  : 'bg-white/5 border border-white/10 text-white/60 hover:text-white'
+                  ? 'bg-gradient-to-r from-pink-500/30 to-pink-600/30 border-pink-400/60 text-white'
+                  : 'bg-white/5 border-white/10 text-white/60'
               }`}
+              whileHover={activeFilter !== cat.id ? {
+                backgroundColor: 'rgba(255,255,255,0.08)',
+                borderColor: 'rgba(236,72,153,0.4)',
+              } : {}}
+              whileTap={{ scale: 0.95 }}
             >
-              {cat.label}
-            </button>
+              {/* Shine effect on hover */}
+              {activeFilter !== cat.id && (
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  initial={{ x: '-100%' }}
+                  whileHover={{ x: '100%' }}
+                  transition={{ duration: 0.5 }}
+                  style={{ width: '200%' }}
+                />
+              )}
+              <span className="relative z-10">{cat.label}</span>
+            </motion.button>
           ))}
         </motion.div>
 
