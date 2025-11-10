@@ -4,6 +4,7 @@ interface ProcessStep {
   number: number;
   title: string;
   description: string;
+  icon: React.ReactNode;
 }
 
 const steps: ProcessStep[] = [
@@ -11,21 +12,41 @@ const steps: ProcessStep[] = [
     number: 1,
     title: 'Discovery & Brief',
     description: 'We start with a detailed discussion about your vision, goals, and requirements to ensure perfect alignment.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM13 10H7" />
+      </svg>
+    ),
   },
   {
     number: 2,
     title: 'Design & Concept',
     description: 'I create initial concepts and designs for your review, refining based on your feedback.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+      </svg>
+    ),
   },
   {
     number: 3,
     title: 'Development & Implementation',
     description: 'Building out the full solution with attention to detail, performance, and user experience.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    ),
   },
   {
     number: 4,
     title: 'Refinement & Delivery',
     description: 'Final polish, testing, and delivery with comprehensive documentation and support.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
   },
 ];
 
@@ -76,9 +97,14 @@ export const FromConceptToReality = () => {
                 {/* Content - alternating sides */}
                 <div className={index % 2 === 0 ? '' : 'md:order-2'}>
                   <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {step.title}
-                    </h3>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="text-pink-400 w-6 h-6 flex-shrink-0">
+                        {step.icon}
+                      </div>
+                      <h3 className="text-xl font-bold text-white">
+                        {step.title}
+                      </h3>
+                    </div>
                     <p className="text-white/70 leading-relaxed">
                       {step.description}
                     </p>

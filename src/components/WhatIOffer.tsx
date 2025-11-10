@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 interface Service {
   title: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode;
   color: string;
 }
 
@@ -11,37 +11,62 @@ const services: Service[] = [
   {
     title: 'Product Visualization',
     description: 'Photorealistic renders that showcase products in the best light',
-    icon: '📦',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125V4.875c0-.621-.504-1.125-1.125-1.125H2.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+      </svg>
+    ),
     color: 'from-violet-500/20 to-fuchsia-500/20',
   },
   {
     title: 'UI/UX Design',
     description: 'Beautiful and functional digital experiences',
-    icon: '🎨',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.53 16.122a3 3 0 00-5.78 1.128A2.25 2.25 0 002.25 18h15.75a2.25 2.25 0 002.25-2.25M15 12a3 3 0 11-6 0 3 3 0 016 0zm6-3.75a.75.75 0 100-1.5.75.75 0 000 1.5z" />
+      </svg>
+    ),
     color: 'from-cyan-500/20 to-blue-500/20',
   },
   {
     title: 'Brand Development',
     description: 'Complete brand identity and visual systems',
-    icon: '✨',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.78.78 2.051.78 2.831 0l6.374-6.374c.78-.78.78-2.049 0-2.829L13.48 3.659A2.25 2.25 0 0011.889 3H9.568z" />
+      </svg>
+    ),
     color: 'from-emerald-500/20 to-teal-500/20',
   },
   {
     title: 'Motion Design',
     description: 'Dynamic animations and interactive experiences',
-    icon: '🎬',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
     color: 'from-rose-500/20 to-pink-500/20',
   },
   {
     title: 'Web Development',
     description: 'Modern, responsive websites and applications',
-    icon: '💻',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    ),
     color: 'from-amber-500/20 to-orange-500/20',
   },
   {
     title: 'Creative Consulting',
     description: 'Strategic guidance for your creative projects',
-    icon: '🚀',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.892m-6 3.75c0 1.657.895 3.09 2.25 3.897m8.25-12a4.5 4.5 0 010 9H3.75A4.5 4.5 0 013 12c0-2.344 2.235-4.5 5-4.5h8.25z" />
+      </svg>
+    ),
     color: 'from-indigo-500/20 to-purple-500/20',
   },
 ];
@@ -88,7 +113,7 @@ export const WhatIOffer = () => {
                 backgroundImage: `linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(25, 25, 35, 0.8))`,
               }}
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
+              <div className="text-white mb-4 w-8 h-8">{service.icon}</div>
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
               <p className="text-white/70 text-sm leading-relaxed">{service.description}</p>
             </motion.div>
