@@ -1,56 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 
-interface Track {
-  name: string;
-  artist: string;
-  cover: string;
-  url: string;
-  favorited: boolean;
-}
-
 export const AboutPage: React.FC = () => {
   const navigate = useNavigate();
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTime, setCurrentTime] = useState(0);
-  const [duration] = useState(240);
-
-  const tracks: Track[] = [
-    {
-      name: "Midnight Dreams",
-      artist: "Luna Echo",
-      cover: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&h=400&fit=crop",
-      url: "https://www.music-platform.com/track/1",
-      favorited: false,
-    },
-    {
-      name: "Neon Nights",
-      artist: "Cyber Waves",
-      cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=400&fit=crop",
-      url: "https://www.music-platform.com/track/2",
-      favorited: false,
-    },
-    {
-      name: "Digital Horizon",
-      artist: "Synth Wave",
-      cover: "https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=400&h=400&fit=crop",
-      url: "https://www.music-platform.com/track/3",
-      favorited: false,
-    },
-  ];
-
-  const currentTrack = tracks[currentTrackIndex];
-  const barWidth = duration > 0 ? (currentTime / duration) * 100 : 0;
-
-  const handlePrevTrack = () => {
-    setCurrentTrackIndex((prev) => (prev === 0 ? tracks.length - 1 : prev - 1));
-  };
-
-  const handleNextTrack = () => {
-    setCurrentTrackIndex((prev) => (prev === tracks.length - 1 ? 0 : prev + 1));
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -103,8 +56,8 @@ export const AboutPage: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         style={{
           position: "fixed",
-          top: "40px",
-          left: "40px",
+          top: "clamp(20px, 5vw, 40px)",
+          left: "clamp(20px, 5vw, 40px)",
           zIndex: "1000",
         }}
       >
@@ -112,8 +65,8 @@ export const AboutPage: React.FC = () => {
           onClick={() => navigate("/")}
           style={{
             position: "relative",
-            width: "50px",
-            height: "50px",
+            width: "clamp(40px, 10vw, 50px)",
+            height: "clamp(40px, 10vw, 50px)",
             background: "rgba(255, 255, 255, 0.08)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
@@ -123,7 +76,7 @@ export const AboutPage: React.FC = () => {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            fontSize: "18px",
+            fontSize: "clamp(14px, 4vw, 18px)",
             color: "#ffffff",
             transition: "all 0.3s ease",
             overflow: "hidden",
@@ -165,12 +118,12 @@ export const AboutPage: React.FC = () => {
         variants={containerVariants}
       >
         <div
-          className="grid gap-8 md:gap-16 px-4 md:px-8 py-20 max-w-7xl mx-auto"
+          className="grid gap-6 sm:gap-8 md:gap-16 px-3 sm:px-4 md:px-8 py-12 sm:py-16 md:py-20 max-w-7xl mx-auto"
           style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
             alignItems: "start",
-            paddingTop: "80px",
-            paddingBottom: "80px",
+            paddingTop: "clamp(60px, 10vw, 80px)",
+            paddingBottom: "clamp(60px, 10vw, 80px)",
           }}
         >
           {/* Left Section */}
@@ -236,9 +189,9 @@ export const AboutPage: React.FC = () => {
             <motion.div variants={itemVariants}>
               <p
                 style={{
-                  fontSize: "1rem",
+                  fontSize: "clamp(0.9rem, 2vw, 1rem)",
                   color: "#ccc",
-                  marginBottom: "24px",
+                  marginBottom: "16px",
                   lineHeight: "1.6",
                 }}
               >
@@ -246,7 +199,7 @@ export const AboutPage: React.FC = () => {
               </p>
 
               {/* Skills Tags */}
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginBottom: "0px" }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "0px" }}>
                                 {["Autonomous", "Empathetic", "Communicative", "Meticulous", "Optimistic", "Reliable", "Self-Aware"].map(
                   (skill) => (
                     <motion.span
@@ -256,9 +209,9 @@ export const AboutPage: React.FC = () => {
                         background: "transparent",
                         border: "1px solid rgba(255, 255, 255, 0.1)",
                         color: "#ccc",
-                        padding: "6px 12px",
+                        padding: "4px 8px",
                         borderRadius: "16px",
-                        fontSize: "12px",
+                        fontSize: "clamp(10px, 1.5vw, 12px)",
                         fontWeight: "500",
                         cursor: "pointer",
                         transition: "all 0.3s ease",
@@ -353,205 +306,48 @@ export const AboutPage: React.FC = () => {
                   key={btn}
                   whileHover={{ y: -2, scale: 1.05 }}
                   style={{
-                    flex: 1,
-                    background: "rgba(255, 255, 255, 0.08)",
-                    border: "1px solid rgba(255, 255, 255, 0.2)",
-                    padding: "14px 20px",
-                    borderRadius: "50px",
-                    fontSize: "13px",
-                    fontWeight: "600",
+                    background: btn === "Skills" ? "transparent" : "transparent",
+                    border: btn === "Skills" ? "none" : ".5px solid #ec4899",
+                    padding: "18px 18px",
+                    borderRadius: "20px",
+                    width: "140px",
+                    height: "60px",
+                    fontSize: "14px",
+                    fontWeight: "700",
                     cursor: "pointer",
                     textTransform: "uppercase",
-                    letterSpacing: "0.5px",
+                    letterSpacing: "1px",
                     color: "#ffffff",
                     transition: "all 0.3s ease",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    whiteSpace: "wrap",
+                    maxWidth: "400px",
+                    boxShadow: btn === "Skills" ? "0 0 20px rgba(236, 72, 153, 0.2)" : "0 0 20px rgba(236, 72, 853, 0.2)",
                   }}
                   onMouseEnter={(e: any) => {
-                    e.target.style.background = "rgba(255, 255, 255, 0.15)";
-                    e.target.style.borderColor = "rgba(236, 72, 153, 0.5)";
+                    if (btn === "Skills") {
+                      e.target.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.4)";
+                      e.target.style.background = "rgba(236, 72, 153, 0.1)";
+                    } else {
+                      e.target.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
+                      e.target.style.borderColor = "rgba(236, 72, 853, 0.8)";
+                    }
                   }}
                   onMouseLeave={(e: any) => {
-                    e.target.style.background = "rgba(255, 255, 255, 0.08)";
-                    e.target.style.borderColor = "rgba(255, 255, 255, 0.2)";
+                    if (btn === "Skills") {
+                      e.target.style.boxShadow = "0 0 20px rgba(236, 72, 153, 0.2)";
+                      e.target.style.background = "transparent";
+                    } else {
+                      e.target.style.boxShadow = "0 0 20px rgba(236, 72, 153, 0.2)";
+                      e.target.style.borderColor = "#ec4899";
+                    }
                   }}
                 >
                   {btn}
                 </motion.button>
               ))}
-            </motion.div>
-          </motion.div>
-
-          {/* Center Section - Music Player */}
-          <motion.div
-            variants={itemVariants}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "40px 20px",
-            }}
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              style={{
-                background: "rgba(17, 17, 17, 0.9)",
-                backdropFilter: "blur(20px)",
-                borderRadius: "24px",
-                padding: "30px",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
-                width: "320px",
-                minHeight: "380px",
-                boxShadow: "0px 15px 35px -5px rgba(50, 88, 130, 0.32)",
-              }}
-              whileHover={{ y: -4, borderColor: "rgba(236, 72, 153, 0.3)" }}
-            >
-              {/* Album Cover */}
-              <div style={{ marginBottom: "20px" }}>
-                <motion.img
-                  key={currentTrackIndex}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.8 }}
-                  transition={{ duration: 0.3 }}
-                  src={currentTrack.cover}
-                  alt={currentTrack.name}
-                  style={{
-                    width: "100%",
-                    height: "200px",
-                    borderRadius: "15px",
-                    objectFit: "cover",
-                    boxShadow: "0px 10px 40px 0px rgba(236, 72, 153, 0.3)",
-                  }}
-                />
-              </div>
-
-              {/* Album Info */}
-              {currentTrack && (
-                <motion.div
-                  key={`info-${currentTrackIndex}`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3, delay: 0.1 }}
-                  style={{
-                    marginBottom: "20px",
-                    textAlign: "center",
-                  }}
-                >
-                  <div style={{ fontSize: "16px", fontWeight: "bold", marginBottom: "8px", color: "#ffffff" }}>
-                    {currentTrack.artist}
-                  </div>
-                  <div style={{ fontSize: "14px", color: "#888", lineHeight: "1.3" }}>
-                    {currentTrack.name}
-                  </div>
-                </motion.div>
-              )}
-
-              {/* Controls */}
-              <div style={{ display: "flex", justifyContent: "center", gap: "12px", alignItems: "center", marginBottom: "20px" }}>
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={handlePrevTrack}
-                  style={{
-                    background: "transparent",
-                    border: "none",
-                    color: "#888",
-                    cursor: "pointer",
-                    fontSize: "24px",
-                    padding: "8px",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e: any) => {
-                    e.target.style.color = "#ec4899";
-                  }}
-                  onMouseLeave={(e: any) => {
-                    e.target.style.color = "#888";
-                  }}
-                >
-                  ⏮
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.15 }}
-                  whileTap={{ scale: 0.9 }}
-                  onClick={() => setIsPlaying(!isPlaying)}
-                  style={{
-                    background: "rgba(236, 72, 153, 0.2)",
-                    border: "1px solid rgba(236, 72, 153, 0.5)",
-                    color: "#ffffff",
-                    cursor: "pointer",
-                    fontSize: "32px",
-                    padding: "12px 16px",
-                    borderRadius: "50%",
-                    transition: "all 0.3s ease",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  {isPlaying ? "⏸" : "▶"}
-                </motion.button>
-
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={handleNextTrack}
-                  style={{
-                    background: "transparent",
-                    border: "none",
-                    color: "#888",
-                    cursor: "pointer",
-                    fontSize: "24px",
-                    padding: "8px",
-                    transition: "all 0.3s ease",
-                  }}
-                  onMouseEnter={(e: any) => {
-                    e.target.style.color = "#ec4899";
-                  }}
-                  onMouseLeave={(e: any) => {
-                    e.target.style.color = "#888";
-                  }}
-                >
-                  ⏭
-                </motion.button>
-              </div>
-
-              {/* Progress Bar */}
-              <div style={{ marginBottom: "8px" }}>
-                <div
-                  style={{
-                    height: "6px",
-                    width: "100%",
-                    background: "rgba(255, 255, 255, 0.1)",
-                    borderRadius: "10px",
-                    overflow: "hidden",
-                    cursor: "pointer",
-                  }}
-                  onClick={(e) => {
-                    const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-                    const newTime = ((e.clientX - rect.left) / rect.width) * duration;
-                    setCurrentTime(newTime);
-                  }}
-                >
-                  <motion.div
-                    animate={{ width: `${barWidth}%` }}
-                    transition={{ duration: 0.1 }}
-                    style={{
-                      height: "100%",
-                      background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
-                      borderRadius: "10px",
-                    }}
-                  />
-                </div>
-              </div>
-
-              {/* Time Display */}
-              <div style={{ display: "flex", justifyContent: "space-between", fontSize: "12px", color: "#888" }}>
-                <span>{Math.floor(currentTime / 60)}:{String(Math.floor(currentTime % 60)).padStart(2, "0")}</span>
-                <span>{Math.floor(duration / 60)}:{String(Math.floor(duration % 60)).padStart(2, "0")}</span>
-              </div>
             </motion.div>
           </motion.div>
 
@@ -623,10 +419,10 @@ export const AboutPage: React.FC = () => {
 
             {/* Latest Projects */}
             <motion.div variants={itemVariants}>
-              <h3 style={{ fontSize: "1.2rem", fontWeight: "600", marginBottom: "24px", color: "#ffffff" }}>
+              <h3 style={{ fontSize: "clamp(1rem, 2.5vw, 1.2rem)", fontWeight: "600", marginBottom: "16px", color: "#ffffff" }}>
                 Latest projects
               </h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                 {[
                   { id: "ggs", name: "Good Games", img: "https://i.imgur.com/I23nYjZ.png?auto=compress&cs=tinysrgb&w=400" },
                   { id: "geneproof2", name: "GeneProof 2.0", img: "https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=400" },
@@ -640,8 +436,8 @@ export const AboutPage: React.FC = () => {
                       style={{
                         display: "flex",
                         alignItems: "center",
-                        gap: "12px",
-                        padding: "8px",
+                        gap: "10px",
+                        padding: "6px",
                         borderRadius: "12px",
                         cursor: "pointer",
                         transition: "all 0.3s ease",
@@ -660,15 +456,15 @@ export const AboutPage: React.FC = () => {
                         src={project.img}
                         alt={project.name}
                         style={{
-                          width: "48px",
-                          height: "48px",
+                          width: "40px",
+                          height: "40px",
                           borderRadius: "8px",
                           objectFit: "cover",
                           flexShrink: 0,
                         }}
                       />
                       <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ fontSize: "0.95rem", fontWeight: "600", marginBottom: "2px", color: "#ffffff" }}>
+                        <div style={{ fontSize: "clamp(0.85rem, 2vw, 0.95rem)", fontWeight: "600", marginBottom: "2px", color: "#ffffff" }}>
                           {project.name}
                         </div>
                       </div>
@@ -688,14 +484,14 @@ export const AboutPage: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         style={{
           position: "fixed",
-          bottom: "20px",
-          right: "20px",
-          padding: "20px",
+          bottom: "clamp(12px, 3vw, 20px)",
+          right: "clamp(12px, 3vw, 20px)",
+          padding: "clamp(14px, 3vw, 20px)",
           background: "rgba(17, 17, 17, 0.9)",
           backdropFilter: "blur(20px)",
           border: "1px solid rgba(236, 72, 153, 0.3)",
           borderRadius: "50px",
-          fontSize: "12px",
+          fontSize: "clamp(10px, 2vw, 12px)",
           fontWeight: "600",
           color: "#ec4899",
           zIndex: "1000",

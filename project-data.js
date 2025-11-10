@@ -173,16 +173,16 @@ const projectsData = {
     title: 'Voya™️',
     label: '',
     heroImage: '',
-    description: 'An astrocartography travel app',
+    description: 'An astrocartography travel companion',
     sections: [
       {
         type: 'single',
         title: '',
         text: 'Every trip aligns with the stars',
-        image: 'https://i.imgur.com/0pYWUlj.gif?auto=compress&cs=tinysrgb&w=600'
+        image: 'https://i.imgur.com/uGBIAag.png?auto=compress&cs=tinysrgb&w=600'
       }
     ],
-    overview: 'Knack gamifies reading to engage young learners and foster a lifelong love of books.'
+    overview: 'What if you\'re just living in the wrong place?'
   },
   
   'knack': {
@@ -247,37 +247,6 @@ const projectsData = {
       }
     ],
     overview: 'Digital platform that facilitates civic engagement and democratic processes through community organizing and voting.'
-  },
-    'flix': {
-    title: 'LiteFlix',
-    heroImage: '',
-    description: 'Inspired by 5D Optic Storage.',
-    visitUrl: 'https://breamiller.github.io/liteflix',
-    visitLabel: 'Visit LiteFlix',
-    sections: [
-      {
-        type: 'single',
-        title: '',
-        text: 'Ready-to-wear fashion tailored to the individual.',
-        image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600'
-      },
-      {
-        type: 'double',
-        items: [
-          {
-            title: '',
-            text: 'Every fabric pattern features unique textures never seen before.',
-            image: 'https://i.imgur.com/4EAzGYU.gif?auto=compress&cs=tinysrgb&w=600'
-          },
-          {
-            title: '',
-            text: 'Premium designs made with quality materials and eco-friendly production.',
-            image: 'https://i.imgur.com/JF9wr5V.png?auto=compress&cs=tinysrgb&w=600'
-          }
-        ]
-      }
-    ],
-    overview: 'At the intersection of AI technology and fashion design, unique mandalas push the boundaries of traditional patterns.'
   },
   
   'biohaxx-tv-series': {

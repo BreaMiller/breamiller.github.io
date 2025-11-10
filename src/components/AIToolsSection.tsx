@@ -1,4 +1,5 @@
 import { InfiniteSlider } from './InfiniteSlider';
+import { useState } from 'react';
 
 const aiTools = [
   { id: 1, name: 'Opus Clip', logo: 'https://asset.brandfetch.io/idMyFW0O1q/ide61u_rax.png' },
@@ -15,76 +16,152 @@ const aiTools = [
 ];
 
 export const AIToolsSection = () => {
+  const [isHovering, setIsHovering] = useState(false);
+
   return (
     <section
-      className="w-full py-20 md:py-32 pb-48 md:pb-72"
+      className="w-full py-16 sm:py-20 md:py-32 pb-32 sm:pb-48 md:pb-72"
       style={{
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="container max-w-7xl mx-auto px-3 md:px-4 mb-16">
-        <h2
-          className="text-4xl md:text-5xl font-bold text-center mb-4"
-          style={{
-            background: "linear-gradient(135deg, #ffffff 0%, #ec4899 50%, #6366f1 75%, #06b6d4 100%)",
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-        >
-          My Favorite AI Tools
-        </h2>
-        <p className="text-center text-gray-400 max-w-2xl mx-auto">
-          Powerful AI tools that fuel my creative process and innovation
-        </p>
+      <div className="container max-w-7xl mx-auto px-3 sm:px-4 mb-12 sm:mb-16">
       </div>
 
-      <InfiniteSlider gap={20} duration={30} direction="horizontal" reverse={false}>
-        {aiTools.map((tool) => (
-          <div
-            key={tool.id}
-            className="flex-shrink-0 flex items-center justify-center px-8 py-6 rounded-2xl border border-gray-700 bg-gradient-to-br from-gray-900 to-gray-800 hover:border-pink-500/50 transition-all duration-300 cursor-pointer group"
-            style={{
-              minWidth: '200px',
-              background: "linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(30, 30, 30, 0.6) 100%)",
-              backdropFilter: "blur(10px)",
-            }}
-          >
-            <div className="flex flex-col items-center gap-3">
-              <img 
-                src={tool.logo}
-                alt={tool.name}
-                className="w-12 h-12 group-hover:scale-110 transition-transform duration-300 object-contain"
-                style={{
-                  filter: 'brightness(0) invert(1)',
-                }}
-              />
-              <span className="text-white font-semibold text-center whitespace-nowrap text-sm">
-                {tool.name}
-              </span>
+      <div style={{ position: "relative" }}>
+        <InfiniteSlider gap={20} duration={30} direction="horizontal" reverse={false}>
+          {aiTools.map((tool) => (
+            <div
+              key={tool.id}
+              className="flex-shrink-0 flex items-center justify-center px-6 sm:px-8 py-4 sm:py-6 rounded-2xl border border-gray-700 bg-gradient-to-br from-gray-900 to-gray-800 hover:border-pink-500/50 transition-all duration-300 cursor-pointer group"
+              style={{
+                minWidth: '160px',
+                background: "linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(30, 30, 30, 0.6) 100%)",
+                backdropFilter: "blur(10px)",
+              }}
+            >
+              <div className="flex flex-col items-center gap-2 sm:gap-3">
+                <img 
+                  src={tool.logo}
+                  alt={tool.name}
+                  className="w-10 sm:w-12 h-10 sm:h-12 group-hover:scale-110 transition-transform duration-300 object-contain"
+                  style={{
+                    filter: 'brightness(0) invert(1)',
+                  }}
+                />
+                <span className="text-white font-semibold text-center whitespace-nowrap text-xs sm:text-sm">
+                  {tool.name}
+                </span>
+              </div>
             </div>
-          </div>
-        ))}
-      </InfiniteSlider>
+          ))}
+        </InfiniteSlider>
 
-      <div className="container max-w-7xl mx-auto px-3 md:px-4 mt-20 flex justify-center">
-        <button
-          disabled
+        {/* Backdrop blur overlays on sides */}
+        <div
           style={{
-            background: "transparent",
-            border: "1px solid rgba(236, 72, 153, 0.3)",
-            borderRadius: "50px",
-            padding: "16px 32px",
-            color: "#ec4899",
-            fontSize: "14px",
-            fontWeight: "700",
-            textTransform: "uppercase",
-            letterSpacing: "0.5px",
-            cursor: "not-allowed",
-            opacity: 0.8,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "280px",
+            height: "100%",
+            background: "linear-gradient(to right, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.95) 15%, rgba(10, 10, 10, 0.85) 30%, rgba(10, 10, 10, 0.65) 50%, rgba(10, 10, 10, 0.35) 70%, rgba(10, 10, 10, 0.1) 90%, transparent 100%)",
+            backdropFilter: "blur(8px)",
+            pointerEvents: "none",
+            zIndex: 10,
+            animation: "fadeBlur 0.3s ease-in-out",
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "20px",
           }}
         >
+          <span
+            style={{
+              fontSize: "clamp(12px, 2vw, 16px)",
+              fontWeight: "600",
+              background: "linear-gradient(135deg, #ffffff 0%, #ec4899 50%, #6366f1 75%, #06b6d4 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              whiteSpace: "nowrap",
+              opacity: 0.9,
+              textTransform: "uppercase",
+              letterSpacing: "1px",
+            }}
+          >
+            My Favorite
+            <br />
+            AI Tools
+          </span>
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            width: "150px",
+            height: "100%",
+            background: "linear-gradient(to left, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.95) 15%, rgba(10, 10, 10, 0.85) 30%, rgba(10, 10, 10, 0.65) 50%, rgba(10, 10, 10, 0.35) 70%, rgba(10, 10, 10, 0.1) 90%, transparent 100%)",
+            backdropFilter: "blur(8px)",
+            pointerEvents: "none",
+            zIndex: 10,
+            animation: "fadeBlur 0.3s ease-in-out",
+          }}
+        />
+      </div>
+
+            <div className="container max-w-7xl mx-auto px-3 sm:px-4 mt-16 sm:mt-20 flex justify-center">
+        <button
+          disabled
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          style={{
+            background: isHovering 
+              ? "linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%)"
+              : "transparent",
+            border: isHovering 
+              ? "1px solid rgba(236, 72, 153, 0.8)"
+              : ".5px solid #ec4899",
+            borderRadius: "20px",
+            padding: "38px 38px",
+            width: "220px",
+            height: "60px",
+            color: isHovering ? "#ffffff" : "#ec4899",
+            fontSize: "clamp(11px, 2vw, 14px)",
+            fontWeight: "700",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
+            cursor: "not-allowed",
+            opacity: isHovering ? 1 : 0.8,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            whiteSpace: "nowrap",
+            maxWidth: "2200px",
+            transition: "all 0.3s ease",
+            boxShadow: isHovering 
+              ? "0 0 30px rgba(236, 72, 153, 0.4), inset 0 0 20px rgba(236, 72, 153, 0.1)"
+              : "0 0 15px rgba(236, 72, 153, 0.15)",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          {/* Shine effect on hover */}
+          {isHovering && (
+            <div
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%)",
+                borderRadius: "20px",
+                pointerEvents: "none",
+              }}
+            />
+          )}
           Directory Coming Soon
         </button>
       </div>

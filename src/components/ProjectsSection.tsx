@@ -9,9 +9,9 @@ export const ProjectsSection = () => {
     { id: 'baraka', label: 'MATERNITY SOCIAL NETWORK', title: 'Baraka', img: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=400', size: 'small' },
     { id: 'geneproof', label: 'HEALTH TRACKING APP', title: 'GeneProof', img: 'https://i.imgur.com/o91Hbp9.gif?auto=compress&cs=tinysrgb&w=400', size: 'small', popOff: true },
     { id: 'buku-tv', label: 'WHERE TO WATCH', title: 'Buku TV™️', img: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=800', size: 'medium' },
-    { id: 'voya', label: 'TRAVEL COMPANION', title: 'Voya', img: 'https://i.imgur.com/0pYWUlj.gif?auto=compress&cs=tinysrgb&w=1200', size: 'medium' },
+    { id: 'voya', label: 'TRAVEL COMPANION', title: 'Voya', img: 'https://i.imgur.com/uGBIAag.png?auto=compress&cs=tinysrgb&w=1200', size: 'medium' },
     { id: 'ad-reels', label: 'AI ADS', title: 'Ad Reels', img: 'https://i.imgur.com/O0Pmvuj.gif?auto=compress&cs=tinysrgb&w=800', size: 'large', isVideo: true },
-    { id: 'coming-soon', label: 'ABSTRACT AI ART', title: 'Coming Soon', img: '', size: 'small', isPlaceholder: true },
+    { id: 'who-we-are', label: 'ABSTRACT AI ART', title: 'Who We Are, Have Been, & Will Always Be', img: 'https://i.imgur.com/VwuVUu8.png?auto=compress&cs=tinysrgb&w=600', size: 'small' },
     { id: 'imagine', label: 'PASSION PROJECT', title: 'Imagine...', img: 'https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600', size: 'small' },
     { id: 'attraction', label: 'AI COUTURE', title: 'The Art of Attraction', img: 'https://i.imgur.com/eXDo86B.jpeg?auto=compress&cs=tinysrgb&w=400', size: 'small' },
     { id: 'wellness-guide', label: 'LIFESTYLE BOOK', title: 'Wellness Guide', img: 'https://i.imgur.com/EGUHIC7.png?auto=compress&cs=tinysrgb&w=400', size: 'small', popOff: true },
@@ -28,35 +28,35 @@ export const ProjectsSection = () => {
   const getGridClass = (size: string) => {
     switch (size) {
       case 'large':
-        return 'col-span-1 sm:col-span-2';
+        return 'col-span-2 sm:col-span-1 md:col-span-2';
       case 'medium':
-        return 'col-span-1';
+        return 'col-span-1 sm:col-span-1 md:col-span-1';
       case 'small':
       default:
-        return 'col-span-1';
+        return 'col-span-1 sm:col-span-1 md:col-span-1';
     }
   };
 
   const getHeightClass = (size: string) => {
     switch (size) {
       case 'large':
-        return 'h-56 sm:h-72 md:h-96';
+        return 'h-40 sm:h-48 md:h-64 lg:h-96';
       case 'medium':
-        return 'h-48 sm:h-64 md:h-80';
+        return 'h-36 sm:h-44 md:h-56 lg:h-80';
       case 'small':
       default:
-        return 'h-44 sm:h-56 md:h-64';
+        return 'h-32 sm:h-40 md:h-48 lg:h-64';
     }
   };
 
   return (
-    <section className="work section-spacing py-20" style={{ 
+    <section className="work section-spacing py-12 sm:py-16 md:py-20" style={{ 
       background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
       backgroundAttachment: "fixed",
     }}>
-      <div className="container max-w-7xl mx-auto px-3 md:px-4">
+      <div className="container max-w-7xl mx-auto px-2 sm:px-3 md:px-4">
         <div 
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-max"
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 auto-rows-max"
           style={{ perspective: "1000px" }}
         >
           {projects.map((project) => {
@@ -82,12 +82,12 @@ export const ProjectsSection = () => {
                     }}
                   >
                     <div 
-                      className="absolute inset-0 flex flex-col justify-between p-6 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className="absolute inset-0 flex flex-col justify-between p-3 sm:p-4 md:p-6 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       style={{ justifyContent: 'flex-end', alignItems: 'flex-start' }}
                     >
                       <div>
                         <div 
-                          className="text-xs font-semibold tracking-tight mb-1"
+                          className="text-xs md:text-sm font-semibold tracking-tight mb-1"
                           style={{
                             background: "linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%)",
                             WebkitBackgroundClip: "text",
@@ -97,61 +97,55 @@ export const ProjectsSection = () => {
                         >
                           {project.label}
                         </div>
-                        <h3 className="text-base md:text-2xl font-bold text-white mt-2">
+                        <h3 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold text-white mt-1 sm:mt-2">
                           {project.title}
                         </h3>
                       </div>
                     </div>
                     
-                    {project.isPlaceholder ? (
-                      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20" style={{ borderRadius: "20px" }} />
+                    {project.isVideo ? (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="relative w-full h-full">
+                          <img
+                            src={project.img}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                            <div className="text-white text-4xl">▶</div>
+                          </div>
+                        </div>
+                      </div>
                     ) : (
                       <>
-                        {project.isVideo ? (
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="relative w-full h-full">
-                              <img
-                                src={project.img}
-                                alt={project.title}
-                                className="w-full h-full object-cover"
-                              />
-                              <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                                <div className="text-white text-4xl">▶</div>
-                              </div>
-                            </div>
-                          </div>
-                        ) : (
-                          <>
-                            <img
-                              src={project.img}
-                              alt={project.title}
-                              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                              style={{ 
-                                borderRadius: project.popOff ? "0px" : "20px",
-                                width: project.popOff ? "120%" : "100%",
-                                height: project.popOff ? "120%" : "100%",
-                                left: project.popOff ? "-10%" : "0",
-                                top: project.popOff ? "-10%" : "0",
-                              }}
-                            />
-                            {/* Dark backdrop blur on hover */}
-                            <div
-                              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none backdrop-blur-sm"
-                              style={{
-                                background: "rgba(0, 0, 0, 0.3)",
-                                borderRadius: "20px",
-                              }}
-                            />
-                            {/* Glare effect on hover */}
-                            <div
-                              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                              style={{
-                                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, transparent 50%)",
-                                borderRadius: "20px",
-                              }}
-                            />
-                          </>
-                        )}
+                        <img
+                          src={project.img}
+                          alt={project.title}
+                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          style={{ 
+                            borderRadius: project.popOff ? "0px" : "20px",
+                            width: project.popOff ? "120%" : "100%",
+                            height: project.popOff ? "120%" : "100%",
+                            left: project.popOff ? "-10%" : "0",
+                            top: project.popOff ? "-10%" : "0",
+                          }}
+                        />
+                        {/* Dark backdrop blur on hover */}
+                        <div
+                          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none backdrop-blur-sm"
+                          style={{
+                            background: "rgba(0, 0, 0, 0.3)",
+                            borderRadius: "20px",
+                          }}
+                        />
+                        {/* Glare effect on hover */}
+                        <div
+                          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                          style={{
+                            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, transparent 50%)",
+                            borderRadius: "20px",
+                          }}
+                        />
                       </>
                     )}
                   </div>

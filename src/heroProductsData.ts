@@ -10,6 +10,11 @@ export const heroProducts = [
     thumbnail: "https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=600",
   },
   {
+    title: "GeneProof",
+    link: "/projects/geneproof",
+    thumbnail: "https://i.imgur.com/o91Hbp9.gif?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
     title: "AltaMed",
     link: "/projects/altamed",
     thumbnail: "https://i.imgur.com/PLb6nM4.png?auto=compress&cs=tinysrgb&w=600",
@@ -32,7 +37,7 @@ export const heroProducts = [
   {
     title: "Voya",
     link: "/projects/voya",
-    thumbnail: "https://i.imgur.com/0pYWUlj.gif?auto=compress&cs=tinysrgb&w=1200",
+    thumbnail: "https://i.imgur.com/uGBIAag.png?auto=compress&cs=tinysrgb&w=1200",
   },
   {
     title: "Ad Reels",

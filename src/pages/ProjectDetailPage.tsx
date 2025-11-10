@@ -105,8 +105,8 @@ export const ProjectDetailPage: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         style={{
           position: "fixed",
-          top: "40px",
-          left: "40px",
+          top: "clamp(20px, 5vw, 40px)",
+          left: "clamp(20px, 5vw, 40px)",
           zIndex: "1000",
         }}
       >
@@ -114,8 +114,8 @@ export const ProjectDetailPage: React.FC = () => {
           onClick={() => navigate("/")}
           style={{
             position: "relative",
-            width: "50px",
-            height: "50px",
+            width: "clamp(40px, 10vw, 50px)",
+            height: "clamp(40px, 10vw, 50px)",
             background: "rgba(255, 255, 255, 0.08)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
@@ -125,7 +125,7 @@ export const ProjectDetailPage: React.FC = () => {
             alignItems: "center",
             justifyContent: "center",
             cursor: "pointer",
-            fontSize: "18px",
+            fontSize: "clamp(14px, 4vw, 18px)",
             color: "#ffffff",
             transition: "all 0.3s ease",
             overflow: "hidden",
@@ -172,15 +172,15 @@ export const ProjectDetailPage: React.FC = () => {
           style={{
             maxWidth: "1400px",
             margin: "0 auto",
-            padding: "100px 40px 60px",
+            padding: "clamp(60px, 10vw, 100px) clamp(16px, 5vw, 40px) clamp(30px, 8vw, 60px)",
           }}
         >
           <motion.h1
             style={{
-              fontSize: "4rem",
+              fontSize: "clamp(2rem, 7vw, 4rem)",
               fontWeight: "800",
               lineHeight: "1.1",
-              marginBottom: "20px",
+              marginBottom: "16px",
               letterSpacing: "-0.02em",
               textAlign: "left",
               background: "linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%)",
@@ -195,10 +195,10 @@ export const ProjectDetailPage: React.FC = () => {
           <motion.p
             variants={itemVariants}
             style={{
-              fontSize: "1.2rem",
+              fontSize: "clamp(0.9rem, 2.5vw, 1.2rem)",
               fontWeight: "400",
               color: "#aaa",
-              marginBottom: "20px",
+              marginBottom: "16px",
               lineHeight: "1.6",
               maxWidth: "600px",
               textAlign: "left",
@@ -238,10 +238,10 @@ export const ProjectDetailPage: React.FC = () => {
           style={{
             maxWidth: "1400px",
             margin: "0 auto",
-            padding: "0 40px 80px",
+            padding: "0 clamp(16px, 5vw, 40px) clamp(40px, 8vw, 80px)",
             display: "flex",
             flexDirection: "column",
-            gap: "60px",
+            gap: "clamp(30px, 8vw, 60px)",
           }}
         >
           {/* Large Images */}
@@ -257,17 +257,34 @@ export const ProjectDetailPage: React.FC = () => {
               }}
               whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
             >
-              <motion.img
-                src={image.src}
-                alt={image.alt}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "20px",
-                }}
-                loading="lazy"
-              />
+              {image.src.endsWith('.mp4') || image.src.endsWith('.webm') || image.src.includes('.mp4') ? (
+                <video
+                  src={image.src}
+                  autoPlay
+                  loop
+                  muted
+                  controls
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "20px",
+                    backgroundColor: "#000",
+                  }}
+                />
+              ) : (
+                <motion.img
+                  src={image.src}
+                  alt={image.alt}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "20px",
+                  }}
+                  loading="lazy"
+                />
+              )}
             </motion.div>
           ))}
 
@@ -276,8 +293,8 @@ export const ProjectDetailPage: React.FC = () => {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: mediumImages.length === 1 ? "1fr" : "repeat(2, 1fr)",
-                gap: "40px",
+                gridTemplateColumns: mediumImages.length === 1 ? "1fr" : window.innerWidth < 768 ? "1fr" : "repeat(2, 1fr)",
+                gap: "clamp(20px, 5vw, 40px)",
               }}
             >
               {mediumImages.map((image, index) => (
@@ -292,17 +309,34 @@ export const ProjectDetailPage: React.FC = () => {
                   }}
                   whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
                 >
-                  <motion.img
-                    src={image.src}
-                    alt={image.alt}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                      borderRadius: "20px",
-                    }}
-                    loading="lazy"
-                  />
+                  {image.src.endsWith('.mp4') || image.src.endsWith('.webm') || image.src.includes('.mp4') ? (
+                    <video
+                      src={image.src}
+                      autoPlay
+                      loop
+                      muted
+                      controls
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "20px",
+                        backgroundColor: "#000",
+                      }}
+                    />
+                  ) : (
+                    <motion.img
+                      src={image.src}
+                      alt={image.alt}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        borderRadius: "20px",
+                      }}
+                      loading="lazy"
+                    />
+                  )}
                 </motion.div>
               ))}
             </div>
@@ -315,10 +349,10 @@ export const ProjectDetailPage: React.FC = () => {
           style={{
             maxWidth: "1400px",
             margin: "0 auto",
-            padding: "60px 40px",
+            padding: "clamp(40px, 8vw, 60px) clamp(16px, 5vw, 40px)",
             display: "grid",
-            gridTemplateColumns: "2fr 1fr",
-            gap: "80px",
+            gridTemplateColumns: window.innerWidth < 768 ? "1fr" : "2fr 1fr",
+            gap: "clamp(40px, 8vw, 80px)",
             alignItems: "start",
           }}
         >
@@ -326,9 +360,9 @@ export const ProjectDetailPage: React.FC = () => {
           <motion.div variants={itemVariants}>
             <h2
               style={{
-                fontSize: "1.8rem",
+                fontSize: "clamp(1.2rem, 4vw, 1.8rem)",
                 fontWeight: "600",
-                marginBottom: "24px",
+                marginBottom: "16px",
                 color: "#ffffff",
               }}
             >
@@ -336,10 +370,10 @@ export const ProjectDetailPage: React.FC = () => {
             </h2>
             <p
               style={{
-                fontSize: "1.1rem",
+                fontSize: "clamp(0.95rem, 2.2vw, 1.1rem)",
                 color: "#bbb",
                 lineHeight: "1.8",
-                marginBottom: "40px",
+                marginBottom: "32px",
               }}
             >
               {project.overview}
@@ -347,7 +381,7 @@ export const ProjectDetailPage: React.FC = () => {
 
             <p
               style={{
-                fontSize: "1rem",
+                fontSize: "clamp(0.9rem, 2vw, 1rem)",
                 color: "#999",
                 lineHeight: "1.6",
               }}
@@ -453,11 +487,12 @@ export const ProjectDetailPage: React.FC = () => {
           style={{
             maxWidth: "1400px",
             margin: "0 auto",
-            padding: "60px 40px 100px",
+            padding: "clamp(40px, 8vw, 60px) clamp(16px, 5vw, 40px) clamp(60px, 10vw, 100px)",
             display: "flex",
-            gap: "20px",
+            gap: "12px",
             justifyContent: "center",
             alignItems: "center",
+            flexWrap: "wrap",
           }}
         >
           <motion.button
@@ -472,7 +507,7 @@ export const ProjectDetailPage: React.FC = () => {
               borderRadius: "20px",
               width: "140px",
               height: "60px",
-              fontSize: "14px",
+              fontSize: "clamp(11px, 2vw, 14px)",
               fontWeight: "700",
               cursor: "pointer",
               textTransform: "uppercase",
@@ -483,8 +518,10 @@ export const ProjectDetailPage: React.FC = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              whiteSpace: "nowrap",
               animation: "outlineGlow 3s ease-in-out infinite",
               transition: "all 0.3s ease",
+              maxWidth: "400px",
             }}
             onMouseEnter={(e: any) => {
               e.target.style.transform = "translateY(-3px)";
@@ -500,23 +537,23 @@ export const ProjectDetailPage: React.FC = () => {
             BACK TO HOME
           </motion.button>
 
-          {/* Visit Project Button */}
-          {project.url && (
+          {/* Visit Project Button - Using visitUrl/visitLabel if available, otherwise use url */}
+          {(project.visitUrl || project.url) && (
             <motion.a
-              href={project.url}
+              href={project.visitUrl || project.url}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
               style={{
-                background: "linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%)",
-                border: "none",
+                background: "transparent",
+                border: ".5px solid #ec4899",
                 color: "#ffffff",
-                padding: "18px 18px",
+                padding: "16px 18px",
                 borderRadius: "20px",
                 width: "140px",
                 height: "60px",
-                fontSize: "14px",
+                fontSize: "clamp(11px, 2vw, 14px)",
                 fontWeight: "700",
                 cursor: "pointer",
                 textTransform: "uppercase",
@@ -526,20 +563,22 @@ export const ProjectDetailPage: React.FC = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 8px 25px rgba(236, 72, 153, 0.3)",
+                boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
                 textDecoration: "none",
                 transition: "all 0.3s ease",
+                whiteSpace: "nowrap",
+                maxWidth: "200px",
               }}
               onMouseEnter={(e: any) => {
-                e.currentTarget.style.boxShadow = "0 15px 40px rgba(236, 72, 153, 0.5)";
-                e.currentTarget.style.transform = "translateY(-3px)";
+                e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
+                e.currentTarget.style.borderColor = "rgba(236, 72, 153, 0.8)";
               }}
               onMouseLeave={(e: any) => {
-                e.currentTarget.style.boxShadow = "0 8px 25px rgba(236, 72, 153, 0.3)";
-                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 0 20px rgba(236, 72, 153, 0.2)";
+                e.currentTarget.style.borderColor = "#ec4899";
               }}
             >
-              VISIT PROJECT
+              {project.visitLabel || `VISIT ${project.title.toUpperCase()}`}
             </motion.a>
           )}
         </motion.section>

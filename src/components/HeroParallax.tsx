@@ -74,7 +74,7 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
         }}
         className=""
       >
-      <motion.div className="flex flex-row-reverse gap-12 md:gap-20 mb-20 px-4 md:px-40">
+      <motion.div className="flex flex-row-reverse gap-3 sm:gap-8 md:gap-12 lg:gap-20 mb-12 sm:mb-16 md:mb-20 px-2 sm:px-4 md:px-8 lg:px-40">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -83,7 +83,7 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row gap-12 md:gap-20 mb-20 px-4 md:px-40">
+        <motion.div className="flex flex-row gap-3 sm:gap-8 md:gap-12 lg:gap-20 mb-12 sm:mb-16 md:mb-20 px-2 sm:px-4 md:px-8 lg:px-40">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -92,7 +92,7 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse gap-12 md:gap-20 px-4 md:px-40">
+        <motion.div className="flex flex-row-reverse gap-3 sm:gap-8 md:gap-12 lg:gap-20 px-2 sm:px-4 md:px-8 lg:px-40">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -110,7 +110,7 @@ export const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0" style={{ zIndex: 10, position: "relative" }}>
+    <div className="max-w-7xl relative mx-auto py-10 sm:py-20 md:py-40 px-3 sm:px-4 md:px-6 lg:px-8 w-full left-0 top-0" style={{ zIndex: 10, position: "relative" }}>
       <h1 
         style={{
           display: "block",
@@ -118,10 +118,10 @@ export const Header = () => {
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
-          fontSize: "clamp(2rem, 8vw, 7rem)",
+          fontSize: "clamp(1.75rem, 7vw, 7rem)",
           fontWeight: "800",
           lineHeight: "1.1",
-          marginBottom: "20px",
+          marginBottom: "16px",
           letterSpacing: "-0.02em",
           textAlign: "left",
         }}
@@ -130,10 +130,10 @@ export const Header = () => {
       </h1>
       <p 
         style={{
-          fontSize: "clamp(0.9rem, 2.5vw, 1.2rem)",
+          fontSize: "clamp(0.875rem, 2.2vw, 1.2rem)",
           fontWeight: "400",
           color: "#aaa",
-          marginBottom: "60px",
+          marginBottom: "40px",
           lineHeight: "1.6",
           maxWidth: "600px",
           textAlign: "left",
@@ -154,10 +154,10 @@ export const Header = () => {
           background: "transparent",
           border: "none",
           color: "#ffffff",
-          padding: "clamp(12px, 2vw, 18px)",
+          padding: "18px 18px",
           borderRadius: "20px",
-          minWidth: "clamp(120px, 30vw, 140px)",
-          minHeight: "clamp(48px, 10vw, 60px)",
+          width: "140px",
+          height: "60px",
           fontSize: "clamp(12px, 2vw, 14px)",
           fontWeight: "700",
           cursor: "pointer",
@@ -170,7 +170,9 @@ export const Header = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          whiteSpace: "wrap",
           animation: "outlineGlow 3s ease-in-out infinite",
+          maxWidth: "400px",
         }}
       >
         ABOUT ME
