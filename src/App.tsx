@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HeroParallax } from './components/HeroParallax';
-import { FeaturedWorksCarousel } from './components/FeaturedWorksCarousel';
-import { ProjectsSection } from './components/ProjectsSection';
 import { AIToolsSection } from './components/AIToolsSection';
+import { FeaturedProjects } from './components/FeaturedProjects';
+import { SelectedProjects } from './components/SelectedProjects';
+import { WhatIOffer } from './components/WhatIOffer';
+import { FromConceptToReality } from './components/FromConceptToReality';
+import { ReadyToStart } from './components/ReadyToStart';
 import { ContactForm } from './components/ContactForm';
 import { heroProducts } from './heroProductsData';
 
@@ -29,20 +32,14 @@ function App() {
           zIndex: 0,
         }}
       />
-
-      {/* Gradient blur reveals */}
-      <div className="gradient-blur">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-
       <div style={{ position: "relative", zIndex: 1 }}>
         <HeroParallax products={heroProducts} />
-        <FeaturedWorksCarousel />
-        <ProjectsSection />
+        <FeaturedProjects />
         <AIToolsSection />
+        <SelectedProjects />
+        <WhatIOffer />
+        <FromConceptToReality />
+        <ReadyToStart />
       </div>
 
       {/* Contact Button - Fixed position */}

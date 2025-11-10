@@ -1,118 +1,159 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 export const ProjectsSection = () => {
-  const [filter, setFilter] = useState('all');
-
-  const portfolioItems = [
-    { id: 'ggs', category: 'interface', title: 'Good Games', subtitle: 'GAME DEV PLATFORM', img: 'https://i.imgur.com/I23nYjZ.png?auto=compress&cs=tinysrgb&w=1200' },
-    { id: 'geneproof2', category: 'interface', title: 'GeneProof 2.0', subtitle: 'HEALTH TRACKING APP', img: 'https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'altamed', category: 'design', title: 'AltaMed', subtitle: 'HEALTHCARE DIRECTORY', img: 'https://i.imgur.com/PLb6nM4.png?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'civic-social', category: 'interface', title: 'Civic Social', subtitle: 'NETWORK FOR DEMOCRACY', img: 'https://i.imgur.com/zOAd5qr.png?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'baraka', category: 'design', title: 'Baraka', subtitle: 'MATERNITY SOCIAL NETWORK', img: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'geneproof', category: 'interface', title: 'GeneProof', subtitle: 'HEALTH TRACKING APP', img: 'https://i.imgur.com/o91Hbp9.gif?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'buku-tv', category: 'motion', title: 'Buku TV™️', subtitle: 'WHERE TO WATCH', img: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=800' },
-    { id: 'voya', category: 'interface', title: 'Voya', subtitle: 'TRAVEL COMPANION', img: 'https://i.imgur.com/uGBIAag.png?auto=compress&cs=tinysrgb&w=1200' },
-    { id: 'ad-reels', category: 'motion', title: 'Ad Reels', subtitle: 'AI ADS', img: 'https://i.imgur.com/O0Pmvuj.gif?auto=compress&cs=tinysrgb&w=800' },
-    { id: 'who-we-are', category: 'art', title: 'Who We Are, Have Been, & Will Always Be', subtitle: 'ABSTRACT AI ART', img: 'https://i.imgur.com/VwuVUu8.png?auto=compress&cs=tinysrgb&w=600' },
-    { id: 'imagine', category: 'art', title: 'Imagine...', subtitle: 'PASSION PROJECT', img: 'https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600' },
-    { id: 'attraction', category: 'art', title: 'The Art of Attraction', subtitle: 'AI COUTURE', img: 'https://i.imgur.com/eXDo86B.jpeg?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'wellness-guide', category: 'design', title: 'Wellness Guide', subtitle: 'LIFESTYLE BOOK', img: 'https://i.imgur.com/EGUHIC7.png?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'flix', category: 'interface', title: 'LiteFlix', subtitle: 'PRODUCT DESIGN', img: 'https://i.imgur.com/U51sKZH.png?auto=compress&cs=tinysrgb&w=600' },
-    { id: 'xantara', category: 'design', title: 'Xantara', subtitle: 'AUTHORED WORK', img: 'https://i.imgur.com/WbYxDvA.png?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'love-birds', category: 'art', title: 'Love Birds', subtitle: 'AI DECOR', img: 'https://i.imgur.com/e7kW4Jt.jpeg?w=600' },
-    { id: 'pneuma-collection', category: 'art', title: 'Pneuma Collection', subtitle: 'AI READY-TO-WEAR', img: 'https://i.imgur.com/CEqlRoO.png?auto=compress&cs=tinysrgb&w=400' },
-    { id: 'biohaxx', category: 'motion', title: 'BioHaxx', subtitle: 'AI TV SERIES', img: 'https://i.imgur.com/k8p4JMP.gif?auto=compress&cs=tinysrgb&w=1200' },
-    { id: 'opia', category: 'art', title: 'Opia', subtitle: 'AI DIGITAL ART', img: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600' },
-    { id: 'solaria', category: 'design', title: 'Solaria Handbag', subtitle: 'AI FASHION', img: 'https://i.imgur.com/zLtU5VE.png?auto=compress&cs=tinysrgb&w=600' },
+  const projects = [
+    { id: 'ggs', label: 'GAME DEV PLATFORM', title: 'Good Games', img: 'https://i.imgur.com/I23nYjZ.png?auto=compress&cs=tinysrgb&w=1200', size: 'medium' },
+    { id: 'geneproof2', label: 'HEALTH TRACKING APP', title: 'GeneProof 2.0', img: 'https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=400', size: 'small', popOff: true },
+    { id: 'altamed', label: 'HEALTHCARE DIRECTORY', title: 'AltaMed', img: 'https://i.imgur.com/PLb6nM4.png?auto=compress&cs=tinysrgb&w=400', size: 'small' },
+    { id: 'civic-social', label: 'NETWORK FOR DEMOCRACY', title: 'Civic Social', img: 'https://i.imgur.com/zOAd5qr.png?auto=compress&cs=tinysrgb&w=400', size: 'small' },
+    { id: 'baraka', label: 'MATERNITY SOCIAL NETWORK', title: 'Baraka', img: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=400', size: 'small' },
+    { id: 'geneproof', label: 'HEALTH TRACKING APP', title: 'GeneProof', img: 'https://i.imgur.com/o91Hbp9.gif?auto=compress&cs=tinysrgb&w=400', size: 'small', popOff: true },
+    { id: 'buku-tv', label: 'WHERE TO WATCH', title: 'Buku TV™️', img: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=800', size: 'medium' },
+    { id: 'voya', label: 'TRAVEL COMPANION', title: 'Voya', img: 'https://i.imgur.com/uGBIAag.png?auto=compress&cs=tinysrgb&w=1200', size: 'medium' },
+    { id: 'ad-reels', label: 'AI ADS', title: 'Ad Reels', img: 'https://i.imgur.com/O0Pmvuj.gif?auto=compress&cs=tinysrgb&w=800', size: 'large', isVideo: true },
+    { id: 'who-we-are', label: 'ABSTRACT AI ART', title: 'Who We Are, Have Been, & Will Always Be', img: 'https://i.imgur.com/VwuVUu8.png?auto=compress&cs=tinysrgb&w=600', size: 'small' },
+    { id: 'imagine', label: 'PASSION PROJECT', title: 'Imagine...', img: 'https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600', size: 'small' },
+    { id: 'attraction', label: 'AI COUTURE', title: 'The Art of Attraction', img: 'https://i.imgur.com/eXDo86B.jpeg?auto=compress&cs=tinysrgb&w=400', size: 'small' },
+    { id: 'wellness-guide', label: 'LIFESTYLE BOOK', title: 'Wellness Guide', img: 'https://i.imgur.com/EGUHIC7.png?auto=compress&cs=tinysrgb&w=400', size: 'small', popOff: true },
+    { id: 'flix', label: 'Product Design', title: 'LiteFlix', img: 'https://i.imgur.com/U51sKZH.png?auto=compress&cs=tinysrgb&w=600', size: 'small', popOff: true },
+    { id: 'xantara', label: 'AUTHORED WORK', title: 'Xantara', img: 'https://i.imgur.com/WbYxDvA.png?auto=compress&cs=tinysrgb&w=400', size: 'small' },
+    { id: 'love-birds', label: 'AI DECOR', title: 'Love Birds', img: 'https://i.imgur.com/e7kW4Jt.jpeg?w=600', size: 'small' },
+    { id: 'pneuma-collection', label: 'AI READY-TO-WEAR', title: 'Pneuma Collection', img: 'https://i.imgur.com/CEqlRoO.png?auto=compress&cs=tinysrgb&w=400', size: 'small', popOff: true },
+    { id: 'biohaxx', label: 'AI TV SERIES', title: 'BioHaxx', img: 'https://i.imgur.com/k8p4JMP.gif?auto=compress&cs=tinysrgb&w=1200', size: 'medium' },
+    { id: 'opia', label: 'AI DIGITAL ART', title: 'Opia', img: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600', size: 'medium', popOff: true },
+    { id: 'solaria', label: 'AI FASHION', title: 'Solaria Handbag', img: 'https://i.imgur.com/zLtU5VE.png?auto=compress&cs=tinysrgb&w=600', size: 'medium', popOff: true },
+    { id: 'ethereal-stroll', label: 'MEDITATION MUSIC', title: 'Ethereal Stroll', img: 'https://i.imgur.com/uwCTYkA.jpeg?auto=compress&cs=tinysrgb&w=1200', size: 'large', isVideo: true },
   ];
 
-  const categories = ['all', 'interface', 'design', 'motion', 'art'];
+  const getGridClass = (size: string) => {
+    switch (size) {
+      case 'large':
+        return 'col-span-2 sm:col-span-1 md:col-span-2';
+      case 'medium':
+        return 'col-span-1 sm:col-span-1 md:col-span-1';
+      case 'small':
+      default:
+        return 'col-span-1 sm:col-span-1 md:col-span-1';
+    }
+  };
 
-  const filteredItems = filter === 'all' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === filter);
+  const getHeightClass = (size: string) => {
+    switch (size) {
+      case 'large':
+        return 'h-40 sm:h-48 md:h-64 lg:h-96';
+      case 'medium':
+        return 'h-36 sm:h-44 md:h-56 lg:h-80';
+      case 'small':
+      default:
+        return 'h-32 sm:h-40 md:h-48 lg:h-64';
+    }
+  };
 
   return (
-    <section className="py-20 md:py-32" style={{ 
+    <section className="work section-spacing py-12 sm:py-16 md:py-20" style={{ 
       background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
       backgroundAttachment: "fixed",
     }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <div className="mb-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Featured Works
-          </h2>
-          <p className="text-gray-400 text-lg">
-            Explore my portfolio across different disciplines
-          </p>
-        </div>
+      <div className="container max-w-7xl mx-auto px-2 sm:px-3 md:px-4">
+        <div 
+          className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3 md:gap-4 auto-rows-max"
+          style={{ perspective: "1000px" }}
+        >
+          {projects.map((project) => {
+            const cardStyle = {
+              overflow: project.popOff ? 'visible' : 'hidden',
+              borderRadius: "20px",
+              perspective: "1200px",
+            };
 
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 text-sm md:text-base ${
-                filter === cat
-                  ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white'
-                  : 'border border-gray-600 text-gray-300 hover:border-pink-500 hover:text-pink-500'
-              }`}
-            >
-              {cat.charAt(0).toUpperCase() + cat.slice(1)}
-            </button>
-          ))}
-        </div>
-
-        {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredItems.map((item) => (
-            <Link
-              key={item.id}
-              to={`/projects/${item.id}`}
-              className="group relative overflow-hidden rounded-xl bg-gray-900 h-64 md:h-80 cursor-pointer"
-            >
-              {/* Image */}
-              <img
-                src={item.img}
-                alt={item.title}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-
-              {/* Overlay - Dark */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300" />
-
-              {/* Content */}
-              <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <p className="text-pink-400 text-sm font-semibold mb-2">
-                    {item.subtitle}
-                  </p>
-                  <h3 className="text-white text-xl md:text-2xl font-bold mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm">
-                    {item.category.charAt(0).toUpperCase() + item.category.slice(1)}
-                  </p>
-                </div>
+            return (
+              <div
+                key={project.id}
+                className={`${getGridClass(project.size)} group cursor-pointer`}
+                style={cardStyle}
+              >
+                <Link to={`/projects/${project.id}`} className="block w-full h-full">
+                  <div 
+                    className={`${getHeightClass(project.size)} relative transition-all duration-300`}
+                    style={{ 
+                      borderRadius: "20px", 
+                      overflow: project.popOff ? 'visible' : 'hidden',
+                      transformStyle: project.popOff ? 'preserve-3d' : 'flat',
+                    }}
+                  >
+                    <div 
+                      className="absolute inset-0 flex flex-col justify-between p-3 sm:p-4 md:p-6 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      style={{ justifyContent: 'flex-end', alignItems: 'flex-start' }}
+                    >
+                      <div>
+                        <div 
+                          className="text-xs md:text-sm font-semibold tracking-tight mb-1"
+                          style={{
+                            background: "linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%)",
+                            WebkitBackgroundClip: "text",
+                            WebkitTextFillColor: "transparent",
+                            backgroundClip: "text",
+                          }}
+                        >
+                          {project.label}
+                        </div>
+                        <h3 className="text-xs sm:text-sm md:text-lg lg:text-2xl font-bold text-white mt-1 sm:mt-2">
+                          {project.title}
+                        </h3>
+                      </div>
+                    </div>
+                    
+                    {project.isVideo ? (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="relative w-full h-full">
+                          <img
+                            src={project.img}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                            <div className="text-white text-4xl">▶</div>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <img
+                          src={project.img}
+                          alt={project.title}
+                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          style={{ 
+                            borderRadius: project.popOff ? "0px" : "20px",
+                            width: project.popOff ? "120%" : "100%",
+                            height: project.popOff ? "120%" : "100%",
+                            left: project.popOff ? "-10%" : "0",
+                            top: project.popOff ? "-10%" : "0",
+                          }}
+                        />
+                        {/* Dark backdrop blur on hover */}
+                        <div
+                          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none backdrop-blur-sm"
+                          style={{
+                            background: "rgba(0, 0, 0, 0.3)",
+                            borderRadius: "20px",
+                          }}
+                        />
+                        {/* Glare effect on hover */}
+                        <div
+                          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                          style={{
+                            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, transparent 50%)",
+                            borderRadius: "20px",
+                          }}
+                        />
+                      </>
+                    )}
+                  </div>
+                </Link>
               </div>
-
-              {/* Border Glow on Hover */}
-              <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-pink-500/50 transition-all duration-300 pointer-events-none" />
-            </Link>
-          ))}
+            );
+          })}
         </div>
-
-        {/* Empty State */}
-        {filteredItems.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-gray-400 text-lg">
-              No projects found in this category
-            </p>
-          </div>
-        )}
       </div>
     </section>
   );
