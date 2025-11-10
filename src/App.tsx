@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HeroParallax } from './components/HeroParallax';
+import { FeaturedWorksCarousel } from './components/FeaturedWorksCarousel';
 import { ProjectsSection } from './components/ProjectsSection';
 import { AIToolsSection } from './components/AIToolsSection';
 import { ContactForm } from './components/ContactForm';
@@ -28,10 +29,20 @@ function App() {
           zIndex: 0,
         }}
       />
+
+      {/* Gradient blur reveals */}
+      <div className="gradient-blur">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
       <div style={{ position: "relative", zIndex: 1 }}>
         <HeroParallax products={heroProducts} />
-        <AIToolsSection />
+        <FeaturedWorksCarousel />
         <ProjectsSection />
+        <AIToolsSection />
       </div>
 
       {/* Contact Button - Fixed position */}

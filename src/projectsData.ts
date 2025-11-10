@@ -131,7 +131,7 @@ export const projectsData: Record<string, ProjectData> = {
     id: "geneproof",
     title: "GeneProof",
     subtitle: "health tracking app",
-    tagline: "✐ᝰ icentivized wellness app",
+    tagline: "✐ᝰ incentivized wellness app",
     description: "Next-generation health tracking platform with advanced analytics and personalized health insights.",
     images: [
       {
@@ -143,7 +143,7 @@ export const projectsData: Record<string, ProjectData> = {
     overview: "GeneProof 2.0 revolutionizes health tracking with machine learning-powered insights and a user-centric interface. The platform helps users understand their health data and make informed decisions.",
     tools: ["React", "Python", "Machine Learning", "Data Visualization"],
     role: "Creator, Product Designer, & Developer",
-    year: "2025",
+    year: "2024",
     url: "https://breamiller.github.io/geneproof/",
   },
   "baraka": {

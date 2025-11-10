@@ -29,51 +29,13 @@ export const AIToolsSection = () => {
       <div className="container max-w-7xl mx-auto px-3 sm:px-4 mb-12 sm:mb-16">
       </div>
 
-      <div style={{ position: "relative" }}>
-        <InfiniteSlider gap={20} duration={30} direction="horizontal" reverse={false}>
-          {aiTools.map((tool) => (
-            <div
-              key={tool.id}
-              className="flex-shrink-0 flex items-center justify-center px-6 sm:px-8 py-4 sm:py-6 rounded-2xl border border-gray-700 bg-gradient-to-br from-gray-900 to-gray-800 hover:border-pink-500/50 transition-all duration-300 cursor-pointer group"
-              style={{
-                minWidth: '160px',
-                background: "linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(30, 30, 30, 0.6) 100%)",
-                backdropFilter: "blur(10px)",
-              }}
-            >
-              <div className="flex flex-col items-center gap-2 sm:gap-3">
-                <img 
-                  src={tool.logo}
-                  alt={tool.name}
-                  className="w-10 sm:w-12 h-10 sm:h-12 group-hover:scale-110 transition-transform duration-300 object-contain"
-                  style={{
-                    filter: 'brightness(0) invert(1)',
-                  }}
-                />
-                <span className="text-white font-semibold text-center whitespace-nowrap text-xs sm:text-sm">
-                  {tool.name}
-                </span>
-              </div>
-            </div>
-          ))}
-        </InfiniteSlider>
-
-        {/* Backdrop blur overlays on sides */}
+      <div style={{ position: "relative", display: "flex", alignItems: "center", gap: "20px" }}>
+        {/* My Favorite AI Tools text - outside blur */}
         <div
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "280px",
-            height: "100%",
-            background: "linear-gradient(to right, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.95) 15%, rgba(10, 10, 10, 0.85) 30%, rgba(10, 10, 10, 0.65) 50%, rgba(10, 10, 10, 0.35) 70%, rgba(10, 10, 10, 0.1) 90%, transparent 100%)",
-            backdropFilter: "blur(8px)",
-            pointerEvents: "none",
-            zIndex: 10,
-            animation: "fadeBlur 0.3s ease-in-out",
-            display: "flex",
-            alignItems: "center",
+            minWidth: "fit-content",
             paddingLeft: "20px",
+            zIndex: 5,
           }}
         >
           <span
@@ -88,6 +50,8 @@ export const AIToolsSection = () => {
               opacity: 0.9,
               textTransform: "uppercase",
               letterSpacing: "1px",
+              display: "block",
+              lineHeight: "1.3",
             }}
           >
             My Favorite
@@ -95,20 +59,66 @@ export const AIToolsSection = () => {
             AI Tools
           </span>
         </div>
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            right: 0,
-            width: "150px",
-            height: "100%",
-            background: "linear-gradient(to left, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.95) 15%, rgba(10, 10, 10, 0.85) 30%, rgba(10, 10, 10, 0.65) 50%, rgba(10, 10, 10, 0.35) 70%, rgba(10, 10, 10, 0.1) 90%, transparent 100%)",
-            backdropFilter: "blur(8px)",
-            pointerEvents: "none",
-            zIndex: 10,
-            animation: "fadeBlur 0.3s ease-in-out",
-          }}
-        />
+
+        <div style={{ position: "relative", flex: 1 }}>
+          <InfiniteSlider gap={20} duration={30} direction="horizontal" reverse={false}>
+            {aiTools.map((tool) => (
+              <div
+                key={tool.id}
+                className="flex-shrink-0 flex items-center justify-center px-6 sm:px-8 py-4 sm:py-6 rounded-2xl border border-gray-700 bg-gradient-to-br from-gray-900 to-gray-800 hover:border-pink-500/50 transition-all duration-300 cursor-pointer group"
+                style={{
+                  minWidth: '160px',
+                  background: "linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(30, 30, 30, 0.6) 100%)",
+                  backdropFilter: "blur(10px)",
+                }}
+              >
+                <div className="flex flex-col items-center gap-2 sm:gap-3">
+                  <img 
+                    src={tool.logo}
+                    alt={tool.name}
+                    className="w-10 sm:w-12 h-10 sm:h-12 group-hover:scale-110 transition-transform duration-300 object-contain"
+                    style={{
+                      filter: 'brightness(0) invert(1)',
+                    }}
+                  />
+                  <span className="text-white font-semibold text-center whitespace-nowrap text-xs sm:text-sm">
+                    {tool.name}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </InfiniteSlider>
+
+          {/* Progressive blur overlays on sides - smoother fade */}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "180px",
+              height: "100%",
+              background: "linear-gradient(to right, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.8) 25%, rgba(10, 10, 10, 0.4) 55%, rgba(10, 10, 10, 0.1) 85%, transparent 100%)",
+              backdropFilter: "blur(12px)",
+              pointerEvents: "none",
+              zIndex: 10,
+              animation: "fadeBlur 0.3s ease-in-out",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              width: "120px",
+              height: "100%",
+              background: "linear-gradient(to left, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.8) 25%, rgba(10, 10, 10, 0.4) 55%, rgba(10, 10, 10, 0.1) 85%, transparent 100%)",
+              backdropFilter: "blur(12px)",
+              pointerEvents: "none",
+              zIndex: 10,
+              animation: "fadeBlur 0.3s ease-in-out",
+            }}
+          />
+        </div>
       </div>
 
             <div className="container max-w-7xl mx-auto px-3 sm:px-4 mt-16 sm:mt-20 flex justify-center">

@@ -10,11 +10,6 @@ export const heroProducts = [
     thumbnail: "https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    title: "GeneProof",
-    link: "/projects/geneproof",
-    thumbnail: "https://i.imgur.com/o91Hbp9.gif?auto=compress&cs=tinysrgb&w=600",
-  },
-  {
     title: "AltaMed",
     link: "/projects/altamed",
     thumbnail: "https://i.imgur.com/PLb6nM4.png?auto=compress&cs=tinysrgb&w=600",
