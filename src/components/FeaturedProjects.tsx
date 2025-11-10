@@ -168,7 +168,7 @@ export const FeaturedProjects = () => {
           </div>
 
           {/* Navigation Arrows */}
-          <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between px-4 z-10 pointer-events-none">
+          <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between px-4 z-30 pointer-events-none">
             <motion.button
               onClick={prevSlide}
               className="pointer-events-auto p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hidden md:flex items-center justify-center relative overflow-hidden group"

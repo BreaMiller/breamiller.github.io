@@ -60,6 +60,126 @@ const selectedProjects: SelectedProject[] = [
     category: 'environment',
     tags: ['Health', 'Education', 'Design'],
   },
+  {
+    id: 'geneproof2.0',
+    title: 'GeneProof 2.0',
+    subtitle: 'health tracking upgrade',
+    image: 'https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=600',
+    category: 'product',
+    tags: ['Health Tech', 'React', 'ML'],
+  },
+  {
+    id: 'altamed',
+    title: 'AltaMed',
+    subtitle: 'healthcare accessibility platform',
+    image: 'https://i.imgur.com/PLb6nM4.png?auto=compress&cs=tinysrgb&w=600',
+    category: 'product',
+    tags: ['Healthcare', 'Platform', 'Design'],
+  },
+  {
+    id: 'civic-social',
+    title: 'CivicSocial',
+    subtitle: 'network for democracy',
+    image: 'https://i.imgur.com/XVs6KEM.png?auto=compress&cs=tinysrgb&w=600',
+    category: 'environment',
+    tags: ['Civic Tech', 'Community', 'Design'],
+  },
+  {
+    id: 'ad-reels',
+    title: 'Ad Reels',
+    subtitle: 'affordable AI advertising',
+    image: 'https://i.imgur.com/O0Pmvuj.gif?auto=compress&cs=tinysrgb&w=600',
+    category: 'motion',
+    tags: ['AI', 'Video', 'Advertising'],
+  },
+  {
+    id: 'xantara',
+    title: 'Xantara',
+    subtitle: 'sci-fi original series',
+    image: 'https://i.imgur.com/WbYxDvA.png?auto=compress&cs=tinysrgb&w=600',
+    category: 'motion',
+    tags: ['Sci-Fi', 'Visual', 'Narrative'],
+  },
+  {
+    id: 'attraction',
+    title: 'The Art of Attraction',
+    subtitle: 'luxury couture collection',
+    image: 'https://i.imgur.com/eXDo86B.jpeg?auto=compress&cs=tinysrgb&w=600',
+    category: 'character',
+    tags: ['Fashion', 'AI', 'Design'],
+  },
+  {
+    id: 'love-birds',
+    title: 'Love Birds',
+    subtitle: 'artistic expression of connection',
+    image: 'https://i.imgur.com/e7kW4Jt.jpeg?auto=compress&cs=tinysrgb&w=600',
+    category: 'character',
+    tags: ['Art', 'Digital', 'Design'],
+  },
+  {
+    id: 'pneuma-collection',
+    title: 'Pneuma Collection',
+    subtitle: 'ready-to-wear collection',
+    image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600',
+    category: 'character',
+    tags: ['Fashion', 'AI', 'Design'],
+  },
+  {
+    id: 'biohaxx',
+    title: 'BioHaxx',
+    subtitle: 'sci-fi television series',
+    image: 'https://i.imgur.com/FnN3fD0.gif?auto=compress&cs=tinysrgb&w=600',
+    category: 'motion',
+    tags: ['Sci-Fi', 'Narrative', 'Visual'],
+  },
+  {
+    id: 'solaria',
+    title: 'Solaria Handbag',
+    subtitle: 'ai-generated luxury accessory',
+    image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600',
+    category: 'character',
+    tags: ['Luxury', 'AI', 'Design'],
+  },
+  {
+    id: 'opia',
+    title: 'Opia',
+    subtitle: 'digital art experience',
+    image: 'https://i.imgur.com/RNisHGQ.mp4?auto=compress&cs=tinysrgb&w=600',
+    category: 'motion',
+    tags: ['Art', 'Digital', 'Experience'],
+  },
+  {
+    id: 'ethereal-stroll',
+    title: 'Ethereal Stroll',
+    subtitle: 'ambient soundscape composition',
+    image: 'https://i.imgur.com/uwCTYkA.jpeg?auto=compress&cs=tinysrgb&w=600',
+    category: 'motion',
+    tags: ['Audio', 'Composition', 'Experience'],
+  },
+  {
+    id: 'who-we-are',
+    title: 'Who We Are, Have Been, & Will Always Be',
+    subtitle: 'Vitruivian Love',
+    image: 'https://i.imgur.com/VwuVUu8.png?auto=compress&cs=tinysrgb&w=600',
+    category: 'character',
+    tags: ['Art', 'AI', 'Abstract'],
+  },
+  {
+    id: 'geneproof',
+    title: 'GeneProof',
+    subtitle: 'health tracking app',
+    image: 'https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=600',
+    category: 'product',
+    tags: ['Health', 'Mobile', 'Design'],
+  },
+  {
+    id: 'flix',
+    title: 'LiteFlix',
+    subtitle: 'lightweight streaming platform',
+    image: 'https://i.imgur.com/vFVoyRr.png?auto=compress&cs=tinysrgb&w=600',
+    category: 'product',
+    tags: ['Streaming', 'UI/UX', 'Design'],
+  },
 ];
 
 const categories = [
@@ -72,13 +192,14 @@ const categories = [
 
 export const SelectedProjects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
-  const [showAll, setShowAll] = useState(false);
+  const [displayCount, setDisplayCount] = useState(6);
 
   const filtered = selectedProjects.filter(
     (project) => activeFilter === 'all' || project.category === activeFilter
   );
 
-  const displayed = showAll ? filtered : filtered.slice(0, 3);
+  const displayed = filtered.slice(0, displayCount);
+  const hasMore = displayCount < filtered.length;
 
   return (
     <motion.section
@@ -186,7 +307,7 @@ export const SelectedProjects = () => {
         </div>
 
         {/* Load More Button */}
-        {!showAll && filtered.length > 3 && (
+        {hasMore && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -194,51 +315,55 @@ export const SelectedProjects = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <motion.button
-              onClick={() => setShowAll(true)}
-              className="px-8 py-3 bg-gradient-to-r from-pink-500/20 to-pink-600/20 border border-pink-400/40 text-white font-semibold rounded-full inline-flex items-center gap-2 relative overflow-hidden group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
+              onClick={() => setDisplayCount(displayCount + 6)}
+              onMouseEnter={(e) => {
+                const el = e.currentTarget as HTMLButtonElement;
+                el.style.background = "linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%)";
+                el.style.borderColor = "rgba(236, 72, 153, 0.8)";
+                el.style.color = "#ffffff";
+                el.style.boxShadow = "0 0 30px rgba(236, 72, 153, 0.4), inset 0 0 20px rgba(236, 72, 153, 0.1)";
+              }}
+              onMouseLeave={(e) => {
+                const el = e.currentTarget as HTMLButtonElement;
+                el.style.background = "transparent";
+                el.style.borderColor = ".5px solid #ec4899";
+                el.style.color = "#ec4899";
+                el.style.boxShadow = "0 0 15px rgba(236, 72, 153, 0.15)";
+              }}
+              style={{
+                background: "transparent",
+                border: ".5px solid #ec4899",
+                borderRadius: "20px",
+                padding: "38px 38px",
+                width: "220px",
+                height: "60px",
+                color: "#ec4899",
+                fontSize: "clamp(11px, 2vw, 14px)",
+                fontWeight: "700",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+                cursor: "pointer",
+                opacity: 0.8,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                whiteSpace: "nowrap",
+                maxWidth: "220px",
+                transition: "all 0.3s ease",
+                boxShadow: "0 0 15px rgba(236, 72, 153, 0.15)",
+                position: "relative",
+                overflow: "hidden",
+              }}
             >
-              {/* Shine sweep effect */}
-              <motion.div
-                className="absolute inset-0 rounded-full"
-                initial={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)", x: "-150%" }}
-                whileHover={{ x: "150%" }}
-                transition={{ duration: 0.6, ease: "easeInOut" }}
-                style={{ width: "200%", pointerEvents: "none" }}
-              />
-
-              {/* Glow effect on hover */}
-              <motion.div
-                className="absolute inset-0 rounded-full"
-                initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
-                whileHover={{ 
-                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.5), inset 0 0 15px rgba(236, 72, 153, 0.15)",
-                }}
-                transition={{ duration: 0.3 }}
-                style={{ pointerEvents: "none" }}
-              />
-
-              {/* Border highlight on hover */}
-              <motion.div
-                className="absolute inset-0 rounded-full"
-                initial={{ borderColor: "rgba(236, 72, 153, 0.4)", borderWidth: "1px" }}
-                whileHover={{ borderColor: "rgba(236, 72, 153, 0.8)" }}
-                transition={{ duration: 0.3 }}
-                style={{ 
-                  pointerEvents: "none",
-                  border: "1px solid"
-                }}
-              />
-
-              <span className="relative z-10 flex items-center gap-2">
-                Load More Projects
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
+              {/* Shine effect on hover */}
+              <span style={{
+                position: "relative",
+                zIndex: 10,
+              }}>
+                Load More
               </span>
-            </motion.button>
+            </button>
           </motion.div>
         )}
       </div>

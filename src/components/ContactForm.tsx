@@ -332,8 +332,8 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 <motion.button
                   type="submit"
                   disabled={loading}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.92 }}
                   style={{
                     background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
                     border: "none",
@@ -348,9 +348,31 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                     transition: "all 0.3s ease",
                     opacity: loading ? 0.7 : 1,
                     marginTop: "8px",
+                    position: "relative",
+                    overflow: "hidden",
                   }}
                 >
-                  {loading ? "SENDING..." : "SEND MESSAGE"}
+                  {/* Shine sweep effect */}
+                  <motion.div
+                    className="absolute inset-0"
+                    initial={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)", x: "-150%" }}
+                    whileHover={{ x: "150%" }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    style={{ width: "200%", pointerEvents: "none" }}
+                  />
+
+                  {/* Shadow glow on hover */}
+                  <motion.div
+                    className="absolute inset-0"
+                    initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
+                    whileHover={{ 
+                      boxShadow: "0 0 20px rgba(236, 72, 153, 0.6), inset 0 0 15px rgba(236, 72, 153, 0.2)",
+                    }}
+                    transition={{ duration: 0.3 }}
+                    style={{ pointerEvents: "none" }}
+                  />
+
+                  <span className="relative z-10">{loading ? "SENDING..." : "SEND MESSAGE"}</span>
                 </motion.button>
               </form>
             </>
