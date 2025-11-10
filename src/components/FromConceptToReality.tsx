@@ -31,19 +31,23 @@ const steps: ProcessStep[] = [
 
 export const FromConceptToReality = () => {
   return (
-    <section
+    <motion.section
       className="py-20 md:py-32 relative z-10"
       style={{
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      whileInView={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false, amount: 0.3 }}
     >
       <div className="container max-w-4xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.5 }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -99,6 +103,6 @@ export const FromConceptToReality = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

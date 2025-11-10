@@ -1,5 +1,6 @@
 import { InfiniteSlider } from './InfiniteSlider';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const aiTools = [
   { id: 1, name: 'Opus Clip', logo: 'https://asset.brandfetch.io/idMyFW0O1q/ide61u_rax.png' },
@@ -19,12 +20,16 @@ export const AIToolsSection = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <section
+    <motion.section
       className="w-full py-16 sm:py-20 md:py-32 pb-32 sm:pb-48 md:pb-72"
       style={{
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      whileInView={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false, amount: 0.3 }}
     >
       <div className="container max-w-7xl mx-auto px-3 sm:px-4 mb-12 sm:mb-16">
       </div>
@@ -175,6 +180,6 @@ export const AIToolsSection = () => {
           Directory Coming Soon
         </button>
       </div>
-    </section>
+    </motion.section>
   );
 };

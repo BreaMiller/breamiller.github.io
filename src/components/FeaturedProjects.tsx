@@ -34,19 +34,23 @@ const featuredProjects: FeaturedProject[] = [
 
 export const FeaturedProjects = () => {
   return (
-    <section
+    <motion.section
       className="py-20 md:py-32 relative z-10"
       style={{
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      whileInView={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false, amount: 0.3 }}
     >
       <div className="container max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, amount: 0.5 }}
           className="mb-12"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -65,7 +69,7 @@ export const FeaturedProjects = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: false, amount: 0.3 }}
               className="group relative overflow-hidden rounded-2xl h-80 cursor-pointer"
             >
               <img
@@ -83,6 +87,6 @@ export const FeaturedProjects = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

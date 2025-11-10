@@ -34,8 +34,8 @@ function App() {
       />
       <div style={{ position: "relative", zIndex: 1 }}>
         <HeroParallax products={heroProducts} />
-        <FeaturedProjects />
         <AIToolsSection />
+        <FeaturedProjects />
         <SelectedProjects />
         <WhatIOffer />
         <FromConceptToReality />
