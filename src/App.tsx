@@ -39,7 +39,7 @@ function App() {
         <SelectedProjects />
         <WhatIOffer />
         <FromConceptToReality />
-        <ReadyToStart />
+        <ReadyToStart onContactClick={() => setIsContactOpen(true)} />
       </div>
 
       {/* Contact Button - Fixed position */}

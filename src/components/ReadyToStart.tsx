@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 
-export const ReadyToStart = () => {
+interface ReadyToStartProps {
+  onContactClick: () => void;
+}
+
+export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
   return (
     <motion.section
       className="py-20 md:py-32 relative z-10"
@@ -48,8 +52,8 @@ export const ReadyToStart = () => {
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
-            <motion.a
-              href="mailto:brea@example.com"
+            <motion.button
+              onClick={onContactClick}
               className="px-6 py-3 bg-gradient-to-r from-pink-500 to-pink-600 text-white font-semibold rounded-full inline-flex items-center justify-center gap-2 relative overflow-hidden group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -70,9 +74,13 @@ export const ReadyToStart = () => {
                 transition={{ duration: 0.3 }}
                 style={{ pointerEvents: 'none' }}
               />
-              <span className="relative z-10">Send Email</span>
-              <span className="relative z-10">→</span>
-            </motion.a>
+              <span className="relative z-10 flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Send Email
+              </span>
+            </motion.button>
 
             <motion.button
               className="px-6 py-3 bg-white/5 border border-white/20 text-white/80 font-medium rounded-full inline-flex items-center justify-center gap-2 relative overflow-hidden group"
@@ -93,8 +101,12 @@ export const ReadyToStart = () => {
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               />
-              <span className="relative z-10">Schedule Call</span>
-              <span className="relative z-10">📅</span>
+              <span className="relative z-10 flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Schedule Call
+              </span>
             </motion.button>
           </motion.div>
 
