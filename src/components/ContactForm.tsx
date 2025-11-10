@@ -102,8 +102,8 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           {/* Close button */}
           <motion.button
             onClick={onClose}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.15 }}
+            whileTap={{ scale: 0.9 }}
             style={{
               position: "absolute",
               top: "clamp(12px, 3vw, 20px)",
@@ -120,17 +120,48 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               alignItems: "center",
               justifyContent: "center",
               transition: "all 0.3s ease",
-            }}
-            onMouseEnter={(e: any) => {
-              e.currentTarget.style.background = "rgba(255, 255, 255, 0.15)";
-              e.currentTarget.style.borderColor = "rgba(236, 72, 853, 0.5)";
-            }}
-            onMouseLeave={(e: any) => {
-              e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
-              e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.2)";
+              overflow: "hidden",
             }}
           >
-            ✕
+            {/* Glare sweep effect */}
+            <motion.div
+              className="absolute inset-0 rounded-full"
+              initial={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)" }}
+              whileHover={{
+                background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent)",
+              }}
+              transition={{ duration: 0.5 }}
+              style={{
+                x: "-100%",
+              }}
+              animate={{ x: ["100%"] }}
+            />
+            
+            {/* Background glow on hover */}
+            <motion.div
+              className="absolute inset-0 rounded-full"
+              initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0), inset 0 0 0px rgba(236, 72, 153, 0)" }}
+              whileHover={{ 
+                boxShadow: "0 0 20px rgba(236, 72, 153, 0.5), inset 0 0 10px rgba(236, 72, 153, 0.2)",
+                background: "rgba(236, 72, 153, 0.1)",
+              }}
+              transition={{ duration: 0.3 }}
+              style={{ pointerEvents: "none" }}
+            />
+
+            {/* Pink border highlight on hover */}
+            <motion.div
+              className="absolute inset-0 rounded-full"
+              initial={{ borderColor: "rgba(255, 255, 255, 0.2)", borderWidth: "1px" }}
+              whileHover={{ borderColor: "rgba(236, 72, 153, 0.6)" }}
+              transition={{ duration: 0.3 }}
+              style={{ 
+                pointerEvents: "none",
+                border: "1px solid",
+              }}
+            />
+
+            <span className="relative z-10">✕</span>
           </motion.button>
 
           {submitted ? (
