@@ -85,8 +85,9 @@ export const FeaturedProjects = () => {
           <div
             className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
             style={{
-              background: "linear-gradient(to right, rgba(10,10,10,1) 0%, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0.3) 70%, transparent 100%)",
-              backdropFilter: "blur(8px)",
+              background: "linear-gradient(to right, rgba(10,10,10,1) 0%, rgba(10,10,10,0.95) 15%, rgba(10,10,10,0.7) 45%, transparent 100%)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
             }}
           />
 
@@ -94,8 +95,9 @@ export const FeaturedProjects = () => {
           <div
             className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
             style={{
-              background: "linear-gradient(to left, rgba(10,10,10,1) 0%, rgba(10,10,10,0.8) 40%, rgba(10,10,10,0.3) 70%, transparent 100%)",
-              backdropFilter: "blur(8px)",
+              background: "linear-gradient(to left, rgba(10,10,10,1) 0%, rgba(10,10,10,0.95) 15%, rgba(10,10,10,0.7) 45%, transparent 100%)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
             }}
           />
 
@@ -262,18 +264,57 @@ export const FeaturedProjects = () => {
         </div>
 
         {/* Carousel Indicators */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-3 mt-12">
           {featuredProjects.map((_, index) => (
             <motion.button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className="relative h-2 rounded-full transition-all duration-300"
-              style={{
+              className="relative rounded-full transition-all duration-300 overflow-hidden group"
+              initial={{ width: 8, height: 8 }}
+              animate={{ 
                 width: currentIndex === index ? 32 : 8,
-                backgroundColor: currentIndex === index ? '#ec4899' : 'rgba(255,255,255,0.2)',
+                height: 8,
               }}
-              whileHover={{ scale: 1.2 }}
-            />
+              whileHover={{ scale: 1.3 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label={`Go to slide ${index + 1}`}
+            >
+              {/* Background bar */}
+              <div 
+                className="absolute inset-0 rounded-full"
+                style={{
+                  backgroundColor: currentIndex === index ? '#ec4899' : 'rgba(255,255,255,0.2)',
+                  transition: 'background-color 0.3s ease'
+                }}
+              />
+              
+              {/* Glow effect on active dot */}
+              {currentIndex === index && (
+                <motion.div
+                  className="absolute inset-0 rounded-full"
+                  initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
+                  animate={{ 
+                    boxShadow: [
+                      "0 0 0px rgba(236, 72, 153, 0)",
+                      "0 0 15px rgba(236, 72, 153, 0.6)",
+                      "0 0 0px rgba(236, 72, 153, 0)"
+                    ]
+                  }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                />
+              )}
+              
+              {/* Hover glow */}
+              <motion.div
+                className="absolute inset-0 rounded-full"
+                initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
+                whileHover={{ 
+                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.8), inset 0 0 10px rgba(236, 72, 153, 0.2)",
+                  background: currentIndex !== index ? "rgba(236, 72, 153, 0.3)" : undefined
+                }}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.button>
           ))}
         </div>
       </div>

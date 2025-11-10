@@ -99,7 +99,16 @@ export const FromConceptToReality = () => {
               >
                 {/* Content - alternating sides */}
                 <div className={index % 2 === 0 ? '' : 'md:order-2'}>
-                  <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300">
+                  <motion.div 
+                    className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all duration-300"
+                    style={{
+                      backgroundImage: `linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(25, 25, 35, 0.8))`,
+                    }}
+                    whileHover={{ 
+                      borderColor: "rgba(255, 255, 255, 0.3)",
+                      boxShadow: "0 0 20px rgba(236, 72, 153, 0.1)"
+                    }}
+                  >
                     <div className="flex items-center gap-3 mb-3">
                       <div className="text-pink-400 w-6 h-6 flex-shrink-0">
                         {step.icon}
@@ -111,14 +120,28 @@ export const FromConceptToReality = () => {
                     <p className="text-white/70 leading-relaxed">
                       {step.description}
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Timeline dot */}
                 <div className="hidden md:flex justify-center">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-pink-600 relative z-20 flex-shrink-0">
+                  <motion.div 
+                    className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-pink-500 to-pink-600 relative z-20 flex-shrink-0"
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
                     <span className="text-white font-bold text-lg">{step.number}</span>
-                  </div>
+                    
+                    {/* Glow ring on hover */}
+                    <motion.div
+                      className="absolute inset-0 rounded-full"
+                      initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
+                      whileHover={{ 
+                        boxShadow: "0 0 0px rgba(236, 72, 153, 0.5), inset 0 0 10px rgba(236, 72, 153, 0.2)"
+                      }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.div>
                 </div>
 
                 {/* Mobile counter */}
