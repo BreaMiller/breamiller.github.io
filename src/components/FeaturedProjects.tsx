@@ -58,16 +58,13 @@ export const FeaturedProjects = () => {
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
       }}
-      initial={{ opacity: 0, filter: "blur(10px)" }}
-      whileInView={{ opacity: 1, filter: "blur(0px)" }}
-      transition={{ duration: 0.8 }}
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="container max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0 }}
           viewport={{ once: false, amount: 0.5 }}
           className="mb-12"
         >
@@ -80,7 +77,13 @@ export const FeaturedProjects = () => {
         </motion.div>
 
         {/* Carousel Container */}
-        <div className="relative w-full">
+        <motion.div 
+          className="relative w-full"
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0.05 }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
           {/* Left Progressive Blur Overlay */}
           <div
             className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
@@ -261,10 +264,16 @@ export const FeaturedProjects = () => {
               </svg>
             </motion.button>
           </div>
-        </div>
+        </motion.div>
 
         {/* Carousel Indicators */}
-        <div className="flex justify-center gap-3 mt-12">
+        <motion.div 
+          className="flex justify-center gap-3 mt-12"
+          initial={{ opacity: 0, filter: "blur(10px)" }}
+          whileInView={{ opacity: 1, filter: "blur(0px)" }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
           {featuredProjects.map((_, index) => (
             <motion.button
               key={index}
@@ -316,7 +325,7 @@ export const FeaturedProjects = () => {
               />
             </motion.button>
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
