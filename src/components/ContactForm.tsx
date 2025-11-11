@@ -193,7 +193,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 Get In Touch
               </h2>
 
-              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "center" }}>
                 {/* Name Field */}
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
                   <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
