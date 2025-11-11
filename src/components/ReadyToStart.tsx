@@ -58,7 +58,7 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
                 whileHover={{ 
                   y: -2, 
                   scale: 1.05,
-                  boxShadow: "0 0 40px rgba(236, 72, 153, 0.4)"
+                  boxShadow: "0 0 40px rgba(236, 72, 853, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
                 style={{
@@ -80,7 +80,7 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
                   justifyContent: "center",
                   whiteSpace: "nowrap",
                   maxWidth: "400px",
-                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+                  boxShadow: "0 0 20px rgba(236, 72, 853, 0.2)",
                   position: "relative",
                   overflow: "hidden",
                   animation: btn === "Send Email" ? "outlineGlow 3s ease-in-out infinite" : "none",

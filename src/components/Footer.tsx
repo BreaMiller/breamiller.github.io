@@ -1,19 +1,23 @@
 import { motion } from 'framer-motion';
+import { SiLinkedin, SiFlickr, SiGithub } from 'react-icons/si';
 
-export const Footer = () => {
-  const currentYear = new Date().getFullYear();
+interface FooterProps {
+  onWorkClick?: () => void;
+  onContactClick?: () => void;
+}
 
+export const Footer = ({ onWorkClick, onContactClick }: FooterProps) => {
   const socialLinks = [
-    { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'in' },
-    { name: 'Flickr', url: 'https://flickr.com', icon: '📷' },
-    { name: 'GitHub', url: 'https://github.com', icon: 'gh' },
+    { name: 'LinkedIn', url: 'https://linkedin.com', icon: SiLinkedin },
+    { name: 'Flickr', url: 'https://flickr.com', icon: SiFlickr },
+    { name: 'GitHub', url: 'https://github.com', icon: SiGithub },
   ];
 
   const footerLinks = [
-    { label: 'Work', href: '#work' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '#contact' },
-    { label: 'Privacy', href: '#privacy' },
+    { label: 'Work', href: '#work', onClick: onWorkClick },
+    { label: 'About', href: '/about', onClick: undefined },
+    { label: 'Contact', href: '#contact', onClick: onContactClick },
+    { label: 'Privacy', href: '#privacy', onClick: undefined },
   ];
 
   return (
@@ -49,7 +53,7 @@ export const Footer = () => {
               </span>
             </h3>
             <p className="text-white/60 text-sm leading-relaxed">
-              Creative technologist exploring the intersection of design, AI, and human experience.
+              Crafting beautiful digital experiences with design and code.
             </p>
           </motion.div>
 
@@ -66,6 +70,12 @@ export const Footer = () => {
                 <motion.a
                   key={index}
                   href={link.href}
+                  onClick={(e) => {
+                    if (link.onClick) {
+                      e.preventDefault();
+                      link.onClick();
+                    }
+                  }}
                   className="text-white/60 hover:text-pink-400 transition-colors duration-300 text-sm block"
                   whileHover={{ x: 4 }}
                 >
@@ -84,24 +94,27 @@ export const Footer = () => {
           >
             <h4 className="text-white font-semibold mb-6 uppercase text-xs tracking-widest">Connect</h4>
             <div className="flex gap-4">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-pink-500/50 transition-all duration-300"
-                  whileHover={{
-                    scale: 1.1,
-                    boxShadow: "0 0 20px rgba(236, 72, 153, 0.3)",
-                    borderColor: "rgba(236, 72, 153, 0.5)",
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  title={social.name}
-                >
-                  <span className="text-xs font-bold">{social.icon}</span>
-                </motion.a>
-              ))}
+              {socialLinks.map((social, index) => {
+                const IconComponent = social.icon;
+                return (
+                  <motion.a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-pink-500/50 transition-all duration-300"
+                    whileHover={{
+                      scale: 1.1,
+                      boxShadow: "0 0 20px rgba(236, 72, 153, 0.3)",
+                      borderColor: "rgba(236, 72, 853, 0.5)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    title={social.name}
+                  >
+                    <IconComponent size={18} />
+                  </motion.a>
+                );
+              })}
             </div>
           </motion.div>
         </div>
@@ -117,9 +130,15 @@ export const Footer = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           viewport={{ once: true }}
         >
-          <p>© {currentYear} Brea Miller. All rights reserved.</p>
+          <p>© 2026 Brea Miller. All rights reserved.</p>
           <p className="mt-4 sm:mt-0">
-            Designed & developed with <span style={{ color: '#ec4899' }}>✱</span> by Brea Miller
+            <span style={{ 
+              fontFamily: "'Brush Script MT', cursive",
+              fontSize: "18px",
+              fontStyle: "italic",
+              fontWeight: "300",
+              letterSpacing: "-0.5px",
+            }}>XOXO</span>
           </p>
         </motion.div>
       </div>

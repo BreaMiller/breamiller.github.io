@@ -7,9 +7,21 @@ import { WhatIOffer } from './components/WhatIOffer';
 import { FromConceptToReality } from './components/FromConceptToReality';
 import { ReadyToStart } from './components/ReadyToStart';
 import { Footer } from './components/Footer';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { heroProducts } from './heroProductsData';
+import { useRef, useState } from 'react';
 
 function App() {
+  const featuredProjectsRef = useRef<HTMLDivElement>(null);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const handleWorkClick = () => {
+    featuredProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleContactClick = () => {
+    setIsContactOpen(true);
+  };
   return (
     <div className="w-full relative" style={{
       background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
@@ -32,13 +44,18 @@ function App() {
       <div style={{ position: "relative", zIndex: 1 }}>
         <HeroParallax products={heroProducts} />
         <AIToolsSection />
-        <FeaturedProjects />
+        <div ref={featuredProjectsRef}>
+          <FeaturedProjects />
+        </div>
         <WhatIOffer />
         <SelectedProjects />
         <FromConceptToReality />
-        <ReadyToStart />
-        <Footer />
+        <ReadyToStart onContactClick={handleContactClick} />
+        <Footer onWorkClick={handleWorkClick} onContactClick={handleContactClick} />
       </div>
+
+      {/* Privacy Policy Modal */}
+      <PrivacyPolicy />
 
       {/* Page View Counter - Fixed position */}
       <motion.div
