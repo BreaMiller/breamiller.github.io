@@ -506,7 +506,7 @@ export const projectsData: Record<string, ProjectData> = {
     title: "Who We Are, Have Been, & Will Always Be",
     subtitle: "Vitruivian Love",
     tagline: "✐ᝰ through abstraction",
-    description: "An exploratory AI art collection pushing the boundaries of human emotions expressed through abstract visualization.",
+    description: "An exploratory AI art collection that explores love, transformation, and the profound changes we undergo when we meet someone who transforms us completely.",
     images: [
       {
         src: "https://i.imgur.com/VwuVUu8.png?auto=compress&cs=tinysrgb&w=1200",
@@ -529,7 +529,7 @@ export const projectsData: Record<string, ProjectData> = {
         size: "large",
       },
     ],
-    overview: "What do you get when AI attempts to express emotions through abstract art? This upcoming collection pushes the boundaries of AI-generated expression by investigating how artificial intelligence interprets the ineffable landscape of human feeling. Each piece represents an experiment in visual emotion—a collaboration between human intent and machine creativity that challenges traditional notions of artistic authenticity and emotional expression. By abstaining from literal representation, the collection invites viewers to project their own emotional experiences onto algorithmic interpretations of the felt human experience.",
+    overview: "I grieve the distance that once lived between\ntwo strangers passing on a crowded street,\nthe thousand nights we might have never been,\nthe lives we walked before our paths met again.\n\nWhat sorrow lives in all we could have missed—\nthe mornings waking separate and cold,\nlips that may have never known bliss,\nthe stories that would die without being told.\n\nBut eulogies are not for death alone;\nthey sing of transformation, they sing of letting go—\nI lay to rest the parts I've outgrown\nto make room for the love we've come to know.",
     tools: ["AI-Generation", "Adobe Photoshop", "Digital Art"],
     role: "Creative Director & AI Artist",
     year: "2025",

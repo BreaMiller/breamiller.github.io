@@ -405,6 +405,8 @@ export const ProjectDetailPage: React.FC = () => {
                 color: "#bbb",
                 lineHeight: "1.8",
                 marginBottom: "32px",
+                whiteSpace: "pre-wrap",
+                fontStyle: project.id === "who-we-are" ? "italic" : "normal",
               }}
             >
               {project.overview}
