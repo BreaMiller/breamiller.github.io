@@ -62,10 +62,32 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
                   boxShadow: "0 0 40px rgba(236, 72, 153, 0.4)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group inline-flex min-w-[140px] transition-all duration-300 hover:-translate-y-1 hover:scale-105 border-gradient hover:text-white text-sm font-medium text-white/80 bg-white/5 rounded-full px-5 py-3 relative backdrop-blur-xl items-center justify-center"
+                style={{
+                  background: btn === "Send Email" ? "transparent" : "transparent",
+                  border: btn === "Send Email" ? "none" : ".5px solid #ec4899",
+                  padding: "18px 18px",
+                  borderRadius: "20px",
+                  width: "140px",
+                  height: "60px",
+                  fontSize: "14px",
+                  fontWeight: "700",
+                  cursor: "pointer",
+                  textTransform: "uppercase",
+                  letterSpacing: "1px",
+                  color: "#ffffff",
+                  transition: "all 0.3s ease",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  whiteSpace: "nowrap",
+                  maxWidth: "400px",
+                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+                  position: "relative",
+                  overflow: "hidden",
+                  animation: btn === "Send Email" ? "outlineGlow 3s ease-in-out infinite" : "none",
+                }}
               >
-                <span>{btn}</span>
-                <span aria-hidden="true" className="transition-all duration-300 group-hover:opacity-80 opacity-20 w-[70%] h-[1px] rounded-full absolute bottom-0 left-1/2 -translate-x-1/2" style={{ background: "linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%)" }}></span>
+                {btn}
               </motion.button>
             ))}
           </motion.div>
