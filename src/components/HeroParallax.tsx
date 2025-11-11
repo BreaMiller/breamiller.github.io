@@ -231,7 +231,11 @@ export const ProductCard = ({
             zIndex: 1,
           }}
         />
-        <img
+        <motion.img
+          initial={{ opacity: 0, scale: 1.1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.5 }}
           src={product.thumbnail}
           alt={product.title}
           style={{
