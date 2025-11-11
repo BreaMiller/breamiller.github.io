@@ -30,20 +30,50 @@ export const ProjectDetailPage: React.FC = () => {
         >
           <h1 style={{ fontSize: "2rem", marginBottom: "20px" }}>Project not found</h1>
           <motion.button
-            whileHover={{ scale: 1.05 }}
             onClick={() => navigate("/")}
+            whileHover={{ scale: 1.05, y: -3 }}
+            whileTap={{ scale: 0.95 }}
             style={{
-              padding: "12px 24px",
-              background: "linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%)",
-              border: "none",
-              borderRadius: "8px",
+              padding: "18px 28px",
+              background: "rgba(236, 72, 153, 0.1)",
+              border: "1px solid rgba(236, 72, 153, 0.3)",
+              borderRadius: "20px",
               color: "#ffffff",
               fontWeight: "600",
               cursor: "pointer",
               fontSize: "14px",
+              textTransform: "uppercase",
+              letterSpacing: "1px",
+              position: "relative",
+              overflow: "hidden",
+              transition: "all 0.3s ease",
+              boxShadow: "0 8px 25px rgba(236, 72, 153, 0.2)",
+            }}
+            onMouseEnter={(e: any) => {
+              e.currentTarget.style.background = "rgba(236, 72, 853, 0.2)";
+              e.currentTarget.style.boxShadow = "0 8px 40px rgba(236, 72, 153, 0.4)";
+              e.currentTarget.style.borderColor = "rgba(236, 72, 153, 0.6)";
+            }}
+            onMouseLeave={(e: any) => {
+              e.currentTarget.style.background = "rgba(236, 72, 153, 0.1)";
+              e.currentTarget.style.boxShadow = "0 8px 25px rgba(236, 72, 153, 0.2)";
+              e.currentTarget.style.borderColor = "rgba(236, 72, 153, 0.3)";
             }}
           >
             Back to Home
+            {/* Glare effect on hover */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
+                borderRadius: "20px",
+                pointerEvents: "none",
+              }}
+            />
           </motion.button>
         </motion.div>
       </div>

@@ -149,10 +149,10 @@ export const Header = () => {
       </p>
             <button 
         onClick={() => navigate('/about')}
-        className="mt-8 backdrop-blur-xl"
+        className="mt-8"
         style={{
-          background: "rgba(236, 72, 153, 0.1)",
-          border: "1px solid rgba(236, 72, 153, 0.3)",
+          background: "transparent",
+          border: "none",
           color: "#ffffff",
           padding: "18px 18px",
           borderRadius: "20px",
@@ -164,13 +164,14 @@ export const Header = () => {
           transition: "all 0.3s ease",
           textTransform: "uppercase",
           letterSpacing: "1px",
-          boxShadow: "0 8px 25px rgba(236, 72, 153, 0.2)",
+          boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
           position: "relative",
           overflow: "hidden",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           whiteSpace: "wrap",
+          animation: "outlineGlow 3s ease-in-out infinite",
           maxWidth: "400px",
         }}
       >

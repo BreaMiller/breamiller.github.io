@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface FeaturedProject {
   id: string;
@@ -14,7 +15,7 @@ const featuredProjects: FeaturedProject[] = [
     id: 'liteflix',
     title: 'LiteFlix',
     description: 'A lightweight streaming platform with curated content and personalized recommendations',
-    image: 'https://i.imgur.com/9Z8X5kL.png?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://i.imgur.com/vFVoyRr.png',
     category: 'Streaming',
   },
   {
@@ -49,6 +50,7 @@ const featuredProjects: FeaturedProject[] = [
 
 export const FeaturedProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % featuredProjects.length);
@@ -56,6 +58,16 @@ export const FeaturedProjects = () => {
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length);
+  };
+
+  const handleProjectClick = () => {
+    const projectId = featuredProjects[currentIndex].id;
+    // Special handling for liteflix - navigate to /flix instead of /projects/liteflix
+    if (projectId === 'liteflix') {
+      navigate('/flix');
+    } else {
+      navigate(`/projects/${projectId}`);
+    }
   };
 
   return (
@@ -114,14 +126,15 @@ export const FeaturedProjects = () => {
               </motion.div>
 
               {/* Current Slide - Main */}
-              <motion.a
+              <motion.button
                 key={`main-${currentIndex}`}
-                href={`/projects/${featuredProjects[currentIndex].id}`}
+                onClick={handleProjectClick}
                 initial={{ opacity: 0, scale: 0.85, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.85, y: 20 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="group relative overflow-hidden rounded-2xl h-96 md:h-[625px] w-full max-w-2xl flex-shrink-0 cursor-pointer"
+                className="group relative overflow-hidden rounded-2xl h-96 md:h-[625px] w-full max-w-2xl flex-shrink-0 cursor-pointer border-none background-none p-0"
+                style={{ background: "none" }}
               >
                 <img
                   src={featuredProjects[currentIndex].image}
@@ -134,7 +147,7 @@ export const FeaturedProjects = () => {
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">{featuredProjects[currentIndex].title}</h3>
                   <p className="text-white/80 text-sm md:text-base">{featuredProjects[currentIndex].description}</p>
                 </div>
-              </motion.a>
+              </motion.button>
 
               {/* Next Slide Peek */}
               <motion.div
