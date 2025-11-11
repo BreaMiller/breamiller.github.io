@@ -235,11 +235,9 @@ export const AboutPage: React.FC = () => {
                 <div
                   ref={scrollerRef}
                   id="aboutScroll"
-                  className="h-[600px] overflow-y-auto snap-y snap-mandatory pr-3 flex-1 scroll-smooth [&::-webkit-scrollbar]:hidden"
+                  className="h-[600px] overflow-y-auto overflow-x-hidden snap-y snap-mandatory pr-3 flex-1 scroll-smooth"
                   style={{
                     scrollBehavior: 'smooth',
-                    scrollbarWidth: 'none',
-                    msOverflowStyle: 'none',
                   }}
                 >
                   {/* Slide 1: Profile */}
@@ -622,6 +620,32 @@ export const AboutPage: React.FC = () => {
           background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(99, 102, 241, 0.1));
           pointer-events: none;
           border-radius: inherit;
+        }
+
+        /* Styled scrollbar */
+        #aboutScroll::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        #aboutScroll::-webkit-scrollbar-track {
+          background: rgba(15, 15, 15, 0.5);
+          border-radius: 10px;
+        }
+
+        #aboutScroll::-webkit-scrollbar-thumb {
+          background: rgba(236, 72, 153, 0.4);
+          border-radius: 10px;
+          transition: background 0.3s ease;
+        }
+
+        #aboutScroll::-webkit-scrollbar-thumb:hover {
+          background: rgba(236, 72, 153, 0.6);
+        }
+
+        /* Firefox scrollbar */
+        #aboutScroll {
+          scrollbar-width: thin;
+          scrollbar-color: rgba(236, 72, 153, 0.4) rgba(15, 15, 15, 0.5);
         }
       `}</style>
 
