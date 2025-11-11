@@ -236,26 +236,12 @@ export const AboutPage: React.FC = () => {
                       </p>
 
                       {/* Skills Tags */}
-                      <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "16px", marginBottom: "16px" }}>
+                      <div className="flex flex-wrap gap-2 mt-3">
                         {["Autonomous", "Empathetic", "Communicative", "Meticulous", "Optimistic", "Reliable", "Self-Aware"].map(
                           (skill) => (
-                            <motion.span
-                              key={skill}
-                              whileHover={{ scale: 1.05, y: -2 }}
-                              style={{
-                                background: "rgba(236, 72, 153, 0.1)",
-                                border: ".5px solid rgba(236, 72, 153, 0.3)",
-                                color: "#ec4899",
-                                padding: "6px 12px",
-                                borderRadius: "16px",
-                                fontSize: "clamp(10px, 1.5vw, 12px)",
-                                fontWeight: "600",
-                                cursor: "pointer",
-                                transition: "all 0.3s ease",
-                              }}
-                            >
+                            <span key={skill} className="text-xs bg-white/10 text-white/80 px-2 py-1 rounded-full">
                               {skill}
-                            </motion.span>
+                            </span>
                           )
                         )}
                       </div>
