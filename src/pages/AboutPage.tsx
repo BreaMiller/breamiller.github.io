@@ -444,7 +444,7 @@ export const AboutPage: React.FC = () => {
                 {/* Scroll Dots Indicator */}
                 <div className="flex flex-col gap-4 items-center justify-center h-[600px]">
                   {[0, 1, 2, 3, 4].map((i) => (
-                    <motion.button
+                    <button
                       key={i}
                       onClick={() => {
                         if (scrollerRef.current) {
@@ -461,7 +461,6 @@ export const AboutPage: React.FC = () => {
                         border: "none",
                         cursor: "pointer",
                         transition: "all 0.3s ease",
-                        position: "relative",
                       }}
                       aria-label={`Go to slide ${i + 1}`}
                     />
