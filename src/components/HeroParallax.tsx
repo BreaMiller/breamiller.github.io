@@ -146,7 +146,7 @@ export const Header = () => {
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
           fontWeight: "600",
-        }}>✐ᝰ innovative empath–</span>crafting digital experiences that bridge the gap between innovation and human connection. Every project is an opportunity to create products that don't just work beautifully, but feel intentional and alive.
+        }}>✐ᝰ innovative empath–</span>crafting digital experiences that don't just work beautifully, but feel intuitive and intentional.
       </p>
       <button 
         onClick={() => navigate('/about')}
