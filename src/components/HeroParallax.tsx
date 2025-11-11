@@ -110,7 +110,7 @@ export const Header = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-7xl relative mx-auto py-10 sm:py-20 md:py-40 px-3 sm:px-4 md:px-6 lg:px-8 w-full left-0 top-0" style={{ zIndex: 10, position: "relative" }}>
+    <div className="max-w-7xl relative mx-auto py-0 px-3 sm:px-4 md:px-6 lg:px-8 w-full left-0 top-0" style={{ zIndex: 10, position: "relative", paddingTop: "clamp(40px, 10vw, 80px)", paddingBottom: "clamp(40px, 10vw, 80px)" }}>
       <h1 
         style={{
           display: "block",
@@ -121,7 +121,7 @@ export const Header = () => {
           fontSize: "clamp(1.75rem, 7vw, 7rem)",
           fontWeight: "800",
           lineHeight: "1.1",
-          marginBottom: "16px",
+          marginBottom: "clamp(12px, 2vw, 24px)",
           letterSpacing: "-0.02em",
           textAlign: "left",
         }}
@@ -133,9 +133,9 @@ export const Header = () => {
           fontSize: "clamp(0.875rem, 2.2vw, 1.2rem)",
           fontWeight: "400",
           color: "#aaa",
-          marginBottom: "40px",
+          marginBottom: "clamp(24px, 5vw, 40px)",
           lineHeight: "1.6",
-          maxWidth: "600px",
+          maxWidth: "clamp(300px, 90vw, 600px)",
           textAlign: "left",
         }}
       >
@@ -147,9 +147,9 @@ export const Header = () => {
           fontWeight: "600",
         }}>✐ᝰ innovative empath–</span>crafting digital experiences that bridge the gap between innovation and human connection. Every project is an opportunity to create products that don't just work beautifully, but feel intentional and alive.
       </p>
-            <button 
+      <button 
         onClick={() => navigate('/about')}
-        className="mt-8"
+        className="mt-6 sm:mt-8"
         style={{
           background: "transparent",
           border: "none",

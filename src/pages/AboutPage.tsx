@@ -239,9 +239,17 @@ export const AboutPage: React.FC = () => {
                       <div className="flex flex-wrap gap-2 mt-3">
                         {["Autonomous", "Empathetic", "Communicative", "Meticulous", "Optimistic", "Reliable", "Self-Aware"].map(
                           (skill) => (
-                            <span key={skill} className="text-xs bg-white/10 text-white/80 px-2 py-1 rounded-full">
+                            <motion.span 
+                              key={skill}
+                              whileHover={{ scale: 1.05 }}
+                              className="text-xs text-pink-400 px-3 py-1.5 rounded-full transition-all duration-200 cursor-pointer"
+                              style={{
+                                background: "rgba(236, 72, 153, 0.1)",
+                                border: "1px solid rgba(236, 72, 153, 0.3)",
+                              }}
+                            >
                               {skill}
-                            </span>
+                            </motion.span>
                           )
                         )}
                       </div>
@@ -300,12 +308,48 @@ export const AboutPage: React.FC = () => {
                         Let's create something extraordinary together.
                       </p>
                       <motion.button
-                        className="mt-8 group inline-flex min-w-[140px] transition-all duration-300 hover:-translate-y-1 hover:scale-105 border-gradient hover:text-white text-sm font-medium text-white/80 bg-white/5 rounded-full px-5 py-3 relative backdrop-blur-xl items-center justify-center"
-                        whileHover={{ scale: 1.05, y: -2 }}
+                        className="mt-8"
+                        whileHover={{ scale: 1.05, y: -3 }}
                         whileTap={{ scale: 0.95 }}
+                        style={{
+                          background: "transparent",
+                          border: "none",
+                          color: "#ffffff",
+                          padding: "18px 18px",
+                          borderRadius: "20px",
+                          width: "140px",
+                          height: "60px",
+                          fontSize: "14px",
+                          fontWeight: "700",
+                          cursor: "pointer",
+                          transition: "all 0.3s ease",
+                          textTransform: "uppercase",
+                          letterSpacing: "1px",
+                          boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+                          position: "relative",
+                          overflow: "hidden",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          whiteSpace: "nowrap",
+                          animation: "outlineGlow 3s ease-in-out infinite",
+                          maxWidth: "400px",
+                        }}
                       >
-                        <span>Get in touch</span>
-                        <span aria-hidden="true" className="transition-all duration-300 group-hover:opacity-80 opacity-20 w-[70%] h-[1px] rounded-full absolute bottom-0 left-1/2 -translate-x-1/2" style={{ background: "linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%)" }}></span>
+                        GET IN TOUCH
+                        {/* Glare effect on hover */}
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
+                          transition={{ duration: 0.3 }}
+                          style={{
+                            position: "absolute",
+                            inset: 0,
+                            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
+                            borderRadius: "20px",
+                            pointerEvents: "none",
+                          }}
+                        />
                       </motion.button>
                     </div>
                   </article>
