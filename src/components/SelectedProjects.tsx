@@ -340,7 +340,7 @@ export const SelectedProjects = () => {
                 borderRadius: "20px",
                 padding: "38px 38px",
                 width: "220px",
-                height: "60px",
+                height: "48px",
                 color: "#ec4899",
                 fontSize: "clamp(11px, 2vw, 14px)",
                 fontWeight: "700",
