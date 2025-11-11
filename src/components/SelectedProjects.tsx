@@ -316,7 +316,7 @@ export const SelectedProjects = () => {
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 0.15 }}
             viewport={{ once: false, amount: 0.5 }}
-            className="text-center"
+            className="flex justify-center pt-8"
           >
             <button
               onClick={() => setDisplayCount(displayCount + 6)}

@@ -33,7 +33,7 @@ function HomePage() {
           zIndex: 0,
         }}
       />
-      <div style={{ position: "relative", zIndex: 1 }}>
+            <div style={{ position: "relative", zIndex: 1 }}>
         <HeroParallax products={heroProducts} />
         <AIToolsSection />
         <FeaturedProjects />
