@@ -28,7 +28,7 @@ function HomePage() {
           left: 0,
           right: 0,
           bottom: 0,
-          background: "radial-gradient(ellipse at center, rgba(236, 72, 153, 0.08) 0%, rgba(99, 102, 241, 0.06) 40%, transparent 70%)",
+          background: "radial-gradient(ellipse at center, rgba(236, 72, 153, 0.15) 0%, rgba(99, 102, 241, 0.12) 40%, transparent 70%)",
           pointerEvents: "none",
           zIndex: 0,
         }}
