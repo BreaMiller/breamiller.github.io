@@ -212,9 +212,11 @@ export const AboutPage: React.FC = () => {
                 <div
                   ref={scrollerRef}
                   id="aboutScroll"
-                  className="h-[600px] overflow-y-auto snap-y snap-mandatory pr-3 flex-1 scroll-smooth"
+                  className="h-[600px] overflow-y-auto snap-y snap-mandatory pr-3 flex-1 scroll-smooth [&::-webkit-scrollbar]:hidden"
                   style={{
                     scrollBehavior: 'smooth',
+                    scrollbarWidth: 'none',
+                    msOverflowStyle: 'none',
                   }}
                 >
                   {/* Slide 1: Profile */}
@@ -441,14 +443,14 @@ export const AboutPage: React.FC = () => {
                   ))}
                 </div>
 
-                <motion.button
-                  className="group inline-flex min-w-[140px] transition-all duration-300 hover:-translate-y-1 hover:scale-105 border-gradient hover:text-white text-sm font-medium text-white/80 bg-white/5 rounded-full px-5 py-3 relative backdrop-blur-xl items-center justify-center"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.95 }}
+                <motion.a
+                  href="mailto:hello@breamiller.com"
+                  className="inline text-xs font-medium text-white/60 hover:text-white transition-colors duration-300"
+                  whileHover={{ opacity: 0.8 }}
+                  whileTap={{ opacity: 0.6 }}
                 >
-                  <span>Get in touch</span>
-                  <span aria-hidden="true" className="transition-all duration-300 group-hover:opacity-80 opacity-20 w-[70%] h-[1px] rounded-full absolute bottom-0 left-1/2 -translate-x-1/2" style={{ background: "linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%)" }}></span>
-                </motion.button>
+                  Get in touch →
+                </motion.a>
               </div>
             </div>
           </div>
