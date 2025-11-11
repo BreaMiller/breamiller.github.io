@@ -52,98 +52,56 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
-            <motion.button
-              onClick={onContactClick}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              style={{
-                background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
-                border: "none",
-                borderRadius: "20px",
-                padding: "18px 18px",
-                width: "140px",
-                height: "60px",
-                color: "#ffffff",
-                fontSize: "clamp(11px, 2vw, 14px)",
-                fontWeight: "700",
-                cursor: "pointer",
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-                boxShadow: "0 8px 25px rgba(236, 72, 153, 0.3)",
-                transition: "all 0.3s ease",
-                overflow: "hidden",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                whiteSpace: "nowrap",
-                maxWidth: "140px",
-                position: "relative",
-              }}
-            >
-              Send Email
-              {/* Glare effect on hover */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%)",
-                  borderRadius: "20px",
-                  pointerEvents: "none",
+            {["Send Email", "Schedule Call"].map((btn) => (
+              <motion.button
+                key={btn}
+                onClick={onContactClick}
+                whileHover={{ 
+                  y: -2, 
+                  scale: 1.05,
+                  boxShadow: "0 0 40px rgba(236, 72, 153, 0.4)"
                 }}
-              />
-            </motion.button>
-
-            <button
-              onClick={onContactClick}
-              onMouseEnter={(e) => {
-                const el = e.currentTarget as HTMLButtonElement;
-                el.style.background = "linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%)";
-                el.style.borderColor = "rgba(236, 72, 153, 0.8)";
-                el.style.color = "#ffffff";
-                el.style.boxShadow = "0 0 30px rgba(236, 72, 153, 0.4), inset 0 0 20px rgba(236, 72, 153, 0.1)";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.currentTarget as HTMLButtonElement;
-                el.style.background = "transparent";
-                el.style.borderColor = ".5px solid #ec4899";
-                el.style.color = "#ec4899";
-                el.style.boxShadow = "0 0 15px rgba(236, 72, 153, 0.15)";
-              }}
-              style={{
-                background: "transparent",
-                border: ".5px solid #ec4899",
-                borderRadius: "20px",
-                padding: "38px 38px",
-                width: "220px",
-                height: "48px",
-                color: "#ec4899",
-                fontSize: "clamp(11px, 2vw, 14px)",
-                fontWeight: "700",
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-                cursor: "pointer",
-                opacity: 0.8,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                whiteSpace: "nowrap",
-                maxWidth: "220px",
-                transition: "all 0.3s ease",
-                boxShadow: "0 0 15px rgba(236, 72, 153, 0.15)",
-                position: "relative",
-                overflow: "hidden",
-              }}
-            >
-              <span style={{
-                position: "relative",
-                zIndex: 10,
-              }}>
-                Schedule Call
-              </span>
-            </button>
+                whileTap={{ scale: 0.95 }}
+                style={{
+                  background: btn === "Send Email" ? "rgba(236, 72, 153, 0.1)" : "transparent",
+                  border: btn === "Send Email" ? "none" : ".5px solid #ec4899",
+                  padding: "18px 18px",
+                  borderRadius: "20px",
+                  width: "140px",
+                  height: "60px",
+                  fontSize: "14px",
+                  fontWeight: "700",
+                  cursor: "pointer",
+                  textTransform: "uppercase",
+                  letterSpacing: "1px",
+                  color: "#ffffff",
+                  transition: "all 0.3s ease",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  whiteSpace: "nowrap",
+                  maxWidth: "400px",
+                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                {btn}
+                {/* Glare effect on hover */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
+                    borderRadius: "20px",
+                    pointerEvents: "none",
+                  }}
+                />
+              </motion.button>
+            ))}
           </motion.div>
 
           <motion.div
