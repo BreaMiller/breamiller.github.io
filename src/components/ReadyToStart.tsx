@@ -100,26 +100,13 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-wrap gap-4 justify-center pt-8 border-t border-white/10"
           >
-            <button
+            <motion.a
               onClick={() => navigate('/about')}
-              style={{ 
-                background: "none", 
-                border: "none", 
-                cursor: "pointer", 
-                padding: 0,
-                color: "#ffffff",
-                fontSize: "14px",
-                transition: "color 0.3s ease",
-              }}
-              onMouseEnter={(e: any) => {
-                e.currentTarget.style.color = "#ec4899";
-              }}
-              onMouseLeave={(e: any) => {
-                e.currentTarget.style.color = "#ffffff";
-              }}
+              className="text-sm text-white/60 hover:text-pink-400 transition-colors cursor-pointer"
+              whileHover={{ scale: 1.05 }}
             >
               About Me
-            </button>
+            </motion.a>
             <a
               href="#"
               className="text-sm text-white/60 hover:text-white transition-colors"
