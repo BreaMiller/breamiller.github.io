@@ -25,7 +25,13 @@ export const AIToolsSection = () => {
       viewport={{ once: false, amount: 0.3 }}
     >
       <motion.div
-        style={{ position: "relative", display: "flex", alignItems: "center", gap: "20px" }}
+        style={{ 
+          position: "relative", 
+          display: "flex", 
+          alignItems: "center", 
+          gap: "clamp(12px, 3vw, 20px)",
+        }}
+        className="flex-col md:flex-row md:items-center"
         initial={{ opacity: 0, filter: "blur(10px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.6, delay: 0 }}
@@ -35,19 +41,19 @@ export const AIToolsSection = () => {
         <div
           style={{
             minWidth: "fit-content",
-            paddingLeft: "20px",
+            paddingLeft: "clamp(12px, 3vw, 20px)",
             zIndex: 5,
           }}
+          className="text-center md:text-left"
         >
           <span
             style={{
-              fontSize: "clamp(12px, 2vw, 16px)",
+              fontSize: "clamp(14px, 3vw, 16px)",
               fontWeight: "600",
               background: "linear-gradient(135deg, #ec4899 0%, #ec4899 40%, #6366f1 75%, #06b6d4 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
-              whiteSpace: "nowrap",
               opacity: 0.9,
               textTransform: "uppercase",
               letterSpacing: "1px",
@@ -61,7 +67,7 @@ export const AIToolsSection = () => {
           </span>
         </div>
 
-        <div style={{ position: "relative", flex: 1 }}>
+        <div style={{ position: "relative", flex: 1, width: "100%" }}>
           <InfiniteSlider gap={20} duration={30} direction="horizontal" reverse={false}>
             {aiTools.map((tool) => (
               <div
@@ -96,7 +102,7 @@ export const AIToolsSection = () => {
               position: "absolute",
               top: 0,
               left: 0,
-              width: "180px",
+              width: "clamp(80px, 15vw, 180px)",
               height: "100%",
               background: "linear-gradient(to right, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.95) 20%, rgba(10, 10, 10, 0.7) 50%, transparent 100%)",
               backdropFilter: "blur(12px)",
@@ -111,7 +117,7 @@ export const AIToolsSection = () => {
               position: "absolute",
               top: 0,
               right: 0,
-              width: "120px",
+              width: "clamp(60px, 12vw, 120px)",
               height: "100%",
               background: "linear-gradient(to left, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.95) 20%, rgba(10, 10, 10, 0.7) 50%, transparent 100%)",
               backdropFilter: "blur(12px)",
@@ -125,7 +131,7 @@ export const AIToolsSection = () => {
       </motion.div>
 
       <motion.div
-        className="container max-w-7xl mx-auto px-3 sm:px-4 mt-16 sm:mt-20 flex justify-center"
+        className="container max-w-7xl mx-auto px-3 sm:px-4 md:px-6 mt-12 sm:mt-16 md:mt-20 flex justify-center"
         initial={{ opacity: 0, filter: "blur(10px)" }}
         whileInView={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.6, delay: 0.1 }}
@@ -139,9 +145,9 @@ export const AIToolsSection = () => {
             background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
             border: "none",
             borderRadius: "20px",
-            padding: "18px 18px",
-            width: "220px",
-            height: "60px",
+            padding: "clamp(16px, 2vw, 18px)",
+            width: "clamp(180px, 50vw, 220px)",
+            height: "clamp(50px, 10vw, 60px)",
             color: "#ffffff",
             fontSize: "clamp(11px, 2vw, 14px)",
             fontWeight: "700",
@@ -153,7 +159,6 @@ export const AIToolsSection = () => {
             alignItems: "center",
             justifyContent: "center",
             whiteSpace: "nowrap",
-            maxWidth: "220px",
             transition: "all 0.3s ease",
             boxShadow: "0 8px 25px rgba(236, 72, 153, 0.3)",
             position: "relative",
