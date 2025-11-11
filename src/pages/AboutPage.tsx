@@ -195,7 +195,6 @@ export const AboutPage: React.FC = () => {
                   loading="eager"
                   decoding="async"
                   style={{
-                    transform: "scaleX(-1)",
                     borderRadius: "0 0 24px 24px",
                   }}
                 />
