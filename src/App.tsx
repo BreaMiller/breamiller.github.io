@@ -8,6 +8,7 @@ import { FromConceptToReality } from './components/FromConceptToReality';
 import { ReadyToStart } from './components/ReadyToStart';
 import { Footer } from './components/Footer';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { AiOutlineEye } from 'react-icons/ai';
 import { heroProducts } from './heroProductsData';
 import { useRef, useState } from 'react';
 
@@ -95,7 +96,7 @@ function App() {
         }}
         transition={{ duration: 0.3 }}
       >
-        <span style={{ marginRight: "8px" }}>👁</span>
+        <AiOutlineEye size={16} style={{ marginRight: "8px" }} />
         Views: <span style={{ marginLeft: "4px", fontWeight: "700" }}>1.2K</span>
       </motion.div>
     </div>
