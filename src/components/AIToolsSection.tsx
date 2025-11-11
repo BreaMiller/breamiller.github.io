@@ -47,7 +47,7 @@ export const AIToolsSection = () => {
             style={{
               fontSize: "clamp(12px, 2vw, 16px)",
               fontWeight: "600",
-              background: "linear-gradient(135deg, #ffffff 0%, #ec4899 50%, #6366f1 75%, #06b6d4 100%)",
+              background: "linear-gradient(135deg, #ec4899 0%, #ec4899 40%, #6366f1 75%, #06b6d4 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",

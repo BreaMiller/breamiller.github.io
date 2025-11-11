@@ -8,6 +8,7 @@ import { WhatIOffer } from './components/WhatIOffer';
 import { FromConceptToReality } from './components/FromConceptToReality';
 import { ReadyToStart } from './components/ReadyToStart';
 import { ContactForm } from './components/ContactForm';
+import { Footer } from './components/Footer';
 import { heroProducts } from './heroProductsData';
 
 function App() {
@@ -36,10 +37,11 @@ function App() {
         <HeroParallax products={heroProducts} />
         <AIToolsSection />
         <FeaturedProjects />
-        <WhatIOffer />
         <SelectedProjects />
+        <WhatIOffer />
         <FromConceptToReality />
         <ReadyToStart onContactClick={() => setIsContactOpen(true)} />
+        <Footer />
       </div>
 
       {/* Contact Button - Fixed position */}
