@@ -83,6 +83,7 @@ export const AboutPage: React.FC = () => {
 
   return (
     <div
+      data-page="about"
       style={{
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
