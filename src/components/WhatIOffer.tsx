@@ -76,8 +76,7 @@ export const WhatIOffer = () => {
     <motion.section
       className="py-20 md:py-32 relative z-10"
       style={{
-        background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
-        backgroundAttachment: "fixed",
+        background: "transparent",
       }}
       viewport={{ once: false, amount: 0.3 }}
     >

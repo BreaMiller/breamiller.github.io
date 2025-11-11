@@ -20,8 +20,7 @@ export const AIToolsSection = () => {
     <motion.section
       className="w-full py-16 sm:py-20 md:py-32 pb-32 sm:pb-48 md:pb-72"
       style={{
-        background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
-        backgroundAttachment: "fixed",
+        background: "transparent",
       }}
       viewport={{ once: false, amount: 0.3 }}
     >
