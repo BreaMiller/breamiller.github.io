@@ -33,7 +33,6 @@ function App() {
       background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
       backgroundAttachment: "fixed",
       color: "#ffffff",
-      minHeight: "100vh",
     }}>
       {/* Pink light glow background effect */}
       <div

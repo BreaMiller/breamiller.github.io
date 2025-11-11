@@ -244,9 +244,6 @@ export const ProductCard = ({
             position: "relative",
             zIndex: 2,
           }}
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
         />
       </button>
       <h2 

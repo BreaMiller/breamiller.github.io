@@ -83,7 +83,6 @@ export const AboutPage: React.FC = () => {
 
   return (
     <div
-      data-page="about"
       style={{
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
@@ -193,39 +192,34 @@ export const AboutPage: React.FC = () => {
                   src="https://i.imgur.com/zpEC4yH.png"
                   alt="Portfolio - Brea Miller"
                   className="about-image active aspect-square w-full h-full object-cover absolute inset-0"
-                  loading="eager"
-                  decoding="async"
                   style={{
-                    borderRadius: "24px",
+                    borderRadius: "0 0 24px 24px",
                   }}
+                  loading="lazy"
                 />
                 <img
                   src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/70bb19b3-d51f-47a2-8020-6261061a6a14_3840w.jpg"
                   alt="Portfolio - Image 2"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
-                  decoding="async"
                 />
                 <img
                   src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/9b854164-e5f6-4f39-a78c-f75ccbc5ff69_3840w.jpg"
                   alt="Portfolio - Image 3"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
-                  decoding="async"
                 />
                 <img
                   src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/04545374-057d-4527-9043-c2ee9b0d7f09_1600w.webp"
                   alt="Portfolio - Image 4"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
-                  decoding="async"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1516035069371-29a08e8be313?w=800&h=800&fit=crop"
                   alt="Photography - Image 5"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
-                  decoding="async"
                 />
               </div>
             </div>
@@ -447,6 +441,7 @@ export const AboutPage: React.FC = () => {
                   {[0, 1, 2, 3, 4].map((i) => (
                     <button
                       key={i}
+                      className="scroll-dot transition-all duration-300"
                       onClick={() => {
                         if (scrollerRef.current) {
                           const slides = scrollerRef.current.querySelectorAll('.about-content-item');
@@ -461,7 +456,6 @@ export const AboutPage: React.FC = () => {
                         background: currentSlide === i ? "#ec4899" : "rgba(236, 72, 153, 0.3)",
                         border: "none",
                         cursor: "pointer",
-                        transition: "all 0.3s ease",
                       }}
                       aria-label={`Go to slide ${i + 1}`}
                     />

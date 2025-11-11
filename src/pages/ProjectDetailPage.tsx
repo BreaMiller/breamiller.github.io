@@ -1,21 +1,13 @@
 import React from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AiOutlineEye } from 'react-icons/ai';
 import { projectsData } from '../projectsData';
 
 export const ProjectDetailPage: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
-  const location = useLocation();
   const navigate = useNavigate();
-  
-  // Handle /flix route by mapping it to flix project
-  let actualProjectId = projectId;
-  if (location.pathname === '/flix') {
-    actualProjectId = 'flix';
-  }
-  
-  const project = actualProjectId ? projectsData[actualProjectId] : null;
+  const project = projectId ? projectsData[projectId] : null;
 
   if (!project) {
     return (
@@ -322,8 +314,6 @@ export const ProjectDetailPage: React.FC = () => {
                     borderRadius: "20px",
                   }}
                   loading="lazy"
-                  decoding="async"
-                  fetchPriority={index === 0 ? "high" : "low"}
                 />
               )}
             </motion.div>
@@ -376,8 +366,6 @@ export const ProjectDetailPage: React.FC = () => {
                         borderRadius: "20px",
                       }}
                       loading="lazy"
-                      decoding="async"
-                      fetchPriority="low"
                     />
                   )}
                 </motion.div>
