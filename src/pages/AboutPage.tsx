@@ -418,7 +418,7 @@ export const AboutPage: React.FC = () => {
                         border: btn === "Skills" ? "none" : ".5px solid #ec4899",
                         padding: "18px 18px",
                         borderRadius: "20px",
-                        width: "140px",
+                        width: btn === "Skills" ? "140px" : "200px",
                         height: "60px",
                         fontSize: "14px",
                         fontWeight: "700",
