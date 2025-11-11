@@ -102,8 +102,21 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
           >
             <button
               onClick={() => navigate('/about')}
-              className="text-sm text-white/60 hover:text-white transition-colors"
-              style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
+              style={{ 
+                background: "none", 
+                border: "none", 
+                cursor: "pointer", 
+                padding: 0,
+                color: "#ffffff",
+                fontSize: "14px",
+                transition: "color 0.3s ease",
+              }}
+              onMouseEnter={(e: any) => {
+                e.currentTarget.style.color = "#ec4899";
+              }}
+              onMouseLeave={(e: any) => {
+                e.currentTarget.style.color = "#ffffff";
+              }}
             >
               About Me
             </button>
