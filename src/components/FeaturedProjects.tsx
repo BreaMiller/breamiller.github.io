@@ -62,7 +62,12 @@ export const FeaturedProjects = () => {
 
   const handleProjectClick = () => {
     const projectId = featuredProjects[currentIndex].id;
-    navigate(`/projects/${projectId}`);
+    // Special handling for liteflix - navigate to /flix instead of /projects/liteflix
+    if (projectId === 'liteflix') {
+      navigate('/flix');
+    } else {
+      navigate(`/projects/${projectId}`);
+    }
   };
 
   return (
