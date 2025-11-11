@@ -63,8 +63,8 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
                 }}
                 whileTap={{ scale: 0.95 }}
                 style={{
-                  background: btn === "Send Email" ? "rgba(236, 72, 153, 0.1)" : "transparent",
-                  border: btn === "Send Email" ? "none" : ".5px solid #ec4899",
+                  background: btn === "Send Email" ? "transparent" : "transparent",
+                  border: btn === "Send Email" ? ".5px solid #ec4899" : ".5px solid #ec4899",
                   padding: "18px 18px",
                   borderRadius: "20px",
                   width: "140px",

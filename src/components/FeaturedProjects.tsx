@@ -11,6 +11,13 @@ interface FeaturedProject {
 
 const featuredProjects: FeaturedProject[] = [
   {
+    id: 'liteflix',
+    title: 'LiteFlix',
+    description: 'A lightweight streaming platform with curated content and personalized recommendations',
+    image: 'https://i.imgur.com/9Z8X5kL.png?auto=compress&cs=tinysrgb&w=1200',
+    category: 'Streaming',
+  },
+  {
     id: 'ggs',
     title: 'Good Games',
     description: 'Gaming platform redesign with incentivized community features',
@@ -110,10 +117,10 @@ export const FeaturedProjects = () => {
               {/* Previous Slide Peek */}
               <motion.div
                 key={`prev-${currentIndex}`}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 0.4, x: 0 }}
-                exit={{ opacity: 0, x: 100 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, x: 100, scale: 0.95 }}
+                animate={{ opacity: 0.4, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: 100, scale: 0.95 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
                 className="hidden lg:block flex-shrink-0 w-80 h-[500px] cursor-pointer"
                 onClick={prevSlide}
               >
@@ -131,10 +138,10 @@ export const FeaturedProjects = () => {
               <motion.a
                 key={`main-${currentIndex}`}
                 href={`/projects/${featuredProjects[currentIndex].id}`}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, scale: 0.85, y: 20 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.85, y: 20 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
                 className="group relative overflow-hidden rounded-2xl h-96 md:h-[625px] w-full max-w-2xl flex-shrink-0 cursor-pointer"
               >
                 <img
@@ -153,10 +160,10 @@ export const FeaturedProjects = () => {
               {/* Next Slide Peek */}
               <motion.div
                 key={`next-${currentIndex}`}
-                initial={{ opacity: 0, x: -100 }}
-                animate={{ opacity: 0.4, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, x: -100, scale: 0.95 }}
+                animate={{ opacity: 0.4, x: 0, scale: 1 }}
+                exit={{ opacity: 0, x: -100, scale: 0.95 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
                 className="hidden lg:block flex-shrink-0 w-80 h-[500px] cursor-pointer"
                 onClick={nextSlide}
               >
