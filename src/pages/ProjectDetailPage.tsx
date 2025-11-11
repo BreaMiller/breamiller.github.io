@@ -514,6 +514,33 @@ export const ProjectDetailPage: React.FC = () => {
           </motion.div>
         </motion.section>
 
+        {/* Closing Text Section - Only for Who We Are */}
+        {project.id === "who-we-are" && (
+          <motion.section
+            variants={itemVariants}
+            style={{
+              maxWidth: "900px",
+              margin: "0 auto",
+              padding: "clamp(40px, 8vw, 60px) clamp(16px, 5vw, 40px)",
+              borderTop: "1px solid rgba(236, 72, 153, 0.2)",
+              borderBottom: "1px solid rgba(236, 72, 153, 0.2)",
+              textAlign: "center",
+            }}
+          >
+            <p
+              style={{
+                fontSize: "clamp(1rem, 2.5vw, 1.3rem)",
+                color: "#bbb",
+                lineHeight: "1.8",
+                fontStyle: "italic",
+                fontWeight: "400",
+              }}
+            >
+              Vitruvian Love - a study of the ideal proportions of love as a microcosm of the universe.
+            </p>
+          </motion.section>
+        )}
+
         {/* Back to Home Button */}
         <motion.section
           variants={itemVariants}
