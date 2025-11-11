@@ -225,9 +225,14 @@ export const AboutPage: React.FC = () => {
                   {/* Slide 1: Profile */}
                   <article className="about-content-item active snap-start min-h-[600px] flex items-center">
                     <div>
-                      <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
-                        <span className="text-xs text-white/70">About Me</span>
-                      </div>
+                      <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
+                        style={{
+                          background: "rgba(236, 72, 153, 0.1)",
+                          border: "1px solid rgba(236, 72, 153, 0.3)",
+                        }}
+                      >
+                        <span className="text-xs text-pink-400">About Me</span>
+                      </motion.div>
                       <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
                         Hi! I'm Brea.
                       </h2>
@@ -259,9 +264,14 @@ export const AboutPage: React.FC = () => {
                   {/* Slide 2: Product Design */}
                   <article className="about-content-item snap-start min-h-[600px] flex items-center">
                     <div>
-                      <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
-                        <span className="text-xs text-white/70">Design Expertise</span>
-                      </div>
+                      <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
+                        style={{
+                          background: "rgba(236, 72, 153, 0.1)",
+                          border: "1px solid rgba(236, 72, 153, 0.3)",
+                        }}
+                      >
+                        <span className="text-xs text-pink-400">Design Expertise</span>
+                      </motion.div>
                       <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
                         Bringing products to life
                       </h2>
@@ -277,9 +287,14 @@ export const AboutPage: React.FC = () => {
                   {/* Slide 3: Development */}
                   <article className="about-content-item snap-start min-h-[600px] flex items-center">
                     <div>
-                      <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
-                        <span className="text-xs text-white/70">Development</span>
-                      </div>
+                      <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
+                        style={{
+                          background: "rgba(236, 72, 153, 0.1)",
+                          border: "1px solid rgba(236, 72, 153, 0.3)",
+                        }}
+                      >
+                        <span className="text-xs text-pink-400">Development</span>
+                      </motion.div>
                       <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
                         Code that performs
                       </h2>
@@ -295,9 +310,14 @@ export const AboutPage: React.FC = () => {
                   {/* Slide 4: Let's Connect */}
                   <article className="about-content-item snap-start min-h-[600px] flex items-center">
                     <div>
-                      <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
-                        <span className="text-xs text-white/70">Let's Connect</span>
-                      </div>
+                      <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
+                        style={{
+                          background: "rgba(236, 72, 153, 0.1)",
+                          border: "1px solid rgba(236, 72, 153, 0.3)",
+                        }}
+                      >
+                        <span className="text-xs text-pink-400">Let's Connect</span>
+                      </motion.div>
                       <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
                         Ready to collaborate?
                       </h2>
@@ -335,6 +355,14 @@ export const AboutPage: React.FC = () => {
                           animation: "outlineGlow 3s ease-in-out infinite",
                           maxWidth: "400px",
                         }}
+                        onMouseEnter={(e: any) => {
+                          e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
+                          e.currentTarget.style.background = "rgba(236, 72, 153, 0.05)";
+                        }}
+                        onMouseLeave={(e: any) => {
+                          e.currentTarget.style.boxShadow = "0 0 20px rgba(236, 72, 853, 0.2)";
+                          e.currentTarget.style.background = "transparent";
+                        }}
                       >
                         GET IN TOUCH
                         {/* Glare effect on hover */}
@@ -347,6 +375,19 @@ export const AboutPage: React.FC = () => {
                             inset: 0,
                             background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
                             borderRadius: "20px",
+                            pointerEvents: "none",
+                          }}
+                        />
+                        {/* Border highlight on hover */}
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
+                          transition={{ duration: 0.3 }}
+                          style={{
+                            position: "absolute",
+                            inset: 0,
+                            borderRadius: "20px",
+                            border: "1px solid rgba(236, 72, 153, 0.4)",
                             pointerEvents: "none",
                           }}
                         />
