@@ -304,9 +304,14 @@ export const AboutPage: React.FC = () => {
               {["Skills", "Military Service"].map((btn) => (
                 <motion.button
                   key={btn}
-                  whileHover={{ y: -2, scale: 1.05 }}
+                  whileHover={{ 
+                    y: -2, 
+                    scale: 1.05,
+                    boxShadow: "0 0 40px rgba(236, 72, 153, 0.4)"
+                  }}
+                  whileTap={{ scale: 0.95 }}
                   style={{
-                    background: btn === "Skills" ? "transparent" : "transparent",
+                    background: btn === "Skills" ? "rgba(236, 72, 153, 0.1)" : "transparent",
                     border: btn === "Skills" ? "none" : ".5px solid #ec4899",
                     padding: "18px 18px",
                     borderRadius: "20px",
@@ -322,30 +327,27 @@ export const AboutPage: React.FC = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    whiteSpace: "wrap",
+                    whiteSpace: "nowrap",
                     maxWidth: "400px",
-                    boxShadow: btn === "Skills" ? "0 0 20px rgba(236, 72, 153, 0.2)" : "0 0 20px rgba(236, 72, 853, 0.2)",
-                  }}
-                  onMouseEnter={(e: any) => {
-                    if (btn === "Skills") {
-                      e.target.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.4)";
-                      e.target.style.background = "rgba(236, 72, 153, 0.1)";
-                    } else {
-                      e.target.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
-                      e.target.style.borderColor = "rgba(236, 72, 853, 0.8)";
-                    }
-                  }}
-                  onMouseLeave={(e: any) => {
-                    if (btn === "Skills") {
-                      e.target.style.boxShadow = "0 0 20px rgba(236, 72, 153, 0.2)";
-                      e.target.style.background = "transparent";
-                    } else {
-                      e.target.style.boxShadow = "0 0 20px rgba(236, 72, 153, 0.2)";
-                      e.target.style.borderColor = "#ec4899";
-                    }
+                    boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+                    position: "relative",
+                    overflow: "hidden",
                   }}
                 >
                   {btn}
+                  {/* Glare effect on hover */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
+                      borderRadius: "20px",
+                      pointerEvents: "none",
+                    }}
+                  />
                 </motion.button>
               ))}
             </motion.div>
