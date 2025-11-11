@@ -4,10 +4,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.tsx';
 import { AboutPage } from './pages/AboutPage.tsx';
 import { ProjectDetailPage } from './pages/ProjectDetailPage.tsx';
+import { LoadingScreen } from './components/LoadingScreen.tsx';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <LoadingScreen />
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />

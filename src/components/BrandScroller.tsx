@@ -5,102 +5,123 @@ import { FaFlickr } from "react-icons/fa";
 import { SiAdobe, SiGooglegemini, SiClaude, SiMake, SiN8N, SiRapid, SiElevenlabs } from "react-icons/si";
 import { FiFigma } from "react-icons/fi";
 import { VscGithubInverted } from "react-icons/vsc";
+import { motion } from "framer-motion";
+
+const icons = [
+  { Icon: SiAdobe, name: "Adobe" },
+  { Icon: SiClaude, name: "Claude" },
+  { Icon: FaFlickr, name: "Flickr" },
+  { Icon: SiGooglegemini, name: "Gemini" },
+  { Icon: VscGithubInverted, name: "GitHub" },
+  { Icon: FiFigma, name: "Figma" },
+  { Icon: BsYoutube, name: "YouTube" },
+  { Icon: SiMake, name: "Make" },
+  { Icon: SiRapid, name: "Rapid" },
+  { Icon: SiElevenlabs, name: "ElevenLabs" },
+  { Icon: SiN8N, name: "n8n" },
+];
 
 export const BrandScroller = () => {
   return (
-    <div className="group flex w-full overflow-hidden py-2 [--gap:9rem] [gap:var(--gap))] flex-row max-w-full [--duration:40s] [mask-image:linear-gradient(to_right,_rgba(0,_0,_0,_0),rgba(0,_0,_0,_1)_10%,rgba(0,_0,_0,_1)_90%,rgba(0,_0,_0,_0))]">
-      <div className="flex animate-marquee whitespace-nowrap">
-        {Array(1).fill(10).map((_, i) => (
-          <div key={i} className="flex items-center mx-8">
-            <SiAdobe size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-         
-            <SiClaude size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <FaFlickr size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <SiGooglegemini size={20} className="px-9" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
+    <div className="relative w-full overflow-hidden py-8">
+      {/* Fade overlays */}
+      <div
+        className="absolute left-0 top-0 bottom-0 w-24 md:w-48 z-10 pointer-events-none"
+        style={{
+          background: "linear-gradient(to right, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.15) 50%, transparent 100%)",
+        }}
+      />
+      <div
+        className="absolute right-0 top-0 bottom-0 w-24 md:w-48 z-10 pointer-events-none"
+        style={{
+          background: "linear-gradient(to left, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.15) 50%, transparent 100%)",
+        }}
+      />
 
-            <VscGithubInverted size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <FiFigma size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <BsYoutube size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <SiMake size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-             <SiRapid size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <SiElevenlabs size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-
-            <SiN8N size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>            
-
-          </div>
-        ))}
-      </div>
+      {/* Scrolling content */}
+      <motion.div
+        className="flex gap-8 md:gap-12"
+        animate={{ x: [-500, -2500] }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        {Array(2).fill(icons).flat().map((item, idx) => {
+          const { Icon, name } = item;
+          return (
+            <div
+              key={`${name}-${idx}`}
+              className="flex items-center justify-center gap-2 flex-shrink-0"
+            >
+              <motion.div
+                whileHover={{ scale: 1.1, color: "#ec4899" }}
+                transition={{ duration: 0.2 }}
+                className="text-white/60 hover:text-pink-500 transition-colors duration-200"
+              >
+                <Icon size={32} />
+              </motion.div>
+            </div>
+          );
+        })}
+      </motion.div>
     </div>
   );
 };
 
 export const BrandScrollerReverse = () => {
   return (
-    <div className="w-full overflow-hidden">
-      <div className="flex animate-marquee-reverse whitespace-nowrap">
-        {Array(1).fill(10).map((_, i) => (
-          <div key={i} className="flex items-center mx-8">
+    <div className="relative w-full overflow-hidden py-8">
+      {/* Fade overlays */}
+      <div
+        className="absolute left-0 top-0 bottom-0 w-24 md:w-48 z-10 pointer-events-none"
+        style={{
+          background: "linear-gradient(to right, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.15) 50%, transparent 100%)",
+        }}
+      />
+      <div
+        className="absolute right-0 top-0 bottom-0 w-24 md:w-48 z-10 pointer-events-none"
+        style={{
+          background: "linear-gradient(to left, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.15) 50%, transparent 100%)",
+        }}
+      />
 
-            <SiN8N size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>            
-            
-            <SiElevenlabs size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>           
-            
-            <SiRapid size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>          
-            
-            <SiMake size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <BsYoutube size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>        
-            
-            <FiFigma size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <VscGithubInverted size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <SiGooglegemini size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <FaFlickr size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <SiClaude size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-            
-            <SiAdobe size={20} className="mx-2" />
-            <span className="text-sm font-medium opacity-70 mx-6"></span>
-          </div>
-        ))}
-      </div>
+      {/* Scrolling content - reverse direction */}
+      <motion.div
+        className="flex gap-8 md:gap-12"
+        animate={{ x: [-2500, -500] }}
+        transition={{
+          duration: 30,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        {Array(2).fill(icons).flat().map((item, idx) => {
+          const { Icon, name } = item;
+          return (
+            <div
+              key={`${name}-reverse-${idx}`}
+              className="flex items-center justify-center gap-2 flex-shrink-0"
+            >
+              <motion.div
+                whileHover={{ scale: 1.1, color: "#ec4899" }}
+                transition={{ duration: 0.2 }}
+                className="text-white/60 hover:text-pink-500 transition-colors duration-200"
+              >
+                <Icon size={32} />
+              </motion.div>
+            </div>
+          );
+        })}
+      </motion.div>
     </div>
   );
 };
 
 const BrandScrollerContent = () => {
   return (
-    <div className="py-4">
+    <div className="w-full relative z-10">
       <BrandScroller />
       <BrandScrollerReverse />
     </div>

@@ -421,7 +421,6 @@ export const AboutPage: React.FC = () => {
                         boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
                         position: "relative",
                         overflow: "hidden",
-                        backdropFilter: "blur(10px)",
                       }}
                     >
                       {btn}
