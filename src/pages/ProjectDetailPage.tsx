@@ -314,6 +314,8 @@ export const ProjectDetailPage: React.FC = () => {
                     borderRadius: "20px",
                   }}
                   loading="lazy"
+                  decoding="async"
+                  fetchPriority={index === 0 ? "high" : "low"}
                 />
               )}
             </motion.div>
@@ -366,6 +368,8 @@ export const ProjectDetailPage: React.FC = () => {
                         borderRadius: "20px",
                       }}
                       loading="lazy"
+                      decoding="async"
+                      fetchPriority="low"
                     />
                   )}
                 </motion.div>
