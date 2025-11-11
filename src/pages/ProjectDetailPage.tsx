@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { AiOutlineEye } from 'react-icons/ai';
 import { projectsData } from '../projectsData';
 
 export const ProjectDetailPage: React.FC = () => {
@@ -622,7 +623,7 @@ export const ProjectDetailPage: React.FC = () => {
           position: "fixed",
           bottom: "20px",
           right: "20px",
-          padding: "16px 20px",
+          padding: "12px 16px",
           background: "rgba(17, 17, 17, 0.9)",
           backdropFilter: "blur(20px)",
           border: "1px solid rgba(236, 72, 153, 0.3)",
@@ -633,10 +634,14 @@ export const ProjectDetailPage: React.FC = () => {
           zIndex: "1000",
           textTransform: "uppercase",
           letterSpacing: "0.5px",
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
         }}
         whileHover={{ y: -2, boxShadow: "0 8px 20px rgba(236, 72, 153, 0.2)" }}
       >
-        Views: <span>1</span>
+        <AiOutlineEye size={16} />
+        <span>1</span>
       </motion.div>
     </div>
   );

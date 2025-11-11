@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { ContactForm } from '../components/ContactForm';
 
 export const AboutPage: React.FC = () => {
   const navigate = useNavigate();
   const scrollerRef = useRef<HTMLDivElement>(null);
 
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   useEffect(() => {
     if (!scrollerRef.current) return;
@@ -355,6 +357,7 @@ export const AboutPage: React.FC = () => {
                         Let's create something extraordinary together.
                       </p>
                       <motion.button
+                        onClick={() => setIsContactOpen(true)}
                         className="mt-8"
                         whileHover={{ scale: 1.05, y: -3 }}
                         whileTap={{ scale: 0.95 }}
@@ -381,6 +384,7 @@ export const AboutPage: React.FC = () => {
                           whiteSpace: "nowrap",
                           animation: "outlineGlow 3s ease-in-out infinite",
                           maxWidth: "400px",
+                          marginLeft: "5px",
                         }}
                         onMouseEnter={(e: any) => {
                           e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
@@ -606,6 +610,9 @@ export const AboutPage: React.FC = () => {
           border-radius: inherit;
         }
       `}</style>
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
 };
