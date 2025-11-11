@@ -184,8 +184,8 @@ export const AboutPage: React.FC = () => {
             >
               <div className="about-image-container absolute inset-0">
                 <img
-                  src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/6c4619c1-2023-4aaf-bcf7-6e3d8c1e2500_1600w.png"
-                  alt="Portfolio - Image 1"
+                  src="https://i.imgur.com/0E3HLMf.png"
+                  alt="Portfolio - Brea Miller"
                   className="about-image active aspect-square w-full h-full object-cover absolute inset-0"
                 />
                 <img
@@ -220,30 +220,6 @@ export const AboutPage: React.FC = () => {
                   {/* Slide 1: Profile */}
                   <article className="about-content-item active snap-start min-h-[600px] flex items-center">
                     <div>
-                      {/* Profile Image */}
-                      <div className="mb-6 flex justify-center">
-                        <div
-                          style={{
-                            width: "120px",
-                            height: "160px",
-                            borderRadius: "16px",
-                            overflow: "hidden",
-                            border: "0.5px solid rgba(236, 72, 153, 0.3)",
-                          }}
-                        >
-                          <img
-                            src="https://i.imgur.com/0E3HLMf.png"
-                            alt="Brea Miller"
-                            style={{
-                              width: "100%",
-                              height: "100%",
-                              objectFit: "cover",
-                              transform: "scaleX(-1)",
-                            }}
-                          />
-                        </div>
-                      </div>
-
                       <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
                         <span className="text-xs text-white/70">About Me</span>
                       </div>
@@ -251,7 +227,7 @@ export const AboutPage: React.FC = () => {
                         Hi! I'm Brea.
                       </h2>
                       <p className="text-base md:text-lg text-white/70 mt-6">
-                        A <strong>philomath</strong> with a deep love for long distance travel, live music, and vegan food flavored to perfection.
+                        A <strong>phinomath</strong> with a deep love for long distance travel, live music, and vegan food flavored to perfection.
                       </p>
 
                       {/* Skills Tags */}

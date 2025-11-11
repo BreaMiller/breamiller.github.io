@@ -17,7 +17,7 @@ The page maintains the three-column grid layout:
 **Left Section:**
 - Profile image with gradient overlay
 - "Hi! I'm Brea," greeting text with gradient
-- Description paragraph with "philomath" mention
+- Description paragraph with "phinomath" mention
 - Skill tags with hover effects (Autonomous, Empathetic, Communicative, Meticulous, Optimistic, Reliable, Self-Aware)
 - Location card with animated globe and pulsing location dot
 - Action buttons (Skills, Military Service)
