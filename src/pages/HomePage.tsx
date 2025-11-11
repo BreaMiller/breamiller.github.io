@@ -37,8 +37,8 @@ function HomePage() {
         <HeroParallax products={heroProducts} />
         <AIToolsSection />
         <FeaturedProjects />
-        <SelectedProjects />
         <WhatIOffer />
+        <SelectedProjects />
         <FromConceptToReality />
         <ReadyToStart onContactClick={() => setIsContactOpen(true)} />
         <Footer />

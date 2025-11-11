@@ -316,51 +316,57 @@ export const SelectedProjects = () => {
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 0.15 }}
             viewport={{ once: false, amount: 0.5 }}
-            className="flex justify-center pt-8"
+            className="text-center"
           >
-            <motion.button
+            <button
               onClick={() => setDisplayCount(displayCount + 6)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              onMouseEnter={(e) => {
+                const el = e.currentTarget as HTMLButtonElement;
+                el.style.background = "linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%)";
+                el.style.borderColor = "rgba(236, 72, 153, 0.8)";
+                el.style.color = "#ffffff";
+                el.style.boxShadow = "0 0 30px rgba(236, 72, 153, 0.4), inset 0 0 20px rgba(236, 72, 153, 0.1)";
+              }}
+              onMouseLeave={(e) => {
+                const el = e.currentTarget as HTMLButtonElement;
+                el.style.background = "transparent";
+                el.style.borderColor = ".5px solid #ec4899";
+                el.style.color = "#ec4899";
+                el.style.boxShadow = "0 0 15px rgba(236, 72, 153, 0.15)";
+              }}
               style={{
-                background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
-                border: "none",
+                background: "transparent",
+                border: ".5px solid #ec4899",
                 borderRadius: "20px",
-                padding: "18px 18px",
-                width: "140px",
+                padding: "38px 38px",
+                width: "220px",
                 height: "60px",
-                color: "#ffffff",
+                color: "#ec4899",
                 fontSize: "clamp(11px, 2vw, 14px)",
                 fontWeight: "700",
-                cursor: "pointer",
                 textTransform: "uppercase",
                 letterSpacing: "1px",
-                boxShadow: "0 8px 25px rgba(236, 72, 153, 0.3)",
-                transition: "all 0.3s ease",
-                overflow: "hidden",
+                cursor: "pointer",
+                opacity: 0.8,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 whiteSpace: "nowrap",
-                maxWidth: "140px",
+                maxWidth: "220px",
+                transition: "all 0.3s ease",
+                boxShadow: "0 0 15px rgba(236, 72, 153, 0.15)",
                 position: "relative",
+                overflow: "hidden",
               }}
             >
-              Load More
-              {/* Glare effect on hover */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%)",
-                  borderRadius: "20px",
-                  pointerEvents: "none",
-                }}
-              />
-            </motion.button>
+              {/* Shine effect on hover */}
+              <span style={{
+                position: "relative",
+                zIndex: 10,
+              }}>
+                Load More
+              </span>
+            </button>
           </motion.div>
         )}
       </div>

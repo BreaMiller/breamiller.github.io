@@ -20,7 +20,10 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
           whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.6, delay: 0 }}
           viewport={{ once: false, amount: 0.5 }}
-          className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12 text-center hover:border-white/20 transition-all duration-300"
+          className="border border-white/10 rounded-3xl p-8 md:p-12 text-center hover:border-white/20 transition-all duration-300"
+          style={{
+            backgroundImage: "linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(25, 25, 35, 0.8))"
+          }}
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
