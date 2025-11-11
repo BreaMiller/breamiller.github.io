@@ -17,10 +17,8 @@ export const AboutPage: React.FC = () => {
     const slides = [...scroller.querySelectorAll('.about-content-item')] as HTMLElement[];
     const images = [...document.querySelectorAll('.about-image')] as HTMLElement[];
     const dots = [...document.querySelectorAll('.scroll-dot')] as HTMLElement[];
-    const firstImage = images[0] as HTMLElement;
 
     let current = 0;
-    let lastScrollTop = 0;
 
     // Set initial states
     images.forEach((img, i) => {
@@ -32,25 +30,6 @@ export const AboutPage: React.FC = () => {
     dots.forEach((d, i) => {
       d.classList.toggle('active', i === 0);
     });
-
-    // Track scroll direction for image flip
-    const handleScroll = () => {
-      const currentScroll = scroller.scrollTop;
-      if (currentScroll < lastScrollTop) {
-        // Scrolling up
-        if (firstImage) {
-          firstImage.style.transform = 'scaleX(1)';
-        }
-      } else {
-        // Scrolling down
-        if (firstImage) {
-          firstImage.style.transform = 'scaleX(-1)';
-        }
-      }
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    };
-
-    scroller.addEventListener('scroll', handleScroll);
 
     // IntersectionObserver for syncing
     const io = new IntersectionObserver((entries) => {
@@ -99,7 +78,6 @@ export const AboutPage: React.FC = () => {
 
     return () => {
       io.disconnect();
-      scroller.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
