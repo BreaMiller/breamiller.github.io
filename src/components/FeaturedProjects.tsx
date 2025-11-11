@@ -90,24 +90,6 @@ export const FeaturedProjects = () => {
           transition={{ duration: 0.6, delay: 0.05 }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          {/* Left Filter Blur */}
-          <div
-            className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-20 pointer-events-none"
-            style={{
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
-            }}
-          />
-
-          {/* Right Filter Blur */}
-          <div
-            className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-20 pointer-events-none"
-            style={{
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
-            }}
-          />
-
           {/* Carousel Content */}
           <div className="relative overflow-hidden py-4">
             <div className="flex items-center justify-center gap-6 md:gap-8">
