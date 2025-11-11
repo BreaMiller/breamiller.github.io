@@ -1,6 +1,6 @@
 "use client";
 
-import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
+import { BsYoutube } from "react-icons/bs";
 import { FaFlickr } from "react-icons/fa";
 import { SiAdobe, SiGooglegemini, SiClaude, SiMake, SiN8N, SiRapid, SiElevenlabs } from "react-icons/si";
 import { FiFigma } from "react-icons/fi";
