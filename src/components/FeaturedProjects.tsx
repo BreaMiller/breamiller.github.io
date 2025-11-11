@@ -94,7 +94,7 @@ export const FeaturedProjects = () => {
           <div
             className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
             style={{
-              background: "linear-gradient(to right, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.7) 50%, transparent 100%)",
+              background: "linear-gradient(to right, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.15) 50%, transparent 100%)",
             }}
           />
 
@@ -102,7 +102,7 @@ export const FeaturedProjects = () => {
           <div
             className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
             style={{
-              background: "linear-gradient(to left, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.7) 50%, transparent 100%)",
+              background: "linear-gradient(to left, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.15) 50%, transparent 100%)",
             }}
           />
 
