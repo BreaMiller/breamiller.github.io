@@ -90,19 +90,21 @@ export const FeaturedProjects = () => {
           transition={{ duration: 0.6, delay: 0.05 }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          {/* Left Progressive Blur Overlay */}
+          {/* Left Filter Blur */}
           <div
-            className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
+            className="absolute left-0 top-0 bottom-0 w-24 md:w-40 z-20 pointer-events-none"
             style={{
-              background: "linear-gradient(to right, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.15) 50%, transparent 100%)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
             }}
           />
 
-          {/* Right Progressive Blur Overlay */}
+          {/* Right Filter Blur */}
           <div
-            className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
+            className="absolute right-0 top-0 bottom-0 w-24 md:w-40 z-20 pointer-events-none"
             style={{
-              background: "linear-gradient(to left, rgba(10, 10, 10, 0.3) 0%, rgba(10, 10, 10, 0.15) 50%, transparent 100%)",
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
             }}
           />
 
