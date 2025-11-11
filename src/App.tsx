@@ -7,7 +7,6 @@ import { WhatIOffer } from './components/WhatIOffer';
 import { FromConceptToReality } from './components/FromConceptToReality';
 import { ReadyToStart } from './components/ReadyToStart';
 import { Footer } from './components/Footer';
-import { ContactForm } from './components/ContactForm';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { AiOutlineEye } from 'react-icons/ai';
 import { heroProducts } from './heroProductsData';
@@ -60,9 +59,6 @@ function App() {
         <ReadyToStart onContactClick={handleContactClick} />
         <Footer onWorkClick={handleWorkClick} onContactClick={handleContactClick} onPrivacyClick={handlePrivacyClick} />
       </div>
-
-      {/* Contact Form Modal */}
-      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       {/* Privacy Policy Modal */}
       <PrivacyPolicy isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />

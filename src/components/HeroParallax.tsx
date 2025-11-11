@@ -146,7 +146,7 @@ export const Header = () => {
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
           fontWeight: "600",
-        }}>✐ᝰ innovative empath–</span>crafting digital experiences that don't just work beautifully, but feel intuitive and intentional.
+        }}>✐ᝰ innovative empath–</span>crafting digital experiences that bridge the gap between innovation and human connection. Every project is an opportunity to create products that don't just work beautifully, but feel intentional and alive.
       </p>
       <button 
         onClick={() => navigate('/about')}
@@ -244,6 +244,9 @@ export const ProductCard = ({
             position: "relative",
             zIndex: 2,
           }}
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
         />
       </button>
       <h2 

@@ -189,37 +189,43 @@ export const AboutPage: React.FC = () => {
             >
               <div className="about-image-container absolute inset-0">
                 <img
-                  src="https://i.imgur.com/zpEC4yH.png"
+                  src="https://i.imgur.com/0E3HLMf.png"
                   alt="Portfolio - Brea Miller"
                   className="about-image active aspect-square w-full h-full object-cover absolute inset-0"
+                  loading="eager"
+                  decoding="async"
                   style={{
+                    transform: "scaleX(-1)",
                     borderRadius: "0 0 24px 24px",
                   }}
-                  loading="lazy"
                 />
                 <img
                   src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/70bb19b3-d51f-47a2-8020-6261061a6a14_3840w.jpg"
                   alt="Portfolio - Image 2"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/9b854164-e5f6-4f39-a78c-f75ccbc5ff69_3840w.jpg"
                   alt="Portfolio - Image 3"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/04545374-057d-4527-9043-c2ee9b0d7f09_1600w.webp"
                   alt="Portfolio - Image 4"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
+                  decoding="async"
                 />
                 <img
                   src="https://images.unsplash.com/photo-1516035069371-29a08e8be313?w=800&h=800&fit=crop"
                   alt="Photography - Image 5"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

@@ -1,12 +1,10 @@
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 
 interface ReadyToStartProps {
   onContactClick?: () => void;
 }
 
 export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
-  const navigate = useNavigate();
   return (
     <motion.section
       className="py-20 md:py-32 relative z-10"
@@ -51,7 +49,7 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.5, delay: 0.15 }}
             viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
             {["Send Email", "Schedule Call"].map((btn) => (
               <motion.button
@@ -100,48 +98,24 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-wrap gap-4 justify-center pt-8 border-t border-white/10"
           >
-            <motion.a
-              onClick={() => navigate('/about')}
-              className="text-sm text-white/60 transition-colors cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              style={{ color: "inherit" }}
-              onMouseEnter={(e: any) => {
-                e.currentTarget.style.color = "#ec4899";
-              }}
-              onMouseLeave={(e: any) => {
-                e.currentTarget.style.color = "rgba(255, 255, 255, 0.6)";
-              }}
-            >
-              About Me
-            </motion.a>
-            <motion.a
+            <a
               href="#"
-              className="text-sm text-white/60 transition-colors cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              style={{ color: "inherit" }}
-              onMouseEnter={(e: any) => {
-                e.currentTarget.style.color = "#ec4899";
-              }}
-              onMouseLeave={(e: any) => {
-                e.currentTarget.style.color = "rgba(255, 255, 255, 0.6)";
-              }}
+              className="text-sm text-white/60 hover:text-white transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="#"
+              className="text-sm text-white/60 hover:text-white transition-colors"
             >
               Flickr
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="#"
-              className="text-sm text-white/60 transition-colors cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              style={{ color: "inherit" }}
-              onMouseEnter={(e: any) => {
-                e.currentTarget.style.color = "#ec4899";
-              }}
-              onMouseLeave={(e: any) => {
-                e.currentTarget.style.color = "rgba(255, 255, 255, 0.6)";
-              }}
+              className="text-sm text-white/60 hover:text-white transition-colors"
             >
-              Github
-            </motion.a>
+              Dribbble
+            </a>
           </motion.div>
         </motion.div>
       </div>
