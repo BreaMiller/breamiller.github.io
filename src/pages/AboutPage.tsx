@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,12 +6,15 @@ export const AboutPage: React.FC = () => {
   const navigate = useNavigate();
   const scrollerRef = useRef<HTMLDivElement>(null);
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+
   useEffect(() => {
     if (!scrollerRef.current) return;
 
     const scroller = scrollerRef.current;
     const slides = [...scroller.querySelectorAll('.about-content-item')] as HTMLElement[];
     const images = [...document.querySelectorAll('.about-image')] as HTMLElement[];
+    const dots = [...document.querySelectorAll('.scroll-dot')] as HTMLElement[];
 
     let current = 0;
 
@@ -21,6 +24,9 @@ export const AboutPage: React.FC = () => {
     });
     slides.forEach((s, i) => {
       s.classList.toggle('active', i === 0);
+    });
+    dots.forEach((d, i) => {
+      d.classList.toggle('active', i === 0);
     });
 
     // IntersectionObserver for syncing
@@ -36,6 +42,11 @@ export const AboutPage: React.FC = () => {
       // Fade out old content
       slides[current].classList.remove('active');
       slides[idx].classList.add('active');
+
+      // Update dots
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === idx);
+      });
 
       // Transition images
       const outImg = images[current];
@@ -55,6 +66,7 @@ export const AboutPage: React.FC = () => {
       });
 
       current = idx;
+      setCurrentSlide(idx);
     }, {
       root: scroller,
       threshold: [0.4, 0.7],
@@ -158,11 +170,10 @@ export const AboutPage: React.FC = () => {
         style={{
           position: "relative",
           zIndex: 10,
-          paddingTop: "clamp(24px, 5vw, 96px)",
+          paddingTop: "clamp(12px, 3vw, 24px)",
           paddingBottom: "clamp(24px, 5vw, 48px)",
-          marginTop: "clamp(24px, 5vw, 96px)",
         }}
-        className="py-20 md:py-32"
+        className="py-0"
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12 items-start">
@@ -197,122 +208,263 @@ export const AboutPage: React.FC = () => {
 
             {/* RIGHT: Scrollable Content */}
             <div className="lg:col-span-7">
-              <div
-                ref={scrollerRef}
-                id="aboutScroll"
-                className="h-[600px] overflow-y-auto snap-y snap-mandatory pr-1"
-              >
-                {/* Slide 1: About Me */}
-                <article className="about-content-item active snap-start min-h-[600px] flex items-center">
-                  <div>
-                    <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
-                      <span className="text-xs text-white/70">About Me</span>
-                    </div>
-                    <h2 className="mt-5 text-4xl md:text-6xl text-white drop-shadow-xl font-semibold tracking-tight">
-                      Creating visual stories through design
-                    </h2>
-                    <p className="text-base md:text-lg text-white/70 mt-6">
-                      I'm Brea, a designer and developer with a passion for creating beautiful, functional experiences. With years of experience in digital design and web development, I bring technical expertise and creative vision to every project.
-                    </p>
-                    <p className="text-base md:text-lg text-white/70 mt-4">
-                      From concept to execution, I deliver work that drives results and exceeds expectations.
-                    </p>
-                  </div>
-                </article>
+              <div className="flex gap-4">
+                <div
+                  ref={scrollerRef}
+                  id="aboutScroll"
+                  className="h-[600px] overflow-y-auto snap-y snap-mandatory pr-3 flex-1 scroll-smooth"
+                  style={{
+                    scrollBehavior: 'smooth',
+                  }}
+                >
+                  {/* Slide 1: Profile */}
+                  <article className="about-content-item active snap-start min-h-[600px] flex items-center">
+                    <div>
+                      {/* Profile Image */}
+                      <div className="mb-6 flex justify-center">
+                        <div
+                          style={{
+                            width: "120px",
+                            height: "160px",
+                            borderRadius: "16px",
+                            overflow: "hidden",
+                            border: "0.5px solid rgba(236, 72, 153, 0.3)",
+                          }}
+                        >
+                          <img
+                            src="https://i.imgur.com/0E3HLMf.png"
+                            alt="Brea Miller"
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                              transform: "scaleX(-1)",
+                            }}
+                          />
+                        </div>
+                      </div>
 
-                {/* Slide 2: Product Design */}
-                <article className="about-content-item snap-start min-h-[600px] flex items-center">
-                  <div>
-                    <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
-                      <span className="text-xs text-white/70">Design Expertise</span>
-                    </div>
-                    <h2 className="mt-5 text-4xl md:text-6xl text-white drop-shadow-xl font-semibold tracking-tight">
-                      Bringing products to life
-                    </h2>
-                    <p className="text-base md:text-lg text-white/70 mt-6">
-                      Beautiful, user-centered design that elevates brands and drives engagement. Meticulous attention to detail, typography, color, and composition.
-                    </p>
-                    <p className="text-base md:text-lg text-white/70 mt-4">
-                      Creative vision + technical mastery so your products look their best across all channels.
-                    </p>
-                  </div>
-                </article>
+                      <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
+                        <span className="text-xs text-white/70">About Me</span>
+                      </div>
+                      <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
+                        Hi! I'm Brea.
+                      </h2>
+                      <p className="text-base md:text-lg text-white/70 mt-6">
+                        A <strong>philomath</strong> with a deep love for long distance travel, live music, and vegan food flavored to perfection.
+                      </p>
 
-                {/* Slide 3: Development */}
-                <article className="about-content-item snap-start min-h-[600px] flex items-center">
-                  <div>
-                    <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
-                      <span className="text-xs text-white/70">Development</span>
+                      {/* Skills Tags */}
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "8px", marginTop: "16px", marginBottom: "16px" }}>
+                        {["Autonomous", "Empathetic", "Communicative", "Meticulous", "Optimistic", "Reliable", "Self-Aware"].map(
+                          (skill) => (
+                            <motion.span
+                              key={skill}
+                              whileHover={{ scale: 1.05, y: -2 }}
+                              style={{
+                                background: "rgba(236, 72, 153, 0.1)",
+                                border: ".5px solid rgba(236, 72, 153, 0.3)",
+                                color: "#ec4899",
+                                padding: "6px 12px",
+                                borderRadius: "16px",
+                                fontSize: "clamp(10px, 1.5vw, 12px)",
+                                fontWeight: "600",
+                                cursor: "pointer",
+                                transition: "all 0.3s ease",
+                              }}
+                            >
+                              {skill}
+                            </motion.span>
+                          )
+                        )}
+                      </div>
                     </div>
-                    <h2 className="mt-5 text-4xl md:text-6xl text-white drop-shadow-xl font-semibold tracking-tight">
-                      Code that performs
-                    </h2>
-                    <p className="text-base md:text-lg text-white/70 mt-6">
-                      From React to TypeScript, modern web technologies for fast, responsive applications. Clean code, scalable architecture, production-ready assets.
-                    </p>
-                    <p className="text-base md:text-lg text-white/70 mt-4">
-                      Vite, Tailwind, Framer Motion—building performant digital experiences.
-                    </p>
-                  </div>
-                </article>
+                  </article>
 
-                {/* Slide 4: Let's Connect */}
-                <article className="about-content-item snap-start min-h-[600px] flex items-center">
-                  <div>
-                    <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
-                      <span className="text-xs text-white/70">Let's Connect</span>
+                  {/* Slide 2: Product Design */}
+                  <article className="about-content-item snap-start min-h-[600px] flex items-center">
+                    <div>
+                      <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
+                        <span className="text-xs text-white/70">Design Expertise</span>
+                      </div>
+                      <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
+                        Bringing products to life
+                      </h2>
+                      <p className="text-base md:text-lg text-white/70 mt-6">
+                        Beautiful, user-centered design that elevates brands and drives engagement. Meticulous attention to detail, typography, color, and composition.
+                      </p>
+                      <p className="text-base md:text-lg text-white/70 mt-4">
+                        Creative vision + technical mastery so your products look their best across all channels.
+                      </p>
                     </div>
-                    <h2 className="mt-5 text-4xl md:text-6xl text-white drop-shadow-xl font-semibold tracking-tight">
-                      Ready to collaborate?
-                    </h2>
-                    <p className="text-base md:text-lg text-white/70 mt-6">
-                      Whether you have a project in mind or just want to chat about design and development, I'd love to hear from you.
-                    </p>
-                    <p className="text-base md:text-lg text-white/70 mt-4">
-                      Let's create something extraordinary together.
-                    </p>
-                  </div>
-                </article>
-              </div>
+                  </article>
 
-              {/* Stats + CTA (stays under the scroller) */}
-              <div className="grid grid-cols-2 gap-6 mt-8">
-                <div className="rounded-xl border-gradient before:rounded-xl bg-white/5 p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500/20 to-indigo-500/20 flex items-center justify-center border-gradient before:rounded-lg">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-pink-400">
-                        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
-                        <circle cx="12" cy="8" r="6"></circle>
-                      </svg>
+                  {/* Slide 3: Development */}
+                  <article className="about-content-item snap-start min-h-[600px] flex items-center">
+                    <div>
+                      <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
+                        <span className="text-xs text-white/70">Development</span>
+                      </div>
+                      <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
+                        Code that performs
+                      </h2>
+                      <p className="text-base md:text-lg text-white/70 mt-6">
+                        From React to TypeScript, modern web technologies for fast, responsive applications. Clean code, scalable architecture, production-ready assets.
+                      </p>
+                      <p className="text-base md:text-lg text-white/70 mt-4">
+                        Vite, Tailwind, Framer Motion—building performant digital experiences.
+                      </p>
                     </div>
-                    <h3 className="text-lg font-semibold">5+ Years</h3>
-                  </div>
-                  <p className="text-sm text-white/60">
-                    Professional experience in design and development
-                  </p>
+                  </article>
+
+                  {/* Slide 4: Let's Connect */}
+                  <article className="about-content-item snap-start min-h-[600px] flex items-center">
+                    <div>
+                      <div className="inline-flex items-center gap-2 rounded-full border-gradient before:rounded-full bg-white/5 px-3 py-1.5 backdrop-blur">
+                        <span className="text-xs text-white/70">Let's Connect</span>
+                      </div>
+                      <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
+                        Ready to collaborate?
+                      </h2>
+                      <p className="text-base md:text-lg text-white/70 mt-6">
+                        Whether you have a project in mind or just want to chat about design and development, I'd love to hear from you.
+                      </p>
+                      <p className="text-base md:text-lg text-white/70 mt-4">
+                        Let's create something extraordinary together.
+                      </p>
+                    </div>
+                  </article>
                 </div>
 
-                <div className="overflow-hidden border-gradient before:rounded-2xl bg-white/5 rounded-2xl p-6 backdrop-blur-xl">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500/20 to-indigo-500/20 flex items-center justify-center border-gradient before:rounded-lg">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-indigo-400">
-                        <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"></path>
-                        <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"></path>
-                        <path d="M18 9h1.5a1 1 0 0 0 0-5H18"></path>
-                        <path d="M4 22h16"></path>
-                        <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"></path>
-                        <path d="M6 9H4.5a1 1 0 0 1 0-5H6"></path>
-                      </svg>
-                    </div>
-                    <h3 className="text-lg font-semibold">50+ Projects</h3>
-                  </div>
-                  <p className="text-sm text-white/60">
-                    Happy clients and completed work
-                  </p>
+                {/* Scroll Dots Indicator */}
+                <div className="flex flex-col gap-4 items-center justify-center h-[600px]">
+                  {[0, 1, 2, 3].map((i) => (
+                    <button
+                      key={i}
+                      className="scroll-dot transition-all duration-300"
+                      onClick={() => {
+                        if (scrollerRef.current) {
+                          const slides = scrollerRef.current.querySelectorAll('.about-content-item');
+                          const targetSlide = slides[i] as HTMLElement;
+                          targetSlide?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                      }}
+                      style={{
+                        width: currentSlide === i ? "12px" : "8px",
+                        height: currentSlide === i ? "12px" : "8px",
+                        borderRadius: "50%",
+                        background: currentSlide === i ? "#ec4899" : "rgba(236, 72, 153, 0.3)",
+                        border: "none",
+                        cursor: "pointer",
+                      }}
+                      aria-label={`Go to slide ${i + 1}`}
+                    />
+                  ))}
                 </div>
               </div>
 
-              <div className="mt-8">
+              {/* Stats + CTA + Buttons (stays under the scroller) */}
+              <div className="flex flex-col gap-6 mt-8">
+                <div className="grid grid-cols-2 gap-6">
+                  <motion.div
+                    whileHover={{ y: -2 }}
+                    className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 hover:border-white/20 transition-all duration-300"
+                    style={{
+                      backgroundImage: "linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(25, 25, 35, 0.8))",
+                    }}
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 flex items-center justify-center border border-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-violet-400">
+                          <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+                          <circle cx="12" cy="8" r="6"></circle>
+                        </svg>
+                      </div>
+                      <h3 className="text-lg font-semibold">5+ Years</h3>
+                    </div>
+                    <p className="text-sm text-white/60">
+                      Professional experience in design and development
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    whileHover={{ y: -2 }}
+                    className="rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 p-6 hover:border-white/20 transition-all duration-300"
+                    style={{
+                      backgroundImage: "linear-gradient(135deg, rgba(15, 15, 15, 0.8), rgba(25, 25, 35, 0.8))",
+                    }}
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 text-cyan-400">
+                          <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"></path>
+                          <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"></path>
+                          <path d="M18 9h1.5a1 1 0 0 0 0-5H18"></path>
+                          <path d="M4 22h16"></path>
+                          <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"></path>
+                          <path d="M6 9H4.5a1 1 0 0 1 0-5H6"></path>
+                        </svg>
+                      </div>
+                      <h3 className="text-lg font-semibold">50+ Projects</h3>
+                    </div>
+                    <p className="text-sm text-white/60">
+                      Happy clients and completed work
+                    </p>
+                  </motion.div>
+                </div>
+
+                {/* Skills and Military Service Buttons */}
+                <div style={{ display: "flex", gap: "12px" }}>
+                  {["Skills", "Military Service"].map((btn) => (
+                    <motion.button
+                      key={btn}
+                      whileHover={{
+                        y: -2,
+                        scale: 1.05,
+                        boxShadow: "0 0 40px rgba(236, 72, 153, 0.4)"
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                      style={{
+                        background: btn === "Skills" ? "rgba(236, 72, 153, 0.1)" : "transparent",
+                        border: btn === "Skills" ? "none" : ".5px solid #ec4899",
+                        padding: "18px 18px",
+                        borderRadius: "20px",
+                        width: "140px",
+                        height: "60px",
+                        fontSize: "14px",
+                        fontWeight: "700",
+                        cursor: "pointer",
+                        textTransform: "uppercase",
+                        letterSpacing: "1px",
+                        color: "#ffffff",
+                        transition: "all 0.3s ease",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        whiteSpace: "nowrap",
+                        maxWidth: "400px",
+                        boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+                        position: "relative",
+                        overflow: "hidden",
+                      }}
+                    >
+                      {btn}
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1 }}
+                        transition={{ duration: 0.3 }}
+                        style={{
+                          position: "absolute",
+                          inset: 0,
+                          background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
+                          borderRadius: "20px",
+                          pointerEvents: "none",
+                        }}
+                      />
+                    </motion.button>
+                  ))}
+                </div>
+
                 <motion.button
                   className="group inline-flex min-w-[140px] transition-all duration-300 hover:-translate-y-1 hover:scale-105 border-gradient hover:text-white text-sm font-medium text-white/80 bg-white/5 rounded-full px-5 py-3 relative backdrop-blur-xl items-center justify-center"
                   whileHover={{ scale: 1.05, y: -2 }}
