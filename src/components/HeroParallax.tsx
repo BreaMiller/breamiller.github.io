@@ -64,6 +64,19 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
         backgroundAttachment: "fixed",
       }}
     >
+      {/* Fade to bottom overlay */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "200px",
+          background: "linear-gradient(to bottom, transparent 0%, rgba(10, 10, 10, 0.8) 100%)",
+          pointerEvents: "none",
+          zIndex: 50,
+        }}
+      />
       <Header />
       <motion.div
         style={{
