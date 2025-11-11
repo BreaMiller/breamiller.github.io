@@ -53,9 +53,6 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
                 Brea Miller
               </span>
             </h3>
-            <p className="text-white/60 text-sm leading-relaxed">
-              Crafting beautiful digital experiences with design and code.
-            </p>
           </motion.div>
 
           {/* Links section */}

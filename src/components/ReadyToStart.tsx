@@ -49,7 +49,7 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
             whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 0.5, delay: 0.15 }}
             viewport={{ once: false, amount: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >
             {["Send Email", "Schedule Call"].map((btn) => (
               <motion.button
