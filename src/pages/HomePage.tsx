@@ -21,7 +21,13 @@ function HomePage() {
       color: "#ffffff",
     }}>
       {/* Pink light glow background effect */}
-      <div
+      <motion.div
+        animate={{ opacity: [0.12, 0.18, 0.12] }}
+        transition={{
+          duration: 4,
+          repeatType: "loop",
+          ease: "easeInOut",
+        }}
         style={{
           position: "fixed",
           top: 0,
