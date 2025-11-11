@@ -444,9 +444,8 @@ export const AboutPage: React.FC = () => {
                 {/* Scroll Dots Indicator */}
                 <div className="flex flex-col gap-4 items-center justify-center h-[600px]">
                   {[0, 1, 2, 3, 4].map((i) => (
-                    <button
+                    <motion.button
                       key={i}
-                      className="scroll-dot transition-all duration-300"
                       onClick={() => {
                         if (scrollerRef.current) {
                           const slides = scrollerRef.current.querySelectorAll('.about-content-item');
@@ -454,16 +453,35 @@ export const AboutPage: React.FC = () => {
                           targetSlide?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }
                       }}
+                      initial={false}
+                      whileHover={currentSlide !== i ? { scale: 1.6, boxShadow: "0 0 20px rgba(236, 72, 853, 0.6)" } : {}}
+                      whileTap={{ scale: 0.9 }}
                       style={{
                         width: currentSlide === i ? "12px" : "8px",
                         height: currentSlide === i ? "12px" : "8px",
                         borderRadius: "50%",
                         background: currentSlide === i ? "#ec4899" : "rgba(236, 72, 153, 0.3)",
-                        border: "none",
+                        border: currentSlide === i ? "2px solid rgba(236, 72, 853, 0.6)" : "none",
                         cursor: "pointer",
+                        transition: "all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                        position: "relative",
                       }}
                       aria-label={`Go to slide ${i + 1}`}
-                    />
+                    >
+                      {currentSlide === i && (
+                        <motion.div
+                          layoutId="activeIndicator"
+                          className="absolute inset-0 rounded-full"
+                          style={{
+                            border: "2px solid rgba(236, 72, 853, 0.8)",
+                            boxShadow: "0 0 15px rgba(236, 72, 853, 0.4), inset 0 0 10px rgba(236, 72, 853, 0.2)",
+                          }}
+                          initial={{ scale: 0.8 }}
+                          animate={{ scale: 1 }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      )}
+                    </motion.button>
                   ))}
                 </div>
               </div>
