@@ -1,5 +1,4 @@
 import { InfiniteSlider } from './InfiniteSlider';
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const aiTools = [
@@ -17,8 +16,6 @@ const aiTools = [
 ];
 
 export const AIToolsSection = () => {
-  const [isHovering, setIsHovering] = useState(false);
-
   return (
     <motion.section
       className="w-full py-16 sm:py-20 md:py-32 pb-32 sm:pb-48 md:pb-72"
@@ -135,58 +132,50 @@ export const AIToolsSection = () => {
         transition={{ duration: 0.6, delay: 0.1 }}
         viewport={{ once: false, amount: 0.5 }}
       >
-        <button
+        <motion.button
           disabled
-          onMouseEnter={() => setIsHovering(true)}
-          onMouseLeave={() => setIsHovering(false)}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           style={{
-            background: isHovering 
-              ? "linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%)"
-              : "transparent",
-            border: isHovering 
-              ? "1px solid rgba(236, 72, 153, 0.8)"
-              : ".5px solid #ec4899",
+            background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
+            border: "none",
             borderRadius: "20px",
-            padding: "38px 38px",
-            width: "220px",
+            padding: "18px 18px",
+            width: "140px",
             height: "60px",
-            color: isHovering ? "#ffffff" : "#ec4899",
+            color: "#ffffff",
             fontSize: "clamp(11px, 2vw, 14px)",
             fontWeight: "700",
             textTransform: "uppercase",
             letterSpacing: "1px",
             cursor: "not-allowed",
-            opacity: isHovering ? 1 : 0.8,
+            opacity: 0.8,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
             whiteSpace: "nowrap",
-            maxWidth: "2200px",
+            maxWidth: "140px",
             transition: "all 0.3s ease",
-            boxShadow: isHovering 
-              ? "0 0 30px rgba(236, 72, 153, 0.4), inset 0 0 20px rgba(236, 72, 153, 0.1)"
-              : "0 0 15px rgba(236, 72, 153, 0.15)",
+            boxShadow: "0 8px 25px rgba(236, 72, 153, 0.3)",
             position: "relative",
             overflow: "hidden",
           }}
         >
-          {/* Shine effect on hover */}
-          {isHovering && (
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%)",
-                borderRadius: "20px",
-                pointerEvents: "none",
-              }}
-            />
-          )}
+          {/* Glare effect on hover */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%)",
+              borderRadius: "20px",
+              pointerEvents: "none",
+            }}
+          />
           Directory Coming Soon
-        </button>
+        </motion.button>
       </motion.div>
     </motion.section>
   );
