@@ -14,6 +14,7 @@ import { useRef, useState } from 'react';
 function App() {
   const featuredProjectsRef = useRef<HTMLDivElement>(null);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   const handleWorkClick = () => {
     featuredProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -21,6 +22,10 @@ function App() {
 
   const handleContactClick = () => {
     setIsContactOpen(true);
+  };
+
+  const handlePrivacyClick = () => {
+    setIsPrivacyOpen(true);
   };
   return (
     <div className="w-full relative" style={{
@@ -51,11 +56,11 @@ function App() {
         <SelectedProjects />
         <FromConceptToReality />
         <ReadyToStart onContactClick={handleContactClick} />
-        <Footer onWorkClick={handleWorkClick} onContactClick={handleContactClick} />
+        <Footer onWorkClick={handleWorkClick} onContactClick={handleContactClick} onPrivacyClick={handlePrivacyClick} />
       </div>
 
       {/* Privacy Policy Modal */}
-      <PrivacyPolicy />
+      <PrivacyPolicy isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
 
       {/* Page View Counter - Fixed position */}
       <motion.div

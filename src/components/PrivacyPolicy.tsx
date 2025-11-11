@@ -1,24 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export const PrivacyPolicy: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface PrivacyPolicyProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
-  useEffect(() => {
-    // Check if user has already dismissed the privacy notice
-    const dismissed = localStorage.getItem('privacy-dismissed');
-    if (!dismissed) {
-      // Show after 3 seconds on initial visit
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
+export const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ isOpen, onClose }) => {
   const handleDismiss = () => {
-    setIsOpen(false);
-    localStorage.setItem('privacy-dismissed', 'true');
+    onClose();
   };
 
   return (
@@ -56,11 +46,68 @@ export const PrivacyPolicy: React.FC = () => {
 
             <motion.button
               onClick={handleDismiss}
-              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(236, 72, 153, 0.3)' }}
+              className="mt-4"
+              whileHover={{ scale: 1.05, y: -3 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full py-3 px-4 bg-pink-600 hover:bg-pink-500 text-white font-semibold rounded-lg transition-all duration-300"
+              style={{
+                background: "transparent",
+                border: "none",
+                color: "#ffffff",
+                padding: "18px 18px",
+                borderRadius: "20px",
+                width: "100%",
+                height: "60px",
+                fontSize: "14px",
+                fontWeight: "700",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+                boxShadow: "0 0 20px rgba(236, 72, 853, 0.2)",
+                position: "relative",
+                overflow: "hidden",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                whiteSpace: "nowrap",
+                animation: "outlineGlow 3s ease-in-out infinite",
+              }}
+              onMouseEnter={(e: any) => {
+                e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 853, 0.5)";
+                e.currentTarget.style.background = "rgba(236, 72, 853, 0.05)";
+              }}
+              onMouseLeave={(e: any) => {
+                e.currentTarget.style.boxShadow = "0 0 20px rgba(236, 72, 853, 0.2)";
+                e.currentTarget.style.background = "transparent";
+              }}
             >
-              Got It
+              GOT IT
+              {/* Glare effect on hover */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
+                  borderRadius: "20px",
+                  pointerEvents: "none",
+                }}
+              />
+              {/* Border highlight on hover */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.3 }}
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  borderRadius: "20px",
+                  border: "1px solid rgba(236, 72, 853, 0.4)",
+                  pointerEvents: "none",
+                }}
+              />
             </motion.button>
           </motion.div>
         </motion.div>

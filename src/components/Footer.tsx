@@ -4,9 +4,10 @@ import { SiLinkedin, SiFlickr, SiGithub } from 'react-icons/si';
 interface FooterProps {
   onWorkClick?: () => void;
   onContactClick?: () => void;
+  onPrivacyClick?: () => void;
 }
 
-export const Footer = ({ onWorkClick, onContactClick }: FooterProps) => {
+export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterProps) => {
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: SiLinkedin },
     { name: 'Flickr', url: 'https://flickr.com', icon: SiFlickr },
@@ -17,7 +18,7 @@ export const Footer = ({ onWorkClick, onContactClick }: FooterProps) => {
     { label: 'Work', href: '#work', onClick: onWorkClick },
     { label: 'About', href: '/about', onClick: undefined },
     { label: 'Contact', href: '#contact', onClick: onContactClick },
-    { label: 'Privacy', href: '#privacy', onClick: undefined },
+    { label: 'Privacy', href: '#privacy', onClick: onPrivacyClick },
   ];
 
   return (

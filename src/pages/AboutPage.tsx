@@ -17,8 +17,10 @@ export const AboutPage: React.FC = () => {
     const slides = [...scroller.querySelectorAll('.about-content-item')] as HTMLElement[];
     const images = [...document.querySelectorAll('.about-image')] as HTMLElement[];
     const dots = [...document.querySelectorAll('.scroll-dot')] as HTMLElement[];
+    const firstImage = images[0] as HTMLElement;
 
     let current = 0;
+    let lastScrollTop = 0;
 
     // Set initial states
     images.forEach((img, i) => {
@@ -30,6 +32,25 @@ export const AboutPage: React.FC = () => {
     dots.forEach((d, i) => {
       d.classList.toggle('active', i === 0);
     });
+
+    // Track scroll direction for image flip
+    const handleScroll = () => {
+      const currentScroll = scroller.scrollTop;
+      if (currentScroll < lastScrollTop) {
+        // Scrolling up
+        if (firstImage) {
+          firstImage.style.transform = 'scaleX(1)';
+        }
+      } else {
+        // Scrolling down
+        if (firstImage) {
+          firstImage.style.transform = 'scaleX(-1)';
+        }
+      }
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    };
+
+    scroller.addEventListener('scroll', handleScroll);
 
     // IntersectionObserver for syncing
     const io = new IntersectionObserver((entries) => {
@@ -78,6 +99,7 @@ export const AboutPage: React.FC = () => {
 
     return () => {
       io.disconnect();
+      scroller.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -210,6 +232,11 @@ export const AboutPage: React.FC = () => {
                 <img
                   src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/04545374-057d-4527-9043-c2ee9b0d7f09_1600w.webp"
                   alt="Portfolio - Image 4"
+                  className="about-image aspect-square w-full h-full object-cover absolute inset-0"
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1516035069371-29a08e8be313?w=800&h=800&fit=crop"
+                  alt="Photography - Image 5"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                 />
               </div>
@@ -384,7 +411,7 @@ export const AboutPage: React.FC = () => {
                           whiteSpace: "nowrap",
                           animation: "outlineGlow 3s ease-in-out infinite",
                           maxWidth: "400px",
-                          marginLeft: "5px",
+                          marginLeft: "20px",
                         }}
                         onMouseEnter={(e: any) => {
                           e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";

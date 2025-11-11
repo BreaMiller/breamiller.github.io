@@ -18,7 +18,7 @@ const aiTools = [
 export const AIToolsSection = () => {
   return (
     <motion.section
-      className="w-full py-16 sm:py-20 md:py-32 pb-32 sm:pb-48 md:pb-72"
+      className="w-full py-12 sm:py-16 md:py-20 pb-16 sm:pb-24 md:pb-32"
       style={{
         background: "transparent",
       }}
@@ -137,13 +137,13 @@ export const AIToolsSection = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           style={{
-            background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
-            border: "none",
+            background: "transparent",
+            border: ".5px solid #ec4899",
             borderRadius: "20px",
-            padding: "clamp(16px, 2vw, 18px)",
+            padding: "18px 18px",
             width: "clamp(180px, 50vw, 220px)",
             height: "clamp(50px, 10vw, 60px)",
-            color: "#ffffff",
+            color: "#ec4899",
             fontSize: "clamp(11px, 2vw, 14px)",
             fontWeight: "700",
             textTransform: "uppercase",
@@ -155,25 +155,32 @@ export const AIToolsSection = () => {
             justifyContent: "center",
             whiteSpace: "nowrap",
             transition: "all 0.3s ease",
-            boxShadow: "0 8px 25px rgba(236, 72, 153, 0.3)",
+            boxShadow: "0 0 15px rgba(236, 72, 153, 0.15)",
             position: "relative",
             overflow: "hidden",
           }}
+          onMouseEnter={(e) => {
+            const el = e.currentTarget as HTMLButtonElement;
+            el.style.background = "linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%)";
+            el.style.borderColor = "rgba(236, 72, 153, 0.8)";
+            el.style.color = "#ffffff";
+            el.style.boxShadow = "0 0 30px rgba(236, 72, 153, 0.4), inset 0 0 20px rgba(236, 72, 153, 0.1)";
+          }}
+          onMouseLeave={(e) => {
+            const el = e.currentTarget as HTMLButtonElement;
+            el.style.background = "transparent";
+            el.style.borderColor = ".5px solid #ec4899";
+            el.style.color = "#ec4899";
+            el.style.boxShadow = "0 0 15px rgba(236, 72, 853, 0.15)";
+          }}
         >
-          {/* Glare effect on hover */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-            style={{
-              position: "absolute",
-              inset: 0,
-              background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%)",
-              borderRadius: "20px",
-              pointerEvents: "none",
-            }}
-          />
-          Directory Coming Soon
+          {/* Shine effect on hover */}
+          <span style={{
+            position: "relative",
+            zIndex: 10,
+          }}>
+            Directory Coming Soon
+          </span>
         </motion.button>
       </motion.div>
     </motion.section>
