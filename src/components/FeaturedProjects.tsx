@@ -95,8 +95,8 @@ export const FeaturedProjects = () => {
             className="absolute left-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
             style={{
               background: "linear-gradient(to right, transparent 0%, transparent 100%)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
+              backdropFilter: "blur(25px)",
+              WebkitBackdropFilter: "blur(25px)",
             }}
           />
 
@@ -105,8 +105,8 @@ export const FeaturedProjects = () => {
             className="absolute right-0 top-0 bottom-0 w-32 md:w-48 z-20 pointer-events-none"
             style={{
               background: "linear-gradient(to left, transparent 0%, transparent 100%)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
+              backdropFilter: "blur(25px)",
+              WebkitBackdropFilter: "blur(25px)",
             }}
           />
 

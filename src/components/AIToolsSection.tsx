@@ -76,7 +76,7 @@ export const AIToolsSection = () => {
                 style={{
                   minWidth: '160px',
                   background: "transparent",
-                  backdropFilter: "blur(10px)",
+                  backdropFilter: "blur(25px)",
                 }}
               >
                 <div className="flex flex-col items-center gap-2 sm:gap-3">
@@ -105,8 +105,8 @@ export const AIToolsSection = () => {
               width: "clamp(80px, 15vw, 180px)",
               height: "100%",
               background: "linear-gradient(to right, transparent 0%, transparent 100%)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
+              backdropFilter: "blur(25px)",
+              WebkitBackdropFilter: "blur(25px)",
               pointerEvents: "none",
               zIndex: 10,
               animation: "fadeBlur 0.3s ease-in-out",
@@ -120,8 +120,8 @@ export const AIToolsSection = () => {
               width: "clamp(60px, 12vw, 120px)",
               height: "100%",
               background: "linear-gradient(to left, transparent 0%, transparent 100%)",
-              backdropFilter: "blur(12px)",
-              WebkitBackdropFilter: "blur(12px)",
+              backdropFilter: "blur(25px)",
+              WebkitBackdropFilter: "blur(25px)",
               pointerEvents: "none",
               zIndex: 10,
               animation: "fadeBlur 0.3s ease-in-out",
