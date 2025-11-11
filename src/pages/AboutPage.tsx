@@ -190,6 +190,10 @@ export const AboutPage: React.FC = () => {
                   src="https://i.imgur.com/0E3HLMf.png"
                   alt="Portfolio - Brea Miller"
                   className="about-image active aspect-square w-full h-full object-cover absolute inset-0"
+                  style={{
+                    transform: "scaleX(-1)",
+                    borderRadius: "0 0 24px 24px",
+                  }}
                 />
                 <img
                   src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/70bb19b3-d51f-47a2-8020-6261061a6a14_3840w.jpg"
@@ -307,7 +311,30 @@ export const AboutPage: React.FC = () => {
                     </div>
                   </article>
 
-                  {/* Slide 4: Let's Connect */}
+                  {/* Slide 4: Photography */}
+                  <article className="about-content-item snap-start min-h-[600px] flex items-center">
+                    <div>
+                      <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
+                        style={{
+                          background: "rgba(236, 72, 153, 0.1)",
+                          border: "1px solid rgba(236, 72, 153, 0.3)",
+                        }}
+                      >
+                        <span className="text-xs text-pink-400">Photography</span>
+                      </motion.div>
+                      <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
+                        Through my lens
+                      </h2>
+                      <p className="text-base md:text-lg text-white/70 mt-6">
+                        Photography is my way of exploring the world. From candid moments to carefully composed landscapes, I capture experiences that tell stories and evoke emotion.
+                      </p>
+                      <p className="text-base md:text-lg text-white/70 mt-4">
+                        Every frame is a dialogue between light, composition, and the beauty of the present moment.
+                      </p>
+                    </div>
+                  </article>
+
+                  {/* Slide 5: Let's Connect */}
                   <article className="about-content-item snap-start min-h-[600px] flex items-center">
                     <div>
                       <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
@@ -398,7 +425,7 @@ export const AboutPage: React.FC = () => {
 
                 {/* Scroll Dots Indicator */}
                 <div className="flex flex-col gap-4 items-center justify-center h-[600px]">
-                  {[0, 1, 2, 3].map((i) => (
+                  {[0, 1, 2, 3, 4].map((i) => (
                     <button
                       key={i}
                       className="scroll-dot transition-all duration-300"

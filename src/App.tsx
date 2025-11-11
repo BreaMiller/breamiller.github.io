@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HeroParallax } from './components/HeroParallax';
 import { AIToolsSection } from './components/AIToolsSection';
@@ -7,13 +6,10 @@ import { SelectedProjects } from './components/SelectedProjects';
 import { WhatIOffer } from './components/WhatIOffer';
 import { FromConceptToReality } from './components/FromConceptToReality';
 import { ReadyToStart } from './components/ReadyToStart';
-import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
 import { heroProducts } from './heroProductsData';
 
 function App() {
-  const [isContactOpen, setIsContactOpen] = useState(false);
-
   return (
     <div className="w-full relative" style={{
       background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
@@ -40,62 +36,46 @@ function App() {
         <WhatIOffer />
         <SelectedProjects />
         <FromConceptToReality />
-        <ReadyToStart onContactClick={() => setIsContactOpen(true)} />
+        <ReadyToStart />
         <Footer />
       </div>
 
-      {/* Contact Button - Fixed position */}
-      <motion.button
+      {/* Page View Counter - Fixed position */}
+      <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsContactOpen(true)}
         style={{
           position: "fixed",
           bottom: "clamp(20px, 5vw, 40px)",
           right: "clamp(20px, 5vw, 40px)",
           zIndex: 100,
-          background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
-          border: "none",
-          borderRadius: "20px",
-          padding: "18px 18px",
-          width: "140px",
-          height: "60px",
-          color: "#ffffff",
-          fontSize: "clamp(11px, 2vw, 14px)",
-          fontWeight: "700",
-          cursor: "pointer",
+          background: "rgba(17, 17, 17, 0.9)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          border: "1px solid rgba(236, 72, 153, 0.3)",
+          borderRadius: "50px",
+          padding: "18px 24px",
+          fontSize: "clamp(11px, 2vw, 13px)",
+          fontWeight: "600",
+          color: "#ec4899",
           textTransform: "uppercase",
           letterSpacing: "1px",
-          boxShadow: "0 8px 25px rgba(236, 72, 153, 0.3)",
-          transition: "all 0.3s ease",
-          overflow: "hidden",
+          boxShadow: "0 8px 25px rgba(236, 72, 153, 0.2)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           whiteSpace: "nowrap",
-          maxWidth: "400px",
+          maxWidth: "200px",
         }}
+        whileHover={{ 
+          y: -3,
+          boxShadow: "0 12px 35px rgba(236, 72, 153, 0.4)",
+        }}
+        transition={{ duration: 0.3 }}
       >
-        Contact Brea
-        {/* Glare effect on hover */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%)",
-            borderRadius: "50px",
-            pointerEvents: "none",
-          }}
-        />
-      </motion.button>
-
-      {/* Contact Form Modal */}
-      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+        <span style={{ marginRight: "8px" }}>👁</span>
+        Views: <span style={{ marginLeft: "4px", fontWeight: "700" }}>1.2K</span>
+      </motion.div>
     </div>
   );
 }

@@ -4,9 +4,8 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'Twitter', url: 'https://twitter.com', icon: '𝕏' },
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'in' },
-    { name: 'Instagram', url: 'https://instagram.com', icon: 'ig' },
+    { name: 'Flickr', url: 'https://flickr.com', icon: '📷' },
     { name: 'GitHub', url: 'https://github.com', icon: 'gh' },
   ];
 

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 interface ReadyToStartProps {
-  onContactClick: () => void;
+  onContactClick?: () => void;
 }
 
 export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
@@ -108,13 +108,7 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
               href="#"
               className="text-sm text-white/60 hover:text-white transition-colors"
             >
-              Twitter
-            </a>
-            <a
-              href="#"
-              className="text-sm text-white/60 hover:text-white transition-colors"
-            >
-              Instagram
+              Flickr
             </a>
             <a
               href="#"
