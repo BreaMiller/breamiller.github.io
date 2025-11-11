@@ -102,23 +102,46 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
           >
             <motion.a
               onClick={() => navigate('/about')}
-              className="text-sm text-white/60 hover:text-pink-400 transition-colors cursor-pointer"
+              className="text-sm text-white/60 transition-colors cursor-pointer"
               whileHover={{ scale: 1.05 }}
+              style={{ color: "inherit" }}
+              onMouseEnter={(e: any) => {
+                e.currentTarget.style.color = "#ec4899";
+              }}
+              onMouseLeave={(e: any) => {
+                e.currentTarget.style.color = "rgba(255, 255, 255, 0.6)";
+              }}
             >
               About Me
             </motion.a>
-            <a
+            <motion.a
               href="#"
-              className="text-sm text-white/60 hover:text-white transition-colors"
+              className="text-sm text-white/60 transition-colors cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              style={{ color: "inherit" }}
+              onMouseEnter={(e: any) => {
+                e.currentTarget.style.color = "#ec4899";
+              }}
+              onMouseLeave={(e: any) => {
+                e.currentTarget.style.color = "rgba(255, 255, 255, 0.6)";
+              }}
             >
               Flickr
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#"
-              className="text-sm text-white/60 hover:text-white transition-colors"
+              className="text-sm text-white/60 transition-colors cursor-pointer"
+              whileHover={{ scale: 1.05 }}
+              style={{ color: "inherit" }}
+              onMouseEnter={(e: any) => {
+                e.currentTarget.style.color = "#ec4899";
+              }}
+              onMouseLeave={(e: any) => {
+                e.currentTarget.style.color = "rgba(255, 255, 255, 0.6)";
+              }}
             >
               Github
-            </a>
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>
