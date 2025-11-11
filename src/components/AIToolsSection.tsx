@@ -72,10 +72,10 @@ export const AIToolsSection = () => {
             {aiTools.map((tool) => (
               <div
                 key={tool.id}
-                className="flex-shrink-0 flex items-center justify-center px-6 sm:px-8 py-4 sm:py-6 rounded-2xl border border-gray-700 bg-gradient-to-br from-gray-900 to-gray-800 hover:border-pink-500/50 transition-all duration-300 cursor-pointer group"
+                className="flex-shrink-0 flex items-center justify-center px-6 sm:px-8 py-4 sm:py-6 rounded-2xl border border-white/10 hover:border-pink-500/50 transition-all duration-300 cursor-pointer group"
                 style={{
                   minWidth: '160px',
-                  background: "linear-gradient(135deg, rgba(15, 15, 15, 0.8) 0%, rgba(30, 30, 30, 0.6) 100%)",
+                  background: "transparent",
                   backdropFilter: "blur(10px)",
                 }}
               >
