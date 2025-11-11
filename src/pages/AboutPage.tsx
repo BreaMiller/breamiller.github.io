@@ -170,7 +170,10 @@ export const AboutPage: React.FC = () => {
         style={{
           position: "relative",
           zIndex: 10,
-          paddingTop: "clamp(12px, 3vw, 24px)",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           paddingBottom: "clamp(24px, 5vw, 48px)",
         }}
         className="py-0"
@@ -179,7 +182,7 @@ export const AboutPage: React.FC = () => {
           <div className="grid gap-10 lg:grid-cols-12 items-start">
             {/* LEFT: Stacked Images */}
             <div
-              className="lg:col-span-5 relative overflow-hidden rounded-2xl"
+              className="lg:col-span-5 relative overflow-hidden rounded-3xl"
               style={{ height: "600px" }}
             >
               <div className="about-image-container absolute inset-0">
@@ -310,6 +313,14 @@ export const AboutPage: React.FC = () => {
                       <p className="text-base md:text-lg text-white/70 mt-4">
                         Let's create something extraordinary together.
                       </p>
+                      <motion.button
+                        className="mt-8 group inline-flex min-w-[140px] transition-all duration-300 hover:-translate-y-1 hover:scale-105 border-gradient hover:text-white text-sm font-medium text-white/80 bg-white/5 rounded-full px-5 py-3 relative backdrop-blur-xl items-center justify-center"
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <span>Get in touch</span>
+                        <span aria-hidden="true" className="transition-all duration-300 group-hover:opacity-80 opacity-20 w-[70%] h-[1px] rounded-full absolute bottom-0 left-1/2 -translate-x-1/2" style={{ background: "linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%)" }}></span>
+                      </motion.button>
                     </div>
                   </article>
                 </div>
@@ -442,15 +453,6 @@ export const AboutPage: React.FC = () => {
                     </motion.button>
                   ))}
                 </div>
-
-                <motion.a
-                  href="mailto:hello@breamiller.com"
-                  className="inline text-xs font-medium text-white/60 hover:text-white transition-colors duration-300"
-                  whileHover={{ opacity: 0.8 }}
-                  whileTap={{ opacity: 0.6 }}
-                >
-                  Get in touch →
-                </motion.a>
               </div>
             </div>
           </div>
@@ -464,6 +466,7 @@ export const AboutPage: React.FC = () => {
           transform: translateY(24px);
           transition: transform 600ms cubic-bezier(.2, .8, .2, 1), opacity 600ms ease;
           will-change: transform, opacity;
+          border-radius: 24px;
         }
 
         .about-image.active {
