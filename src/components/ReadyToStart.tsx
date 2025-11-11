@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 interface ReadyToStartProps {
   onContactClick?: () => void;
 }
 
 export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
+  const navigate = useNavigate();
   return (
     <motion.section
       className="py-20 md:py-32 relative z-10"
@@ -98,12 +100,13 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-wrap gap-4 justify-center pt-8 border-t border-white/10"
           >
-            <a
-              href="#"
+            <button
+              onClick={() => navigate('/about')}
               className="text-sm text-white/60 hover:text-white transition-colors"
+              style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}
             >
-              LinkedIn
-            </a>
+              About Me
+            </button>
             <a
               href="#"
               className="text-sm text-white/60 hover:text-white transition-colors"
@@ -114,7 +117,7 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
               href="#"
               className="text-sm text-white/60 hover:text-white transition-colors"
             >
-              Dribbble
+              Github
             </a>
           </motion.div>
         </motion.div>
