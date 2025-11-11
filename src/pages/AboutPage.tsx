@@ -189,7 +189,7 @@ export const AboutPage: React.FC = () => {
             >
               <div className="about-image-container absolute inset-0">
                 <img
-                  src="https://i.imgur.com/0E3HLMf.png"
+                  src="https://i.imgur.com/zpEC4yH.png"
                   alt="Portfolio - Brea Miller"
                   className="about-image active aspect-square w-full h-full object-cover absolute inset-0"
                   loading="eager"
