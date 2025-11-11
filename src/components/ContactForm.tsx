@@ -332,44 +332,72 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 <motion.button
                   type="submit"
                   disabled={loading}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.92 }}
+                  whileHover={{ scale: 1.05, y: -3 }}
+                  whileTap={{ scale: 0.95 }}
                   style={{
-                    background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
+                    background: "transparent",
                     border: "none",
-                    borderRadius: "12px",
-                    padding: "clamp(12px, 2.5vw, 14px) clamp(16px, 3vw, 20px)",
                     color: "#ffffff",
-                    fontSize: "clamp(12px, 2.5vw, 14px)",
-                    fontWeight: "600",
+                    padding: "18px 18px",
+                    borderRadius: "20px",
+                    width: "140px",
+                    height: "60px",
+                    fontSize: "14px",
+                    fontWeight: "700",
                     cursor: loading ? "not-allowed" : "pointer",
-                    textTransform: "uppercase",
-                    letterSpacing: "0.5px",
                     transition: "all 0.3s ease",
-                    opacity: loading ? 0.7 : 1,
-                    marginTop: "8px",
+                    textTransform: "uppercase",
+                    letterSpacing: "1px",
+                    boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
                     position: "relative",
                     overflow: "hidden",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    whiteSpace: "nowrap",
+                    animation: "outlineGlow 3s ease-in-out infinite",
+                    maxWidth: "400px",
+                    marginTop: "8px",
+                    opacity: loading ? 0.7 : 1,
+                  } as any}
+                  onMouseEnter={(e: any) => {
+                    if (!loading) {
+                      e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 853, 0.5)";
+                      e.currentTarget.style.background = "rgba(236, 72, 853, 0.05)";
+                    }
+                  }}
+                  onMouseLeave={(e: any) => {
+                    if (!loading) {
+                      e.currentTarget.style.boxShadow = "0 0 20px rgba(236, 72, 853, 0.2)";
+                      e.currentTarget.style.background = "transparent";
+                    }
                   }}
                 >
-                  {/* Shine sweep effect */}
+                  {/* Glare effect on hover */}
                   <motion.div
-                    className="absolute inset-0"
-                    initial={{ background: "linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent)", x: "-150%" }}
-                    whileHover={{ x: "150%" }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                    style={{ width: "200%", pointerEvents: "none" }}
-                  />
-
-                  {/* Shadow glow on hover */}
-                  <motion.div
-                    className="absolute inset-0"
-                    initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
-                    whileHover={{ 
-                      boxShadow: "0 0 20px rgba(236, 72, 153, 0.6), inset 0 0 15px rgba(236, 72, 153, 0.2)",
-                    }}
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                    style={{ pointerEvents: "none" }}
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
+                      borderRadius: "20px",
+                      pointerEvents: "none",
+                    }}
+                  />
+                  {/* Border highlight on hover */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      borderRadius: "20px",
+                      border: "1px solid rgba(236, 72, 153, 0.4)",
+                      pointerEvents: "none",
+                    }}
                   />
 
                   <span className="relative z-10">{loading ? "SENDING..." : "SEND MESSAGE"}</span>
