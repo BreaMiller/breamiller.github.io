@@ -184,8 +184,8 @@ export const AboutPage: React.FC = () => {
           <div className="grid gap-10 lg:grid-cols-12 items-start">
             {/* LEFT: Stacked Images */}
             <div
-              className="lg:col-span-5 relative overflow-hidden rounded-3xl"
-              style={{ height: "600px" }}
+              className="lg:col-span-5 relative overflow-hidden rounded-3xl mx-4 md:mx-0 md:h-[600px]"
+              style={{ height: "clamp(300px, 50vw, 600px)" }}
             >
               <div className="about-image-container absolute inset-0">
                 <img
@@ -230,12 +230,12 @@ export const AboutPage: React.FC = () => {
             </div>
 
             {/* RIGHT: Scrollable Content */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 mx-4 md:mx-0">
               <div className="flex gap-4">
                 <div
                   ref={scrollerRef}
                   id="aboutScroll"
-                  className="h-[600px] overflow-y-auto snap-y snap-mandatory pr-3 flex-1 scroll-smooth [&::-webkit-scrollbar]:hidden"
+                  className="h-[600px] md:h-[600px] overflow-y-auto snap-y snap-mandatory pr-3 flex-1 scroll-smooth [&::-webkit-scrollbar]:hidden"
                   style={{
                     scrollBehavior: 'smooth',
                     scrollbarWidth: 'none',
