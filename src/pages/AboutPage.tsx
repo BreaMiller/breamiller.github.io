@@ -199,28 +199,28 @@ export const AboutPage: React.FC = () => {
                   }}
                 />
                 <img
-                  src="https://i.imgur.com/KfKTvU5.jpeg"
+                  src="https://i.imgur.com/KfKTvU5.jpeg?w=800&h=800&fit=crop"
                   alt="Sacred Earrings - Design Expertise"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
-                  src="https://i.imgur.com/I23nYjZ.png"
+                  src="https://i.imgur.com/I23nYjZ.png?w=800&h=800&fit=crop"
                   alt="GGs - Development"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
-                  src="https://www.flickr.com/photos/as-seen-by-brea/5113842599/"
+                  src="https://flickr.com/photos/as-seen-by-brea/5113842599?w=800&h=800&fit=crop"
                   alt="Photography Portfolio"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=800&fit=crop"
+                  src="https://images.unsplash.com/photo-1605712916066-e143c317df72?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1748?w=800&h=800&fit=crop"
                   alt="Let's Connect - Collaboration"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
