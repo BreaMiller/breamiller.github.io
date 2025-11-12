@@ -213,7 +213,7 @@ export const AboutPage: React.FC = () => {
                   decoding="async"
                 />
                 <img
-                  src="https://flickr.com/photos/as-seen-by-brea/5113842599?w=800&h=800&fit=crop"
+                  src="https://live.staticflickr.com/4099/4801187606_c8b07e8226_b.jpg?w=800&h=800&fit=crop"
                   alt="Photography Portfolio"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
