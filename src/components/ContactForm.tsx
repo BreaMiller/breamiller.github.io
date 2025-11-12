@@ -193,9 +193,9 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 Get In Touch
               </h2>
 
-              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "center" }}>
+              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "center", width: "100%", maxWidth: "600px", margin: "0 auto" }}>
                 {/* Name Field */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
                   <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                     Name
                   </label>
@@ -215,6 +215,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                       fontSize: "clamp(13px, 2.5vw, 14px)",
                       transition: "all 0.3s ease",
                       outline: "none",
+                      width: "100%",
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
@@ -228,7 +229,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 </div>
 
                 {/* Email Field */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
                   <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                     Email
                   </label>
@@ -248,10 +249,11 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                       fontSize: "clamp(13px, 2.5vw, 14px)",
                       transition: "all 0.3s ease",
                       outline: "none",
+                      width: "100%",
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
-                      e.currentTarget.style.borderColor = "rgba(236, 72, 153, 0.4)";
+                      e.currentTarget.style.borderColor = "rgba(236, 72, 853, 0.4)";
                     }}
                     onBlur={(e) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)";
@@ -261,7 +263,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 </div>
 
                 {/* Subject Field */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
                   <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                     Subject
                   </label>
@@ -281,6 +283,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                       fontSize: "clamp(13px, 2.5vw, 14px)",
                       transition: "all 0.3s ease",
                       outline: "none",
+                      width: "100%",
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
@@ -294,7 +297,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 </div>
 
                 {/* Message Field */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
                   <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                     Message
                   </label>
@@ -316,6 +319,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                       outline: "none",
                       fontFamily: "inherit",
                       resize: "none",
+                      width: "100%",
                     }}
                     onFocus={(e: any) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
@@ -340,7 +344,8 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                     color: "#ffffff",
                     padding: "18px 18px",
                     borderRadius: "20px",
-                    width: "140px",
+                    width: "100%",
+                    maxWidth: "400px",
                     height: "60px",
                     fontSize: "14px",
                     fontWeight: "700",
@@ -356,7 +361,6 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                     justifyContent: "center",
                     whiteSpace: "nowrap",
                     animation: "outlineGlow 3s ease-in-out infinite",
-                    maxWidth: "400px",
                     marginTop: "8px",
                     opacity: loading ? 0.7 : 1,
                   } as any}

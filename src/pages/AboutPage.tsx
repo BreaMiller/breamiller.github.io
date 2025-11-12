@@ -344,53 +344,17 @@ export const AboutPage: React.FC = () => {
                       <p className="text-base md:text-lg text-white/70 mt-6">
                         Photography is my second language. From candid moments to carefully composed headshots, every frame is a dialogue between light, composition, and the beauty of the present moment.
                       </p>
-                      <motion.button
-                        onClick={() => window.open('https://flickr.com/photos/as-seen-by-brea/with/4870107388', '_blank')}
-                        whileHover={{
-                          y: -2,
-                          scale: 1.05,
-                          boxShadow: "0 0 40px rgba(236, 72, 153, 0.4)"
+                      <motion.a
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          window.open('https://flickr.com/photos/as-seen-by-brea/with/4870107388', '_blank');
                         }}
-                        whileTap={{ scale: 0.95 }}
-                        style={{
-                          background: "transparent",
-                          border: ".5px solid #ec4899",
-                          padding: "18px 18px",
-                          borderRadius: "20px",
-                          width: "200px",
-                          height: "60px",
-                          fontSize: "14px",
-                          fontWeight: "700",
-                          cursor: "pointer",
-                          textTransform: "uppercase",
-                          letterSpacing: "1px",
-                          color: "#ffffff",
-                          transition: "all 0.3s ease",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          whiteSpace: "nowrap",
-                          maxWidth: "400px",
-                          boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
-                          position: "relative",
-                          overflow: "hidden",
-                          marginTop: "24px",
-                        }}
+                        className="inline-block mt-6 text-base text-white/70 transition-colors duration-300 hover:text-pink-400 cursor-pointer"
+                        whileHover={{ color: "#ec4899" }}
                       >
-                        View Portfolio
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          whileHover={{ opacity: 1 }}
-                          transition={{ duration: 0.3 }}
-                          style={{
-                            position: "absolute",
-                            inset: 0,
-                            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
-                            borderRadius: "20px",
-                            pointerEvents: "none",
-                          }}
-                        />
-                      </motion.button>
+                        View Portfolio →
+                      </motion.a>
                     </div>
                   </article>
 
@@ -414,73 +378,17 @@ export const AboutPage: React.FC = () => {
                       <p className="text-base md:text-lg text-white/70 mt-4">
                         Let's create something extraordinary together.
                       </p>
-                      <motion.button
-                        onClick={() => setIsContactOpen(true)}
-                        className="mt-8"
-                        whileHover={{ scale: 1.05, y: -3 }}
-                        whileTap={{ scale: 0.95 }}
-                        style={{
-                          background: "transparent",
-                          border: "none",
-                          color: "#ffffff",
-                          padding: "18px 18px",
-                          borderRadius: "20px",
-                          width: "140px",
-                          height: "60px",
-                          fontSize: "14px",
-                          fontWeight: "700",
-                          cursor: "pointer",
-                          transition: "all 0.3s ease",
-                          textTransform: "uppercase",
-                          letterSpacing: "1px",
-                          boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
-                          position: "relative",
-                          overflow: "hidden",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          whiteSpace: "nowrap",
-                          animation: "outlineGlow 3s ease-in-out infinite",
-                          maxWidth: "400px",
-                          marginLeft: "15px",
+                      <motion.a
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setIsContactOpen(true);
                         }}
-                        onMouseEnter={(e: any) => {
-                          e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
-                          e.currentTarget.style.background = "rgba(236, 72, 153, 0.05)";
-                        }}
-                        onMouseLeave={(e: any) => {
-                          e.currentTarget.style.boxShadow = "0 0 20px rgba(236, 72, 853, 0.2)";
-                          e.currentTarget.style.background = "transparent";
-                        }}
+                        className="inline-block mt-6 text-base text-white/70 transition-colors duration-300 hover:text-pink-400 cursor-pointer"
+                        whileHover={{ color: "#ec4899" }}
                       >
-                        GET IN TOUCH
-                        {/* Glare effect on hover */}
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          whileHover={{ opacity: 1 }}
-                          transition={{ duration: 0.3 }}
-                          style={{
-                            position: "absolute",
-                            inset: 0,
-                            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
-                            borderRadius: "20px",
-                            pointerEvents: "none",
-                          }}
-                        />
-                        {/* Border highlight on hover */}
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          whileHover={{ opacity: 1 }}
-                          transition={{ duration: 0.3 }}
-                          style={{
-                            position: "absolute",
-                            inset: 0,
-                            borderRadius: "20px",
-                            border: "1px solid rgba(236, 72, 153, 0.4)",
-                            pointerEvents: "none",
-                          }}
-                        />
-                      </motion.button>
+                        Get in touch →
+                      </motion.a>
                     </div>
                   </article>
                 </div>
