@@ -206,22 +206,22 @@ export const AboutPage: React.FC = () => {
                   decoding="async"
                 />
                 <img
-                  src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/9b854164-e5f6-4f39-a78c-f75ccbc5ff69_3840w.jpg"
-                  alt="Portfolio - Image 3"
+                  src="https://i.imgur.com/I23nYjZ.png"
+                  alt="GGs - Development"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
-                  src="https://www.flickr.com/photos/as-seen-by-brea/5113842599/"
+                  src="https://images.unsplash.com/photo-1569163139394-de4798aa62b3?w=800&h=800&fit=crop"
                   alt="Photography Portfolio"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1516035069371-29a08e8be313?w=800&h=800&fit=crop"
-                  alt="Photography - Image 5"
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=800&fit=crop"
+                  alt="Let's Connect - Collaboration"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
                   decoding="async"
