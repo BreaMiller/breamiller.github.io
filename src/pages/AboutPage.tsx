@@ -190,7 +190,7 @@ export const AboutPage: React.FC = () => {
               <div className="about-image-container absolute inset-0">
                 <img
                   src="https://i.imgur.com/zpEC4yH.png"
-                  alt="Portfolio - Brea Miller"
+                  alt="Profile - Brea Miller"
                   className="about-image active aspect-square w-full h-full object-cover absolute inset-0"
                   loading="eager"
                   decoding="async"
@@ -199,8 +199,8 @@ export const AboutPage: React.FC = () => {
                   }}
                 />
                 <img
-                  src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/70bb19b3-d51f-47a2-8020-6261061a6a14_3840w.jpg"
-                  alt="Portfolio - Image 2"
+                  src="https://i.imgur.com/KfKTvU5.jpeg"
+                  alt="Sacred Earrings - Design Expertise"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
                   decoding="async"
