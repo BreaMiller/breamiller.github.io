@@ -9,6 +9,16 @@ html, body {
   max-width: 100%;
 }
 
+/* Hide scrollbar while allowing scroll */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @keyframes outlineGlow {
   0%, 100% {
     box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
