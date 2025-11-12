@@ -13,6 +13,7 @@ const aiTools = [
   { id: 9, name: 'Pixlr', logo: 'https://pixlr.com/blog/wp-content/uploads/2022/03/cropped-cropped-Black-icon.png' },
   { id: 10, name: 'Midjourney', logo: 'https://1000logos.net/wp-content/uploads/2025/07/Midjourney-Logo.png' },
   { id: 11, name: 'Claude', logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude.png' },
+  { id: 12, name: 'Figma', logo: 'https://cdn-icons-png.flaticon.com/512/3334/3334674.png' },
 ];
 
 export const AIToolsSection = () => {
