@@ -29,17 +29,21 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     setLoading(true);
 
     try {
+      const scriptUrl = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL;
+      
+      if (!scriptUrl) {
+        console.error('Google Apps Script URL not configured');
+        throw new Error('Form endpoint not configured');
+      }
+
       // Send to Google Apps Script
-      const response = await fetch(
-        'https://script.googleapis.com/macros/d/YOUR_DEPLOYMENT_ID/useTrigger',
-        {
-          method: 'POST',
-          body: JSON.stringify(formData),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
       if (response.ok) {
         setSubmitted(true);
@@ -50,9 +54,11 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
         }, 2000);
       } else {
         console.error('Form submission failed');
+        throw new Error('Form submission failed');
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      // Optionally show error message to user
     } finally {
       setLoading(false);
     }
