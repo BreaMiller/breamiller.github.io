@@ -265,7 +265,7 @@ export const SelectedProjects = () => {
 
         {/* Projects Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12 auto-rows-max md:auto-rows-none"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12"
           initial={{ opacity: 0, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -281,7 +281,7 @@ export const SelectedProjects = () => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
               >
-                <Link to={`/projects/${project.id}`} className="group block h-full">
+                <Link to={`/projects/${project.id}`} className="group">
                   <div className="relative overflow-hidden rounded-2xl h-48 sm:h-56 md:h-64 bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
                     <img
                       src={project.image}
