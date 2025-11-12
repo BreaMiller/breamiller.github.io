@@ -29,14 +29,28 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     setLoading(true);
 
     try {
-      // Simulate form submission (replace with actual API call)
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setSubmitted(true);
-      setTimeout(() => {
-        setSubmitted(false);
-        setFormData({ name: "", email: "", subject: "", message: "" });
-        onClose();
-      }, 2000);
+      // Send to Google Apps Script
+      const response = await fetch(
+        'https://script.googleapis.com/macros/d/YOUR_DEPLOYMENT_ID/useTrigger',
+        {
+          method: 'POST',
+          body: JSON.stringify(formData),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: "", email: "", subject: "", message: "" });
+          onClose();
+        }, 2000);
+      } else {
+        console.error('Form submission failed');
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
     } finally {
