@@ -265,13 +265,13 @@ export const SelectedProjects = () => {
 
         {/* Projects Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12"
           initial={{ opacity: 0, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <AnimatePresence mode="popLayout">
+          <AnimatePresence mode="wait">
             {displayed.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -282,7 +282,7 @@ export const SelectedProjects = () => {
                 transition={{ duration: 0.3, delay: index * 0.05 }}
               >
                 <Link to={`/projects/${project.id}`} className="group">
-                  <div className="relative overflow-hidden rounded-2xl h-64 bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
+                  <div className="relative overflow-hidden rounded-2xl h-48 sm:h-56 md:h-64 bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
                     <img
                       src={project.image}
                       alt={project.title}
@@ -292,12 +292,12 @@ export const SelectedProjects = () => {
                       fetchPriority="low"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <div className="absolute inset-0 flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-xs text-white/70 mb-2 uppercase tracking-wide">{project.category}</p>
-                      <h3 className="text-lg font-bold text-white mb-1">{project.title}</h3>
-                      <p className="text-sm text-white/70">{project.subtitle}</p>
-                      <div className="flex flex-wrap gap-2 mt-3">
-                        {project.tags.map((tag) => (
+                    <div className="absolute inset-0 flex flex-col justify-end p-3 sm:p-4 md:p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-xs text-white/70 mb-1 uppercase tracking-wide">{project.category}</p>
+                      <h3 className="text-base sm:text-lg font-bold text-white mb-1">{project.title}</h3>
+                      <p className="text-xs sm:text-sm text-white/70 line-clamp-2">{project.subtitle}</p>
+                      <div className="flex flex-wrap gap-1 mt-2">
+                        {project.tags.slice(0, 2).map((tag) => (
                           <span key={tag} className="text-xs bg-white/10 text-white/80 px-2 py-1 rounded-full">
                             {tag}
                           </span>

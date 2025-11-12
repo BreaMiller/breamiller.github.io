@@ -62,7 +62,7 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
       style={{
         background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
         backgroundAttachment: "fixed",
-        minHeight: "clamp(300vh, 275vh, 350vh)",
+        minHeight: "clamp(100vh, 250vh, 350vh)",
       }}
     >
       <Header />
@@ -73,9 +73,9 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
           translateY,
           opacity,
         }}
-        className=""
+        className="w-full"
       >
-      <motion.div className="flex flex-row-reverse gap-3 sm:gap-8 md:gap-12 lg:gap-20 mb-12 sm:mb-16 md:mb-20 px-2 sm:px-4 md:px-8 lg:px-40">
+      <motion.div className="flex flex-row-reverse gap-3 sm:gap-8 md:gap-12 lg:gap-20 mb-12 sm:mb-16 md:mb-20 px-2 sm:px-4 md:px-8 lg:px-40 overflow-x-auto md:overflow-visible">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -84,7 +84,7 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row gap-3 sm:gap-8 md:gap-12 lg:gap-20 mb-12 sm:mb-16 md:mb-20 px-2 sm:px-4 md:px-8 lg:px-40">
+        <motion.div className="flex flex-row gap-3 sm:gap-8 md:gap-12 lg:gap-20 mb-12 sm:mb-16 md:mb-20 px-2 sm:px-4 md:px-8 lg:px-40 overflow-x-auto md:overflow-visible">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -93,7 +93,7 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse gap-3 sm:gap-8 md:gap-12 lg:gap-20 px-2 sm:px-4 md:px-8 lg:px-40">
+        <motion.div className="flex flex-row-reverse gap-3 sm:gap-8 md:gap-12 lg:gap-20 px-2 sm:px-4 md:px-8 lg:px-40 overflow-x-auto md:overflow-visible">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
