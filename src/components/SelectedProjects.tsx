@@ -144,7 +144,7 @@ const selectedProjects: SelectedProject[] = [
     id: 'opia',
     title: 'Opia',
     subtitle: 'digital art experience',
-    image: 'https://i.imgur.com/RNisHGQ.mp4?auto=compress&cs=tinysrgb&w=600',
+    image: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600',
     category: 'motion',
     tags: ['Art', 'Digital', 'Experience'],
   },
