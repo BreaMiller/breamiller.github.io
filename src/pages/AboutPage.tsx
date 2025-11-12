@@ -319,10 +319,10 @@ export const AboutPage: React.FC = () => {
                         Code that performs
                       </h2>
                       <p className="text-base md:text-lg text-white/70 mt-6">
-                        From React to TypeScript, modern web technologies for fast, responsive applications. Clean code, scalable architecture, production-ready assets.
+                        I build fast, beautiful, and scalable digital experiences. React, TypeScript, Tailwind, and Framer Motion are my tools for bringing ambitious visions to life with clean, maintainable code.
                       </p>
                       <p className="text-base md:text-lg text-white/70 mt-4">
-                        Vite, Tailwind, Framer Motion—building performant digital experiences.
+                        Whether it's a pixel-perfect component or a full-stack application, I care deeply about performance, accessibility, and creating interfaces that feel delightful to use.
                       </p>
                     </div>
                   </article>
