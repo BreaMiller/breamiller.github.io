@@ -271,7 +271,7 @@ export const SelectedProjects = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: false, amount: 0.5 }}
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="popLayout">
             {displayed.map((project, index) => (
               <motion.div
                 key={project.id}
