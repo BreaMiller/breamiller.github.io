@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { AiOutlineEye } from 'react-icons/ai';
 import { projectsData } from '../projectsData';
+import { ContactForm } from '../components/ContactForm';
+import { Footer } from '../components/Footer';
 
 export const ProjectDetailPage: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
   const project = projectId ? projectsData[projectId] : null;
+  const [isContactOpen, setIsContactOpen] = useState(false);
 
   // Scroll to top when component mounts or projectId changes
   useEffect(() => {
@@ -676,11 +679,17 @@ export const ProjectDetailPage: React.FC = () => {
           alignItems: "center",
           gap: "8px",
         }}
-        whileHover={{ y: -2, boxShadow: "0 8px 20px rgba(236, 72, 153, 0.2)" }}
+        whileHover={{ y: -2, boxShadow: "0 8px 20px rgba(236, 72, 853, 0.2)" }}
       >
         <AiOutlineEye size={16} />
         <span>1</span>
       </motion.div>
+
+      {/* Footer */}
+      <Footer onContactClick={() => setIsContactOpen(true)} />
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
 };

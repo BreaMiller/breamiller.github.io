@@ -8,6 +8,7 @@ import { FromConceptToReality } from './components/FromConceptToReality';
 import { ReadyToStart } from './components/ReadyToStart';
 import { Footer } from './components/Footer';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
+import { ContactForm } from './components/ContactForm';
 import { AiOutlineEye } from 'react-icons/ai';
 import { heroProducts } from './heroProductsData';
 import { useRef, useState } from 'react';
@@ -62,6 +63,9 @@ function App() {
 
       {/* Privacy Policy Modal */}
       <PrivacyPolicy isOpen={isPrivacyOpen} onClose={() => setIsPrivacyOpen(false)} />
+
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       {/* Page View Counter - Fixed position */}
       <motion.div

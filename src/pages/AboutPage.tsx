@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ContactForm } from '../components/ContactForm';
+import { Footer } from '../components/Footer';
 
 export const AboutPage: React.FC = () => {
   const navigate = useNavigate();
@@ -437,7 +438,7 @@ export const AboutPage: React.FC = () => {
                           <circle cx="12" cy="8" r="6"></circle>
                         </svg>
                       </div>
-                      <h3 className="text-lg font-semibold">5+ Years</h3>
+                      <h3 className="text-lg font-semibold">7+ Years</h3>
                     </div>
                     <p className="text-sm text-white/60">
                       Professional experience in design and development
@@ -526,6 +527,9 @@ export const AboutPage: React.FC = () => {
           </div>
         </div>
       </motion.section>
+
+      {/* Footer */}
+      <Footer onContactClick={() => setIsContactOpen(true)} />
 
       {/* Styles for animations */}
       <style>{`
