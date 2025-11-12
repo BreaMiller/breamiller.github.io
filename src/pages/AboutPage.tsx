@@ -189,7 +189,7 @@ export const AboutPage: React.FC = () => {
             >
               <div className="about-image-container absolute inset-0">
                 <img
-                  src="https://i.imgur.com/0E3HLMf.png"
+                  src="https://i.imgur.com/zpEC4yH.png"
                   alt="Portfolio - Brea Miller"
                   className="about-image active aspect-square w-full h-full object-cover absolute inset-0"
                   loading="eager"
@@ -213,8 +213,8 @@ export const AboutPage: React.FC = () => {
                   decoding="async"
                 />
                 <img
-                  src="https://hoirqrkdgbmvpwutwuwj-all.supabase.co/storage/v1/object/public/assets/assets/04545374-057d-4527-9043-c2ee9b0d7f09_1600w.webp"
-                  alt="Portfolio - Image 4"
+                  src="https://www.flickr.com/photos/as-seen-by-brea/5113842599/"
+                  alt="Photography Portfolio"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
                   decoding="async"
@@ -342,10 +342,7 @@ export const AboutPage: React.FC = () => {
                         Through my lens
                       </h2>
                       <p className="text-base md:text-lg text-white/70 mt-6">
-                        Photography is my way of exploring the world. From candid moments to carefully composed landscapes, I capture experiences that tell stories and evoke emotion.
-                      </p>
-                      <p className="text-base md:text-lg text-white/70 mt-4">
-                        Every frame is a dialogue between light, composition, and the beauty of the present moment.
+                        Photography is my second language. From candid moments to carefully composed headshots, every frame is a dialogue between light, composition, and the beauty of the present moment.
                       </p>
                     </div>
                   </article>
@@ -398,7 +395,7 @@ export const AboutPage: React.FC = () => {
                           whiteSpace: "nowrap",
                           animation: "outlineGlow 3s ease-in-out infinite",
                           maxWidth: "400px",
-                          marginLeft: "20px",
+                          marginLeft: "15px",
                         }}
                         onMouseEnter={(e: any) => {
                           e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
