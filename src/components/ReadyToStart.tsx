@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 interface ReadyToStartProps {
   onContactClick?: () => void;
 }
 
 export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
+  const navigate = useNavigate();
   return (
     <motion.section
       className="py-20 md:py-32 relative z-10"
@@ -98,24 +100,31 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
             viewport={{ once: false, amount: 0.5 }}
             className="flex flex-wrap gap-4 justify-center pt-8 border-t border-white/10"
           >
-            <a
-              href="#"
-              className="text-sm text-white/60 hover:text-white transition-colors"
+            <motion.a
+              href="/about"
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/about');
+              }}
+              className="text-sm text-white/60 transition-colors"
+              whileHover={{ color: "#ec4899" }}
             >
-              LinkedIn
-            </a>
-            <a
+              About Me
+            </motion.a>
+            <motion.a
               href="#"
-              className="text-sm text-white/60 hover:text-white transition-colors"
+              className="text-sm text-white/60 transition-colors"
+              whileHover={{ color: "#ec4899" }}
             >
               Flickr
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#"
-              className="text-sm text-white/60 hover:text-white transition-colors"
+              className="text-sm text-white/60 transition-colors"
+              whileHover={{ color: "#ec4899" }}
             >
-              Dribbble
-            </a>
+              Github
+            </motion.a>
           </motion.div>
         </motion.div>
       </div>
