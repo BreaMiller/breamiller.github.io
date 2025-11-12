@@ -213,7 +213,7 @@ export const AboutPage: React.FC = () => {
                   decoding="async"
                 />
                 <img
-                  src="https://live.staticflickr.com/4099/4801187606_c8b07e8226_b.jpg?w=800&h=800&fit=crop"
+                  src="https://live.staticflickr.com/4118/4870060634_1b5e50a944_b.jpg?w=800&h=800&fit=crop"
                   alt="Photography Portfolio"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
@@ -333,7 +333,7 @@ export const AboutPage: React.FC = () => {
                       <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
                         style={{
                           background: "rgba(236, 72, 153, 0.1)",
-                          border: "1px solid rgba(236, 72, 153, 0.3)",
+                          border: "1px solid rgba(236, 72, 853, 0.3)",
                         }}
                       >
                         <span className="text-xs text-pink-400">Photography</span>
@@ -344,6 +344,53 @@ export const AboutPage: React.FC = () => {
                       <p className="text-base md:text-lg text-white/70 mt-6">
                         Photography is my second language. From candid moments to carefully composed headshots, every frame is a dialogue between light, composition, and the beauty of the present moment.
                       </p>
+                      <motion.button
+                        onClick={() => window.open('https://flickr.com/photos/as-seen-by-brea/with/4870107388', '_blank')}
+                        whileHover={{
+                          y: -2,
+                          scale: 1.05,
+                          boxShadow: "0 0 40px rgba(236, 72, 153, 0.4)"
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                        style={{
+                          background: "transparent",
+                          border: ".5px solid #ec4899",
+                          padding: "18px 18px",
+                          borderRadius: "20px",
+                          width: "200px",
+                          height: "60px",
+                          fontSize: "14px",
+                          fontWeight: "700",
+                          cursor: "pointer",
+                          textTransform: "uppercase",
+                          letterSpacing: "1px",
+                          color: "#ffffff",
+                          transition: "all 0.3s ease",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          whiteSpace: "nowrap",
+                          maxWidth: "400px",
+                          boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+                          position: "relative",
+                          overflow: "hidden",
+                          marginTop: "24px",
+                        }}
+                      >
+                        View Portfolio
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
+                          transition={{ duration: 0.3 }}
+                          style={{
+                            position: "absolute",
+                            inset: 0,
+                            background: "linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%)",
+                            borderRadius: "20px",
+                            pointerEvents: "none",
+                          }}
+                        />
+                      </motion.button>
                     </div>
                   </article>
 
