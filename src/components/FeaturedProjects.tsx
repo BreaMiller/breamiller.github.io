@@ -136,7 +136,7 @@ export const FeaturedProjects = () => {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.85, y: 20 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="group relative overflow-hidden rounded-2xl h-96 md:h-[625px] w-full max-w-2xl flex-shrink-0 cursor-pointer border-none background-none p-0"
+                className="group relative overflow-hidden rounded-2xl h-96 md:h-[625px] w-full md:max-w-2xl max-w-sm flex-shrink-0 cursor-pointer border-none background-none p-0"
                 style={{ background: "none" }}
               >
                 <img
