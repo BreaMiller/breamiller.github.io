@@ -4,16 +4,14 @@ import { motion } from 'framer-motion';
 const aiTools = [
   { id: 1, name: 'Opus Clip', logo: 'https://asset.brandfetch.io/idMyFW0O1q/ide61u_rax.png' },
   { id: 2, name: 'Runway', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/runway-ai-icon.png' },
-  { id: 3, name: 'Google Gemini', logo: 'https://www.gstatic.com/images/branding/product/1x/gemini_512dp.png' },
-  { id: 4, name: 'Eleven Labs', logo: 'https://11labs-nonprd-15f22c1d.s3.eu-west-3.amazonaws.com/a2ea339b-8b5e-41bb-b706-24eda8a4c9e3/elevenlabs-symbol.svg' },
-  { id: 5, name: 'Descript', logo: 'https://s3-eu-west-1.amazonaws.com/tpd/logos/5a397f4bb894c90c086a7587/0x0.png' },
-  { id: 6, name: 'Adobe Firefly', logo: 'https://cdn-icons-png.flaticon.com/512/731/731970.png' },
-  { id: 7, name: 'GitHub', logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
-  { id: 8, name: 'OpenArt', logo: 'https://techzehn.com/wp-content/uploads/2025/08/OpenArt-Logo.png' },
-  { id: 9, name: 'Pixlr', logo: 'https://pixlr.com/blog/wp-content/uploads/2022/03/cropped-cropped-Black-icon.png' },
-  { id: 10, name: 'Midjourney', logo: 'https://1000logos.net/wp-content/uploads/2025/07/Midjourney-Logo.png' },
-  { id: 11, name: 'Claude', logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude.png' },
-  { id: 12, name: 'Figma', logo: 'https://www.svgrepo.com/show/361494/figma-logo.svg' },
+  { id: 3, name: 'Eleven Labs', logo: 'https://11labs-nonprd-15f22c1d.s3.eu-west-3.amazonaws.com/a2ea339b-8b5e-41bb-b706-24eda8a4c9e3/elevenlabs-symbol.svg' },
+  { id: 4, name: 'Descript', logo: 'https://s3-eu-west-1.amazonaws.com/tpd/logos/5a397f4bb894c90c086a7587/0x0.png' },
+  { id: 5, name: 'Adobe Firefly', logo: 'https://cdn-icons-png.flaticon.com/512/731/731970.png' },
+  { id: 6, name: 'GitHub', logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
+  { id: 7, name: 'OpenArt', logo: 'https://techzehn.com/wp-content/uploads/2025/08/OpenArt-Logo.png' },
+  { id: 8, name: 'Pixlr', logo: 'https://pixlr.com/blog/wp-content/uploads/2022/03/cropped-cropped-Black-icon.png' },
+  { id: 9, name: 'Claude', logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude.png' },
+  { id: 10, name: 'Figma', logo: 'https://www.svgrepo.com/show/361494/figma-logo.svg' },
 ];
 
 export const AIToolsSection = () => {
