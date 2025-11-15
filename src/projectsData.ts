@@ -139,6 +139,11 @@ export const projectsData: Record<string, ProjectData> = {
         alt: "GeneProof 2.0 Hero",
         size: "large",
       },
+      {
+        src: "https://i.imgur.com/3DnoTQb.gif",
+        alt: "GeneProof Demo",
+        size: "large",
+      },
     ],
     overview: "GeneProof 2.0 revolutionizes health tracking with machine learning-powered insights and a user-centric interface. The platform helps users understand their health data and make informed decisions.",
     tools: ["React", "Python", "Machine Learning", "Data Visualization"],

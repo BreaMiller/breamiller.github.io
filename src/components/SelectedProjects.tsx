@@ -218,7 +218,7 @@ export const SelectedProjects = () => {
           className="mb-12"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Personal Projects
+            Recent Projects
           </h2>
           <p className="text-lg text-white/70">
             A curated collection of my favorite work
