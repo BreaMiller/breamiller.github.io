@@ -207,7 +207,7 @@ export const ProductCard = ({
     >
       <button
         onClick={() => navigate(`/projects/${projectId}`)}
-        className="block overflow-hidden relative"
+        className="block overflow-visible relative"
         style={{
           width: "clamp(240px, 45vw, 480px)",
           height: "clamp(192px, 36vw, 384px)",
@@ -221,6 +221,7 @@ export const ProductCard = ({
           cursor: "pointer",
           padding: 0,
           position: "relative",
+          transformStyle: ["geneproof", "pnuema", "geneproof2.0", "wellness-guide"].includes(projectId) ? "preserve-3d" : "initial",
         }}
       >
         {/* Glare effect - behind image */}
@@ -243,6 +244,16 @@ export const ProductCard = ({
             borderRadius: "20px",
             position: "relative",
             zIndex: 2,
+            transform: ["geneproof", "pnuema", "geneproof2.0", "wellness-guide"].includes(projectId) 
+              ? "translateZ(0px)" 
+              : "none",
+            boxShadow: ["geneproof", "pnuema", "geneproof2.0", "wellness-guide"].includes(projectId)
+              ? `
+                0px 10px 30px rgba(236, 72, 153, 0.2),
+                -5px -5px 15px rgba(236, 72, 153, 0.15),
+                5px -5px 15px rgba(99, 102, 241, 0.15)
+              `
+              : "none",
           }}
           loading="lazy"
           decoding="async"
