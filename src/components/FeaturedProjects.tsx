@@ -101,6 +101,16 @@ export const FeaturedProjects = () => {
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.6, delay: 0.05 }}
           viewport={{ once: false, amount: 0.5 }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          onDragEnd={(event, info) => {
+            const swipeThreshold = 50;
+            if (info.offset.x > swipeThreshold) {
+              prevSlide();
+            } else if (info.offset.x < -swipeThreshold) {
+              nextSlide();
+            }
+          }}
         >
           {/* Carousel Content */}
           <div className="relative overflow-hidden py-4">
