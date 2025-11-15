@@ -122,7 +122,7 @@ export const projectsData: Record<string, ProjectData> = {
         size: "medium",
       },
     ],
-    overview: "CivicSocial asks: What if every citizen could actively participate in shaping their own community? This platform facilitates direct democratic engagement by enabling community members to organize around issues, propose solutions, and vote on legislation that affects their neighborhoods. Through real-time communication, collaborative issue discussion, and transparent voting mechanisms, CivicSocial decentralizes civic participation and empowers citizens to become active agents of change in their communities.",
+    overview: "CivicSocial asks: What if American citizens could budget a portion of their own tax dollars to actively participate in shaping their communities? This platform facilitates direct democratic engagement by enabling community members to organize around issues, propose solutions, and vote on legislation that affects their neighborhoods. Through real-time communication, collaborative issue discussion, and transparent voting mechanisms, CivicSocial decentralizes civic participation and empowers citizens to become active agents of change in their communities.",
     tools: ["TypeScript", "Firebase", "APIs"],
     role: "Creator & Product Designer",
     year: "2025",
