@@ -64,7 +64,7 @@ const selectedProjects: SelectedProject[] = [
     id: 'geneproof2.0',
     title: 'GeneProof 2.0',
     subtitle: 'health tracking upgrade',
-    image: 'https://i.imgur.com/pxnYNKW.png',
+    image: 'https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=600',
     category: 'product',
     tags: ['Health Tech', 'React', 'ML'],
   },
@@ -282,13 +282,7 @@ export const SelectedProjects = () => {
                 transition={{ duration: 0.3, delay: index * 0.05 }}
               >
                 <Link to={`/projects/${project.id}`} className="group">
-                  <div 
-                    className={`relative ${["geneproof2.0", "geneproof", "wellness-guide"].includes(project.id) ? "overflow-visible" : "overflow-hidden"} rounded-2xl h-48 sm:h-56 md:h-64 bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300`}
-                    style={["geneproof2.0", "geneproof", "wellness-guide"].includes(project.id) ? {
-                      boxShadow: `0px 10px 30px rgba(236, 72, 153, 0.2), -5px -5px 15px rgba(236, 72, 153, 0.15), 5px -5px 15px rgba(99, 102, 241, 0.15)`,
-                      transform: "translateZ(0px)",
-                    } : {}}
-                  >
+                  <div className="relative overflow-hidden rounded-2xl h-48 sm:h-56 md:h-64 bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-300">
                     <img
                       src={project.image}
                       alt={project.title}
