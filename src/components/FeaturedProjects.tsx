@@ -15,7 +15,7 @@ const featuredProjects: FeaturedProject[] = [
     id: 'liteflix',
     title: 'LiteFlix',
     description: 'A lightweight streaming platform with curated content and personalized recommendations',
-    image: 'https://i.imgur.com/vFVoyRr.png',
+    image: 'https://i.imgur.com/szopggr.png?auto=compress&cs=tinysrgb&w=1200',
     category: 'Streaming',
   },
   {
