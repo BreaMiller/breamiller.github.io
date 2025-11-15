@@ -57,7 +57,7 @@ export const projectsData: Record<string, ProjectData> = {
     description: "Next-generation health tracking platform with advanced analytics and personalized health insights.",
     images: [
       {
-        src: "https://i.imgur.com/UOf7fcX.png?auto=compress&cs=tinysrgb&w=1200",
+        src: "https://i.imgur.com/eEjaDzu.png?auto=compress&cs=tinysrgb&w=1200",
         alt: "GeneProof 2.0 Hero",
         size: "large",
       },
