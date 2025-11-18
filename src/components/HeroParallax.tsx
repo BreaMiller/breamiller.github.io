@@ -146,7 +146,7 @@ export const Header = () => {
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
           fontWeight: "600",
-        }}>✐ᝰ innovative empath–</span>crafting digital experiences that don't just work beautifully, but feel intuitive and intentionalBrea Miller - LiteFlix.
+        }}>✐ᝰ innovative empath–</span>crafting digital experiences that don't just work beautifully, but feel intuitive and intentional.
       </p>
       <button 
         onClick={() => navigate('/about')}
