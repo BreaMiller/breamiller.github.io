@@ -14,16 +14,16 @@ const featuredProjects: FeaturedProject[] = [
   {
     id: 'liteflix',
     title: 'LiteFlix',
-    description: 'A lightweight streaming platform with curated content and personalized recommendations',
+    description: 'A transparent digital camera inpried by the 5D optic storage',
     image: 'https://i.imgur.com/szopggr.png?auto=compress&cs=tinysrgb&w=1200',
-    category: 'Streaming',
+    category: 'Product',
   },
   {
     id: 'ggs',
     title: 'Good Games',
     description: 'Gaming platform redesign with incentivized community features',
     image: 'https://i.imgur.com/I23nYjZ.png?auto=compress&cs=tinysrgb&w=1200',
-    category: '3D Render',
+    category: 'Interface',
   },
   {
     id: 'geneproof2.0',
