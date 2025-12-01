@@ -225,7 +225,7 @@ export const AboutPage: React.FC = () => {
                   decoding="async"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1613963931023-5dc59437c8a6?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=800&fit=crop"
+                  src="https://images.unsplash.com/photo-1762340273954-afe9b71819c4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=800&fit=crop"
                   alt="Digital Marketing"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
