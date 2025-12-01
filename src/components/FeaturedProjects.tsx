@@ -132,7 +132,7 @@ export const FeaturedProjects = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                     decoding="async"
-                    fetchPriority="low"
+                    {...{ fetchpriority: "low" } as any}
                   />
                   <div className="absolute inset-0 bg-black/40" />
                 </div>
@@ -155,7 +155,7 @@ export const FeaturedProjects = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="eager"
                   decoding="async"
-                  fetchPriority="high"
+                  {...{ fetchpriority: "high" } as any}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -182,7 +182,7 @@ export const FeaturedProjects = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                     decoding="async"
-                    fetchPriority="low"
+                    {...{ fetchpriority: "low" } as any}
                   />
                   <div className="absolute inset-0 bg-black/40" />
                 </div>

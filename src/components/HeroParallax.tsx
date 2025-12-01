@@ -246,7 +246,7 @@ export const ProductCard = ({
           }}
           loading="lazy"
           decoding="async"
-          fetchPriority="low"
+          {...{ fetchpriority: "low" } as any}
         />
       </button>
       <h2 

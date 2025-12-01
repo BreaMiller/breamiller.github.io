@@ -323,7 +323,7 @@ export const ProjectDetailPage: React.FC = () => {
                   }}
                   loading="lazy"
                   decoding="async"
-                  fetchPriority={index === 0 ? "high" : "low"}
+                  {...{ fetchpriority: index === 0 ? "high" : "low" } as any}
                 />
               )}
             </motion.div>
@@ -377,7 +377,7 @@ export const ProjectDetailPage: React.FC = () => {
                       }}
                       loading="lazy"
                       decoding="async"
-                      fetchPriority="low"
+                      {...{ fetchpriority: "low" } as any}
                     />
                   )}
                 </motion.div>
