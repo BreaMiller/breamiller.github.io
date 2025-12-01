@@ -473,9 +473,18 @@ export const AboutPage: React.FC = () => {
 
                 {/* Skills and Military Service Buttons */}
                 <div style={{ display: "flex", gap: "12px" }}>
-                  {["Skills", "Military Service"].map((btn) => (
+                  {["Skills", "Military Service"].map((btn) => {
+                    const handleClick = () => {
+                      if (btn === "Skills") {
+                        window.open("https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb80ceacd7f69ea926b8b4", "_blank");
+                      } else if (btn === "Military Service") {
+                        window.open("https://grave-ozraraptor-fa8.notion.site/Brea-Miller-24a81d719ffb803fa29cd1d221d7750e", "_blank");
+                      }
+                    };
+                    return (
                     <motion.button
                       key={btn}
+                      onClick={handleClick}
                       whileHover={{
                         y: -2,
                         scale: 1.05,
@@ -520,7 +529,8 @@ export const AboutPage: React.FC = () => {
                         }}
                       />
                     </motion.button>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>

@@ -16,7 +16,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
 
   const footerLinks = [
     { label: 'Work', href: '#work', onClick: onWorkClick },
-    { label: 'About', href: '/about', onClick: undefined },
+    { label: 'About', href: '/about', onClick: () => window.location.hash = '#/about' },
     { label: 'Contact', href: '#contact', onClick: onContactClick },
     { label: 'Privacy', href: '#privacy', onClick: onPrivacyClick },
   ];

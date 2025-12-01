@@ -56,7 +56,13 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
             {["Send Email", "Schedule Call"].map((btn) => (
               <motion.button
                 key={btn}
-                onClick={onContactClick}
+                onClick={() => {
+                  if (btn === "Schedule Call") {
+                    window.open("https://calendly.com/brea_miller/30-min-demo", "_blank");
+                  } else {
+                    onContactClick?.();
+                  }
+                }}
                 whileHover={{ 
                   y: -2, 
                   scale: 1.05,

@@ -20,9 +20,8 @@ Added `url` field to ProjectData interface and populated URLs for projects:
 **Projects with URLs:**
 - **GeneProof 2.0**: `https://geneproof.com`
 - **Imagine...**: `https://imagine.breamiller.com`
-- **LiteFlix**: `https://liteflix.app`
-- **Voya**: `https://voya.travel`
-- **Wellness Guide**: `https://wellnessguide.app`
+- **LiteFlix**: `https://breamiller.github.io/liteflix`
+- **Voya**: `https://breamiller.github.io/voya,`
 
 Other projects don't have URLs defined yet (can be added as needed).
 

@@ -229,7 +229,7 @@ export const projectsData: Record<string, ProjectData> = {
     tools: ["React Native", "Astrology APIs", "Booking APIs", "GraphQL", "Stripe"],
     role: "Product Designer & Developer",
     year: "2025",
-    url: "https://voya.travel",
+    url: "https://breamiller.github.io/voya",
   },
   "ad-reels": {
     id: "ad-reels",
@@ -271,7 +271,6 @@ export const projectsData: Record<string, ProjectData> = {
     tools: ["DALL-E", "Midjourney", "Figma", "After Effects", "AI Art Generation"],
     role: "Creative Director",
     year: "2024",
-    url: "https://imagine.breamiller.com",
   },
   "flix": {
     id: "flix",
@@ -300,7 +299,7 @@ export const projectsData: Record<string, ProjectData> = {
     tools: ["React", "Midjourney"],
     role: "Product Designer & Frontend Developer",
     year: "2025",
-    url: "https://liteflix.app",
+    url: "https://breamiller.github.io/liteflix",
     visitUrl: "https://breamiller.github.io/liteflix",
     visitLabel: "Visit LiteFlix",
   },
