@@ -361,7 +361,7 @@ export const AboutPage: React.FC = () => {
                         Mapping intuitive touchpoints
                       </h2>
                       <p className="text-base md:text-lg text-white/70 mt-6">
-                        Each interaction is an excellent chance to wow your audience with experiences that matter. 
+                        Each interaction is an excellent chance to wow your audience with experiences that resonate with them. 
                       </p>
                       <p className="text-base md:text-lg text-white/70 mt-4">
                         From strategy to execution, I specialize in implementing data-driven marketing strategies that blend organic and paid channels into a seamless customer journey.
