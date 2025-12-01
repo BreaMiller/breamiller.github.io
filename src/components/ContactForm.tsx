@@ -6,6 +6,17 @@ interface ContactFormProps {
   onClose: () => void;
 }
 
+const serviceOptions = [
+  "Select a service",
+  "Product Visualization",
+  "UI/UX Design",
+  "Brand Development",
+  "Digital Marketing",
+  "Web Development",
+  "Creative Consulting",
+  "License an Existing Product",
+];
+
 export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -16,7 +27,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -282,28 +293,34 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                   />
                 </div>
 
-                {/* Subject Field */}
+                {/* Service Selection Dropdown */}
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
                   <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
-                    Subject
+                    Service of Interest
                   </label>
-                  <input
-                    type="text"
+                  <select
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    placeholder="What's this about?"
                     style={{
                       background: "rgba(255, 255, 255, 0.05)",
                       border: "1px solid rgba(255, 255, 255, 0.1)",
                       borderRadius: "12px",
                       padding: "clamp(10px, 2vw, 12px) clamp(10px, 2vw, 14px)",
-                      color: "#ffffff",
+                      color: formData.subject === "" ? "rgba(255, 255, 255, 0.5)" : "#ffffff",
                       fontSize: "clamp(13px, 2.5vw, 14px)",
                       transition: "all 0.3s ease",
                       outline: "none",
                       width: "100%",
+                      fontFamily: "inherit",
+                      cursor: "pointer",
+                      appearance: "none",
+                      backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(236, 72, 153, 0.6)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "right 10px center",
+                      backgroundSize: "20px",
+                      paddingRight: "40px",
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
@@ -313,7 +330,21 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)";
                       e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.1)";
                     }}
-                  />
+                  >
+                    {serviceOptions.map((option) => (
+                      <option 
+                        key={option} 
+                        value={option === "Select a service" ? "" : option}
+                        disabled={option === "Select a service"}
+                        style={{
+                          background: "#1a1a1a",
+                          color: "#ffffff",
+                        }}
+                      >
+                        {option}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 {/* Message Field */}
