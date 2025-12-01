@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { AiOutlineEye } from 'react-icons/ai';
 import { ContactForm } from '../components/ContactForm';
 import { Footer } from '../components/Footer';
 
@@ -10,6 +11,16 @@ export const AboutPage: React.FC = () => {
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [aboutPageViews, setAboutPageViews] = useState(0);
+
+  useEffect(() => {
+    // Increment about page view count on mount
+    const storageKey = 'pageViews_about';
+    const currentViews = parseInt(localStorage.getItem(storageKey) || '0');
+    const newViewCount = currentViews + 1;
+    localStorage.setItem(storageKey, newViewCount.toString());
+    setAboutPageViews(newViewCount);
+  }, []);
 
   useEffect(() => {
     if (!scrollerRef.current) return;
@@ -350,7 +361,7 @@ export const AboutPage: React.FC = () => {
                         Crafting customer journeys
                       </h2>
                       <p className="text-base md:text-lg text-white/70 mt-6">
-                        From strategy to execution, I develop end-to-end campaigns that blend organic and paid channels. I create compelling content—video, photography, graphics, animation—tailored to each platform's unique audience.
+                        From strategy to execution, I develop end-to-end campaigns that blend organic and paid channels.
                       </p>
                       <p className="text-base md:text-lg text-white/70 mt-4">
                         Every campaign is tracked, measured, and optimized. I dive deep into performance metrics and deliver actionable insights that drive real business growth.
@@ -567,6 +578,35 @@ export const AboutPage: React.FC = () => {
           </div>
         </div>
       </motion.section>
+
+      {/* View Counter */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          padding: "12px 16px",
+          background: "rgba(17, 17, 17, 0.9)",
+          backdropFilter: "blur(20px)",
+          border: "1px solid rgba(236, 72, 153, 0.3)",
+          borderRadius: "50px",
+          fontSize: "12px",
+          fontWeight: "600",
+          color: "#ec4899",
+          zIndex: "1000",
+          textTransform: "uppercase",
+          letterSpacing: "0.5px",
+          display: "flex",
+          alignItems: "center",
+          gap: "8px",
+        }}
+        whileHover={{ y: -2, boxShadow: "0 8px 20px rgba(236, 72, 153, 0.2)" }}
+      >
+        <AiOutlineEye size={16} />
+        <span>{aboutPageViews}</span>
+      </motion.div>
 
       {/* Footer */}
       <Footer onContactClick={() => setIsContactOpen(true)} />

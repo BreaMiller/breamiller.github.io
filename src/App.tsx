@@ -11,12 +11,22 @@ import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { ContactForm } from './components/ContactForm';
 import { AiOutlineEye } from 'react-icons/ai';
 import { heroProducts } from './heroProductsData';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 function App() {
   const featuredProjectsRef = useRef<HTMLDivElement>(null);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+  const [homePageViews, setHomePageViews] = useState(0);
+
+  useEffect(() => {
+    // Increment home page view count on mount
+    const storageKey = 'pageViews_home';
+    const currentViews = parseInt(localStorage.getItem(storageKey) || '0');
+    const newViewCount = currentViews + 1;
+    localStorage.setItem(storageKey, newViewCount.toString());
+    setHomePageViews(newViewCount);
+  }, []);
 
   const handleWorkClick = () => {
     featuredProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -87,7 +97,7 @@ function App() {
           color: "#ec4899",
           textTransform: "uppercase",
           letterSpacing: "1px",
-          boxShadow: "0 8px 25px rgba(236, 72, 153, 0.2)",
+          boxShadow: "0 8px 25px rgba(236, 72, 853, 0.2)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -96,12 +106,12 @@ function App() {
         }}
         whileHover={{ 
           y: -3,
-          boxShadow: "0 12px 35px rgba(236, 72, 153, 0.4)",
+          boxShadow: "0 12px 35px rgba(236, 72, 853, 0.4)",
         }}
         transition={{ duration: 0.3 }}
       >
         <AiOutlineEye size={16} style={{ marginRight: "8px" }} />
-        Views: <span style={{ marginLeft: "4px", fontWeight: "700" }}>1.2K</span>
+        Views: <span style={{ marginLeft: "4px", fontWeight: "700" }}>{homePageViews}</span>
       </motion.div>
     </div>
   );

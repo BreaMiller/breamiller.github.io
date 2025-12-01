@@ -11,10 +11,21 @@ export const ProjectDetailPage: React.FC = () => {
   const navigate = useNavigate();
   const project = projectId ? projectsData[projectId] : null;
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [projectViews, setProjectViews] = useState(0);
 
   // Scroll to top when component mounts or projectId changes
+  // Also increment view count
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    if (projectId) {
+      // Increment project view count
+      const storageKey = `pageViews_project_${projectId}`;
+      const currentViews = parseInt(localStorage.getItem(storageKey) || '0');
+      const newViewCount = currentViews + 1;
+      localStorage.setItem(storageKey, newViewCount.toString());
+      setProjectViews(newViewCount);
+    }
   }, [projectId]);
 
   if (!project) {
@@ -679,10 +690,10 @@ export const ProjectDetailPage: React.FC = () => {
           alignItems: "center",
           gap: "8px",
         }}
-        whileHover={{ y: -2, boxShadow: "0 8px 20px rgba(236, 72, 853, 0.2)" }}
+        whileHover={{ y: -2, boxShadow: "0 8px 20px rgba(236, 72, 153, 0.2)" }}
       >
         <AiOutlineEye size={16} />
-        <span>1</span>
+        <span>{projectViews}</span>
       </motion.div>
 
       {/* Footer */}
