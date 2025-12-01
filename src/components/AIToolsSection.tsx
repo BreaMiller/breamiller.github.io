@@ -2,17 +2,17 @@ import { InfiniteSlider } from './InfiniteSlider';
 import { motion } from 'framer-motion';
 
 const aiTools = [
-  { id: 1, name: 'Opus Clip', logo: 'https://asset.brandfetch.io/idMyFW0O1q/ide61u_rax.png' },
-  { id: 2, name: 'Runway', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/runway-ai-icon.png' },
-  { id: 3, name: 'Eleven Labs', logo: 'https://11labs-nonprd-15f22c1d.s3.eu-west-3.amazonaws.com/a2ea339b-8b5e-41bb-b706-24eda8a4c9e3/elevenlabs-symbol.svg' },
-  { id: 4, name: 'Descript', logo: 'https://s3-eu-west-1.amazonaws.com/tpd/logos/5a397f4bb894c90c086a7587/0x0.png' },
-  { id: 5, name: 'Adobe Firefly', logo: 'https://cdn-icons-png.flaticon.com/512/731/731970.png' },
-  { id: 6, name: 'GitHub', logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
-  { id: 7, name: 'OpenArt', logo: 'https://techzehn.com/wp-content/uploads/2025/08/OpenArt-Logo.png' },
-  { id: 8, name: 'Pixlr', logo: 'https://pixlr.com/blog/wp-content/uploads/2022/03/cropped-cropped-Black-icon.png' },
-  { id: 9, name: 'Claude', logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude.png' },
-  { id: 10, name: 'Figma', logo: 'https://www.svgrepo.com/show/361494/figma-logo.svg' },
-  { id: 11, name: 'Notion', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMXGj03FU3Mr3pdHmax0CGOKkXBkJYv2d3iQ&s' },
+  { id: 1, name: 'Opus Clip', logo: 'https://asset.brandfetch.io/idMyFW0O1q/ide61u_rax.png', url: 'https://www.opus.pro' },
+  { id: 2, name: 'Runway', logo: 'https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/runway-ai-icon.png', url: 'https://www.runwayml.com' },
+  { id: 3, name: 'Eleven Labs', logo: 'https://11labs-nonprd-15f22c1d.s3.eu-west-3.amazonaws.com/a2ea339b-8b5e-41bb-b706-24eda8a4c9e3/elevenlabs-symbol.svg', url: 'https://www.elevenlabs.io' },
+  { id: 4, name: 'Descript', logo: 'https://s3-eu-west-1.amazonaws.com/tpd/logos/5a397f4bb894c90c086a7587/0x0.png', url: 'https://www.descript.com' },
+  { id: 5, name: 'Adobe Firefly', logo: 'https://cdn-icons-png.flaticon.com/512/731/731970.png', url: 'https://www.adobe.com/products/firefly.html' },
+  { id: 6, name: 'GitHub', logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png', url: 'https://www.github.com' },
+  { id: 7, name: 'OpenArt', logo: 'https://techzehn.com/wp-content/uploads/2025/08/OpenArt-Logo.png', url: 'https://www.openart.ai' },
+  { id: 8, name: 'Pixlr', logo: 'https://pixlr.com/blog/wp-content/uploads/2022/03/cropped-cropped-Black-icon.png', url: 'https://www.pixlr.com' },
+  { id: 9, name: 'Claude', logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude.png', url: 'https://www.claude.ai' },
+  { id: 10, name: 'Figma', logo: 'https://www.svgrepo.com/show/361494/figma-logo.svg', url: 'https://www.figma.com' },
+  { id: 11, name: 'Notion', logo: 'https://boost.space/wp-content/uploads/2025/02/notion.png', url: 'https://www.notion.so' },
 ];
 
 export const AIToolsSection = () => {
@@ -72,6 +72,7 @@ export const AIToolsSection = () => {
             {aiTools.map((tool) => (
               <div
                 key={tool.id}
+                onClick={() => window.open(tool.url, '_blank')}
                 className="flex-shrink-0 flex items-center justify-center px-6 sm:px-8 py-4 sm:py-6 rounded-2xl border border-white/10 hover:border-pink-500/50 transition-all duration-300 cursor-pointer group"
                 style={{
                   minWidth: '160px',
