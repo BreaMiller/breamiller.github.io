@@ -14,7 +14,9 @@ const serviceOptions = [
   "Digital Marketing",
   "Web Development",
   "Creative Consulting",
-  "License an Existing Product",
+  "Licensing Inquiry",
+  "Custom Project",
+  "Feedback",
 ];
 
 export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
