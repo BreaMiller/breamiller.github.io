@@ -214,6 +214,13 @@ export const AboutPage: React.FC = () => {
                   decoding="async"
                 />
                 <img
+                  src="https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1748?w=800&h=800&fit=crop"
+                  alt="Digital Marketing - Campaign Strategy"
+                  className="about-image aspect-square w-full h-full object-cover absolute inset-0"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <img
                   src="https://live.staticflickr.com/4118/4870060634_1b5e50a944_b.jpg?w=800&h=800&fit=crop"
                   alt="Photography Portfolio"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
@@ -328,7 +335,30 @@ export const AboutPage: React.FC = () => {
                     </div>
                   </article>
 
-                  {/* Slide 4: Photography */}
+                  {/* Slide 4: Digital Marketing */}
+                  <article className="about-content-item snap-start min-h-[600px] flex items-center">
+                    <div>
+                      <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
+                        style={{
+                          background: "rgba(236, 72, 153, 0.1)",
+                          border: "1px solid rgba(236, 72, 153, 0.3)",
+                        }}
+                      >
+                        <span className="text-xs text-pink-400">Digital Marketing</span>
+                      </motion.div>
+                      <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
+                        Crafting customer journeys
+                      </h2>
+                      <p className="text-base md:text-lg text-white/70 mt-6">
+                        From strategy to execution, I develop end-to-end campaigns that blend organic and paid channels. I create compelling content—video, photography, graphics, animation—tailored to each platform's unique audience.
+                      </p>
+                      <p className="text-base md:text-lg text-white/70 mt-4">
+                        Every campaign is tracked, measured, and optimized. I dive deep into performance metrics and deliver actionable insights that drive real business growth.
+                      </p>
+                    </div>
+                  </article>
+
+                  {/* Slide 5: Photography */}
                   <article className="about-content-item snap-start min-h-[600px] flex items-center">
                     <div>
                       <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
@@ -359,7 +389,7 @@ export const AboutPage: React.FC = () => {
                     </div>
                   </article>
 
-                  {/* Slide 5: Let's Connect */}
+                  {/* Slide 6: Let's Connect */}
                   <article className="about-content-item snap-start min-h-[600px] flex items-center">
                     <div>
                       <motion.div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5"
@@ -396,7 +426,7 @@ export const AboutPage: React.FC = () => {
 
                 {/* Scroll Dots Indicator */}
                 <div className="flex flex-col gap-4 items-center justify-center h-[600px]">
-                  {[0, 1, 2, 3, 4].map((i) => (
+                  {[0, 1, 2, 3, 4, 5].map((i) => (
                     <button
                       key={i}
                       className="scroll-dot transition-all duration-300"

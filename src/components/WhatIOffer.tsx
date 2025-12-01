@@ -39,12 +39,11 @@ const services: Service[] = [
     color: 'from-emerald-500/20 to-teal-500/20',
   },
   {
-    title: 'Motion Design',
-    description: 'Dynamic animations and interactive experiences',
+    title: 'Digital Marketing',
+    description: 'Strategic campaigns that drive engagement and growth',
     icon: (
       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
     color: 'from-rose-500/20 to-pink-500/20',

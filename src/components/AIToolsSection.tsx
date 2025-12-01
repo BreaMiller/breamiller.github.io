@@ -180,7 +180,7 @@ export const AIToolsSection = () => {
             position: "relative",
             zIndex: 10,
           }}>
-            Explore Directory
+            Explore AI Directory
           </span>
         </motion.button>
       </motion.div>
