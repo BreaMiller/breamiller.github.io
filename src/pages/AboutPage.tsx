@@ -358,13 +358,13 @@ export const AboutPage: React.FC = () => {
                         <span className="text-xs text-pink-400">Digital Marketing</span>
                       </motion.div>
                       <h2 className="mt-5 text-3xl md:text-4xl text-white drop-shadow-xl font-semibold tracking-tight">
-                        Crafting customer journeys
+                        Mapping intuitive touchpoints
                       </h2>
                       <p className="text-base md:text-lg text-white/70 mt-6">
-                        From strategy to execution, I develop end-to-end campaigns that blend organic and paid channels.
+                        Each interaction is an excellent chance to wow your audience with experiences that matter. 
                       </p>
                       <p className="text-base md:text-lg text-white/70 mt-4">
-                        Every campaign is tracked, measured, and optimized. I dive deep into performance metrics and deliver actionable insights that drive real business growth.
+                        From strategy to execution, I specialize in implementing data-driven marketing strategies that blend organic and paid channels into a seamless customer journey.
                       </p>
                     </div>
                   </article>
