@@ -225,7 +225,7 @@ export const AboutPage: React.FC = () => {
                   decoding="async"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1722172597269-d911054badb9?ixlib=rb-4.0.3&auto=format&fit=crop&q=80&w=1748?w=800&h=800&fit=crop"
+                  src="https://images.unsplash.com/photo-1722172597269-d911054badb9?w=800&h=800&fit=crop"
                   alt="Digital Marketing"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
@@ -533,8 +533,8 @@ export const AboutPage: React.FC = () => {
                       }}
                       whileTap={{ scale: 0.95 }}
                       style={{
-                        background: btn === "Skills" ? "rgba(236, 72, 153, 0.1)" : "transparent",
-                        border: btn === "Skills" ? "none" : ".5px solid #ec4899",
+                        background: "transparent",
+                        border: ".5px solid #ec4899",
                         padding: "18px 18px",
                         borderRadius: "20px",
                         width: btn === "Skills" ? "140px" : "200px",
