@@ -148,36 +148,82 @@ export const Header = () => {
           fontWeight: "600",
         }}>✐ᝰ innovative empath–</span>crafting digital experiences that don't just work beautifully, but feel intuitive and intentional.
       </p>
-      <button 
-        onClick={() => navigate('/about')}
-        className="mt-6 sm:mt-8"
-        style={{
-          background: "transparent",
-          border: "none",
-          color: "#ffffff",
-          padding: "18px 18px",
-          borderRadius: "20px",
-          width: "140px",
-          height: "60px",
-          fontSize: "clamp(12px, 2vw, 14px)",
-          fontWeight: "700",
-          cursor: "pointer",
-          transition: "all 0.3s ease",
-          textTransform: "uppercase",
-          letterSpacing: "1px",
-          boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
-          position: "relative",
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          whiteSpace: "wrap",
-          animation: "outlineGlow 3s ease-in-out infinite",
-          maxWidth: "400px",
-        }}
-      >
-        ABOUT ME
-      </button>
+      <div style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap", marginTop: "clamp(24px, 5vw, 40px)" }}>
+        <button 
+          onClick={() => navigate('/about')}
+          style={{
+            background: "transparent",
+            border: "none",
+            color: "#ffffff",
+            padding: "18px 18px",
+            borderRadius: "20px",
+            width: "140px",
+            height: "60px",
+            fontSize: "clamp(12px, 2vw, 14px)",
+            fontWeight: "700",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
+            boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+            position: "relative",
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            whiteSpace: "wrap",
+            animation: "outlineGlow 3s ease-in-out infinite",
+            maxWidth: "400px",
+          }}
+        >
+          ABOUT
+        </button>
+        <button 
+          onClick={() => {
+            // Trigger contact form - needs context from parent
+            // For now, scroll to contact section or handle via props
+            const event = new CustomEvent('openContactForm');
+            window.dispatchEvent(event);
+          }}
+          style={{
+            background: "transparent",
+            border: ".5px solid #ec4899",
+            color: "#ec4899",
+            padding: "18px 18px",
+            borderRadius: "20px",
+            width: "140px",
+            height: "60px",
+            fontSize: "clamp(12px, 2vw, 14px)",
+            fontWeight: "700",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
+            boxShadow: "0 0 15px rgba(236, 72, 153, 0.15)",
+            position: "relative",
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            whiteSpace: "wrap",
+            maxWidth: "400px",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "rgba(236, 72, 153, 0.1)";
+            e.currentTarget.style.borderColor = "rgba(236, 72, 153, 0.8)";
+            e.currentTarget.style.color = "#ffffff";
+            e.currentTarget.style.boxShadow = "0 0 30px rgba(236, 72, 153, 0.4)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "transparent";
+            e.currentTarget.style.borderColor = ".5px solid #ec4899";
+            e.currentTarget.style.color = "#ec4899";
+            e.currentTarget.style.boxShadow = "0 0 15px rgba(236, 72, 153, 0.15)";
+          }}
+        >
+          CONNECT
+        </button>
+      </div>
     </div>
   );
 };

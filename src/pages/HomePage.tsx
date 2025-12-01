@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HeroParallax } from '../components/HeroParallax';
 import { AIToolsSection } from '../components/AIToolsSection';
@@ -13,6 +13,15 @@ import { heroProducts } from '../heroProductsData';
 
 function HomePage() {
   const [isContactOpen, setIsContactOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpenContact = () => {
+      setIsContactOpen(true);
+    };
+
+    window.addEventListener('openContactForm', handleOpenContact);
+    return () => window.removeEventListener('openContactForm', handleOpenContact);
+  }, []);
 
   return (
     <div className="w-full relative" style={{
