@@ -12,6 +12,7 @@ const aiTools = [
   { id: 8, name: 'Pixlr', logo: 'https://pixlr.com/blog/wp-content/uploads/2022/03/cropped-cropped-Black-icon.png' },
   { id: 9, name: 'Claude', logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude.png' },
   { id: 10, name: 'Figma', logo: 'https://www.svgrepo.com/show/361494/figma-logo.svg' },
+  { id: 11, name: 'Notion', logo: 'https://cdn-icons-png.flaticon.com/512/5968/5968705.png' },
 ];
 
 export const AIToolsSection = () => {
@@ -132,7 +133,7 @@ export const AIToolsSection = () => {
         viewport={{ once: false, amount: 0.5 }}
       >
         <motion.button
-          disabled
+          onClick={() => window.open("https://breamiller.github.io/ai-directory/", "_blank")}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           style={{
@@ -147,8 +148,8 @@ export const AIToolsSection = () => {
             fontWeight: "700",
             textTransform: "uppercase",
             letterSpacing: "1px",
-            cursor: "not-allowed",
-            opacity: 0.8,
+            cursor: "pointer",
+            opacity: 1,
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
@@ -178,7 +179,7 @@ export const AIToolsSection = () => {
             position: "relative",
             zIndex: 10,
           }}>
-            Directory Coming Soon
+            Explore Directory
           </span>
         </motion.button>
       </motion.div>
