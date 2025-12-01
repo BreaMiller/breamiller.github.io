@@ -12,7 +12,7 @@ const aiTools = [
   { id: 8, name: 'Pixlr', logo: 'https://pixlr.com/blog/wp-content/uploads/2022/03/cropped-cropped-Black-icon.png' },
   { id: 9, name: 'Claude', logo: 'https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude.png' },
   { id: 10, name: 'Figma', logo: 'https://www.svgrepo.com/show/361494/figma-logo.svg' },
-  { id: 11, name: 'Notion', logo: 'https://cdn-icons-png.flaticon.com/512/5968/5968705.png' },
+  { id: 11, name: 'Notion', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMXGj03FU3Mr3pdHmax0CGOKkXBkJYv2d3iQ&s' },
 ];
 
 export const AIToolsSection = () => {
