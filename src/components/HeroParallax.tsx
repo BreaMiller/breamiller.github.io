@@ -176,7 +176,7 @@ export const Header = () => {
             maxWidth: "400px",
           }}
         >
-          ABOUT ME
+          ABOUT
         </button>
         <button 
           onClick={() => {

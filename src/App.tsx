@@ -28,6 +28,15 @@ function App() {
     setHomePageViews(newViewCount);
   }, []);
 
+  useEffect(() => {
+    const handleOpenContact = () => {
+      setIsContactOpen(true);
+    };
+
+    window.addEventListener('openContactForm', handleOpenContact);
+    return () => window.removeEventListener('openContactForm', handleOpenContact);
+  }, []);
+
   const handleWorkClick = () => {
     featuredProjectsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
