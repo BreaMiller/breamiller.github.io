@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { SiLinkedin, SiFlickr, SiGithub } from 'react-icons/si';
 
 interface FooterProps {
@@ -8,6 +9,7 @@ interface FooterProps {
 }
 
 export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterProps) => {
+  const navigate = useNavigate();
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: SiLinkedin },
     { name: 'Flickr', url: 'https://flickr.com', icon: SiFlickr },
@@ -16,7 +18,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
 
   const footerLinks = [
     { label: 'Work', href: '#work', onClick: onWorkClick },
-    { label: 'About', href: '/about', onClick: () => window.location.hash = '#/about' },
+    { label: 'About', href: '/about', onClick: () => navigate('/about') },
     { label: 'Contact', href: '#contact', onClick: onContactClick },
     { label: 'Privacy', href: '#privacy', onClick: onPrivacyClick },
   ];
