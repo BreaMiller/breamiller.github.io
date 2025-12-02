@@ -47,7 +47,7 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Creator, Product Designer, & Frontend Developer",
     year: "2025",
     visitUrl: "https://breamiller.github.io/gg",
-    visitLabel: "Visit GG",
+    visitLabel: "Visit GGs",
   },
   "geneproof2.0": {
     id: "geneproof2.0",
@@ -67,7 +67,7 @@ export const projectsData: Record<string, ProjectData> = {
     tools: ["React", "Python", "Machine Learning", "Data Visualization"],
     role: "Creator, Product Designer, & Developer",
     year: "2025",
-    url: "https://breamiller.github.io/geneproof/",
+    url: "https://breamiller.github.io/app-geneproof/",
   },
   "altamed": {
     id: "altamed",
@@ -144,7 +144,7 @@ export const projectsData: Record<string, ProjectData> = {
     tools: ["React", "Python", "Machine Learning", "Data Visualization"],
     role: "Creator, Product Designer, & Developer",
     year: "2024",
-    url: "https://breamiller.github.io/geneproof/",
+    url: "https://breamiller.github.io/app-geneproof/",
   },
   "baraka": {
     id: "baraka",
