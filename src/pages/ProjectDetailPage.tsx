@@ -634,7 +634,8 @@ export const ProjectDetailPage: React.FC = () => {
                 color: "#ffffff",
                 padding: "16px 18px",
                 borderRadius: "20px",
-                width: "140px",
+                width: "auto",
+                minWidth: "160px",
                 height: "60px",
                 fontSize: "clamp(11px, 2vw, 14px)",
                 fontWeight: "700",
@@ -650,7 +651,7 @@ export const ProjectDetailPage: React.FC = () => {
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 whiteSpace: "nowrap",
-                maxWidth: "200px",
+                maxWidth: "300px",
               }}
               onMouseEnter={(e: any) => {
                 e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
