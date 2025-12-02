@@ -144,7 +144,7 @@ export const projectsData: Record<string, ProjectData> = {
     tools: ["React", "Python", "Machine Learning", "Data Visualization"],
     role: "Creator, Product Designer, & Developer",
     year: "2024",
-    url: "https://breamiller.github.io/geneproof/",
+    url: "https://breamiller.github.io/app-geneproof/",
   },
   "baraka": {
     id: "baraka",
