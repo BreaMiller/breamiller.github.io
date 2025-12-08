@@ -225,7 +225,7 @@ export const AboutPage: React.FC = () => {
                   decoding="async"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1762340273954-afe9b71819c4?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=800&fit=crop"
+                  src="https://images.unsplash.com/photo-1546702276-0903ce58a586?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=800&h=800&fit=crop"
                   alt="Digital Marketing"
                   className="about-image aspect-square w-full h-full object-cover absolute inset-0"
                   loading="lazy"
@@ -361,7 +361,7 @@ export const AboutPage: React.FC = () => {
                         Mapping intuitive touchpoints
                       </h2>
                       <p className="text-base md:text-lg text-white/70 mt-6">
-                        Each interaction is an excellent chance to wow your audience with experiences that matter. 
+                        Each interaction is an excellent chance to wow your audience with experiences that resonate with them. 
                       </p>
                       <p className="text-base md:text-lg text-white/70 mt-4">
                         From strategy to execution, I specialize in implementing data-driven marketing strategies that blend organic and paid channels into a seamless customer journey.
@@ -534,10 +534,11 @@ export const AboutPage: React.FC = () => {
                       whileTap={{ scale: 0.95 }}
                       style={{
                         background: "transparent",
-                        border: ".5px solid #ec4899",
-                        padding: "18px 18px",
+                        border: btn === "Skills" ? "none" : ".5px solid #ec4899",
+                        padding: "18px 24px",
                         borderRadius: "20px",
-                        width: btn === "Skills" ? "140px" : "200px",
+                        width: btn === "Skills" ? "140px" : "auto",
+                        minWidth: btn === "Skills" ? "auto" : "200px",
                         height: "60px",
                         fontSize: "14px",
                         fontWeight: "700",
@@ -551,7 +552,7 @@ export const AboutPage: React.FC = () => {
                         justifyContent: "center",
                         whiteSpace: "nowrap",
                         maxWidth: "400px",
-                        boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)",
+                        boxShadow: btn === "Skills" ? "0 0 20px rgba(236, 72, 153, 0.2)" : "0 0 15px rgba(236, 72, 153, 0.15)",
                         position: "relative",
                         overflow: "hidden",
                       }}
