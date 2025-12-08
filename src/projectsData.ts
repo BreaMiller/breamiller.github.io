@@ -52,8 +52,8 @@ export const projectsData: Record<string, ProjectData> = {
   "geneproof2.0": {
     id: "geneproof2.0",
     title: "GeneProof 2.0",
-    subtitle: "health tracking upgrade",
-    tagline: "✐ᝰ personalized wellness app",
+    subtitle: "health tracking app",
+    tagline: "✐ᝰ The future of currency is in good health.",
     description: "Next-generation health tracking platform with advanced analytics and personalized health insights.",
     images: [
       {
@@ -72,7 +72,7 @@ export const projectsData: Record<string, ProjectData> = {
   "altamed": {
     id: "altamed",
     title: "AltaMed",
-    subtitle: "healthcare accessibility platform",
+    subtitle: "healthcare practitioner directory",
     tagline: "✐ᝰ healthcare for everyone",
     description: "Accessible healthcare platform connecting patients with quality medical practitioners.",
     images: [
@@ -130,9 +130,9 @@ export const projectsData: Record<string, ProjectData> = {
   "geneproof": {
     id: "geneproof",
     title: "GeneProof",
-    subtitle: "health tracking app",
-    tagline: "✐ᝰ incentivized wellness app",
-    description: "Next-generation health tracking platform with advanced analytics and personalized health insights.",
+    subtitle: "incentivized wellness app",
+    tagline: "✐ᝰ The future of currency is in good health.",
+    description: "After learning about the story of Henrietta Lacks and deep diving into the Human Genome Project in the the summer of 2024, I was determined to create an application that allows users to take ownership of their genetic code with the use of blockchain technology.",
     images: [
       {
         src: "https://i.imgur.com/3DnoTQb.gif?auto=compress&cs=tinysrgb&w=1200",

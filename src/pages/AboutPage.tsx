@@ -535,9 +535,10 @@ export const AboutPage: React.FC = () => {
                       style={{
                         background: "transparent",
                         border: btn === "Skills" ? "none" : ".5px solid #ec4899",
-                        padding: "18px 18px",
+                        padding: "18px 24px",
                         borderRadius: "20px",
-                        width: btn === "Skills" ? "140px" : "200px",
+                        width: btn === "Skills" ? "140px" : "auto",
+                        minWidth: btn === "Skills" ? "auto" : "200px",
                         height: "60px",
                         fontSize: "14px",
                         fontWeight: "700",
