@@ -634,7 +634,7 @@ export const ProjectDetailPage: React.FC = () => {
                 color: "#ffffff",
                 padding: "18px 24px",
                 borderRadius: "20px",
-                width: "180px",
+                width: "225px",
                 height: "60px",
                 fontSize: "clamp(11px, 2vw, 14px)",
                 fontWeight: "700",
