@@ -269,7 +269,7 @@ export const SelectedProjects = () => {
           initial={{ opacity: 0, filter: "blur(10px)" }}
           whileInView={{ opacity: 1, filter: "blur(0px)" }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <AnimatePresence mode="popLayout">
             {displayed.map((project, index) => (
@@ -317,7 +317,7 @@ export const SelectedProjects = () => {
             initial={{ opacity: 0, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            viewport={{ once: false, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             className="flex justify-center pt-8"
           >
             <button
