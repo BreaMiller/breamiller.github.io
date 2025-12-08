@@ -37,13 +37,14 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
     >
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 text-center md:text-left">
           {/* Brand section */}
           <motion.div
             initial={{ opacity: 0, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 0 }}
             viewport={{ once: true }}
+            className="md:text-left"
           >
             <h3 className="text-2xl font-bold mb-4">
               <span style={{
@@ -63,6 +64,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 0.05 }}
             viewport={{ once: true }}
+            className="md:text-left"
           >
             <h4 className="text-white font-semibold mb-6 uppercase text-xs tracking-widest">Navigation</h4>
             <nav className="space-y-3">
@@ -91,9 +93,10 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
             whileInView={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
+            className="md:text-left"
           >
             <h4 className="text-white font-semibold mb-6 uppercase text-xs tracking-widest">Connect</h4>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
                 return (
