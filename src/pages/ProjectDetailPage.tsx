@@ -636,7 +636,7 @@ export const ProjectDetailPage: React.FC = () => {
                 borderRadius: "20px",
                 width: "auto",
                 minWidth: "140px",
-                height: "60px",
+                height: "75px",
                 fontSize: "clamp(11px, 2vw, 14px)",
                 fontWeight: "700",
                 cursor: "pointer",
