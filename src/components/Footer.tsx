@@ -12,8 +12,8 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
   const navigate = useNavigate();
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://linkedin.com', icon: SiLinkedin },
-    { name: 'Flickr', url: 'https://flickr.com', icon: SiFlickr },
-    { name: 'GitHub', url: 'https://github.com', icon: SiGithub },
+    { name: 'Flickr', url: 'https://www.flickr.com/photos/as-seen-by-brea/with/4800552773', icon: SiFlickr },
+    { name: 'GitHub', url: 'https://github.com/astral-aesthetic', icon: SiGithub },
   ];
 
   const footerLinks = [
