@@ -86,6 +86,8 @@ function HomePage() {
               alignItems: "center",
               justifyContent: "center",
               whiteSpace: "nowrap",
+              position: "relative",
+              overflow: "hidden",
             }}
           >
             Build with Me
