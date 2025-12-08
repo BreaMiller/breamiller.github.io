@@ -53,6 +53,58 @@ function HomePage() {
         <AIToolsSection />
         <FeaturedProjects />
         <WhatIOffer />
+        
+        {/* Build with Me CTA Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.5 }}
+          style={{
+            padding: "80px 20px",
+            textAlign: "center",
+          }}
+        >
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsContactOpen(true)}
+            style={{
+              background: "linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%)",
+              border: "none",
+              borderRadius: "20px",
+              padding: "18px 28px",
+              color: "#ffffff",
+              fontSize: "clamp(13px, 2.5vw, 16px)",
+              fontWeight: "700",
+              cursor: "pointer",
+              textTransform: "uppercase",
+              letterSpacing: "1px",
+              boxShadow: "0 8px 25px rgba(236, 72, 153, 0.3)",
+              transition: "all 0.3s ease",
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Build with Me
+            {/* Glare effect on hover */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: "linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, transparent 50%)",
+                borderRadius: "20px",
+                pointerEvents: "none",
+              }}
+            />
+          </motion.button>
+        </motion.section>
+
         <SelectedProjects />
         <FromConceptToReality />
         <ReadyToStart onContactClick={() => setIsContactOpen(true)} />
