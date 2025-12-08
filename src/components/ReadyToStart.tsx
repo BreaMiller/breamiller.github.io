@@ -118,14 +118,18 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
               About Me
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.flickr.com/photos/as-seen-by-brea/with/4800552773"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-white/60 transition-colors"
               whileHover={{ color: "#ec4899" }}
             >
               Flickr
             </motion.a>
             <motion.a
-              href="#"
+              href="https://github.com/astral-aesthetic"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm text-white/60 transition-colors"
               whileHover={{ color: "#ec4899" }}
             >
