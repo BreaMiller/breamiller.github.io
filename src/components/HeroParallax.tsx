@@ -221,7 +221,7 @@ export const Header = () => {
             e.currentTarget.style.boxShadow = "0 0 15px rgba(236, 72, 153, 0.15)";
           }}
         >
-          CONNECT
+          LET'S CONNECT
         </button>
       </div>
     </div>

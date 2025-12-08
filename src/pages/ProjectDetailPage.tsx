@@ -632,7 +632,7 @@ export const ProjectDetailPage: React.FC = () => {
                 background: "transparent",
                 border: ".5px solid #ec4899",
                 color: "#ffffff",
-                padding: "16px 18px",
+                padding: "16px 24px",
                 borderRadius: "20px",
                 width: "auto",
                 minWidth: "160px",
