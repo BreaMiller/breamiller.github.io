@@ -275,8 +275,8 @@ export const projectsData: Record<string, ProjectData> = {
   "flix": {
     id: "flix",
     title: "LiteFlix",
-    subtitle: "Transparent digital camera\nProduct design",
-    tagline: "",
+    subtitle: "Transparent digital camera",
+    tagline: "Memories that outlast a lifetime.",
     description: "Transparent digital camera product design exploration.",
     images: [
       {

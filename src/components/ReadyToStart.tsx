@@ -58,7 +58,7 @@ export const ReadyToStart = ({ onContactClick }: ReadyToStartProps) => {
                 key={btn}
                 onClick={() => {
                   if (btn === "Schedule Call") {
-                    window.open("https://calendly.com/brea_miller/30-min-demo", "_blank");
+                    window.open("https://calendly.com/brea_miller/30-min-sync", "_blank");
                   } else {
                     onContactClick?.();
                   }
