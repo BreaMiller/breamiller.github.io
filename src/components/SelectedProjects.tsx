@@ -137,7 +137,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Solaria Handbag',
     subtitle: 'ai-generated luxury accessory',
     image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600',
-    category: 'products',
+    category: 'hidden',
     tags: ['Luxury', 'AI', 'Design'],
   },
   {
@@ -145,7 +145,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Opia',
     subtitle: 'digital art experience',
     image: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'digital-art',
+    category: 'hidden',
     tags: ['Art', 'Digital', 'Experience'],
   },
   {
@@ -183,12 +183,12 @@ const selectedProjects: SelectedProject[] = [
 ];
 
 const categories = [
-  { id: 'all', label: 'All work - showcase all work' },
-  { id: 'web-apps', label: 'Web Apps - altamed, baraka, buku, civicsocial, gg, geneproof, geneproof 2.0, voya' },
-  { id: 'ai-tv-cinema', label: 'AI TV/Cinema - ad reels, biohaxx, Xantara' },
-  { id: 'digital-art', label: 'Digital Art - etheral stroll, opia, who we are, xantara' },
-  { id: 'products', label: 'Products - Art of Attraction, imagine, liteflix, love birds, pneuma, solaria' },
-  { id: 'written-works', label: 'Written Works - biohaxx, wellness guide, who we are, xantara' },
+  { id: 'all', label: 'All work' },
+  { id: 'web-apps', label: 'Web Apps' },
+  { id: 'ai-tv-cinema', label: 'AI TV/Cinema' },
+  { id: 'digital-art', label: 'Digital Art' },
+  { id: 'products', label: 'Products' },
+  { id: 'written-works', label: 'Written works' },
 ];
 
 export const SelectedProjects = () => {
