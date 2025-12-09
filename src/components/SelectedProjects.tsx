@@ -17,7 +17,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Good Games',
     subtitle: 'gaming platform redesign',
     image: 'https://i.imgur.com/I23nYjZ.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'product',
+    category: 'web-apps',
     tags: ['React', 'TypeScript', 'Design'],
   },
   {
@@ -25,7 +25,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Baraka',
     subtitle: 'maternity support network',
     image: 'https://i.imgur.com/2hBPNJ7.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'environment',
+    category: 'web-apps',
     tags: ['Mobile', 'Community', 'Design'],
   },
   {
@@ -33,7 +33,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Voya',
     subtitle: 'astrocartography travel companion',
     image: 'https://i.imgur.com/uGBIAag.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'character',
+    category: 'web-apps',
     tags: ['Travel', 'Innovation', 'Design'],
   },
   {
@@ -41,7 +41,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Imagine...',
     subtitle: 'ai-driven creative exploration',
     image: 'https://i.imgur.com/hskv718.jpeg?auto=compress&cs=tinysrgb&w=600',
-    category: 'motion',
+    category: 'products',
     tags: ['AI', 'Art', 'Exploration'],
   },
   {
@@ -49,7 +49,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Buku TV',
     subtitle: 'entertainment streaming service',
     image: 'https://i.imgur.com/W9YVpm6.gif?auto=compress&cs=tinysrgb&w=800',
-    category: 'product',
+    category: 'web-apps',
     tags: ['Streaming', 'Interface', 'Experience'],
   },
   {
@@ -57,7 +57,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Wellness Guide',
     subtitle: 'healing common ailments',
     image: 'https://i.imgur.com/EGUHIC7.png?auto=compress&cs=tinysrgb&w=400',
-    category: 'environment',
+    category: 'written-works',
     tags: ['Health', 'Education', 'Design'],
   },
   {
@@ -65,7 +65,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'GeneProof 2.0',
     subtitle: 'health tracking upgrade',
     image: 'https://i.imgur.com/CpIXiZG.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'product',
+    category: 'web-apps',
     tags: ['Health Tech', 'React', 'ML'],
   },
   {
@@ -73,7 +73,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'AltaMed',
     subtitle: 'healthcare accessibility platform',
     image: 'https://i.imgur.com/PLb6nM4.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'product',
+    category: 'web-apps',
     tags: ['Healthcare', 'Platform', 'Design'],
   },
   {
@@ -81,7 +81,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'CivicSocial',
     subtitle: 'network for democracy',
     image: 'https://i.imgur.com/XVs6KEM.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'environment',
+    category: 'web-apps',
     tags: ['Civic Tech', 'Community', 'Design'],
   },
   {
@@ -89,7 +89,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Ad Reels',
     subtitle: 'affordable AI advertising',
     image: 'https://i.imgur.com/O0Pmvuj.gif?auto=compress&cs=tinysrgb&w=600',
-    category: 'motion',
+    category: 'ai-tv-cinema',
     tags: ['AI', 'Video', 'Advertising'],
   },
   {
@@ -97,7 +97,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Xantara',
     subtitle: 'sci-fi original series',
     image: 'https://i.imgur.com/WbYxDvA.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'motion',
+    category: 'ai-tv-cinema',
     tags: ['Sci-Fi', 'Visual', 'Narrative'],
   },
   {
@@ -105,7 +105,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'The Art of Attraction',
     subtitle: 'luxury couture collection',
     image: 'https://i.imgur.com/eXDo86B.jpeg?auto=compress&cs=tinysrgb&w=600',
-    category: 'character',
+    category: 'products',
     tags: ['Fashion', 'AI', 'Design'],
   },
   {
@@ -113,7 +113,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Love Birds',
     subtitle: 'artistic expression of connection',
     image: 'https://i.imgur.com/e7kW4Jt.jpeg?auto=compress&cs=tinysrgb&w=600',
-    category: 'character',
+    category: 'products',
     tags: ['Art', 'Digital', 'Design'],
   },
   {
@@ -121,7 +121,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Pneuma Collection',
     subtitle: 'ready-to-wear collection',
     image: 'https://i.imgur.com/b2LNbXF.jpeg?auto=compress&cs=tinysrgb&w=600',
-    category: 'character',
+    category: 'products',
     tags: ['Fashion', 'AI', 'Design'],
   },
   {
@@ -129,7 +129,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'BioHaxx',
     subtitle: 'sci-fi television series',
     image: 'https://i.imgur.com/FnN3fD0.gif?auto=compress&cs=tinysrgb&w=600',
-    category: 'motion',
+    category: 'ai-tv-cinema',
     tags: ['Sci-Fi', 'Narrative', 'Visual'],
   },
   {
@@ -137,7 +137,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Solaria Handbag',
     subtitle: 'ai-generated luxury accessory',
     image: 'https://i.imgur.com/WagmOW8.jpeg?auto=compress&cs=tinysrgb&w=600',
-    category: 'character',
+    category: 'products',
     tags: ['Luxury', 'AI', 'Design'],
   },
   {
@@ -145,7 +145,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Opia',
     subtitle: 'digital art experience',
     image: 'https://i.imgur.com/IDkwGzA.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'motion',
+    category: 'digital-art',
     tags: ['Art', 'Digital', 'Experience'],
   },
   {
@@ -153,7 +153,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Ethereal Stroll',
     subtitle: 'ambient soundscape composition',
     image: 'https://i.imgur.com/uwCTYkA.jpeg?auto=compress&cs=tinysrgb&w=600',
-    category: 'motion',
+    category: 'digital-art',
     tags: ['Audio', 'Composition', 'Experience'],
   },
   {
@@ -161,7 +161,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'Who We Are, Have Been, & Will Always Be',
     subtitle: 'Vitruivian Love',
     image: 'https://i.imgur.com/VwuVUu8.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'character',
+    category: 'digital-art',
     tags: ['Art', 'AI', 'Abstract'],
   },
   {
@@ -169,7 +169,7 @@ const selectedProjects: SelectedProject[] = [
     title: 'GeneProof',
     subtitle: 'health tracking app',
     image: 'https://i.imgur.com/w8ct2WC.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'product',
+    category: 'web-apps',
     tags: ['Health', 'Mobile', 'Design'],
   },
   {
@@ -177,17 +177,18 @@ const selectedProjects: SelectedProject[] = [
     title: 'LiteFlix',
     subtitle: 'lightweight streaming platform',
     image: 'https://i.imgur.com/vFVoyRr.png?auto=compress&cs=tinysrgb&w=600',
-    category: 'product',
+    category: 'products',
     tags: ['Streaming', 'UI/UX', 'Design'],
   },
 ];
 
 const categories = [
-  { id: 'all', label: 'All Work' },
-  { id: 'product', label: 'Product' },
-  { id: 'environment', label: 'Environment' },
-  { id: 'character', label: 'Character' },
-  { id: 'motion', label: 'Motion' },
+  { id: 'all', label: 'All work - showcase all work' },
+  { id: 'web-apps', label: 'Web Apps - altamed, baraka, buku, civicsocial, gg, geneproof, geneproof 2.0, voya' },
+  { id: 'ai-tv-cinema', label: 'AI TV/Cinema - ad reels, biohaxx, Xantara' },
+  { id: 'digital-art', label: 'Digital Art - etheral stroll, opia, who we are, xantara' },
+  { id: 'products', label: 'Products - Art of Attraction, imagine, liteflix, love birds, pneuma, solaria' },
+  { id: 'written-works', label: 'Written Works - biohaxx, wellness guide, who we are, xantara' },
 ];
 
 export const SelectedProjects = () => {
