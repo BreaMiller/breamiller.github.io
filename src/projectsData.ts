@@ -295,7 +295,7 @@ export const projectsData: Record<string, ProjectData> = {
         size: "medium",
       },
     ],
-    overview: "LiteFlix was inspired by the 5D optic storage.",
+    overview: "LiteFlix was inspired by the 5D optical data storage - an experimental quartz disc used to store up to 360 terabytes of memory for 'billions of years'.",
     tools: ["React", "Midjourney"],
     role: "Product Designer & Frontend Developer",
     year: "2025",
