@@ -295,7 +295,7 @@ export const projectsData: Record<string, ProjectData> = {
         size: "medium",
       },
     ],
-    overview: "LiteFlix delivers streaming content with a focus on performance and accessibility. The platform works seamlessly on low-bandwidth connections and supports offline viewing.",
+    overview: "LiteFlix was inspired by the 5D optic storage.",
     tools: ["React", "Midjourney"],
     role: "Product Designer & Frontend Developer",
     year: "2025",
