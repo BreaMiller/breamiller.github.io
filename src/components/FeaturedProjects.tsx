@@ -103,7 +103,7 @@ export const FeaturedProjects = () => {
           viewport={{ once: false, amount: 0.5 }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
-          onDragEnd={(event, info) => {
+          onDragEnd={(_event, info) => {
             const swipeThreshold = 50;
             if (info.offset.x > swipeThreshold) {
               prevSlide();
