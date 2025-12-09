@@ -8,7 +8,7 @@ interface ContactFormProps {
 
 const serviceOptions = [
   "Select a service",
-  "Product Visualization",
+  "AI Video Production",
   "UI/UX Design",
   "Brand Development",
   "Digital Marketing",
