@@ -159,7 +159,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
         >
           <p>© 2026 Brea Miller. All rights reserved.</p>
           <p className="mt-4 sm:mt-0">
-            <span style={{ 
+            Made with ❤️ <span style={{ 
               fontFamily: "'Brush Script MT', cursive",
               fontSize: "18px",
               fontStyle: "italic",
