@@ -135,8 +135,15 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
           {/* Close button */}
           <motion.button
             onClick={onClose}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                onClose();
+              }
+            }}
             whileHover={{ scale: 1.15 }}
             whileTap={{ scale: 0.9 }}
+            aria-label="Close contact form"
             style={{
               position: "absolute",
               top: "clamp(12px, 3vw, 20px)",
@@ -229,15 +236,17 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "16px", alignItems: "center", width: "100%", maxWidth: "600px", margin: "0 auto" }}>
                 {/* Name Field */}
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
-                  <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                  <label htmlFor="contact-name" style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                     Name
                   </label>
                   <input
                     type="text"
+                    id="contact-name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     placeholder="Your name"
                     style={{
                       background: "rgba(255, 255, 255, 0.05)",
@@ -263,15 +272,17 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
 
                 {/* Email Field */}
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
-                  <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                  <label htmlFor="contact-email" style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                     Email
                   </label>
                   <input
                     type="email"
+                    id="contact-email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     placeholder="your@email.com"
                     style={{
                       background: "rgba(255, 255, 255, 0.05)",
@@ -297,14 +308,16 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
 
                 {/* Service Selection Dropdown */}
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
-                  <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                  <label htmlFor="contact-service" style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                     Service of Interest
                   </label>
                   <select
+                    id="contact-service"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     style={{
                       background: "rgba(255, 255, 255, 0.05)",
                       border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -351,14 +364,16 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
 
                 {/* Message Field */}
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%" }}>
-                  <label style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
+                  <label htmlFor="contact-message" style={{ fontSize: "clamp(11px, 2.5vw, 12px)", fontWeight: "600", color: "#ccc", textTransform: "uppercase", letterSpacing: "0.5px" }}>
                     Message
                   </label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     placeholder="Your message..."
                     rows={4}
                     style={{
@@ -389,6 +404,8 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                 <motion.button
                   type="submit"
                   disabled={loading}
+                  aria-label={loading ? "Sending message..." : "Send message"}
+                  aria-busy={loading}
                   whileHover={{ scale: 1.05, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                   style={{

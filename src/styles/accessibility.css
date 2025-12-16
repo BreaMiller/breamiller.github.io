@@ -1,0 +1,116 @@
+/* WCAG 2.1 AA Compliant Accessibility Styles */
+
+/* Focus indicators for keyboard navigation */
+*:focus-visible {
+  outline: 3px solid #ec4899;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* High contrast focus for buttons */
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #ec4899;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px rgba(236, 72, 153, 0.2);
+}
+
+/* Form elements focus */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid #ec4899 !important;
+  outline-offset: 2px !important;
+  border-color: #ec4899 !important;
+}
+
+/* Skip to main content link - visible on focus */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #ec4899;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Reduce motion for users with vestibular disorders */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  button,
+  a {
+    outline: 2px solid currentColor;
+  }
+  
+  button:hover,
+  a:hover {
+    outline-width: 3px;
+  }
+}
+
+/* Ensure minimum touch target sizes (44x44px) */
+button,
+a,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Visible focus for interactive elements */
+.focusable:focus-visible {
+  outline: 3px solid #ec4899;
+  outline-offset: 2px;
+}
+
+/* Improve color contrast for text on dark backgrounds */
+.text-contrast {
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure links are distinguishable */
+a:not([class]) {
+  text-decoration: underline;
+  text-decoration-skip-ink: auto;
+}
+
+/* Focus visible for carousel controls */
+[role="button"]:focus-visible,
+[role="link"]:focus-visible {
+  outline: 3px solid #ec4899;
+  outline-offset: 3px;
+}

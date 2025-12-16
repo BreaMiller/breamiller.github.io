@@ -23,7 +23,7 @@ const icons = [
 
 export const BrandScroller = () => {
   return (
-    <div className="relative w-full overflow-hidden py-8">
+    <div className="relative w-full overflow-hidden py-8" role="region" aria-label="Technologies and tools showcase">
       {/* Fade overlays */}
       <div
         className="absolute left-0 top-0 bottom-0 w-24 md:w-48 z-10 pointer-events-none"
@@ -59,8 +59,10 @@ export const BrandScroller = () => {
                 whileHover={{ scale: 1.1, color: "#ec4899" }}
                 transition={{ duration: 0.2 }}
                 className="text-white/60 hover:text-pink-500 transition-colors duration-200"
+                role="img"
+                aria-label={name}
               >
-                <Icon size={32} />
+                <Icon size={32} aria-hidden="true" />
               </motion.div>
             </div>
           );
@@ -72,7 +74,7 @@ export const BrandScroller = () => {
 
 export const BrandScrollerReverse = () => {
   return (
-    <div className="relative w-full overflow-hidden py-8">
+    <div className="relative w-full overflow-hidden py-8" role="region" aria-label="Technologies and tools showcase">
       {/* Fade overlays */}
       <div
         className="absolute left-0 top-0 bottom-0 w-24 md:w-48 z-10 pointer-events-none"
@@ -108,8 +110,10 @@ export const BrandScrollerReverse = () => {
                 whileHover={{ scale: 1.1, color: "#ec4899" }}
                 transition={{ duration: 0.2 }}
                 className="text-white/60 hover:text-pink-500 transition-colors duration-200"
+                role="img"
+                aria-label={name}
               >
-                <Icon size={32} />
+                <Icon size={32} aria-hidden="true" />
               </motion.div>
             </div>
           );

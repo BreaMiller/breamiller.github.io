@@ -151,6 +151,13 @@ export const Header = () => {
       <div style={{ display: "flex", gap: "12px", alignItems: "center", flexWrap: "wrap", marginTop: "clamp(24px, 5vw, 40px)" }}>
         <button 
           onClick={() => navigate('/about')}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              navigate('/about');
+            }
+          }}
+          aria-label="Learn more about Brea Miller"
           style={{
             background: "transparent",
             border: "none",
@@ -185,6 +192,14 @@ export const Header = () => {
             const event = new CustomEvent('openContactForm');
             window.dispatchEvent(event);
           }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const event = new CustomEvent('openContactForm');
+              window.dispatchEvent(event);
+            }
+          }}
+          aria-label="Open contact form"
           style={{
             background: "transparent",
             border: ".5px solid #ec4899",
@@ -253,6 +268,13 @@ export const ProductCard = ({
     >
       <button
         onClick={() => navigate(`/projects/${projectId}`)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            navigate(`/projects/${projectId}`);
+          }
+        }}
+        aria-label={`View ${product.title} project`}
         className="block overflow-hidden relative"
         style={{
           width: "clamp(240px, 45vw, 480px)",
@@ -280,7 +302,7 @@ export const ProductCard = ({
         />
         <img
           src={product.thumbnail}
-          alt={product.title}
+          alt={`${product.title} - Project thumbnail showcasing design work`}
           style={{
             width: "100%",
             height: "100%",

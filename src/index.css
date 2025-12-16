@@ -3,6 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* WCAG Accessibility Styles */
+@import './styles/accessibility.css';
+
 html, body {
   overflow-x: hidden;
   width: 100%;

@@ -24,13 +24,19 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="w-full relative" style={{
-      background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
-      backgroundAttachment: "fixed",
-      color: "#ffffff",
-    }}>
-      {/* Pink light glow background effect */}
-      <motion.div
+    <>
+      {/* Skip to main content link for keyboard users */}
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      
+      <div className="w-full relative" style={{
+        background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%)",
+        backgroundAttachment: "fixed",
+        color: "#ffffff",
+      }}>
+        {/* Pink light glow background effect */}
+        <motion.div
         animate={{ opacity: [0.12, 0.18, 0.12] }}
         transition={{
           duration: 4,
@@ -48,7 +54,7 @@ function HomePage() {
           zIndex: 0,
         }}
       />
-            <div style={{ position: "relative", zIndex: 1 }}>
+            <main id="main-content" style={{ position: "relative", zIndex: 1 }}>
         <HeroParallax products={heroProducts} />
         <AIToolsSection />
         <FeaturedProjects />
@@ -69,6 +75,13 @@ function HomePage() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsContactOpen(true)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                setIsContactOpen(true);
+              }
+            }}
+            aria-label="Start a project - Open contact form"
             style={{
               background: "linear-gradient(135deg, #ec4899 0%, #6366f1 50%, #06b6d4 100%)",
               border: "none",
@@ -111,7 +124,7 @@ function HomePage() {
         <FromConceptToReality />
         <ReadyToStart onContactClick={() => setIsContactOpen(true)} />
         <Footer />
-      </div>
+      </main>
 
       {/* Contact Button - Fixed position */}
       <motion.button
@@ -120,6 +133,13 @@ function HomePage() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsContactOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            setIsContactOpen(true);
+          }
+        }}
+        aria-label="Contact Brea Miller"
         style={{
           position: "fixed",
           bottom: "clamp(20px, 5vw, 40px)",
@@ -166,6 +186,7 @@ function HomePage() {
       {/* Contact Form Modal */}
       <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
+    </>
   );
 }
 

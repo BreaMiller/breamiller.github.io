@@ -128,7 +128,7 @@ export const FeaturedProjects = () => {
                 <div className="relative overflow-hidden rounded-2xl h-full group">
                   <img
                     src={featuredProjects[(currentIndex - 1 + featuredProjects.length) % featuredProjects.length].image}
-                    alt="previous"
+                    alt={`${featuredProjects[(currentIndex - 1 + featuredProjects.length) % featuredProjects.length].title} - Featured project preview`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                     decoding="async"
@@ -142,6 +142,13 @@ export const FeaturedProjects = () => {
               <motion.button
                 key={`main-${currentIndex}`}
                 onClick={handleProjectClick}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleProjectClick();
+                  }
+                }}
+                aria-label={`View ${featuredProjects[currentIndex].title} project details`}
                 initial={{ opacity: 0, scale: 0.85, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.85, y: 20 }}
@@ -151,7 +158,7 @@ export const FeaturedProjects = () => {
               >
                 <img
                   src={featuredProjects[currentIndex].image}
-                  alt={featuredProjects[currentIndex].title}
+                  alt={`${featuredProjects[currentIndex].title} - ${featuredProjects[currentIndex].description}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="eager"
                   decoding="async"
@@ -178,7 +185,7 @@ export const FeaturedProjects = () => {
                 <div className="relative overflow-hidden rounded-2xl h-full group">
                   <img
                     src={featuredProjects[(currentIndex + 1) % featuredProjects.length].image}
-                    alt="next"
+                    alt={`${featuredProjects[(currentIndex + 1) % featuredProjects.length].title} - Featured project preview`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                     decoding="async"
@@ -194,8 +201,14 @@ export const FeaturedProjects = () => {
           <div className="absolute left-0 right-0 top-1/2 -translate-y-1/2 flex justify-between px-4 z-30 pointer-events-none">
             <motion.button
               onClick={prevSlide}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  prevSlide();
+                }
+              }}
               className="pointer-events-auto p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hidden md:flex items-center justify-center relative overflow-hidden group"
-              aria-label="Previous slide"
+              aria-label="Previous project"
               whileHover={{ scale: 1.12 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -239,8 +252,14 @@ export const FeaturedProjects = () => {
 
             <motion.button
               onClick={nextSlide}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  nextSlide();
+                }
+              }}
               className="pointer-events-auto p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hidden md:flex items-center justify-center relative overflow-hidden group"
-              aria-label="Next slide"
+              aria-label="Next project"
               whileHover={{ scale: 1.12 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -296,6 +315,12 @@ export const FeaturedProjects = () => {
             <motion.button
               key={index}
               onClick={() => setCurrentIndex(index)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setCurrentIndex(index);
+                }
+              }}
               className="relative rounded-full transition-all duration-300 overflow-hidden group"
               initial={{ width: 8, height: 8 }}
               animate={{ 
@@ -304,7 +329,8 @@ export const FeaturedProjects = () => {
               }}
               whileHover={{ scale: 1.3 }}
               whileTap={{ scale: 0.9 }}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={`Go to project ${index + 1}: ${featuredProjects[index].title}`}
+              aria-current={currentIndex === index ? 'true' : 'false'}
             >
               {/* Background bar */}
               <div 

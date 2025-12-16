@@ -47,14 +47,37 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
             className="md:text-left"
           >
             <h3 className="text-2xl font-bold mb-4">
-              <span style={{
-                background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
-              }}>
-                Brea Miller
-              </span>
+              <button
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  navigate('/');
+                }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    navigate('/');
+                  }
+                }}
+                aria-label="Return to top of homepage"
+                style={{
+                  background: "none",
+                  border: "none",
+                  padding: 0,
+                  cursor: "pointer",
+                  transition: "opacity 0.3s ease",
+                }}
+                className="hover:opacity-80"
+              >
+                <span style={{
+                  background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}>
+                  Brea Miller
+                </span>
+              </button>
             </h3>
           </motion.div>
 
@@ -67,7 +90,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
             className="md:text-left"
           >
             <h4 className="text-white font-semibold mb-6 uppercase text-xs tracking-widest">Navigation</h4>
-            <nav className="space-y-3">
+            <nav className="space-y-3" aria-label="Footer navigation">
               {footerLinks.map((link, index) => (
                 <motion.a
                   key={index}
@@ -105,6 +128,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit Brea Miller's ${social.name} profile`}
                     className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-pink-500/50 transition-all duration-300"
                     whileHover={{
                       scale: 1.1,

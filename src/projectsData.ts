@@ -198,7 +198,7 @@ export const projectsData: Record<string, ProjectData> = {
       },
     ],
     overview: "Buku TV delivers premium entertainment through an intuitive streaming interface. The platform uses AI recommendations and supports multiple devices for seamless viewing.",
-    tools: ["React", "Video.js", "AWS", "Redis"],
+    tools: ["Typescript", "Video.js", "AWS", "Redis"],
     role: "Creator & Frontend Developer",
     year: "2025",
   },
