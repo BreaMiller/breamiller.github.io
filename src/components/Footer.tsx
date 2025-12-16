@@ -65,9 +65,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
                   border: "none",
                   padding: 0,
                   cursor: "pointer",
-                  transition: "opacity 0.3s ease",
                 }}
-                className="hover:opacity-80"
               >
                 <span style={{
                   background: "linear-gradient(135deg, #ec4899 0%, #6366f1 100%)",
@@ -157,7 +155,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
           transition={{ duration: 0.6, delay: 0.15 }}
           viewport={{ once: true }}
         >
-          <p>© 2026 Brea Miller. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Brea Miller. All rights reserved.</p>
           <p className="mt-4 sm:mt-0">
             Made with ❤️ <span style={{ 
               fontFamily: "'Brush Script MT', cursive",
