@@ -686,7 +686,7 @@ export const ProjectDetailPage: React.FC = () => {
           zIndex: "1000",
           textTransform: "uppercase",
           letterSpacing: "0.5px",
-          display: "flex",
+          display: "none",
           alignItems: "center",
           gap: "8px",
         }}

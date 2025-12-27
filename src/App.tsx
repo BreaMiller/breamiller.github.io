@@ -107,7 +107,7 @@ function App() {
           textTransform: "uppercase",
           letterSpacing: "1px",
           boxShadow: "0 8px 25px rgba(236, 72, 853, 0.2)",
-          display: "flex",
+          display: "none",
           alignItems: "center",
           justifyContent: "center",
           whiteSpace: "nowrap",
