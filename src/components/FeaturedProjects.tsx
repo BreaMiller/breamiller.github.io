@@ -304,28 +304,54 @@ export const FeaturedProjects = () => {
         </motion.div>
 
         {/* Carousel Indicators */}
-        <div className="flex justify-center gap-2 mt-8">
-          {featuredProjects.map((_, index) => (
-            <motion.button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault();
-                  setCurrentIndex(index);
-                }
-              }}
-              className="relative rounded-full transition-all duration-300 overflow-hidden"
-              style={{
-                height: '2px',
-                width: currentIndex === index ? 8 : 2,
-                backgroundColor: currentIndex === index ? '#ec4899' : 'rgba(255,255,255,0.2)',
-              }}
-              whileHover={{ backgroundColor: currentIndex === index ? '#f472b6' : 'rgba(255,255,255,0.4)' }}
-              aria-label={`Go to project ${index + 1}: ${featuredProjects[index].title}`}
-              aria-current={currentIndex === index ? 'true' : 'false'}
-            />
-          ))}
+        <div className="flex justify-center gap-3 mt-8" role="tablist" aria-label="Project carousel navigation">
+          {featuredProjects.map((project, index) => {
+            const isActive = currentIndex === index;
+            return (
+              <motion.button
+                key={`indicator-${index}`}
+                onClick={() => setCurrentIndex(index)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setCurrentIndex(index);
+                  }
+                }}
+                role="tab"
+                aria-selected={isActive}
+                aria-controls={`project-${index}`}
+                aria-label={`${project.title}`}
+                tabIndex={isActive ? 0 : -1}
+                className="rounded-full cursor-pointer border-none p-0 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-black overflow-hidden relative"
+                style={{
+                  width: isActive ? 30 : 9,
+                  height: 9,
+                  minWidth: isActive ? 30 : 9,
+                  minHeight: 9,
+                  maxWidth: isActive ? 30 : 9,
+                  maxHeight: 9,
+                }}
+                initial={false}
+                animate={{
+                  backgroundColor: isActive ? '#ec4899' : 'rgba(255,255,255,0.2)',
+                }}
+                whileHover={{
+                  backgroundColor: isActive ? '#ec4899' : 'rgba(255,255,255,0.35)',
+                  boxShadow: isActive 
+                    ? '0 0 12px rgba(236, 72, 153, 0.6), inset 0 0 6px rgba(255, 255, 255, 0.2)' 
+                    : '0 0 8px rgba(255, 255, 255, 0.4)',
+                }}
+                whileTap={{
+                  backgroundColor: isActive ? '#be185d' : 'rgba(255,255,255,0.15)',
+                  boxShadow: 'none',
+                }}
+                transition={{
+                  backgroundColor: { duration: 0.2, ease: 'easeInOut' },
+                  boxShadow: { duration: 0.2, ease: 'easeInOut' },
+                }}
+              />
+            );
+          })}
         </div>
       </div>
     </motion.section>

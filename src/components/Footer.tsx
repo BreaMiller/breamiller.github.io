@@ -69,7 +69,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
             <h4 className="text-white font-semibold mb-6 uppercase text-xs tracking-widest">Navigation</h4>
             <nav className="space-y-3" aria-label="Footer navigation">
               {footerLinks.map((link, index) => (
-                <a
+                <motion.a
                   key={index}
                   href={link.href}
                   onClick={(e) => {
@@ -78,10 +78,11 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
                       link.onClick();
                     }
                   }}
-                  className="text-white/60 text-sm block"
+                  className="text-white/60 hover:text-pink-400 transition-colors duration-300 text-sm block"
+                  whileHover={{ x: 4 }}
                 >
                   {link.label}
-                </a>
+                </motion.a>
               ))}
             </nav>
           </motion.div>
@@ -99,17 +100,23 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
                 return (
-                  <a
+                  <motion.a
                     key={index}
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Visit Brea Miller's ${social.name} profile`}
-                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60"
+                    className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-pink-500/50 transition-all duration-300"
+                    whileHover={{
+                      scale: 1.1,
+                      boxShadow: "0 0 20px rgba(236, 72, 153, 0.3)",
+                      borderColor: "rgba(236, 72, 853, 0.5)",
+                    }}
+                    whileTap={{ scale: 0.95 }}
                     title={social.name}
                   >
                     <IconComponent size={18} />
-                  </a>
+                  </motion.a>
                 );
               })}
             </div>

@@ -655,7 +655,7 @@ export const ProjectDetailPage: React.FC = () => {
         </motion.section>
       </motion.div>
 
-      {/* Footer */
+      {/* Footer */}
       <Footer onContactClick={() => setIsContactOpen(true)} />
 
       {/* Contact Form Modal */}

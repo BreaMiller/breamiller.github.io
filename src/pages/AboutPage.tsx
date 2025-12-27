@@ -569,7 +569,7 @@ export const AboutPage: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Footer */
+      {/* Footer */}
       <Footer onContactClick={() => setIsContactOpen(true)} />
 
       {/* Styles for animations */}
