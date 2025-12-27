@@ -9,7 +9,6 @@ import { ReadyToStart } from './components/ReadyToStart';
 import { Footer } from './components/Footer';
 import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { ContactForm } from './components/ContactForm';
-import { AiOutlineEye } from 'react-icons/ai';
 import { heroProducts } from './heroProductsData';
 import { useRef, useState, useEffect } from 'react';
 
@@ -17,16 +16,6 @@ function App() {
   const featuredProjectsRef = useRef<HTMLDivElement>(null);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
-  const [homePageViews, setHomePageViews] = useState(0);
-
-  useEffect(() => {
-    // Increment home page view count on mount
-    const storageKey = 'pageViews_home';
-    const currentViews = parseInt(localStorage.getItem(storageKey) || '0');
-    const newViewCount = currentViews + 1;
-    localStorage.setItem(storageKey, newViewCount.toString());
-    setHomePageViews(newViewCount);
-  }, []);
 
   useEffect(() => {
     const handleOpenContact = () => {
@@ -85,43 +74,6 @@ function App() {
 
       {/* Contact Form Modal */}
       <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-
-      {/* Page View Counter - Fixed position */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        style={{
-          position: "fixed",
-          bottom: "clamp(20px, 5vw, 40px)",
-          right: "clamp(20px, 5vw, 40px)",
-          zIndex: 100,
-          background: "rgba(17, 17, 17, 0.9)",
-          backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
-          border: "1px solid rgba(236, 72, 153, 0.3)",
-          borderRadius: "50px",
-          padding: "18px 24px",
-          fontSize: "clamp(11px, 2vw, 13px)",
-          fontWeight: "600",
-          color: "#ec4899",
-          textTransform: "uppercase",
-          letterSpacing: "1px",
-          boxShadow: "0 8px 25px rgba(236, 72, 853, 0.2)",
-          display: "none",
-          alignItems: "center",
-          justifyContent: "center",
-          whiteSpace: "nowrap",
-          maxWidth: "200px",
-        }}
-        whileHover={{ 
-          y: -3,
-          boxShadow: "0 12px 35px rgba(236, 72, 853, 0.4)",
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <AiOutlineEye size={16} style={{ marginRight: "8px" }} />
-        Views: <span style={{ marginLeft: "4px", fontWeight: "700" }}>{homePageViews}</span>
-      </motion.div>
     </div>
   );
 }

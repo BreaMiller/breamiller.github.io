@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { AiOutlineEye } from 'react-icons/ai';
 import { projectsData } from '../projectsData';
 import { ContactForm } from '../components/ContactForm';
 import { Footer } from '../components/Footer';
@@ -11,21 +10,10 @@ export const ProjectDetailPage: React.FC = () => {
   const navigate = useNavigate();
   const project = projectId ? projectsData[projectId] : null;
   const [isContactOpen, setIsContactOpen] = useState(false);
-  const [projectViews, setProjectViews] = useState(0);
 
   // Scroll to top when component mounts or projectId changes
-  // Also increment view count
   useEffect(() => {
     window.scrollTo(0, 0);
-    
-    if (projectId) {
-      // Increment project view count
-      const storageKey = `pageViews_project_${projectId}`;
-      const currentViews = parseInt(localStorage.getItem(storageKey) || '0');
-      const newViewCount = currentViews + 1;
-      localStorage.setItem(storageKey, newViewCount.toString());
-      setProjectViews(newViewCount);
-    }
   }, [projectId]);
 
   if (!project) {
@@ -667,36 +655,7 @@ export const ProjectDetailPage: React.FC = () => {
         </motion.section>
       </motion.div>
 
-      {/* View Counter */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        style={{
-          position: "fixed",
-          bottom: "20px",
-          right: "20px",
-          padding: "12px 16px",
-          background: "rgba(17, 17, 17, 0.9)",
-          backdropFilter: "blur(20px)",
-          border: "1px solid rgba(236, 72, 153, 0.3)",
-          borderRadius: "50px",
-          fontSize: "12px",
-          fontWeight: "600",
-          color: "#ec4899",
-          zIndex: "1000",
-          textTransform: "uppercase",
-          letterSpacing: "0.5px",
-          display: "none",
-          alignItems: "center",
-          gap: "8px",
-        }}
-        whileHover={{ y: -2, boxShadow: "0 8px 20px rgba(236, 72, 153, 0.2)" }}
-      >
-        <AiOutlineEye size={16} />
-        <span>{projectViews}</span>
-      </motion.div>
-
-      {/* Footer */}
+      {/* Footer */
       <Footer onContactClick={() => setIsContactOpen(true)} />
 
       {/* Contact Form Modal */}

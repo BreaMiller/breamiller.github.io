@@ -304,13 +304,7 @@ export const FeaturedProjects = () => {
         </motion.div>
 
         {/* Carousel Indicators */}
-        <motion.div 
-          className="flex justify-center gap-3 mt-12"
-          initial={{ opacity: 0, filter: "blur(10px)" }}
-          whileInView={{ opacity: 1, filter: "blur(0px)" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: false, amount: 0.5 }}
-        >
+        <div className="flex justify-center gap-2 mt-8">
           {featuredProjects.map((_, index) => (
             <motion.button
               key={index}
@@ -321,55 +315,18 @@ export const FeaturedProjects = () => {
                   setCurrentIndex(index);
                 }
               }}
-              className="relative rounded-full transition-all duration-300 overflow-hidden group"
-              initial={{ width: 8, height: 8 }}
-              animate={{ 
-                width: currentIndex === index ? 32 : 8,
-                height: 8,
+              className="relative rounded-full transition-all duration-300 overflow-hidden"
+              style={{
+                height: '2px',
+                width: currentIndex === index ? 8 : 2,
+                backgroundColor: currentIndex === index ? '#ec4899' : 'rgba(255,255,255,0.2)',
               }}
-              whileHover={{ scale: 1.3 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ backgroundColor: currentIndex === index ? '#f472b6' : 'rgba(255,255,255,0.4)' }}
               aria-label={`Go to project ${index + 1}: ${featuredProjects[index].title}`}
               aria-current={currentIndex === index ? 'true' : 'false'}
-            >
-              {/* Background bar */}
-              <div 
-                className="absolute inset-0 rounded-full"
-                style={{
-                  backgroundColor: currentIndex === index ? '#ec4899' : 'rgba(255,255,255,0.2)',
-                  transition: 'background-color 0.3s ease'
-                }}
-              />
-              
-              {/* Glow effect on active dot */}
-              {currentIndex === index && (
-                <motion.div
-                  className="absolute inset-0 rounded-full"
-                  initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
-                  animate={{ 
-                    boxShadow: [
-                      "0 0 0px rgba(236, 72, 153, 0)",
-                      "0 0 15px rgba(236, 72, 153, 0.6)",
-                      "0 0 0px rgba(236, 72, 153, 0)"
-                    ]
-                  }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                />
-              )}
-              
-              {/* Hover glow */}
-              <motion.div
-                className="absolute inset-0 rounded-full"
-                initial={{ boxShadow: "0 0 0px rgba(236, 72, 153, 0)" }}
-                whileHover={{ 
-                  boxShadow: "0 0 20px rgba(236, 72, 153, 0.8), inset 0 0 10px rgba(236, 72, 153, 0.2)",
-                  background: currentIndex !== index ? "rgba(236, 72, 153, 0.3)" : undefined
-                }}
-                transition={{ duration: 0.3 }}
-              />
-            </motion.button>
+            />
           ))}
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );
