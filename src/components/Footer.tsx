@@ -64,7 +64,7 @@ export const Footer = ({ onWorkClick, onContactClick, onPrivacyClick }: FooterPr
                   background: "none",
                   border: "none",
                   padding: 0,
-                  cursor: "pointer",
+                  cursor: "default",
                 }}
               >
                 <span style={{
