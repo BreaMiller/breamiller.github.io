@@ -67,7 +67,7 @@ export const projectsData: Record<string, ProjectData> = {
     tools: ["React", "Python", "Machine Learning", "Data Visualization"],
     role: "Creator, Product Designer, & Developer",
     year: "2025",
-    url: "https://breamiller.github.io/waitlist-geneproof/",
+    url: "https://breamiller.github.io/get-geneproof/",
   },
   "altamed": {
     id: "altamed",
