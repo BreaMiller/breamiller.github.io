@@ -425,29 +425,60 @@ export const AboutPage: React.FC = () => {
                 </div>
 
                 {/* Scroll Dots Indicator */}
-                <div className="flex flex-col gap-4 items-center justify-center h-[600px]">
-                  {[0, 1, 2, 3, 4, 5].map((i) => (
-                    <button
-                      key={i}
-                      className="scroll-dot transition-all duration-300"
-                      onClick={() => {
-                        if (scrollerRef.current) {
-                          const slides = scrollerRef.current.querySelectorAll('.about-content-item');
-                          const targetSlide = slides[i] as HTMLElement;
-                          targetSlide?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                      }}
-                      style={{
-                        width: currentSlide === i ? "12px" : "8px",
-                        height: currentSlide === i ? "12px" : "8px",
-                        borderRadius: "50%",
-                        background: currentSlide === i ? "#ec4899" : "rgba(236, 72, 153, 0.3)",
-                        border: "none",
-                        cursor: "pointer",
-                      }}
-                      aria-label={`Go to slide ${i + 1}`}
-                    />
-                  ))}
+                <div className="flex flex-col gap-3 items-center justify-center h-[600px]">
+                  {[0, 1, 2, 3, 4, 5].map((i) => {
+                    const isActive = currentSlide === i;
+                    return (
+                      <motion.button
+                        key={i}
+                        className="scroll-dot rounded-full cursor-pointer border-none p-0 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-black overflow-hidden relative"
+                        onClick={() => {
+                          if (scrollerRef.current) {
+                            const slides = scrollerRef.current.querySelectorAll('.about-content-item');
+                            const targetSlide = slides[i] as HTMLElement;
+                            targetSlide?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            if (scrollerRef.current) {
+                              const slides = scrollerRef.current.querySelectorAll('.about-content-item');
+                              const targetSlide = slides[i] as HTMLElement;
+                              targetSlide?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                          }
+                        }}
+                        style={{
+                          width: 9,
+                          height: isActive ? 30 : 9,
+                          minWidth: 9,
+                          minHeight: isActive ? 30 : 9,
+                          maxWidth: 9,
+                          maxHeight: isActive ? 30 : 9,
+                        }}
+                        initial={false}
+                        animate={{
+                          backgroundColor: isActive ? '#ec4899' : 'rgba(255,255,255,0.2)',
+                        }}
+                        whileHover={{
+                          backgroundColor: isActive ? '#ec4899' : 'rgba(255,255,255,0.35)',
+                          boxShadow: isActive 
+                            ? '0 0 12px rgba(236, 72, 153, 0.6), inset 0 0 6px rgba(255, 255, 255, 0.2)' 
+                            : '0 0 8px rgba(255, 255, 255, 0.4)',
+                        }}
+                        whileTap={{
+                          backgroundColor: isActive ? '#be185d' : 'rgba(255,255,255,0.15)',
+                          boxShadow: 'none',
+                        }}
+                        transition={{
+                          backgroundColor: { duration: 0.2, ease: 'easeInOut' },
+                          boxShadow: { duration: 0.2, ease: 'easeInOut' },
+                        }}
+                        aria-label={`Go to slide ${i + 1}`}
+                      />
+                    );
+                  })}
                 </div>
               </div>
 
