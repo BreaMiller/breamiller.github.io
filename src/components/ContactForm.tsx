@@ -46,32 +46,37 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
       
       if (!scriptUrl) {
         console.error('Google Apps Script URL not configured');
-        throw new Error('Form endpoint not configured');
+        alert('Form configuration error. Please contact the site administrator.');
+        setLoading(false);
+        return;
       }
 
-      // Send to Google Apps Script
+      console.log('Submitting form data:', formData);
+      console.log('Script URL:', scriptUrl);
+
+      // Send to Google Apps Script with no-cors mode
       const response = await fetch(scriptUrl, {
         method: 'POST',
+        mode: 'no-cors', // Required for Google Apps Script
         body: JSON.stringify(formData),
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain', // Use text/plain to avoid preflight
         },
       });
 
-      if (response.ok) {
-        setSubmitted(true);
-        setTimeout(() => {
-          setSubmitted(false);
-          setFormData({ name: "", email: "", subject: "", message: "" });
-          onClose();
-        }, 2000);
-      } else {
-        console.error('Form submission failed');
-        throw new Error('Form submission failed');
-      }
+      console.log('Response received');
+      
+      // With no-cors mode, we can't read the response, so assume success
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        onClose();
+      }, 3000);
+
     } catch (error) {
       console.error("Error submitting form:", error);
-      // Optionally show error message to user
+      alert('Error sending message. Please try again or contact directly via email.');
     } finally {
       setLoading(false);
     }
@@ -297,7 +302,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                     }}
                     onFocus={(e) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)";
-                      e.currentTarget.style.borderColor = "rgba(236, 72, 853, 0.4)";
+                      e.currentTarget.style.borderColor = "rgba(236, 72, 153, 0.4)";
                     }}
                     onBlur={(e) => {
                       e.currentTarget.style.background = "rgba(255, 255, 255, 0.05)";
@@ -436,13 +441,13 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
                   } as any}
                   onMouseEnter={(e: any) => {
                     if (!loading) {
-                      e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 853, 0.5)";
-                      e.currentTarget.style.background = "rgba(236, 72, 853, 0.05)";
+                      e.currentTarget.style.boxShadow = "0 0 40px rgba(236, 72, 153, 0.5)";
+                      e.currentTarget.style.background = "rgba(236, 72, 153, 0.05)";
                     }
                   }}
                   onMouseLeave={(e: any) => {
                     if (!loading) {
-                      e.currentTarget.style.boxShadow = "0 0 20px rgba(236, 72, 853, 0.2)";
+                      e.currentTarget.style.boxShadow = "0 0 20px rgba(236, 72, 153, 0.2)";
                       e.currentTarget.style.background = "transparent";
                     }
                   }}
