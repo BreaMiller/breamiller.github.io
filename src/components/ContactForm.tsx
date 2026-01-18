@@ -44,7 +44,7 @@ export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     try {
       // Use environment variable or fallback to hardcoded URL
       const scriptUrl = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL || 
-        'https://script.google.com/macros/s/AKfycbxeJfMtAPJbjMrDi7_B0EKHo1wsJi7vRjxIRJXDkGlXZ27UC_dao7yoloSFwxT6WnOb/exec';
+        'https://script.google.com/macros/s/AKfycbwCks4D45oGavxQ8PXybyl6KLulKWyW1VXNvnvMVqO19_egFY1O4WE4sr8UJnGbIgu1/exec';
       
       if (!scriptUrl) {
         console.error('Google Apps Script URL not configured');
