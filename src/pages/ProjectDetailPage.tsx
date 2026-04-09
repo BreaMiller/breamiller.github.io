@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { projectsData } from '../projectsData';
 import { ContactForm } from '../components/ContactForm';
 import { Footer } from '../components/Footer';
+import { CaseStudySection } from '../components/CaseStudySection';
 
 export const ProjectDetailPage: React.FC = () => {
   const { projectId } = useParams<{ projectId: string }>();
@@ -655,6 +656,24 @@ export const ProjectDetailPage: React.FC = () => {
         </motion.section>
       </motion.div>
 
+      {/* Case Study Section - UI/UX Documentation */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        style={{
+          position: 'relative',
+          zIndex: 5,
+          maxWidth: '1200px',
+          marginX: 'auto',
+          marginBottom: '80px',
+          paddingLeft: 'clamp(20px, 5vw, 60px)',
+          paddingRight: 'clamp(20px, 5vw, 60px)',
+        }}
+      >
+        <CaseStudySection project={project} />
+      </motion.div>
+
       {/* Footer */}
       <Footer onContactClick={() => setIsContactOpen(true)} />
 
@@ -663,3 +682,4 @@ export const ProjectDetailPage: React.FC = () => {
     </div>
   );
 };
+
