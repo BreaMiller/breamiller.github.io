@@ -369,58 +369,6 @@ export const CaseStudySection: React.FC<CaseStudySectionProps> = ({ project }) =
           )}
         </motion.section>
       )}
-
-      {/* Business Impact Section */}
-      {project.businessImpact && (
-        <motion.section variants={itemVariants} style={{ marginBottom: '60px' }}>
-          <h2
-            style={{
-              fontSize: 'clamp(24px, 5vw, 36px)',
-              fontWeight: '700',
-              marginBottom: '30px',
-              color: '#ffffff',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            Measurable Business Impact
-          </h2>
-          {project.businessImpact.metrics && project.businessImpact.metrics.length > 0 && (
-            <div style={{ marginBottom: '40px' }}>
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                  gap: '20px',
-                }}
-              >
-                {project.businessImpact.metrics.map((metric, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.03 }}
-                    style={{
-                      padding: '25px',
-                      background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%)',
-                      border: '1px solid rgba(236, 72, 153, 0.2)',
-                      borderRadius: '12px',
-                      textAlign: 'center',
-                    }}
-                  >
-                    <p style={{ color: '#EC4899', fontSize: 'clamp(24px, 6vw, 36px)', fontWeight: '700', margin: '0 0 10px 0' }}>
-                      {metric.value}
-                    </p>
-                    <h4 style={{ color: '#ffffff', fontSize: '14px', fontWeight: '600', margin: '0 0 8px 0', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                      {metric.metric}
-                    </h4>
-                    <p style={{ color: '#A0A0A0', fontSize: '13px', margin: '0' }}>
-                      {metric.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          )}
-        </motion.section>
-      )}
     </motion.div>
   );
 };
