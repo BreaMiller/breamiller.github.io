@@ -674,6 +674,112 @@ export const ProjectDetailPage: React.FC = () => {
         <CaseStudySection project={project} />
       </motion.div>
 
+      {/* Bottom Navigation Buttons */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5 }}
+        style={{
+          maxWidth: '1400px',
+          margin: '0 auto',
+          padding: 'clamp(40px, 8vw, 80px) clamp(16px, 5vw, 40px) clamp(60px, 10vw, 100px)',
+          display: 'flex',
+          gap: '12px',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          borderTop: '1px solid rgba(236, 72, 153, 0.1)',
+        }}
+      >
+        <motion.button
+          whileHover={{ scale: 1.05, y: -3 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => navigate('/')}
+          style={{
+            background: 'transparent',
+            border: 'none',
+            color: '#ffffff',
+            padding: '18px 18px',
+            borderRadius: '20px',
+            width: '140px',
+            height: '60px',
+            fontSize: 'clamp(11px, 2vw, 14px)',
+            fontWeight: '700',
+            cursor: 'pointer',
+            textTransform: 'uppercase',
+            letterSpacing: '1px',
+            boxShadow: '0 0 20px rgba(236, 72, 153, 0.2)',
+            position: 'relative',
+            overflow: 'hidden',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            whiteSpace: 'nowrap',
+            animation: 'outlineGlow 3s ease-in-out infinite',
+            transition: 'all 0.3s ease',
+            maxWidth: '400px',
+          }}
+          onMouseEnter={(e: any) => {
+            e.target.style.transform = 'translateY(-3px)';
+            e.target.style.boxShadow = '0 0 40px rgba(236, 72, 153, 0.4)';
+            e.target.style.background = 'rgba(236, 72, 153, 0.1)';
+          }}
+          onMouseLeave={(e: any) => {
+            e.target.style.transform = 'translateY(0)';
+            e.target.style.boxShadow = '0 0 20px rgba(236, 72, 153, 0.2)';
+            e.target.style.background = 'transparent';
+          }}
+        >
+          BACK TO HOME
+        </motion.button>
+
+        {/* Visit Project Button */}
+        {(project.visitUrl || project.url) && (
+          <motion.a
+            href={project.visitUrl || project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              background: 'transparent',
+              border: '.5px solid #ec4899',
+              color: '#ffffff',
+              padding: '18px 24px',
+              borderRadius: '20px',
+              width: '225px',
+              height: '60px',
+              fontSize: 'clamp(11px, 2vw, 14px)',
+              fontWeight: '700',
+              cursor: 'pointer',
+              textTransform: 'uppercase',
+              letterSpacing: '1px',
+              position: 'relative',
+              overflow: 'hidden',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 0 20px rgba(236, 72, 853, 0.2)',
+              textDecoration: 'none',
+              transition: 'all 0.3s ease',
+              whiteSpace: 'nowrap',
+              maxWidth: '400px',
+            }}
+            onMouseEnter={(e: any) => {
+              e.currentTarget.style.boxShadow = '0 0 40px rgba(236, 72, 153, 0.5)';
+              e.currentTarget.style.borderColor = 'rgba(236, 72, 153, 0.8)';
+            }}
+            onMouseLeave={(e: any) => {
+              e.currentTarget.style.boxShadow = '0 0 20px rgba(236, 72, 153, 0.2)';
+              e.currentTarget.style.borderColor = '#ec4899';
+            }}
+          >
+            {project.visitLabel || `VISIT ${project.title.toUpperCase()}`}
+          </motion.a>
+        )}
+      </motion.section>
+
       {/* Footer */}
       <Footer onContactClick={() => setIsContactOpen(true)} />
 
