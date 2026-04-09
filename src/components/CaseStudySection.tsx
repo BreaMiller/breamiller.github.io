@@ -419,43 +419,6 @@ export const CaseStudySection: React.FC<CaseStudySectionProps> = ({ project }) =
               </div>
             </div>
           )}
-          {project.businessImpact.achievements && project.businessImpact.achievements.length > 0 && (
-            <div>
-              <h3 style={{ color: '#ffffff', marginBottom: '15px', fontSize: '16px', fontWeight: '600' }}>
-                Key Achievements
-              </h3>
-              <ul
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-                  gap: '12px',
-                  margin: '0',
-                  paddingLeft: '0',
-                  listStyle: 'none',
-                }}
-              >
-                {project.businessImpact.achievements.map((achievement, index) => (
-                  <li
-                    key={index}
-                    style={{
-                      padding: '15px',
-                      background: 'rgba(59, 130, 246, 0.1)',
-                      border: '1px solid rgba(59, 130, 246, 0.2)',
-                      borderRadius: '8px',
-                      color: '#ffffff',
-                      fontSize: '14px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                    }}
-                  >
-                    <span style={{ color: '#3B82F6', fontSize: '18px' }}>★</span>
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
         </motion.section>
       )}
     </motion.div>
