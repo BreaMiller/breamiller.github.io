@@ -522,6 +522,65 @@ export const projectsData: Record<string, ProjectData> = {
     tools: ["React Native", "Node.js", "Firebase", "Matching Algorithms", "Payment Processing"],
     role: "Creator, Designer, Developer",
     year: "2024",
+    typography: {
+      primary: { name: "Inter", fallback: "system-ui, -apple-system, sans-serif" },
+      secondary: { name: "Poppins", fallback: "sans-serif" },
+      sizes: {
+        h1: "clamp(28px, 7vw, 52px)",
+        h2: "clamp(20px, 5vw, 36px)",
+        h3: "clamp(16px, 4vw, 26px)",
+        body: "15px",
+        small: "13px",
+      },
+    },
+    colorPalette: [
+      { name: "Earth Rose", hex: "#D97675", rgb: "217, 118, 117", usage: "Primary actions, maternal warmth" },
+      { name: "Soft Sage", hex: "#9CA98F", rgb: "156, 169, 143", usage: "Calm, nurturing interface" },
+      { name: "Sky Blue", hex: "#87CEEB", rgb: "135, 206, 235", usage: "Trust, serenity" },
+      { name: "Cream", hex: "#FBF6F1", rgb: "251, 246, 241", usage: "Background, comfort" },
+      { name: "Deep Brown", hex: "#5C4033", rgb: "92, 64, 51", usage: "Text, grounding" },
+      { name: "Accent Gold", hex: "#D4AF37", rgb: "212, 175, 55", usage: "Highlights, milestones" },
+    ],
+    problem: "Expectant and postpartum mothers face isolation, lack of peer support, and difficulty accessing qualified doulas. Modern childbirth is often medicalized without adequate emotional support or community guidance. Mothers need safe spaces to share experiences, ask questions, and connect with others at similar life stages.",
+    process: "Conducted ethnographic research with 120+ pregnant women, postpartum mothers, and doulas. Interviewed community midwives and childbirth educators. Created maternal journey maps identifying emotional and logistical touchpoints. Prototyped matching algorithm with focus groups. Tested accessibility features for varying pregnancy-related physical limitations.",
+    solution: "Baraka creates a compassionate mobile-first ecosystem connecting mothers with community. Intelligent matching algorithms connect expectant mothers with compatible peer groups. Verified doula profiles build trust. Curated resources guide each trimester. Real-time messaging enables community support. Local facility reviews help with birth planning. Payment integration makes professional support accessible.",
+    userResearch: {
+      methods: ["Ethnographic study with pregnant women", "Doula and midwife interviews", "Community workshop sessions", "Postpartum support group observations"],
+      keyInsights: [
+        "71% of mothers felt isolated during pregnancy despite modern connectivity",
+        "Trust in doula expertise is top priority when seeking support",
+        "Peer recommendations from other mothers drive 85% of information seeking",
+        "Mobile app essential - access needed during labor and recovery",
+        "Cultural sensitivity critical for diverse maternal health outcomes",
+      ],
+      targetAudience: "Pregnant women (18-50), postpartum mothers, family members supporting mothers, doulas, midwives, childbirth educators",
+    },
+    wireframes: [
+      {
+        title: "Mother Discovery Feed",
+        description: "Connect with expectant mothers at similar stages, view milestone stories",
+        src: "https://i.imgur.com/baraka-feed.png",
+      },
+      {
+        title: "Doula Matching Flow",
+        description: "Preference-based matching with verified doula profiles and booking",
+        src: "https://i.imgur.com/baraka-doula.png",
+      },
+      {
+        title: "Trimester Guidance Hub",
+        description: "Curated resources, exercises, nutrition, and preparation content",
+        src: "https://i.imgur.com/baraka-guidance.png",
+      },
+    ],
+    businessImpact: {
+      metrics: [
+        { metric: "Mother Retention", value: "88%", description: "Monthly active users staying engaged postpartum" },
+        { metric: "Doula Bookings", value: "12,000+", description: "Successful doula-mother connections" },
+        { metric: "Community Posts", value: "45,000+", description: "Peer support messages monthly" },
+        { metric: "Satisfaction", value: "4.9/5", description: "Average app rating from 5,000+ reviews" },
+      ],
+      achievements: [],
+    },
   },
   "buku-tv": {
     id: "buku-tv",
@@ -579,6 +638,65 @@ export const projectsData: Record<string, ProjectData> = {
     role: "Product Designer & Developer",
     year: "2025",
     url: "https://breamiller.github.io/voya",
+    typography: {
+      primary: { name: "Montserrat", fallback: "sans-serif" },
+      secondary: { name: "Cormorant Garamond", fallback: "serif" },
+      sizes: {
+        h1: "clamp(32px, 8vw, 60px)",
+        h2: "clamp(24px, 6vw, 44px)",
+        h3: "clamp(18px, 4vw, 32px)",
+        body: "16px",
+        small: "14px",
+      },
+    },
+    colorPalette: [
+      { name: "Cosmic Purple", hex: "#6B46C1", rgb: "107, 70, 193", usage: "Primary brand, astrological theme" },
+      { name: "Star Gold", hex: "#FCD34D", rgb: "252, 211, 77", usage: "Highlights, celestial elements" },
+      { name: "Ocean Teal", hex: "#0D9488", rgb: "13, 148, 136", usage: "Destinations, exploration" },
+      { name: "Night Sky", hex: "#0F172A", rgb: "15, 23, 42", usage: "Primary background" },
+      { name: "Moonlight", hex: "#F8FAFC", rgb: "248, 250, 252", usage: "Cards, secondary background" },
+      { name: "Accent Rose", hex: "#FB7185", rgb: "251, 113, 133", usage: "Bookmarks, favorites" },
+    ],
+    problem: "Travelers often feel disconnected from destinations they visit, selecting based on generic recommendations or tourist guides. Spiritual and astrology-curious travelers seek deeper alignment with places. Existing travel apps lack personalization beyond preferences - they don't consider cosmic energy, astrological compatibility, or spiritual resonance with destinations.",
+    process: "Surveyed 200+ spiritual travelers and astrology enthusiasts. Conducted interviews with travel astrologers and nomadic communities. Researched astrocartography principles and geographic plotting. Created detailed traveler personas based on astrological signs and travel motivations. Prototyped destination recommendation algorithm with A/B testing of cosmic vs. traditional recommendations.",
+    solution: "Voya overlays astrocartography mapping onto travel planning, plotting nodes where planetary energies are strongest. The app calculates user's birth chart and matches it against destination energies. Personalized recommendations suggest locations for specific life goals (growth, healing, creativity, romance). Integrated booking handles flights and accommodations seamlessly. Community features enable connection with other travelers seeking spiritual alignment.",
+    userResearch: {
+      methods: ["Spiritual traveler surveys", "Astrology expert interviews", "Digital nomad community studies", "Behavior tracking in prototype testing"],
+      keyInsights: [
+        "68% of spiritual travelers want astrology-informed destination recommendations",
+        "Cosmic connection is as important as practical amenities in destination selection",
+        "Solo travelers particularly interested in energy-aligned destinations for self-discovery",
+        "Community aspect crucial - sharing experiences with cosmic alignment seekers",
+        "Accurate birth chart data critical - API integration with astrology services essential",
+      ],
+      targetAudience: "Spiritual travelers (25-55), astrology enthusiasts, digital nomads, solo travelers seeking self-discovery, holistic wellness community",
+    },
+    wireframes: [
+      {
+        title: "Astrocartography Map",
+        description: "Interactive world map showing planetary nodes and energy levels for user's chart",
+        src: "https://i.imgur.com/voya-map.png",
+      },
+      {
+        title: "Personalized Recommendations",
+        description: "Cosmic-aligned destinations curated by life goals and astrological positioning",
+        src: "https://i.imgur.com/voya-recommendations.png",
+      },
+      {
+        title: "Trip Planning Suite",
+        description: "Integrated booking, itinerary building, and cosmic event calendars",
+        src: "https://i.imgur.com/voya-planning.png",
+      },
+    ],
+    businessImpact: {
+      metrics: [
+        { metric: "Cosmic Match Rate", value: "94%", description: "Users booking recommended destinations vs. browsing own" },
+        { metric: "Trip Bookings", value: "8,500+", description: "Complete travel packages booked through platform" },
+        { metric: "Community Engagement", value: "72%", description: "Users sharing cosmic travel stories monthly" },
+        { metric: "Return Users", value: "81%", description: "Repeat platform use for multiple trips" },
+      ],
+      achievements: [],
+    },
   },
   "ad-reels": {
     id: "ad-reels",
